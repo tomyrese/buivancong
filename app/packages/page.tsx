@@ -23,6 +23,7 @@ import {
   Loader2
 } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useProgressStore } from '@/store/useProgressStore';
 import { supabase } from '@/lib/supabase';
@@ -48,6 +49,7 @@ const packageCodeMap: Record<string, string> = {
 };
 
 export default function PackagesPage() {
+  const router = useRouter();
   const { user, isAuthenticated } = useAuthStore();
   const [selectedPackage, setSelectedPackage] = React.useState<Package | null>(null);
   const [checkoutStep, setCheckoutStep] = React.useState<'info' | 'qr' | 'success'>('info');
@@ -174,19 +176,20 @@ export default function PackagesPage() {
       setShowAuthModal(true);
       return;
     }
+
+    // Check if user has phone configured before allowing to open payment modal
+    if (!user?.phone || user.phone.trim() === '') {
+      alert('Tài khoản của bạn chưa cập nhật Số điện thoại. Vui lòng bổ sung Số điện thoại trong Hồ sơ Cá nhân trước khi thực hiện thanh toán!');
+      router.push('/profile');
+      return;
+    }
+
     setSelectedPackage(pkg);
     setPaymentMode('vietqr');
-    
-    // Check if user has phone configured
-    if (!user?.phone || user.phone.trim() === '') {
-      setCheckoutStep('info'); // Show info step to collect phone number first
-      setPhone('');
-    } else {
-      setCheckoutStep('qr'); // Go straight to QR code if phone is configured
-      setPhone(user.phone);
-      setQrTimestamp(Date.now());
-      setTimeLeft(300);
-    }
+    setCheckoutStep('qr'); // Go straight to QR code since phone is configured
+    setPhone(user.phone);
+    setQrTimestamp(Date.now());
+    setTimeLeft(300);
     
     setFullName(user?.name || '');
     setEmail(user?.email || '');
@@ -729,12 +732,13 @@ export default function PackagesPage() {
 
                     <button
                       onClick={() => {
+                        setQrTimestamp(Date.now());
+                        setTimeLeft(300);
                         setCheckAlert('');
-                        setCheckoutStep('info');
                       }}
                       className="w-full py-2.5 rounded-2xl border border-border bg-card text-2xs font-bold text-muted-foreground hover:bg-muted transition-colors text-center cursor-pointer"
                     >
-                      ✏️ Thay đổi thông tin cá nhân
+                      🔄 Tạo mã mới
                     </button>
                   </div>
                 </div>
