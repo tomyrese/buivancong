@@ -11,6 +11,7 @@ export interface User {
   level: number;
   streak: number;
   joinedAt: string;
+  avatarBorder?: string;
 }
 
 interface AuthState {

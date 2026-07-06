@@ -62,6 +62,53 @@ export default function ProfilePage() {
     alert('Mật khẩu đã được cập nhật thành công (Simulated)!');
   };
 
+  const borderOptions = [
+    { 
+      id: 'default', 
+      name: 'Mặc định', 
+      gradient: 'from-border to-border/40', 
+      requirement: 'Mở khóa sẵn', 
+      isUnlocked: true 
+    },
+    { 
+      id: 'bronze', 
+      name: 'Đồng Tân thủ', 
+      gradient: 'from-amber-600 to-amber-800', 
+      requirement: 'Cấp độ 5 trở lên', 
+      isUnlocked: user.level >= 5 
+    },
+    { 
+      id: 'silver', 
+      name: 'Bạc Chiến binh', 
+      gradient: 'from-slate-300 via-slate-400 to-slate-500', 
+      requirement: 'Cấp độ 10 trở lên', 
+      isUnlocked: user.level >= 10 
+    },
+    { 
+      id: 'gold', 
+      name: 'Vàng Tinh hoa', 
+      gradient: 'from-yellow-400 via-amber-500 to-yellow-600', 
+      requirement: 'Cấp độ 15 trở lên', 
+      isUnlocked: user.level >= 15 
+    },
+    { 
+      id: 'platinum', 
+      name: 'Bạch kim Cao thủ', 
+      gradient: 'from-teal-400 via-indigo-500 to-purple-600', 
+      requirement: 'Cấp độ 20 trở lên', 
+      isUnlocked: user.level >= 20 
+    },
+    { 
+      id: 'warrior', 
+      name: 'Huyền thoại Lớp học', 
+      gradient: 'from-red-500 via-orange-500 to-yellow-500', 
+      requirement: 'Đạt từ 1000 XP trở lên', 
+      isUnlocked: user.xp >= 1000 
+    },
+  ];
+
+  const selectedBorder = borderOptions.find(b => b.id === (user.avatarBorder || 'default')) || borderOptions[0];
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 space-y-8 animate-in fade-in duration-300">
       {/* Title */}
@@ -70,7 +117,7 @@ export default function ProfilePage() {
           Hồ sơ Cá nhân
         </h1>
         <p className="text-xs text-muted-foreground mt-1">
-          Quản lý thông tin tài khoản, mật khẩu bảo mật và tùy biến cấu hình giao diện.
+          Quản lý thông tin tài khoản, mật khẩu bảo mật và trang trí ảnh đại diện.
         </p>
       </div>
 
@@ -79,8 +126,10 @@ export default function ProfilePage() {
         <div className="space-y-6">
           <div className="rounded-3xl border border-border bg-card p-6 text-center space-y-4 shadow-sm">
             <div className="relative inline-block mx-auto">
-              <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-primary to-secondary text-2xl font-bold text-white uppercase ring-4 ring-primary/10 select-none">
-                {user.name.charAt(0)}
+              <div className={`p-1 rounded-full bg-gradient-to-tr ${selectedBorder.gradient} shadow-md`}>
+                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-2xl font-bold text-white uppercase select-none ring-2 ring-background">
+                  {user.name.charAt(0)}
+                </div>
               </div>
             </div>
             <div>
@@ -100,29 +149,45 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Quick theme settings */}
+          {/* Avatar Border Customizer */}
           <div className="rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
-            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-              <Settings className="h-4.5 w-4.5 text-primary" />
-              Tùy biến hệ thống
-            </h3>
+            <div className="space-y-1">
+              <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                <Award className="h-4.5 w-4.5 text-primary" />
+                Trang trí Viền Avatar
+              </h3>
+              <p className="text-[10px] text-muted-foreground">Mở khóa viền bằng cách đạt cấp độ hoặc điểm tích lũy.</p>
+            </div>
 
-
-
-            {/* Language switcher */}
-            <div className="flex items-center justify-between text-xs">
-              <span className="text-muted-foreground">Ngôn ngữ hiển thị:</span>
-              <div className="flex items-center gap-1 rounded-xl border border-border bg-background px-2.5 py-1 text-3xs font-bold text-foreground">
-                <Languages className="h-3.5 w-3.5 text-primary" />
-                <select
-                  value={lang}
-                  onChange={(e) => setLang(e.target.value)}
-                  className="bg-transparent focus:outline-none cursor-pointer"
-                >
-                  <option value="vi">Tiếng Việt</option>
-                  <option value="en">English</option>
-                </select>
-              </div>
+            <div className="grid grid-cols-2 gap-2 pt-2">
+              {borderOptions.map((opt) => {
+                const isSelected = (user.avatarBorder || 'default') === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    disabled={!opt.isUnlocked}
+                    onClick={() => {
+                      updateProfile({ avatarBorder: opt.id });
+                    }}
+                    className={`p-2.5 rounded-2xl border text-left transition-all relative flex flex-col justify-between h-20 ${
+                      isSelected
+                        ? 'border-primary bg-primary/5 ring-2 ring-primary/20'
+                        : opt.isUnlocked
+                        ? 'border-border bg-card hover:bg-muted'
+                        : 'border-border/40 bg-muted/40 opacity-60 cursor-not-allowed'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <span className="text-[11px] font-bold text-foreground">{opt.name}</span>
+                      <div className={`h-3 w-3 rounded-full bg-gradient-to-tr ${opt.gradient} border border-background`} />
+                    </div>
+                    
+                    <span className={`text-[9px] ${opt.isUnlocked ? 'text-muted-foreground' : 'text-amber-600 font-semibold'}`}>
+                      {opt.isUnlocked ? (isSelected ? '✓ Đang dùng' : '• Đã mở khóa') : `🔒 ${opt.requirement}`}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

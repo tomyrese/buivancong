@@ -28,6 +28,16 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const { user, logout, login } = useAuthStore();
   
+  const borderOptions = [
+    { id: 'default', gradient: 'from-border/30 to-border/10' },
+    { id: 'bronze', gradient: 'from-amber-600 to-amber-800' },
+    { id: 'silver', gradient: 'from-slate-300 via-slate-400 to-slate-500' },
+    { id: 'gold', gradient: 'from-yellow-400 via-amber-500 to-yellow-600' },
+    { id: 'platinum', gradient: 'from-teal-400 via-indigo-500 to-purple-600' },
+    { id: 'warrior', gradient: 'from-red-500 via-orange-500 to-yellow-500' },
+  ];
+  const activeBorder = borderOptions.find(b => b.id === user?.avatarBorder) || borderOptions[0];
+  
   const [isOpen, setIsOpen] = React.useState(false);
   const [showProfileMenu, setShowProfileMenu] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
@@ -127,10 +137,12 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setShowProfileMenu(!showProfileMenu)}
-                  className="flex items-center gap-2 focus:outline-none"
+                  className="flex items-center gap-2 focus:outline-none animate-in fade-in"
                 >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-xs font-bold text-white uppercase ring-2 ring-primary/20 hover:ring-primary/50 transition-all select-none">
-                    {user.name.charAt(0)}
+                  <div className={`p-0.5 rounded-full bg-gradient-to-tr ${activeBorder.gradient} shadow-sm transition-all hover:scale-105`}>
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-2xs font-bold text-white uppercase ring-1 ring-background select-none">
+                      {user.name.charAt(0)}
+                    </div>
                   </div>
                 </button>
 
@@ -260,8 +272,10 @@ export default function Navbar() {
               {user ? (
                 <div className="px-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-sm font-bold text-white uppercase ring-2 ring-primary/20 select-none shrink-0">
-                      {user.name.charAt(0)}
+                    <div className={`p-0.5 rounded-full bg-gradient-to-tr ${activeBorder.gradient} shadow-sm shrink-0`}>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-xs font-bold text-white uppercase ring-1 ring-background select-none">
+                        {user.name.charAt(0)}
+                      </div>
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-foreground">{user.name}</p>
