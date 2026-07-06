@@ -21,6 +21,8 @@ export default function LearnPage() {
 
   const [activeTab, setActiveTab] = React.useState<'docs' | 'transcript' | 'notes' | 'discussion'>('docs');
   const [userAnswers, setUserAnswers] = React.useState<{ [key: string]: number }>({});
+  const [currentQuestionIdx, setCurrentQuestionIdx] = React.useState(0);
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isClient, setIsClient] = React.useState(false);
 
   // Hydration fix
@@ -36,6 +38,8 @@ export default function LearnPage() {
   // Reset user answers when switching lessons
   React.useEffect(() => {
     setUserAnswers({});
+    setCurrentQuestionIdx(0);
+    setIsSubmitted(false);
   }, [lessonId]);
 
   // Authorization check (Client-side redirect to course detail if not enrolled and lesson is not preview)
@@ -131,85 +135,242 @@ export default function LearnPage() {
         <div className="lg:col-span-8 space-y-6">
           {/* Practice Quiz Section */}
           <div className="rounded-3xl border border-border bg-card p-6 shadow-md space-y-6">
-            <div className="flex items-center gap-2 border-b border-border/60 pb-3">
-              <BookOpen className="h-5 w-5 text-primary" />
-              <h2 className="text-sm sm:text-base font-bold text-foreground">
-                Câu hỏi luyện tập ({lessonQuestions.length} câu)
-              </h2>
+            <div className="flex items-center justify-between border-b border-border/60 pb-3">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-primary" />
+                <h2 className="text-sm sm:text-base font-bold text-foreground">
+                  Câu hỏi luyện tập
+                </h2>
+              </div>
+              {lessonQuestions.length > 0 && !isSubmitted && (
+                <span className="text-xs font-bold text-primary">
+                  Câu hỏi: {currentQuestionIdx + 1} / {lessonQuestions.length}
+                </span>
+              )}
             </div>
 
             {lessonQuestions.length > 0 ? (
-              <div className="space-y-8">
-                {lessonQuestions.map((q, qIdx) => {
-                  const selectedAns = userAnswers[q.id];
-                  const isAnswered = selectedAns !== undefined;
-                  const isCorrect = isAnswered && selectedAns === q.correctAnswer;
+              <div>
+                {!isSubmitted ? (
+                  /* Single Question Runner */
+                  <div className="space-y-6">
+                    {/* Progress Bar */}
+                    <div className="h-1.5 w-full rounded-full bg-muted overflow-hidden">
+                      <div 
+                        className="h-full bg-primary transition-all duration-300 rounded-full"
+                        style={{ width: `${((currentQuestionIdx + 1) / lessonQuestions.length) * 100}%` }}
+                      />
+                    </div>
 
-                  return (
-                    <div key={q.id} className="space-y-4 border-b border-border/40 pb-6 last:border-b-0 last:pb-0">
-                      <h3 className="text-xs sm:text-sm font-bold text-foreground leading-snug">
-                        Câu {qIdx + 1}: {q.question}
-                      </h3>
+                    {/* Question Content */}
+                    {(() => {
+                      const q = lessonQuestions[currentQuestionIdx];
+                      const selectedAns = userAnswers[q.id];
+                      const isAnswered = selectedAns !== undefined;
+                      const isCorrect = isAnswered && selectedAns === q.correctAnswer;
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {q.options.map((option, oIdx) => {
-                          const isCurrentSelected = selectedAns === oIdx;
-                          const isCurrentCorrect = q.correctAnswer === oIdx;
+                      return (
+                        <div className="space-y-4">
+                          <h3 className="text-xs sm:text-sm font-bold text-foreground leading-snug">
+                            {q.question}
+                          </h3>
 
-                          let buttonClass = 'border-border bg-card/60 hover:bg-muted text-foreground';
-                          let badgeClass = 'border-border';
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {q.options.map((option, oIdx) => {
+                              const isCurrentSelected = selectedAns === oIdx;
+                              const isCurrentCorrect = q.correctAnswer === oIdx;
 
-                          if (isAnswered) {
-                            if (isCurrentCorrect) {
-                              buttonClass = 'border-emerald-500 bg-emerald-500/5 text-emerald-600';
-                              badgeClass = 'border-emerald-500 bg-emerald-500 text-white font-bold';
-                            } else if (isCurrentSelected) {
-                              buttonClass = 'border-destructive bg-destructive/5 text-destructive';
-                              badgeClass = 'border-destructive bg-destructive text-white font-bold';
-                            } else {
-                              buttonClass = 'border-border bg-card/40 opacity-60 text-muted-foreground pointer-events-none';
-                            }
-                          }
+                              let buttonClass = 'border-border bg-card/60 hover:bg-muted text-foreground';
+                              let badgeClass = 'border-border';
 
+                              if (isAnswered) {
+                                if (isCurrentCorrect) {
+                                  buttonClass = 'border-emerald-500 bg-emerald-500/5 text-emerald-600';
+                                  badgeClass = 'border-emerald-500 bg-emerald-500 text-white font-bold';
+                                } else if (isCurrentSelected) {
+                                  buttonClass = 'border-destructive bg-destructive/5 text-destructive';
+                                  badgeClass = 'border-destructive bg-destructive text-white font-bold';
+                                } else {
+                                  buttonClass = 'border-border bg-card/40 opacity-60 text-muted-foreground pointer-events-none';
+                                }
+                              }
+
+                              return (
+                                <button
+                                  key={oIdx}
+                                  disabled={isAnswered}
+                                  onClick={() => handleAnswerSelect(q.id, oIdx)}
+                                  className={`flex items-center w-full rounded-xl border p-3.5 text-left text-xs font-semibold transition-all cursor-pointer ${buttonClass}`}
+                                >
+                                  <span className={`mr-2.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-lg border text-3xs ${badgeClass}`}>
+                                    {String.fromCharCode(65 + oIdx)}
+                                  </span>
+                                  {option}
+                                </button>
+                              );
+                            })}
+                          </div>
+
+                          {/* Instant Explanation Box */}
+                          {isAnswered && (
+                            <div className="rounded-xl bg-slate-50 border border-border p-3.5 text-xs text-muted-foreground leading-relaxed animate-in fade-in duration-200">
+                              <div className="flex items-center gap-1.5 mb-1">
+                                <span className={`h-2 w-2 rounded-full ${isCorrect ? 'bg-emerald-500' : 'bg-destructive'}`} />
+                                <span className={`font-bold ${isCorrect ? 'text-emerald-600' : 'text-destructive'}`}>
+                                  {isCorrect ? 'Chính xác!' : 'Chưa chính xác!'}
+                                </span>
+                              </div>
+                              <p className="font-bold text-foreground inline">Giải thích: </p>
+                              {q.explanation}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+
+                    {/* Navigation buttons */}
+                    <div className="flex justify-between items-center pt-4 border-t border-border/40">
+                      <button
+                        onClick={() => setCurrentQuestionIdx(prev => Math.max(0, prev - 1))}
+                        disabled={currentQuestionIdx === 0}
+                        className="rounded-xl border border-border px-4 py-2 text-xs font-semibold text-muted-foreground hover:bg-muted disabled:opacity-40 transition-colors"
+                      >
+                        Câu trước
+                      </button>
+
+                      {(() => {
+                        const q = lessonQuestions[currentQuestionIdx];
+                        const isAnswered = userAnswers[q.id] !== undefined;
+
+                        if (currentQuestionIdx < lessonQuestions.length - 1) {
                           return (
                             <button
-                              key={oIdx}
-                              disabled={isAnswered}
-                              onClick={() => handleAnswerSelect(q.id, oIdx)}
-                              className={`flex items-center w-full rounded-xl border p-3.5 text-left text-xs font-semibold transition-all cursor-pointer ${buttonClass}`}
+                              onClick={() => setCurrentQuestionIdx(prev => prev + 1)}
+                              disabled={!isAnswered}
+                              className="rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white shadow hover:bg-primary/95 disabled:opacity-40 transition-all"
                             >
-                              <span className={`mr-2.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-lg border text-3xs ${badgeClass}`}>
-                                {String.fromCharCode(65 + oIdx)}
-                              </span>
-                              {option}
+                              Tiếp theo
                             </button>
+                          );
+                        } else {
+                          return (
+                            <button
+                              onClick={() => {
+                                setIsSubmitted(true);
+                                handleMarkAsCompleted();
+                              }}
+                              disabled={!isAnswered}
+                              className="rounded-xl bg-emerald-500 px-6 py-2.5 text-xs font-bold text-white shadow hover:bg-emerald-600 disabled:opacity-40 transition-all"
+                            >
+                              Nộp bài
+                            </button>
+                          );
+                        }
+                      })()}
+                    </div>
+                  </div>
+                ) : (
+                  /* Practice Finished & Review Summary */
+                  <div className="space-y-6 animate-in fade-in duration-300">
+                    {/* Score display */}
+                    {(() => {
+                      let correctCount = 0;
+                      lessonQuestions.forEach(q => {
+                        if (userAnswers[q.id] === q.correctAnswer) {
+                          correctCount++;
+                        }
+                      });
+                      const scorePercent = Math.round((correctCount / lessonQuestions.length) * 100);
+
+                      return (
+                        <div className="rounded-2xl bg-emerald-500/10 border border-emerald-500/20 p-5 text-center space-y-3">
+                          <CheckCircle2 className="h-10 w-10 text-emerald-500 mx-auto" />
+                          <div className="space-y-1">
+                            <h3 className="text-sm sm:text-base font-bold text-emerald-600">
+                              Hoàn thành luyện tập: {correctCount} / {lessonQuestions.length} câu đúng ({scorePercent}%)
+                            </h3>
+                            <p className="text-3xs text-muted-foreground leading-relaxed">
+                              Tuyệt vời! Bạn đã kết thúc bài học. Hãy xem lại các đáp án chi tiết và phần giải thích ở bên dưới nhé.
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => {
+                              setUserAnswers({});
+                              setCurrentQuestionIdx(0);
+                              setIsSubmitted(false);
+                            }}
+                            className="rounded-xl border border-border bg-card px-4 py-2 text-3xs font-bold text-muted-foreground hover:bg-muted transition-all"
+                          >
+                            Luyện tập lại
+                          </button>
+                        </div>
+                      );
+                    })()}
+
+                    {/* List of all questions for review */}
+                    <div className="space-y-4">
+                      <h4 className="text-xs font-bold text-foreground">Xem lại toàn bộ đáp án:</h4>
+                      <div className="space-y-4 max-h-[400px] overflow-y-auto pr-1">
+                        {lessonQuestions.map((q, idx) => {
+                          const userAns = userAnswers[q.id];
+                          const isCorrect = userAns === q.correctAnswer;
+
+                          return (
+                            <div 
+                              key={q.id}
+                              className={`rounded-2xl border p-4 space-y-3 bg-card/40 ${
+                                isCorrect ? 'border-emerald-500/20' : 'border-destructive/20'
+                              }`}
+                            >
+                              <div className="flex items-start justify-between gap-3">
+                                <h5 className="text-xs font-bold text-foreground leading-snug">
+                                  Câu {idx + 1}: {q.question}
+                                </h5>
+                                <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold shrink-0 ${
+                                  isCorrect ? 'bg-emerald-500/10 text-emerald-500' : 'bg-destructive/10 text-destructive'
+                                }`}>
+                                  {isCorrect ? 'Đúng' : 'Sai'}
+                                </span>
+                              </div>
+
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                                {q.options.map((option, oIdx) => {
+                                  const isSelected = userAns === oIdx;
+                                  const isRight = q.correctAnswer === oIdx;
+
+                                  let optionStyle = 'border-border bg-card/20';
+                                  if (isSelected) optionStyle = 'border-destructive bg-destructive/5 text-destructive';
+                                  if (isRight) optionStyle = 'border-emerald-500 bg-emerald-500/5 text-emerald-500';
+
+                                  return (
+                                    <div 
+                                      key={oIdx}
+                                      className={`flex items-center rounded-lg border p-2.5 text-2xs font-semibold ${optionStyle}`}
+                                    >
+                                      <span className={`mr-2 flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-md border text-[9px] ${
+                                        isRight 
+                                          ? 'border-emerald-500 bg-emerald-500 text-white font-bold' 
+                                          : isSelected 
+                                          ? 'border-destructive bg-destructive text-white font-bold' 
+                                          : 'border-border'
+                                      }`}>
+                                        {String.fromCharCode(65 + oIdx)}
+                                      </span>
+                                      {option}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+
+                              <div className="rounded-xl bg-muted/60 p-3 text-3xs text-muted-foreground leading-relaxed border border-border/50">
+                                <span className="font-bold text-foreground block mb-0.5">💡 Giải thích:</span>
+                                {q.explanation}
+                              </div>
+                            </div>
                           );
                         })}
                       </div>
-
-                      {/* Instant Explanation Box */}
-                      {isAnswered && (
-                        <div className="rounded-xl bg-slate-50 border border-border p-3.5 text-xs text-muted-foreground leading-relaxed animate-in fade-in duration-200">
-                          <div className="flex items-center gap-1.5 mb-1">
-                            <span className={`h-2 w-2 rounded-full ${isCorrect ? 'bg-emerald-500' : 'bg-destructive'}`} />
-                            <span className={`font-bold ${isCorrect ? 'text-emerald-600' : 'text-destructive'}`}>
-                              {isCorrect ? 'Chính xác!' : 'Chưa chính xác!'}
-                            </span>
-                          </div>
-                          <p className="font-bold text-foreground inline">Giải thích: </p>
-                          {q.explanation}
-                        </div>
-                      )}
                     </div>
-                  );
-                })}
-
-                {/* Completion Celebration Card */}
-                {Object.keys(userAnswers).length === lessonQuestions.length && (
-                  <div className="rounded-2xl bg-emerald-500/10 border border-emerald-500/20 p-4 text-center space-y-2 animate-in zoom-in-95 duration-200">
-                    <CheckCircle2 className="h-8 w-8 text-emerald-500 mx-auto" />
-                    <h4 className="text-xs font-bold text-emerald-600">Tuyệt vời! Bạn đã hoàn thành hết các câu hỏi ôn tập.</h4>
-                    <p className="text-3xs text-muted-foreground">Hãy nhấp nút "Hoàn thành bài" ở trên để lưu trữ tiến độ học tập nhé!</p>
                   </div>
                 )}
               </div>
