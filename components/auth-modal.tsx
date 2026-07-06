@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { X, Mail, Lock, User as UserIcon, ArrowRight, Sparkles } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
+import { supabase } from '@/lib/supabase';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -88,6 +89,43 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     } catch (err) {
       console.error(err);
       setError('Có lỗi xảy ra, vui lòng thử lại sau!');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setError('');
+    setSuccess('');
+    setLoading(true);
+
+    try {
+      const isSupabaseConfigured = 
+        process.env.NEXT_PUBLIC_SUPABASE_URL && 
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY &&
+        !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('placeholder') &&
+        !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY.includes('placeholder');
+
+      if (isSupabaseConfigured) {
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: 'google',
+          options: {
+            redirectTo: window.location.origin
+          }
+        });
+        if (error) throw error;
+      } else {
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        await login('hocsinh.gmail@isinhvien.vn', '123456');
+        setSuccess('Đăng nhập bằng Google thành công! Chào mừng bạn.');
+        setTimeout(() => {
+          onClose();
+          window.location.reload();
+        }, 1000);
+      }
+    } catch (err: any) {
+      console.error(err);
+      setError(err.message || 'Không thể đăng nhập bằng Google, vui lòng thử lại!');
     } finally {
       setLoading(false);
     }
@@ -226,13 +264,6 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
             </div>
           </div>
 
-          {/* Helper details for mock credentials */}
-          {isLoginMode && (
-            <p className="text-[10px] text-muted-foreground leading-relaxed pl-1">
-              💡 Bạn có thể nhập <strong>admin@istudent.edu</strong> để đăng nhập tài khoản Quản trị viên (Admin).
-            </p>
-          )}
-
           {/* Submit Button */}
           <button
             type="submit"
@@ -247,6 +278,29 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 <ArrowRight className="h-4 w-4" />
               </>
             )}
+          </button>
+
+          {/* OR Separator */}
+          <div className="relative flex py-2 items-center">
+            <div className="flex-grow border-t border-border/80"></div>
+            <span className="flex-shrink mx-4 text-[10px] font-extrabold text-muted-foreground uppercase tracking-widest">Hoặc</span>
+            <div className="flex-grow border-t border-border/80"></div>
+          </div>
+
+          {/* Google (Gmail) Login Button */}
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loading || !!success}
+            className="w-full flex items-center justify-center gap-2.5 rounded-2xl border border-border bg-card py-3 text-xs font-bold text-foreground shadow-xs hover:bg-muted/50 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+          >
+            <svg className="h-4.5 w-4.5 shrink-0" viewBox="0 0 24 24">
+              <path
+                fill="#EA4335"
+                d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.41 0-6.19-2.78-6.19-6.19s2.78-6.19 6.19-6.19c1.7 0 3.25.69 4.39 1.8l3.23-3.23C19.2 2.42 15.93 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c5.899 0 10.97-4.23 10.97-11.24 0-.74-.08-1.32-.23-1.955H12.24z"
+              />
+            </svg>
+            <span>{isLoginMode ? 'Đăng nhập bằng Gmail / Google' : 'Đăng ký bằng Gmail / Google'}</span>
           </button>
         </form>
 

@@ -115,7 +115,7 @@ export default function AdminPage() {
           </p>
         </div>
         <div className="rounded-2xl bg-amber-500/5 border border-amber-500/10 p-4 text-xs text-amber-600 font-medium">
-          💡 Mẹo: Bấm Đăng xuất, sau đó Đăng nhập bằng email: <strong className="font-bold underline">admin@istudent.edu</strong>
+          💡 Mẹo: Bấm Đăng xuất, sau đó Đăng nhập bằng email: <strong className="font-bold underline">admin@isinhvien.vn</strong>
         </div>
         <button
           onClick={() => router.push('/')}
