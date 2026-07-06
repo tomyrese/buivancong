@@ -705,16 +705,6 @@ export default function PackagesPage() {
                         </div>
                       )}
 
-                      {/* Developer sandbox info box */}
-                      <div className="rounded-xl bg-muted border border-border p-3 text-[10px] text-muted-foreground space-y-1.5 leading-relaxed">
-                        <div className="flex items-center gap-1 font-bold text-foreground">
-                          <Info className="h-3.5 w-3.5 text-blue-500 animate-pulse" />
-                          <span>Mẹo Thử nghiệm Sandbox (Dev Tip)</span>
-                        </div>
-                        <p>
-                          Bạn có thể giả lập thanh toán bằng cách gửi webhook chứa nội dung chuyển khoản <strong>QRTBVC {user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} {packageCodeMap[selectedPackage.id]}</strong> tới endpoint API Callback của bạn để kích hoạt tức thì.
-                        </p>
-                      </div>
                     </div>
                   </div>
 
