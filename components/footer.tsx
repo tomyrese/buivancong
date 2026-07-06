@@ -46,11 +46,11 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Image 
                 src={logoImg} 
-                alt="iStudent Logo" 
+                alt="iSinhvien Logo" 
                 className="h-7 w-auto object-contain rounded-lg shadow shadow-primary/5"
               />
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-lg font-bold tracking-tight text-transparent">
-                iStudent
+                iSinhvien
               </span>
             </Link>
             <p className="text-xs text-muted-foreground leading-relaxed">
@@ -177,7 +177,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-2xs text-muted-foreground">
-            &copy; {currentYear} iStudent.
+            &copy; {currentYear} iSinhvien.
           </p>
           <div className="flex space-x-6 text-2xs text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Chính sách bảo mật</a>

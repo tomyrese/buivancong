@@ -69,7 +69,7 @@ export default function Navbar() {
   ];
 
   const handleMockLogin = async () => {
-    await login('student@istudent.edu');
+    await login('student@isinhvien.vn');
   };
 
   return (
@@ -87,11 +87,11 @@ export default function Navbar() {
             <Link href="/" className="flex items-center gap-2 group">
               <Image 
                 src={logoImg} 
-                alt="iStudent Logo" 
+                alt="iSinhvien Logo" 
                 className="h-9 w-auto object-contain rounded-xl shadow shadow-primary/10 transition-transform group-hover:scale-105"
               />
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
-                iStudent
+                iSinhvien
               </span>
             </Link>
           </div>

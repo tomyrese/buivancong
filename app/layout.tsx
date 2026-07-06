@@ -13,17 +13,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "iStudent - Nền tảng học tập trực tuyến miễn phí",
-  description: "Trực quan hóa lộ trình học của bạn với sự hỗ trợ của AI. Khám phá các khóa học lập trình, trí tuệ nhân tạo, thiết kế UI/UX chất lượng cao miễn phí.",
-  keywords: "istudent, hoc truc tuyen, lap trinh mien phi, AI, chatgpt, nextjs, react, ui ux design",
-  authors: [{ name: "iStudent Team" }],
+  title: "iSinhvien - Nền tảng học tập trực tuyến miễn phí",
+  description: "Trực quan hóa lộ trình học của bạn. Khám phá các khóa học lập trình, trí tuệ nhân tạo, thiết kế UI/UX chất lượng cao miễn phí.",
+  keywords: "isinhvien, hoc truc tuyen, lap trinh mien phi, nextjs, react, ui ux design",
+  authors: [{ name: "iSinhvien Team" }],
   openGraph: {
-    title: "iStudent - Nền tảng học tập trực tuyến miễn phí",
+    title: "iSinhvien - Nền tảng học tập trực tuyến miễn phí",
     description: "Khám phá các khóa học lập trình, trí tuệ nhân tạo, thiết kế UI/UX chất lượng cao miễn phí.",
     type: "website",
     locale: "vi_VN",
-    url: "https://istudent-demo.vercel.app",
-    siteName: "iStudent",
+    url: "https://isinhvien.vn",
+    siteName: "iSinhvien",
   },
 };
 

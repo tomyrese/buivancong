@@ -30,12 +30,12 @@ export const useAuthStore = create<AuthState>()(
       user: null,
       isAuthenticated: false,
       login: async (email) => {
-        const isAdmin = email === 'admin@istudent.edu';
+        const isAdmin = email === 'admin@isinhvien.vn';
         const mockUser: User = isAdmin
           ? {
               id: 'u-admin',
-              name: 'iStudent Admin',
-              email: 'admin@istudent.edu',
+              name: 'iSinhvien Admin',
+              email: 'admin@isinhvien.vn',
               avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
               role: 'admin',
               xp: 9999,
@@ -46,7 +46,7 @@ export const useAuthStore = create<AuthState>()(
           : {
               id: 'u-student',
               name: 'Học Viên Chăm Chỉ',
-              email: email || 'student@istudent.edu',
+              email: email || 'student@isinhvien.vn',
               avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
               role: 'student',
               xp: 350,
