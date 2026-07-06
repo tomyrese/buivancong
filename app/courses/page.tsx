@@ -3,7 +3,6 @@
 import * as React from 'react';
 import { useSearchParams } from 'next/navigation';
 import SearchFilters from '@/features/courses/search-filters';
-import AIRecommendationModal from '@/features/courses/ai-recommendation-modal';
 import { CourseService, Course } from '@/services/courseService';
 import { useDebounce } from '@/hooks/useDebounce';
 import { BookOpen, Star, Clock, ArrowRight, Smile } from 'lucide-react';
@@ -29,7 +28,6 @@ function CoursesContent() {
   });
 
   const [recentSearches, setRecentSearches] = React.useState<string[]>([]);
-  const [isAIModalOpen, setIsAIModalOpen] = React.useState(false);
   const [visibleCount, setVisibleCount] = React.useState(6);
   const [loading, setLoading] = React.useState(false);
 
@@ -42,12 +40,7 @@ function CoursesContent() {
     }
   }, [initialCategory]);
 
-  // Trigger AI Suggestion modal if ?ai=true
-  React.useEffect(() => {
-    if (triggerAI) {
-      setIsAIModalOpen(true);
-    }
-  }, [triggerAI]);
+
 
   // Load recent searches from localStorage on mount
   React.useEffect(() => {
@@ -260,20 +253,6 @@ function CoursesContent() {
         )}
       </div>
 
-      {/* AI recommendation modal */}
-      <AIRecommendationModal
-        isOpen={isAIModalOpen}
-        onClose={() => {
-          setIsAIModalOpen(false);
-          if (typeof window !== 'undefined') {
-            const url = new URL(window.location.href);
-            if (url.searchParams.has('ai')) {
-              url.searchParams.delete('ai');
-              window.history.replaceState(null, '', url.pathname + url.search);
-            }
-          }
-        }}
-      />
     </div>
   );
 }

@@ -121,14 +121,6 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            {/* AI Assistant shortcut */}
-            <Link
-              href="/courses?ai=true"
-              className="flex items-center gap-1.5 rounded-full bg-secondary/10 px-3.5 py-1 text-xs font-semibold text-secondary hover:bg-secondary/20 transition-all border border-secondary/20 hover:scale-105"
-            >
-              <Sparkles className="h-3.5 w-3.5 text-secondary animate-pulse" />
-              Gợi ý AI
-            </Link>
 
             {/* Profile Dropdown */}
             {user ? (
@@ -262,14 +254,7 @@ export default function Navbar() {
               </Link>
             )}
 
-            <Link
-              href="/courses?ai=true"
-              onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2 rounded-xl px-3 py-2 text-base font-medium text-secondary hover:bg-muted transition-colors"
-            >
-              <Sparkles className="h-5 w-5 text-secondary" />
-              Tư vấn lộ trình học AI
-            </Link>
+
 
             <div className="border-t border-border pt-4 pb-2 mt-4">
               {user ? (

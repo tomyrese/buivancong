@@ -63,11 +63,11 @@ export default function Hero() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/courses?ai=true"
+                href="/packages"
                 className="flex items-center gap-2 rounded-2xl border border-border bg-card/60 backdrop-blur-md px-6 py-3.5 text-sm font-semibold text-foreground hover:bg-muted hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
-                <Sparkles className="h-4 w-4 text-secondary" />
-                Khám phá lộ trình AI
+                <GraduationCap className="h-4 w-4 text-secondary" />
+                Xem Gói Khóa học (Combo)
               </Link>
             </motion.div>
           </div>

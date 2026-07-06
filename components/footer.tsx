@@ -97,11 +97,6 @@ export default function Footer() {
                   Luyện đề trắc nghiệm
                 </Link>
               </li>
-              <li>
-                <Link href="/courses?ai=true" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Hỏi đáp AI
-                </Link>
-              </li>
             </ul>
           </div>
 
