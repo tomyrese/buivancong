@@ -79,15 +79,15 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end self-end z-10"
+            className="lg:col-span-5 flex justify-center lg:justify-start lg:-ml-14 self-end z-10"
           >
-            <div className="relative w-full max-w-[460px] lg:max-w-[500px] flex items-end justify-center">
-              {/* Teacher Image with 3D drop shadow */}
+            <div className="relative w-full max-w-[480px] lg:max-w-[540px] flex items-end justify-center">
+              {/* Teacher Image with layered 3D drop shadow & ambient glow */}
               <Image 
                 src={gv07Img} 
                 alt="Teacher Model" 
                 priority
-                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.3)] filter dark:drop-shadow-[0_20px_35px_rgba(255,255,255,0.05)] transform hover:scale-[1.03] transition-transform duration-500 z-10 translate-y-1"
+                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_10px_15px_rgba(0,0,0,0.15)] drop-shadow-[0_30px_50px_rgba(47,128,237,0.22)] filter dark:drop-shadow-[0_30px_50px_rgba(242,153,74,0.12)] transform hover:scale-[1.03] transition-transform duration-500 z-10 translate-y-1 block"
               />
 
               {/* Decorative Blur Orbs inside image container */}
