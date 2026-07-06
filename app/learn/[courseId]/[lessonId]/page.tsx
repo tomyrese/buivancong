@@ -8,6 +8,7 @@ import SidebarPlaylist from '@/features/learn/sidebar-playlist';
 import DiscussionTab from '@/features/learn/discussion-tab';
 import { BookOpen, FileText, Settings, ShieldAlert, Sparkles, Bookmark, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import { MarkdownRenderer } from '@/components/markdown-renderer';
 
 export default function LearnPage() {
   const params = useParams();
@@ -418,8 +419,8 @@ export default function LearnPage() {
                     </div>
                   </div>
 
-                  <div className="prose prose-sm dark:prose-invert max-w-none text-xs sm:text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
-                    {lesson.content}
+                  <div className="prose prose-sm dark:prose-invert max-w-none text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    <MarkdownRenderer content={lesson.content} />
                   </div>
                 </div>
 
