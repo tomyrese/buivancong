@@ -27,9 +27,9 @@ interface AuthState {
 
 // Helper to check if Supabase has non-placeholder keys configured
 const isSupabaseConfigured = () => {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  return url && key && !url.includes('placeholder') && !key.includes('placeholder');
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_PUBLISHABLE_KEY;
+  return !!(url && key && !url.includes('placeholder') && !key.includes('placeholder'));
 };
 
 export const useAuthStore = create<AuthState>()(
