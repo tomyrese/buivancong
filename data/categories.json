@@ -1,0 +1,18 @@
+[
+  {
+    "id": "scientific-reasoning",
+    "name": "Suy Luận Khoa Học",
+    "slug": "suy-luan-khoa-hoc",
+    "icon": "Atom",
+    "description": "Bao gồm Vật lý 12, Sinh học 12, Lịch sử 12, Kinh tế-Pháp luật 12, Hóa 12, Địa lý 12 giúp luyện thi ĐGNL.",
+    "color": "from-blue-600 to-indigo-600"
+  },
+  {
+    "id": "math",
+    "name": "Toán học",
+    "slug": "toan-hoc",
+    "icon": "Binary",
+    "description": "Bao gồm Toán 10, Toán 11, Toán 12 bám sát đề thi Đánh giá năng lực của thầy Bùi Văn Công.",
+    "color": "from-teal-500 to-cyan-600"
+  }
+]

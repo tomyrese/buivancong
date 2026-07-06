@@ -1,0 +1,1109 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "VẬT LÍ NHIỆT",
+      "topics": [
+        {
+          "id": 1,
+          "name": "CẤU TẠO CHẤT. SỰ CHUYỂN THỂ",
+          "questions": [
+            {
+              "id": "1.1.1",
+              "type": "multiple_choice",
+              "question": "Nội dung thí nghiệm Brown là",
+              "options": [
+                "A. Quan sát hạt phấn hoa bằng kính hiển vi.",
+                "B. Quan sát chuyển động của hạt phấn hoa trong nước bằng kính hiển vi.",
+                "C. Quan sát cánh hoa trong nước bằng kính hiển vi.",
+                "D. Quan sát chuyển động của cánh hoa."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.1.2",
+              "type": "multiple_choice",
+              "question": "Trong thí nghiệm của Brown các hạt phấn hoa chuyển động hỗn độn không ngừng vì",
+              "options": [
+                "A. giữa chúng có khoảng cách.",
+                "B. chúng là các phân tử.",
+                "C. các phân tử nước chuyển động không ngừng, va chạm vào chúng từ mọi phía.",
+                "D. chúng là các thực thể sống."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.3",
+              "type": "multiple_choice",
+              "question": "Phát biểu nào sau đây là sai khi nói về chất khí?",
+              "options": [
+                "A. Các phân tử khí ở rất gần nhau so với các phân tử chất lỏng.",
+                "B. Lực tương tác giữa các nguyên tử, phân tử là rất yếu.",
+                "C. Chất khí không có hình dạng riêng và thể tích riêng.",
+                "D. Chất khí luôn luôn chiếm toàn bộ thể tích bình chứa và có thể nén được dễ dàng."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.1.4",
+              "type": "multiple_choice",
+              "question": "Tính chất nào sau đây không phải là tính chất của chất ở thể khí?",
+              "options": [
+                "A. Có hình dạng và thể tích riêng.",
+                "B. Có các phân tử chuyển động hoàn toàn hỗn độn.",
+                "C. Có thể nén được dễ dàng.",
+                "D. Có lực tương tác phân tử nhỏ hơn lực tương tác phân tử ở thể rắn và thể lỏng."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.1.5",
+              "type": "multiple_choice",
+              "question": "Hãy tìm ý không đúng với mô hình động học phân tử trong các ý sau?",
+              "options": [
+                "A. Các chất được cấu tạo từ các hạt riêng biệt là phân tử.",
+                "B. Các phân tử chuyển động không ngừng.",
+                "C. Tốc độ chuyển động của các phân tử cấu tạo nên vật càng lớn thì thể tích của vật càng lớn.",
+                "D. Giữa các phân tử có lực tương tác gọi là lực liên kết phân tử."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.6",
+              "type": "multiple_choice",
+              "question": "Ngày 31/03/2024 khoảng 2h chiều, một trận mưa đá xuất hiện ở thành phố Đà Lạt. Nguyên nhân hình thành hiện tượng mưa đá là do áp cao cận nhiệt đới lấn tây, đẩy một lượng lớn độ ẩm từ biển về phía đất liền. Trong điều kiện nhiệt ẩm cao, không khí không ổn định, có sự xáo trộn lớn, lúc này dòng không khí chuyển động đi lên sẽ mang theo khối máy nóng ẩm cùng lên cao, vượt qua cả tầng đối lưu. Càng lên cao nhiệt độ sẽ càng giảm, cho đến khi chạm mức 0°C, ... thành các hạt băng. Đến một lúc nào đó, khi hạt đủ lớn, các luồng khí không có thể giữ được nữa thì sẽ rơi xuống mặt đất và hình thành nên các cơn mưa đá. Điền vào chỗ trống cụm từ thích hợp?",
+              "options": [
+                "A. nước ở thể lỏng đông đặc.",
+                "B. hơi nước bị ngưng kết.",
+                "C. hơi nước hóa lỏng rồi từ thể lỏng sang thể rắn.",
+                "D. nước kết tủa."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.7",
+              "type": "multiple_choice",
+              "question": "Trường hợp nào sau đây không xảy ra sự nóng chảy?",
+              "options": [
+                "A. Bỏ cục nước đá vào một cốc nước.",
+                "B. Đốt một ngọn nến.",
+                "C. Đốt một ngọn đèn dầu.",
+                "D. Đúc một cái chuông đồng."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.8",
+              "type": "multiple_choice",
+              "question": "Trong các trường hợp dưới đây, trường hợp nào liên quan đến sự bay hơi?",
+              "options": [
+                "A. Kính cửa sổ bị mờ đi trong những ngày đông giá lạnh.",
+                "B. Cốc nước bị cạn dần khi để ngoài trời nắng.",
+                "C. Miếng bơ để bên ngoài tủ lạnh sau một thời gian bị chảy lỏng.",
+                "D. Đưa nước vào trong tủ lạnh để làm đá."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.1.9",
+              "type": "multiple_choice",
+              "question": "Chọn phát biểu không đúng về nhiệt độ sôi?",
+              "options": [
+                "A. Các chất khác nhau sôi ở nhiệt độ khác nhau.",
+                "B. Mỗi chất lỏng sôi ở một nhiệt độ nhất định.",
+                "C. Trong suốt thời gian sôi, nhiệt độ của chất lỏng không thay đổi.",
+                "D. Nhiệt độ sôi của nước là lớn nhất trong các chất lỏng."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.1.10",
+              "type": "multiple_choice",
+              "question": "Trường hợp nào sau đây liên quan tới sự nóng chảy?",
+              "options": [
+                "A. Sương đọng trên lá cây.",
+                "B. Khăn ướt sẽ khô khi được phơi ra nắng.",
+                "C. Đun nước đổ đầy ấm, nước có thể tràn ra ngoài.",
+                "D. Cục nước đá bỏ từ tủ đá ra ngoài, sau một thời gian, tan thành nước."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.1.11",
+              "type": "multiple_choice",
+              "question": "Trong các đặc điểm sau đây, đặc điểm nào không phải là sự bay hơi?",
+              "options": [
+                "A. Xảy ra ở bất kì nhiệt độ nào của chất lỏng.",
+                "B. Xảy ra trên mặt thoáng của chất lỏng.",
+                "C. Không nhìn thấy được.",
+                "D. Xảy ra ở nhiệt độ xác định của chất lỏng."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.1.12",
+              "type": "multiple_choice",
+              "question": "Nước đựng trong cốc bay hơi càng nhanh khi",
+              "options": [
+                "A. Nước trong cốc càng nhiều.",
+                "B. Nước trong cốc càng ít.",
+                "C. Nước trong cốc càng nóng.",
+                "D. Nước trong cốc càng lạnh."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.13",
+              "type": "multiple_choice",
+              "question": "Hiện tượng nào sau đây không phải là sự ngưng tụ?",
+              "options": [
+                "A. Sương đọng trên lá cây.",
+                "B. Sự tạo thành sương mù.",
+                "C. Sự tạo thành hơi nước.",
+                "D. Sự tạo thành mây."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.14",
+              "type": "multiple_choice",
+              "question": "Sự bay hơi",
+              "options": [
+                "A. xảy ra ở bất kì nhiệt độ nào của chất lỏng.",
+                "B. chỉ xảy ra ở trong lòng chất lỏng.",
+                "C. xảy ra với tốc độ như nhau ở mọi nhiệt độ.",
+                "D. chỉ xảy ra đối với một số ít chất lỏng."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.1.15",
+              "type": "multiple_choice",
+              "question": "Những quá trình chuyển thể nào của đồng được vận dụng trong việc đúc tượng đồng?",
+              "options": [
+                "A. Nóng chảy và bay hơi.",
+                "B. Nóng chảy và đông đặc.",
+                "C. Bay hơi và đông đặc.",
+                "D. Bay hơi và ngưng tụ."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.1.16",
+              "type": "multiple_choice",
+              "question": "Việc làm nào sau đây không đúng khi thực hiện thí nghiệm kiểm tra xem tốc độ bay hơi của một chất lỏng có phụ thuộc vào nhiệt độ hay không?",
+              "options": [
+                "A. Dùng hai đĩa giống nhau.",
+                "B. Dùng cùng một loại chất lỏng.",
+                "C. Dùng hai loại chất lỏng khác nhau.",
+                "D. Dùng hai nhiệt độ khác nhau."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.17",
+              "type": "multiple_choice",
+              "question": "Các bình hình đều đựng cùng một lượng nước. Để cả ba bình vào trong phòng kín. Hỏi sau một tuần bình nào còn ít nước nhất, bình nào nhiều nước nhất? (Hình vẽ)",
+              "options": [
+                "A. Bình A.",
+                "B. Bình B.",
+                "C. Bình C.",
+                "D. Chưa xác định được."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.1.18",
+              "type": "multiple_choice",
+              "question": "Trong các đặc điểm bay hơi sau đây, đặc điểm nào là của sự sôi?",
+              "options": [
+                "A. Xảy ra ở bất kì nhiệt độ nào.",
+                "B. Chỉ xảy ra trên mặt thoáng của chất lỏng.",
+                "C. Chỉ xảy ra trong lòng chất lỏng.",
+                "D. Chỉ xảy ra ở một nhiệt độ xác định của chất lỏng."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.1.19",
+              "type": "multiple_choice",
+              "question": "Đưa cốc nước lạnh ra ngoài trời nóng thì thấy xuất hiện một lớp nước bám ngoài thành cốc. Đó là do hiện tượng",
+              "options": [
+                "A. bay hơi.",
+                "B. nóng chảy.",
+                "C. thăng hoa.",
+                "D. ngưng tụ."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.1.20",
+              "type": "multiple_choice",
+              "question": "Câu nào dưới đây là không đúng khi nói về sự bay hơi của các chất lỏng?",
+              "options": [
+                "A. Sự bay hơi là quá trình chuyển từ thể lỏng sang thể khí xảy ra ở bề mặt chất lỏng.",
+                "B. Quá trình chuyển ngược lại từ thể khí sang thể lỏng là sự ngưng tụ. Sự ngưng tụ luôn xảy ra kèm theo sự bay hơi.",
+                "C. Sự bay hơi là quá trình chuyển từ thể lỏng sang thể khí xảy ra ở cả bên trong và trên bề mặt chất lỏng.",
+                "D. Sự bay hơi của chất lỏng xảy ra ở nhiệt độ bất kì."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.1.21",
+              "type": "true_false",
+              "question": "Cho biết các phát biểu sau đây đúng hay sai?",
+              "statements": [
+                "a. Chất khí không có hình dạng và thể tích riêng, luôn chiếm toàn bộ thể tích bình chứa và có thể nén được dễ dàng.",
+                "b. Vật ở thể rắn có thể tích và hình dạng riêng, rất khó nén.",
+                "c. Vật ở thể lỏng có thể tích riêng nhưng không có hình dạng riêng.",
+                "d. Các chất không thể chuyển từ dạng này sang dạng khác."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "1.1.22",
+              "type": "true_false",
+              "question": "Cho biết các phát biểu sau đây đúng hay sai?",
+              "statements": [
+                "a. Khoảng cách giữa các phân tử lớn thì lực liên kết giữa chúng càng yếu.",
+                "b. Các phân tử sắp xếp càng có trật tự thì lực liên kết giữa chúng càng mạnh.",
+                "c. Vật ở thể lỏng có thể tích và hình dạng riêng.",
+                "d. Vật ở thể rắn có thể tích và hình dạng riêng, rất khó nén."
+              ],
+              "answers": [
+                true,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": "1.1.23",
+              "type": "true_false",
+              "question": "Cho biết các phát biểu sau đây đúng hay sai?",
+              "statements": [
+                "a. Một chất có khối lượng nhất định nhưng khi ở các thể khác nhau thì sẽ khác nhau về thể tích.",
+                "b. Một chất có khối lượng nhất định nhưng khi ở các thể khác nhau thì sẽ khác nhau về kích thước nguyên tử.",
+                "c. Một chất có khối lượng nhất định nhưng khi ở các thể khác nhau thì sẽ khác nhau về khối lượng riêng.",
+                "d. Một chất có khối lượng nhất định nhưng khi ở các thể khác nhau thì sẽ khác nhau về trật tự của các nguyên tử."
+              ],
+              "answers": [
+                true,
+                false,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "1.1.24",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau:",
+              "statements": [
+                "a. Cung cấp nhiệt cho một khối chất luôn làm tăng thể tích của chất đó.",
+                "b. Cung cấp nhiệt cho một khối chất luôn làm tăng nhiệt độ của khối chất đó.",
+                "c. Cung cấp nhiệt cho một khối chất là sự truyền năng lượng cho khối chất đó.",
+                "d. Nhiệt độ nóng chảy phụ thuộc vào chất và áp suất ngoài."
+              ],
+              "answers": [
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "1.1.25",
+              "type": "true_false",
+              "question": "Hình bên dưới là đường biểu diễn sự thay đổi nhiệt độ theo thời gian của thí nghiệm đun nóng liên tục của một lượng nước đá trong một bình không kín. (Hình vẽ)",
+              "statements": [
+                "a. Đoạn OA cho biết nước tồn tại ở cả thể rắn và thể lỏng.",
+                "b. Đoạn CD cho biết nước không tồn tại ở thể lỏng.",
+                "c. Đoạn AB cho biết nước đang tồn tại ở thể rắn.",
+                "d. Đoạn BC cho biết nước đang sôi."
+              ],
+              "answers": [
+                true,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": "1.1.26",
+              "type": "short_answer",
+              "question": "Hình bên biểu diễn sự thay đổi nhiệt độ theo thời gian của nước khi được đun nóng và khi để nguội. Hãy cho biết các đoạn AB, BC, CD của đường biểu diễn ứng với quá trình nào?",
+              "answer": "AB: Nước được đun nóng từ 0°C đến 100°C; BC: Nước đang sôi; CD: Nước đang nguội."
+            },
+            {
+              "id": "1.1.27",
+              "type": "short_answer",
+              "question": "Đồ thị hình bên biểu diễn sự thay đổi nhiệt độ của nước theo thời gian đun. a) Nước ở thể nào trong khoảng thời gian từ phút 0 đến phút thứ 5; từ phút thứ 10 đến phút thứ 25? b) Nước ở thể nào trong khoảng thời gian từ phút thứ 5 đến phút thứ 10; từ phút thứ 25 đến phút thứ 30? c) Các quá trình bay hơi, sôi diễn ra trong những khoảng thời gian nào?",
+              "answer": "a) 0-5: thể rắn; 10-25: thể lỏng. b) 5-10: vừa rắn vừa lỏng; 25-30: vừa lỏng vừa khí. c) Bay hơi bắt đầu từ phút thứ 5; sôi từ phút 25 đến 30."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "THANG NHIỆT ĐỘ",
+          "questions": [
+            {
+              "id": "1.2.1",
+              "type": "multiple_choice",
+              "question": "Dụng cụ nào sau đây dùng để đo nhiệt độ?",
+              "options": [
+                "A. Cân đồng hồ.",
+                "B. Nhiệt kế.",
+                "C. Vôn kế.",
+                "D. Tốc kế."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.2",
+              "type": "multiple_choice",
+              "question": "Nhiệt độ vào một ngày mùa hè ở Hà Nội là 35°C. Nhiệt độ đó tương ứng với bao nhiêu độ F?",
+              "options": [
+                "A. 59°F.",
+                "B. 67°F.",
+                "C. 95°F.",
+                "D. 76°F."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.3",
+              "type": "multiple_choice",
+              "question": "Giá trị nhiệt độ đo được theo thang nhiệt độ Kelvin là 293 K. Hỏi theo thang nhiệt độ Fahrenheit, nhiệt độ đó có giá trị là bao nhiêu?",
+              "options": [
+                "A. 20°F.",
+                "B. 100°F.",
+                "C. 68°F.",
+                "D. 261°F."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.4",
+              "type": "multiple_choice",
+              "question": "104°F ứng với bao nhiêu K?",
+              "options": [
+                "A. 313 K.",
+                "B. 298 K.",
+                "C. 328 K.",
+                "D. 293 K."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.5",
+              "type": "multiple_choice",
+              "question": "Ở nhiệt độ nào thì số đọc trên thang nhiệt độ Fahrenheit gấp đôi số đọc trên thang nhiệt độ Celsius?",
+              "options": [
+                "A. 160°C.",
+                "B. 100°C.",
+                "C. 0°C.",
+                "D. 260°C."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.6",
+              "type": "multiple_choice",
+              "question": "Nội dung nào đúng khi nói nhiệt độ của một vật đang nóng so sánh với nhiệt độ của một vật đang lạnh?",
+              "options": [
+                "A. Vật lạnh có nhiệt độ cao hơn nhiệt độ của vật nóng.",
+                "B. Vật lạnh có nhiệt độ thấp hơn nhiệt độ của vật nóng.",
+                "C. Vật lạnh có nhiệt độ bằng nhiệt độ của vật nóng.",
+                "D. Vật nóng có nhiệt độ thấp hơn nhiệt độ của vật nóng."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.7",
+              "type": "multiple_choice",
+              "question": "Cho hai vật có nhiệt độ khác nhau tiếp xúc với nhau. Nhiệt được truyền từ vật nào sang vật nào?",
+              "options": [
+                "A. Từ vật có khối lượng lớn hơn sang vật có khối lượng nhỏ hơn.",
+                "B. Từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn.",
+                "C. Từ vật có nhiệt năng lớn hơn sang vật có nhiệt năng nhỏ hơn.",
+                "D. Từ vật ở trên cao sang vật ở dưới thấp."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.8",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về điều kiện truyền nhiệt giữa hai vật là đúng?",
+              "options": [
+                "A. Nhiệt không thể truyền từ vật có nhiệt năng nhỏ sang vật có nhiệt năng lớn hơn.",
+                "B. Nhiệt không thể truyền giữa hai vật có nhiệt năng bằng nhau.",
+                "C. Nhiệt chỉ có thể truyền từ vật có nhiệt năng lớn hơn sang vật có nhiệt năng nhỏ hơn.",
+                "D. Nhiệt không thể tự truyền được từ vật có nhiệt độ thấp sang vật có nhiệt độ cao hơn."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.2.9",
+              "type": "multiple_choice",
+              "question": "Nhỏ một giọt nước đang sôi vào một cốc nước ấm thì nhiệt năng của giọt nước và nước trong cốc thay đổi như thế nào?",
+              "options": [
+                "A. Nhiệt năng của giọt nước tăng, của nước trong cốc giảm.",
+                "B. Nhiệt năng của giọt nước giảm, của nước trong cốc tăng.",
+                "C. Nhiệt năng của giọt nước và nước trong cốc đều giảm.",
+                "D. Nhiệt năng của giọt nước và nước trong cốc đều tăng."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.10",
+              "type": "multiple_choice",
+              "question": "Kết luận nào dưới đây là không đúng với thang nhiệt độ Xen-xi-út?",
+              "options": [
+                "A. Kí hiệu của nhiệt độ là t.",
+                "B. Chọn mốc nhiệt độ nước đá đang tan ở áp suất 1 atm là 0°C.",
+                "C. 1°C tương ứng với 273 K.",
+                "D. Đơn vị đo nhiệt độ là °C."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.11",
+              "type": "multiple_choice",
+              "question": "Khi nhiệt độ tuyệt đối tăng thêm 6K thì",
+              "options": [
+                "A. Nhiệt độ Xen-xi-út tăng thêm hơn 6°C.",
+                "B. Nhiệt độ Xen-xi-út tăng thêm 279°C.",
+                "C. Nhiệt độ Xen-xi-út tăng thêm 6°C.",
+                "D. Nhiệt độ Xen-xi-út tăng thêm 267°C."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.12",
+              "type": "multiple_choice",
+              "question": "Nhiệt độ không tuyệt đối là nhiệt độ tại đó",
+              "options": [
+                "A. Nước đông đặc thành đá.",
+                "B. tất cả các chất khí hóa lỏng.",
+                "C. chuyển động nhiệt phân tử hầu như dừng lại.",
+                "D. tất cả các chất khí hóa rắn."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.13",
+              "type": "multiple_choice",
+              "question": "Liên hệ giữa nhiệt độ theo thang Ken-vin và nhiệt độ theo thang Xen-xi-út (khi làm tròn số) là",
+              "options": [
+                "A. T(K) = t(°C) + 273.",
+                "B. T(K) = t(°C) - 273.",
+                "C. T(K) = 273.",
+                "D. T(K) = 273.t(°C)."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.14",
+              "type": "multiple_choice",
+              "question": "Cách xác định nhiệt độ trong thang nhiệt độ Celsius là?",
+              "options": [
+                "A. Lấy nhiệt độ của nước khi đóng băng là 10°C và nhiệt độ sôi của nước 100°C làm chuẩn.",
+                "B. Lấy nhiệt độ của nước khi đóng băng là 10°C và nhiệt độ sôi của nước 0°C làm chuẩn.",
+                "C. Lấy nhiệt độ của nước khi đóng băng là 0°C và nhiệt độ sôi của nước 100°C làm chuẩn.",
+                "D. Lấy nhiệt độ của nước khi đóng băng là 100°C và nhiệt độ sôi của nước 10°C làm chuẩn."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.15",
+              "type": "multiple_choice",
+              "question": "Theo thang nhiệt độ Celsius, từ nhiệt độ đông đặc đến nhiệt độ sôi của nước được chia thành",
+              "options": [
+                "A. 100 phần bằng nhau, mỗi phần ứng với 1°C.",
+                "B. 100 phần bằng nhau, mỗi phần ứng với 1 K.",
+                "C. 100 phần bằng nhau, mỗi phần ứng với 1°F.",
+                "D. 10 phần bằng nhau, mỗi phần ứng với 1°C."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.16",
+              "type": "multiple_choice",
+              "question": "Đơn vị đo nhiệt độ thường dùng ở Việt Nam là",
+              "options": [
+                "A. Độ Kelvin (kí hiệu K).",
+                "B. Độ Celsius (kí hiệu °C).",
+                "C. Độ Fahrenheit (kí hiệu °F).",
+                "D. Độ Fahrenheit và độ Celsius."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.17",
+              "type": "multiple_choice",
+              "question": "Nêu khái niệm nhiệt độ không tuyệt đối?",
+              "options": [
+                "A. Nhiệt độ tại đó chuyển động nhiệt phân tử hầu như dừng lại.",
+                "B. Nhiệt độ tại đó nước đông đặc thành đá.",
+                "C. Nhiệt độ tại đó tất cả các chất khí hóa rắn.",
+                "D. Nhiệt độ tại đó tất cả các chất khí hóa lỏng."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.18",
+              "type": "multiple_choice",
+              "question": "Nhiệt kế là thiết bị dùng để đo?",
+              "options": [
+                "A. Chiều dài.",
+                "B. Thể tích vật rắn.",
+                "C. Nhiệt độ.",
+                "D. Diện tích."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.19",
+              "type": "multiple_choice",
+              "question": "Nhiệt kế nào sau đây hoạt động dựa trên hiện tượng dãn nở vì nhiệt của chất lỏng?",
+              "options": [
+                "A. Nhiệt kế thủy ngân.",
+                "B. Nhiệt kế kim loại.",
+                "C. Nhiệt kế hồng ngoại.",
+                "D. Nhiệt kế điện tử."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.20",
+              "type": "multiple_choice",
+              "question": "Trong các nhiệt kế sau đây, em hãy chọn nhiệt kế phù hợp để đo nhiệt độ của nước sôi?",
+              "options": [
+                "A. Nhiệt kế y tế có thang chia độ từ 35°C đến 42°C.",
+                "B. Nhiệt kế rượu có thang chia độ từ -30°C đến 60°C.",
+                "C. Nhiệt kế thuỷ ngân có thang chia độ từ -10°C đến 110°C.",
+                "D. Nhiệt kế hồng ngoại có thang chia độ từ 30°C đến 45°C."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.21",
+              "type": "multiple_choice",
+              "question": "Không thể dùng nhiệt kế rượu để đo nhiệt độ của hơi nước đang sôi vì",
+              "options": [
+                "A. rượu sôi ở nhiệt độ cao hơn 100°C.",
+                "B. rượu sôi ở nhiệt độ thấp hơn 100°C.",
+                "C. rượu đông đặc ở nhiệt độ thấp hơn 100°C.",
+                "D. rượu đông đặc ở nhiệt độ thấp hơn 0°C."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.22",
+              "type": "multiple_choice",
+              "question": "Chọn câu sai? Nhiệt kế thuỷ ngân dùng để đo",
+              "options": [
+                "A. nhiệt độ của lò luyện kim đang hoạt động.",
+                "B. nhiệt độ của nước đá đang tan.",
+                "C. nhiệt độ khí quyển.",
+                "D. nhiệt độ cơ thể người."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.23",
+              "type": "multiple_choice",
+              "question": "Giới hạn đo (GHĐ) và độ chia nhỏ nhất (ĐCNN) của nhiệt kế vẽ ở hình bên là (Hình vẽ)",
+              "options": [
+                "A. 50°C và 1°C.",
+                "B. 50°C và 2°C.",
+                "C. Từ 20°C đến 50°C và 1°C.",
+                "D. Từ –20°C đến 50°C và 2°C."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.24",
+              "type": "multiple_choice",
+              "question": "Một thang đo X lấy điểm băng là -10°X, lấy điểm sôi là 90°X. Nhiệt độ của một vật đọc được trên nhiệt kế Celsius là 40°C thì trên nhiệt kế X có nhiệt độ bằng",
+              "options": [
+                "A. 20°X.",
+                "B. 30°X.",
+                "C. 40°X.",
+                "D. 50°X."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.25",
+              "type": "multiple_choice",
+              "question": "Giả sử có một thang nhiệt độ kí hiệu là Z. Nhiệt độ sôi của nước theo thang này là 60°Z, điểm ba của nước là -15°Z. Nhiệt độ của vật theo thang Fahrenheit là bao nhiêu nếu thang Z là -96°Z?",
+              "options": [
+                "A. -62,4°F.",
+                "B. 162,4°F.",
+                "C. -162,4°F.",
+                "D. 62,4°F."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.2.26",
+              "type": "multiple_choice",
+              "question": "Khi dùng nhiệt kế để đo nhiệt độ của chính cơ thể mình, người ta phải thực hiện các thao tác sau (chưa được sắp xếp theo đúng thứ tự): a) Đặt nhiệt kế vào nách trái, rồi kẹp cánh tay lại để giữ nhiệt kế. b) Lấy nhiệt kế ra khỏi nách để đọc nhiệt độ. c) Dùng bông lau sạch thân và bầu nhiệt kế. d) Kiểm tra xem thuỷ ngân đã tụt hết xuống bầu nhiệt kế chưa. Nếu chưa, thì vẩy nhiệt kế cho thuỷ ngân tụt xuống. Hãy sắp xếp các thao tác trên theo thứ tự hợp lí nhất.",
+              "options": [
+                "A. a, b, c, d.",
+                "B. d, c, a, b.",
+                "C. d, c, b, d.",
+                "D. b, a, c, d."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.2.27",
+              "type": "multiple_choice",
+              "question": "Hình vẽ nào bên dưới phù hợp với trường hợp nhiệt kế 1 được đặt vào một cốc đựng nước nóng còn nhiệt kế 2 được đặt vào một cốc đựng nước lạnh? (Hình vẽ)",
+              "options": [
+                "A. Hình H1.",
+                "B. Hình H2.",
+                "C. Hình H3.",
+                "D. Hình H4."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.2.28",
+              "type": "multiple_choice",
+              "question": "Cho các bước như sau: (1) Thực hiện phép đo nhiệt độ. (2) Ước lượng nhiệt độ của vật. (3) Hiệu chỉnh nhiệt kế. (4) Lựa chọn nhiệt kế phù hợp. (5) Đọc và ghi kết quả đo. Các bước đúng khi thực hiện đo nhiệt độ của một vật là",
+              "options": [
+                "A. (2), (4), (3), (1), (5).",
+                "B. (1), (4), (2), (3), (5).",
+                "C. (1), (2), (3), (4), (5).",
+                "D. (3), (2), (4), (1), (5)."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.29",
+              "type": "multiple_choice",
+              "question": "Sự phụ thuộc vào nhiệt độ của bước sóng điện từ theo hệ thức Vien: λmax (µm) . T(K) = 2900 được dùng vào việc chế tạo các nhiệt kế thường dùng hằng ngày như nhiệt kế hồng ngoại, cũng như các nhiệt kế trong thiên văn để đo nhiệt độ bề mặt của các thiên thể. Xét một nhiệt kế hồng ngoại khi đo nhiệt độ cơ thể người như hình vẽ. Bước sóng hồng ngoại do cơ thể người phát ra bằng xấp xỉ bằng",
+              "options": [
+                "A. 9,4 µm.",
+                "B. 79 µm.",
+                "C. 29 µm.",
+                "D. 10,6 µm."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.2.30",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau:",
+              "statements": [
+                "a. Năng lượng nhiệt được truyền từ vật nóng hơn sang vật lạnh hơn.",
+                "b. Khi hai vật cùng nhiệt độ, không có sự truyền năng lượng nhiệt giữa chúng.",
+                "c. Nhiệt độ cho biết xu hướng truyền năng lượng nhiệt giữa các vật.",
+                "d. Phần năng lượng nhiệt truyền từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn được gọi là nhiệt lượng."
+              ],
+              "answers": [
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "1.2.31",
+              "type": "true_false",
+              "question": "Bảng sau đây ghi sự thay đổi nhiệt độ của không khí theo thời gian dựa trên số liệu của một trạm khí tượng ở Hà Nội ghi được vào ngày mùa đông. (Bảng số liệu)",
+              "statements": [
+                "a. Nhiệt độ lúc 4 giờ là 13°C.",
+                "b. Nhiệt độ thấp nhất trong ngày là vào lúc 1 giờ.",
+                "c. Nhiệt độ cao nhất trong ngày là vào lúc 16 giờ.",
+                "d. Độ chênh lệch nhiệt độ trong ngày là 6°C."
+              ],
+              "answers": [
+                true,
+                false,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "1.2.32",
+              "type": "true_false",
+              "question": "Bảng dưới đây ghi tên các loại nhiệt kế và nhiệt độ ghi trên thang đo của chúng: (Bảng)",
+              "statements": [
+                "a. Dùng nhiệt kế kim loại để đo nhiệt độ của không khí trong phòng.",
+                "b. Dùng nhiệt kế y tế để đo nhiệt độ của cơ thể người.",
+                "c. Dùng nhiệt kế thủy ngân để đo nhiệt độ của nước đang sôi.",
+                "d. Dùng nhiệt kế rượu để đo nhiệt độ ban đầu của bàn là."
+              ],
+              "answers": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "1.2.33",
+              "type": "short_answer",
+              "question": "Theo bản tin thời tiết phát lúc 19h50 ngày 27/02/2022 thì nhiệt độ trung bình ngày – đêm trong ngày 28/02/2022 tại Hà Nội là 24°C – 17°C. Sự chênh lệch nhiệt độ này trong thang Ken-vin là bao nhiêu?",
+              "answer": "7 K"
+            },
+            {
+              "id": "1.2.34",
+              "type": "short_answer",
+              "question": "Thế giới từng ghi nhận sự thay đổi nhiệt độ rất lớn diễn ra ở Spearfish, South Dakota vào ngày 22/01/1943. Lúc 7h30 sáng, nhiệt độ ngoài trời là -20°C. Hai phút sau, nhiệt độ ngoài trời tăng lên đến 7,2°C. Xác định độ tăng nhiệt độ trung bình trong 2 phút đó theo đơn vị Kenvin/s.",
+              "answer": "0,0167 K/s"
+            },
+            {
+              "id": "1.2.35",
+              "type": "short_answer",
+              "question": "Giả sử một học sinh tạo ra một nhiệt kế sử dụng một thang nhiệt độ mới cho riêng mình, gọi là nhiệt độ Z, có đơn vị là °Z. Trong đó nhiệt độ của nước đá đang tan ở 1atm là -5°Z và nhiệt độ nước đang sôi ở 1atm là 105°Z. a) Thiết lập biểu thức chuyển đổi nhiệt độ từ thang nhiệt độ Xen-xi-út sang nhiệt độ Z. b) Nếu dùng nhiệt kế mới này đo nhiệt độ một vật thì thấy giá trị 61°Z, nhiệt độ của vật trong thang nhiệt độ Xen-xi-út là bao nhiêu? c) Nhiệt độ của vật bằng bao nhiêu (theo thang nhiệt độ Xen-xi-út) để số chỉ trên hai thang nhiệt độ bằng nhau?",
+              "answer": "a) t(°Z) = 1,1.t(°C) - 5. b) 60°C. c) 50°C."
+            },
+            {
+              "id": "1.2.36",
+              "type": "short_answer",
+              "question": "Chiều dài của phần thủy ngân trong nhiệt kế là 2 cm ở 0°C và 22 cm ở 100°C. a) Nhiệt độ là bao nhiêu nếu chiều dài của thủy ngân là 8 cm; 20 cm? b) Chiều dài của phần thủy ngân sẽ là bao nhiêu nếu nhiệt độ là 50°C?",
+              "answer": "a) 30°C và 90°C. b) 12 cm."
+            },
+            {
+              "id": "1.2.37",
+              "type": "short_answer",
+              "question": "Một nhiệt kế thể tích không đổi hiển thị nhiệt độ 0°C và 100°C tương ứng với các áp suất 50 cmHg và 90 cmHg. Biết nhiệt độ đọc được là hàm bậc nhất của áp suất. Khi áp suất thủy ngân là 60 cmHg thì nhiệt độ đọc được bằng bao nhiêu?",
+              "answer": "25°C"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "ĐỊNH LUẬT I NHIỆT ĐỘNG LỰC HỌC",
+          "questions": [
+            {
+              "id": "1.3.1",
+              "type": "multiple_choice",
+              "question": "Công thức nào sau đây mô tả đúng nguyên lí I của NĐLH?",
+              "options": [
+                "A. ΔU = A – Q.",
+                "B. ΔU = Q – A.",
+                "C. A = ΔU – Q.",
+                "D. ΔU = A + Q."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.2",
+              "type": "multiple_choice",
+              "question": "Quy ước về dấu nào sau đây phù hợp với công thức ΔU = A + Q của nguyên lí I NĐLH?",
+              "options": [
+                "A. Vật nhận công: A < 0; vật nhận nhiệt: Q < 0.",
+                "B. Vật nhận công: A > 0; vật nhận nhiệt: Q > 0.",
+                "C. Vật thực hiện công: A < 0; vật truyền nhiệt: Q > 0.",
+                "D. Vật thực hiện công: A > 0; vật truyền nhiệt: Q < 0."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.3.3",
+              "type": "multiple_choice",
+              "question": "Trường hợp nào dưới đây làm biến đổi nội năng không do thực hiện công?",
+              "options": [
+                "A. Mài dao.",
+                "B. Đóng đinh.",
+                "C. Khuấy nước.",
+                "D. Nung sắt trong lò."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.4",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về nguyên nhân của sự thay đổi nhiệt độ của một vật là đúng? Nhiệt độ của vật giảm là do các nguyên tử, phân tử cấu tạo nên vật",
+              "options": [
+                "A. ngừng chuyển động.",
+                "B. nhận thêm động năng.",
+                "C. chuyển động chậm đi.",
+                "D. va chạm vào nhau."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.3.5",
+              "type": "multiple_choice",
+              "question": "Nhiệt lượng của vật bằng không khi",
+              "options": [
+                "A. vật truyền nhiệt.",
+                "B. vật nhận nhiệt.",
+                "C. vật không trao đổi nhiệt.",
+                "D. vật trao đổi nhiệt."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.3.6",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về nội năng là đúng?",
+              "options": [
+                "A. Nội năng là nhiệt lượng.",
+                "B. Nội năng của vật A lớn hơn nội năng của vật B thì nhiệt độ của vật cũng lớn hơn nhiệt độ của vật B.",
+                "C. Nội năng của vật chỉ thay đổi trong quá trình truyền nhiệt, không thay đổi trong quá trình thực hiện công.",
+                "D. Nội năng là một dạng năng lượng."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.7",
+              "type": "multiple_choice",
+              "question": "Phát biểu nào sau đây về nội năng là không đúng?",
+              "options": [
+                "A. Nội năng là một dạng năng lượng.",
+                "B. Nội năng là nhiệt lượng.",
+                "C. Nội năng của một vật có thể tăng hoặc giảm.",
+                "D. Nội năng có thể chuyển hóa thành các dạng năng lượng khác."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.3.8",
+              "type": "multiple_choice",
+              "question": "Nội năng của một vật là",
+              "options": [
+                "A. tổng động năng và thế năng của vật.",
+                "B. tổng động năng và thế năng của các phân tử cấu tạo nên vật.",
+                "C. tổng nhiệt lượng và cơ năng mà vật nhận được trong quá trình truyền nhiệt và thực hiện công.",
+                "D. nhiệt lượng vật nhận được trong quá trình truyền nhiệt."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.3.9",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về truyền nhiệt và thực hiện công là không đúng?",
+              "options": [
+                "A. Thực hiện công là quá trình có thể làm thay đổi nội năng của vật.",
+                "B. Trong thực hiện công có sự chuyển hoá từ nội năng thành cơ năng và ngược lại.",
+                "C. Trong truyền nhiệt có sự truyền động năng từ phân tử này sang phân tử khác.",
+                "D. Trong truyền nhiệt có sự chuyển hoá từ cơ năng sang nội năng và ngược lại."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.10",
+              "type": "multiple_choice",
+              "question": "Nội năng của vật nào tăng lên nhiều nhất khi ta thả rơi bốn vật dưới đây có cùng khối lượng từ cùng một độ cao xuống đất? Coi như toàn bộ độ giảm cơ năng chuyển hết thành nội năng của vật?",
+              "options": [
+                "A. Vật bằng nhôm có nhiệt dung riêng 880 J/kg.K.",
+                "B. Vật bằng sắt có nhiệt dung riêng 460 J/kg.K.",
+                "C. Vật bằng đồng có nhiệt dung riêng 380 J/kg.K.",
+                "D. Vật bằng chì có nhiệt dung riêng 130 J/kg.K."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.11",
+              "type": "multiple_choice",
+              "question": "Điều nào sau đây là sai khi nói về nội năng?",
+              "options": [
+                "A. Nội năng của một vật là dạng năng lượng bao gồm tổng động năng của các phân tử cấu tạo nên vật và thế năng tương tác giữa chúng.",
+                "B. Đơn vị của nội năng là Jun (J).",
+                "C. Nội năng của một vật phụ thuộc vào nhiệt độ và thể tích của vật.",
+                "D. Nội năng không thể biến đổi được."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "1.3.12",
+              "type": "multiple_choice",
+              "question": "Nhiệt năng và nội năng khác nhau ở chỗ",
+              "options": [
+                "A. Nội năng của vật có động năng phân tử còn nhiệt năng thì không.",
+                "B. Nhiệt năng của vật có thế năng phân tử còn nội năng thì không.",
+                "C. Nội năng của vật có thế năng phân tử còn nhiệt năng thì không.",
+                "D. Nhiệt năng của vật có động năng phân tử còn nội năng thì không."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.3.13",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về nhiệt lượng là không đúng?",
+              "options": [
+                "A. Nhiệt lượng là số đo độ tăng nội năng của vật trong quá trình truyền nhiệt.",
+                "B. Một vật lúc nào cũng có nội năng, do đó lúc nào cũng có nhiệt lượng.",
+                "C. Đơn vị nhiệt lượng cũng là đơn vị nội năng.",
+                "D. Nhiệt lượng không phải là nội năng."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "1.3.14",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây nói về nội năng là không đúng?",
+              "options": [
+                "A. Nội năng là một dạng năng lượng.",
+                "B. Nội năng có thể chuyển hóa thành năng lượng khác.",
+                "C. Nội năng là nhiệt lượng.",
+                "D. Nội năng của một vật có thể tăng lên hoặc giảm đi."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "1.3.15",
+              "type": "multiple_choice",
+              "question": "Trường hợp nào dưới đây làm biến đổi nội năng không do thực hiện công?",
+              "options": [
+                "A. Nung nước bằng bếp.",
+                "B. Một viên bi bằng thép rơi xuống đất mềm.",
+                "C. Cọ xát hai vật vào nhau.",
+                "D. Nén khí trong xi lanh."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "1.3.16",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau:",
+              "statements": [
+                "a. Nội năng của một vật phụ thuộc vào nhiệt độ và thể tích của vật.",
+                "b. Nội năng là một dạng năng lượng.",
+                "c. Nội năng của một vật có thể tăng lên hoặc giảm đi.",
+                "d. Nhiệt lượng là số đo độ biến thiên nội năng trong quá trình truyền nhiệt."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "1.3.17",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau:",
+              "statements": [
+                "a. Khi cung cấp nhiệt lượng cho một vật, nội năng của vật luôn tăng.",
+                "b. Khi vật thực hiện công lên vật khác, nội năng của vật giảm.",
+                "c. Trong quá trình truyền nhiệt, có sự chuyển hóa năng lượng từ cơ năng sang nội năng.",
+                "d. Có thể làm thay đổi nội năng của vật bằng cách thực hiện công hoặc truyền nhiệt."
+              ],
+              "answers": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": "1.3.18",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau:",
+              "statements": [
+                "a. Hệ đứng yên vẫn có khả năng sinh công do có nội năng.",
+                "b. Nội năng bao gồm tổng động năng phân tử và thế năng phân tử.",
+                "c. Nội năng không phụ thuộc vào nhiệt độ và thể tích của vật.",
+                "d. Phần nội năng vật nhận được hay mất đi trong quá trình truyền nhiệt gọi là nhiệt lượng."
+              ],
+              "answers": [
+                true,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": "1.3.19",
+              "type": "short_answer",
+              "question": "Một lượng khí nhận nhiệt lượng 250 kJ do được đun nóng, đồng thời nhận công 500 kJ do bị nén. a) Xác định độ tăng nội năng của lượng khí. b) Xác định độ biến thiên nội năng của khí trên nếu đồng thời với việc cung cấp nhiệt lượng 250 kJ, lượng khí này dãn ra và thực hiện công 100 kJ lên môi trường xung quanh nó.",
+              "answer": "a) 750 kJ. b) 150 kJ."
+            },
+            {
+              "id": "1.3.20",
+              "type": "short_answer",
+              "question": "Một lượng khí trong một xilanh hình trụ bị nung nóng, khí nở ra đẩy pit-tông lên làm thể tích tăng thêm 0,02 m³ và nội năng tăng thêm 1280 J. Biết áp suất của khối khí là 2.10⁵ Pa và không đổi trong quá trình dãn nở. Nhiệt lượng đã truyền cho khí bằng bao nhiêu?",
+              "answer": "5280 J"
+            },
+            {
+              "id": "1.3.21",
+              "type": "short_answer",
+              "question": "Một người thợ rèn nhúng một con dao bằng thép có khối lượng 1,1 kg ở nhiệt độ 850°C vào trong bể nước lạnh để làm tăng độ cứng của lưỡi dao. Nước trong bể có thể tích 200 lít và có nhiệt độ bằng với nhiệt độ ngoài trời là 27°C. Xác định nhiệt độ của nước khi có sự cân bằng nhiệt. Bỏ qua sự truyền nhiệt cho thành bể và môi trường bên ngoài. Biết nhiệt dung riêng của thép là 460 J/kg.K; của nước là 4180 J/kg.K.",
+              "answer": "27,5°C"
+            },
+            {
+              "id": "1.3.22",
+              "type": "short_answer",
+              "question": "Một ấm đun nước bằng nhôm có khối lượng 400 g, chứa 3 lít nước được đun trên bếp. Khi nhận được nhiệt lượng 740 kJ thì ấm đạt đến nhiệt độ 80°C. Tính nhiệt độ ban đầu của ấm nước, biết nhiệt dung riêng của nhôm 880 J/kg.K, nhiệt dung riêng của nước là 4180 J/kg.K. Coi nhiệt lượng mà ấm tỏa ra bên ngoài là không đáng kể.",
+              "answer": "22,6°C"
+            },
+            {
+              "id": "1.3.23",
+              "type": "short_answer",
+              "question": "Một chiếc cốc nhôm khối lượng 100 g chứa 300 g nước ở nhiệt độ 20°C. Người ta thả ngập vào cốc nước một chiếc thìa đồng khối lượng 75 g vừa rút ra khỏi nồi nước sôi ở 100°C. Xác định nhiệt độ của nước trong cốc khi có sự cân bằng nhiệt. Bỏ qua các hao phí nhiệt ra ngoài. Nhiệt dung riêng của nhôm là 880 J/kg.K, của đồng là 380 J/kg.K và của nước là 4,19.10³ J/kg.K.",
+              "answer": "68,7°C"
+            },
+            {
+              "id": "1.3.24",
+              "type": "short_answer",
+              "question": "Một ấm đun nước bằng nhôm có khối lượng 400 g, chứa 3 lít nước đun trên bếp. Khi nhận được nhiệt lượng 740 kJ thì ấm đạt đến nhiệt độ là 80°C. Tính nhiệt độ ban đầu của ấm và nước, biết nhiệt dung riêng của nhôm là 880 J/kg.K, nhiệt dung riêng của nước là 4180 J/kg.K. Coi nhiệt lượng mà ấm tỏa ra bên ngoài là không đáng kể.",
+              "answer": "23°C"
+            },
+            {
+              "id": "1.3.25",
+              "type": "short_answer",
+              "question": "Người ta thả một miếng đồng có khối lượng m1 = 0,2 kg đã được đốt nóng đến nhiệt độ t1 vào một nhiệt lượng kế chứa m2 = 0,28 kg nước ở nhiệt độ t2 = 20°C. Nhiệt độ khi có cân bằng nhiệt là t3 = 80°C. Biết nhiệt dung riêng của đồng và nước lần lượt là c1 = 400 J/(kg.K), c2 = 4200 J/(kg.K). Bỏ qua sự trao đổi nhiệt với nhiệt lượng kế và với môi trường. Nhiệt độ ban đầu t1 của đồng bằng bao nhiêu?",
+              "answer": "962°C"
+            },
+            {
+              "id": "1.3.26",
+              "type": "short_answer",
+              "question": "Muốn có 30 lít nước ở nhiệt độ 40°C thì cần phải đổ bao nhiêu lít nước đang sôi ở áp suất tiêu chuẩn vào bao nhiêu lít nước ở nhiệt độ 10°C. Lấy khối lượng riêng của nước là 1 kg/lít; bỏ qua sự thay đổi khối lượng riêng của nước theo nhiệt độ và sự trao đổi nhiệt với bên ngoài.",
+              "answer": "10 lít nước sôi và 20 lít nước 10°C."
+            },
+            {
+              "id": "1.3.27",
+              "type": "short_answer",
+              "question": "Một người có khối lượng 60 kg nhảy ở độ cao 5 m xuống một bể bơi. Tính độ biến thiên nội năng của nước trong bể bơi. Bỏ qua các hao phí năng lượng thoát ra ngoài khối nước trong bể bơi. Lấy g = 10 m/s².",
+              "answer": "3000 J"
+            },
+            {
+              "id": "1.3.28",
+              "type": "short_answer",
+              "question": "Một người cọ xát một miếng sắt dẹt có khối lượng 150 g trên một tấm đá mài. Sau một khoảng thời gian, miếng sắt nóng thêm 12°C. Biết nhiệt dung riêng của sắt là 460 J/kg.K. Tính công mà người này đã thực hiện, giả sử rằng 40% công đó do được dùng để làm nóng miếng sắt.",
+              "answer": "2070 J"
+            },
+            {
+              "id": "1.3.29",
+              "type": "short_answer",
+              "question": "Xác định độ biến thiên nhiệt độ của nước rơi từ độ cao 96 m xuống và đập vào cánh tuabin làm quay máy phát điện, biết rằng 50% thế năng của nước làm nước nóng lên. Cho biết nhiệt dung riêng của nước là 4190 J/kg.K. Lấy g = 10 m/s².",
+              "answer": "0,11 K"
+            },
+            {
+              "id": "1.3.30",
+              "type": "short_answer",
+              "question": "Trong một thí nghiệm, người ta thả rơi tự do một mảnh thép từ độ cao 500 m, khi tới mặt đất nó có vận tốc 50 m/s. Mảnh thép đã nóng lên bao nhiêu độ (°C) khi chạm đất, nếu cho rằng toàn bộ công cản của không khí chỉ dùng để làm nóng mảnh thép? Cho biết nhiệt dung riêng của thép là 460 J/kg.K và lấy g = 10 m/s².",
+              "answer": "8,2°C"
+            },
+            {
+              "id": "1.3.31",
+              "type": "short_answer",
+              "question": "Một viên đạn bằng bạc đang bay với vận tốc 200 m/s thì va chạm vào một bức tường gỗ và nằm yên trong bức tường. Nhiệt dung riêng của bạc là 234 J/(kg.K). Nếu coi viên đạn không trao đổi nhiệt với bên ngoài thì nhiệt độ của viên đạn sẽ tăng thêm bao nhiêu độ?",
+              "answer": "85,5°C"
+            },
+            {
+              "id": "1.3.32",
+              "type": "short_answer",
+              "question": "Một viên đạn bằng đồng bay với vận tốc 500 m/s tới xuyên qua một tấm gỗ. Khi vừa ra khỏi tấm gỗ, vận tốc của viên đạn là 300 m/s. Hỏi nhiệt độ của viên đạn tăng lên bao nhiêu khi nó bay ra khỏi tấm gỗ. Biết nhiệt dung riêng của đồng là 386 J/(kg.K). Nếu coi viên đạn không trao đổi nhiệt với bên ngoài thì nhiệt độ của viên đạn sẽ tăng thêm bao nhiêu?",
+              "answer": "207°C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

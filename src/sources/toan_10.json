@@ -1,0 +1,114 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "Mệnh đề và tập hợp",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Mệnh đề và tập hợp",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bất phương trình và hệ BPT bậc nhất hai ẩn ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Bất phương trình và hệ BPT bậc nhất hai ẩn ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Hàm số bậc hai và đồ thị ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Hàm số bậc hai và đồ thị ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hệ thức lượng trong tam giác ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Hệ thức lượng trong tam giác ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vectơ ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Vectơ ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Thống kê ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Thống kê ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Bất phương trình bậc hai một ẩn ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Bất phương trình bậc hai một ẩn ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Đại số tổ hợp ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Đại số tổ hợp ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Phương pháp tọa độ trong mặt phẳng ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Phương pháp tọa độ trong mặt phẳng ",
+          "questions": []
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Xác suất ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Xác suất ",
+          "questions": []
+        }
+      ]
+    }
+  ]
+}

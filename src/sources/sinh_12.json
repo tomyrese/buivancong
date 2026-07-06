@@ -1,0 +1,1442 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "DI TRUYỀN HỌC",
+      "topics": [
+        {
+          "id": 1,
+          "name": "VẤN ĐỀ 1: DI TRUYỀN HỌC PHÂN TỬ",
+          "subtopics": [
+            {
+              "id": "1.1",
+              "name": "DNA – QUÁ TRÌNH TÁI BẢN DNA",
+              "questions": [
+                {
+                  "id": "1.1.1",
+                  "type": "multiple_choice",
+                  "question": "Hai mạch của phân tử DNA liên kết với nhau bằng loại liên kết nào sau đây?",
+                  "options": [
+                    "A. Hydrogen.",
+                    "B. Cộng hoá trị.",
+                    "C. Ion.",
+                    "D. Ester."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.1.2",
+                  "type": "multiple_choice",
+                  "question": "Tập hợp vật chất di truyền (DNA) trong tế bào của một sinh vật được gọi là",
+                  "options": [
+                    "A. mã di truyền.",
+                    "B. hệ gene.",
+                    "C. nhiễm sắc thể.",
+                    "D. nucleosome."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.1.3",
+                  "type": "multiple_choice",
+                  "question": "Loại nucleotide nào sau đây không tham gia cấu trúc phân tử DNA?",
+                  "options": [
+                    "A. Adenine.",
+                    "B. Guanine.",
+                    "C. Uracil.",
+                    "D. Thymine."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.1.4",
+                  "type": "multiple_choice",
+                  "question": "DNA có chức năng là",
+                  "options": [
+                    "A. mang, bảo quản và truyền đạt thông tin di truyền.",
+                    "B. truyền thông tin giữa các tế bào.",
+                    "C. trao đổi thông tin giữa thế hệ tế bào.",
+                    "D. truyền thông tin di truyền từ tế bào này sang tế bào khác."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.1.5",
+                  "type": "multiple_choice",
+                  "question": "Chức năng nào sau đây không phải là của DNA?",
+                  "options": [
+                    "A. DNA là phân tử mang thông tin di truyền.",
+                    "B. DNA có chức năng truyền thông tin di truyền qua các thế hệ tế bào và cơ thể.",
+                    "C. Một số phân tử DNA có chức năng xúc tác.",
+                    "D. DNA có chức năng quy định tính trạng di truyền."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.1.6",
+                  "type": "multiple_choice",
+                  "question": "Một đoạn phân tử DNA ở sinh vật nhân thực có trình tự nucleotide trên mạch mang mã gốc là: 3'...AAAXAATTXXGGA...5'. Trình tự nucleotide trên mạch bổ sung của đoạn DNA này là",
+                  "options": [
+                    "A. 5'...TTTGTTAAGGXXT...3'.",
+                    "B. 5'...GTTGAAAXXXXT...3'.",
+                    "C. 5'...AAAGTTAXXGGT...3'.",
+                    "D. 5'...GGXXAATTXXGGA...3'."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.1.7",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về cấu trúc DNA, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. DNA được cấu tạo từ 2 chuỗi polynucleotide xoắn kép, song song và ngược chiều.",
+                    "b. Trong phân tử DNA, A liên kết với T bằng 2 liên kết hydrogen, G liên kết với C bằng 3 liên kết hydrogen.",
+                    "c. DNA ở sinh vật nhân sơ có dạng xoắn kép, dạng vòng.",
+                    "d. Mỗi gene là một đoạn DNA mang thông tin mã hoá cho một sản phẩm là protein hoặc RNA."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                },
+                {
+                  "id": "1.1.8",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về quá trình nhân đôi DNA, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. Nhân đôi DNA diễn ra theo nguyên tắc bán bảo toàn.",
+                    "b. Enzyme DNA polymerase tổng hợp mạch mới theo chiều 5' → 3'.",
+                    "c. Ở sinh vật nhân thực, quá trình nhân đôi DNA diễn ra ở pha S của kì trung gian.",
+                    "d. Trên mỗi đơn vị tái bản, có 2 chạc chữ Y đối xứng nhau."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                },
+                {
+                  "id": "1.1.9",
+                  "type": "short_answer",
+                  "question": "Cho một đoạn DNA có trình tự mạch gốc: 3' TAC GGA TAA GCT 5'. Viết trình tự mạch mRNA được tổng hợp từ đoạn DNA này.",
+                  "answer": "5' AUG CCU AUU CGA 3'"
+                },
+                {
+                  "id": "1.1.10",
+                  "type": "short_answer",
+                  "question": "Trong quá trình nhân đôi DNA, nếu một đoạn DNA có 3000 nucleotide, trong đó số nucleotide loại A là 600. Số nucleotide loại G trong đoạn DNA này là bao nhiêu?",
+                  "answer": "900"
+                }
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "GENE VÀ CƠ CHẾ DI TRUYỀN THÔNG TIN DI TRUYỀN",
+              "questions": [
+                {
+                  "id": "1.2.1",
+                  "type": "multiple_choice",
+                  "question": "Codon nào sau đây quy định tín hiệu kết thúc quá trình dịch mã?",
+                  "options": [
+                    "A. 5'UAC3'.",
+                    "B. 5'UGC3'.",
+                    "C. 5'UGG3'.",
+                    "D. 5'UAG3'."
+                  ],
+                  "answer": "D"
+                },
+                {
+                  "id": "1.2.2",
+                  "type": "multiple_choice",
+                  "question": "Theo bảng mã di truyền, codon UUA và UUG cùng mã hoá amino acid Leu (Leucine), ví dụ này cho thấy mã di truyền có tính",
+                  "options": [
+                    "A. đặc hiệu.",
+                    "B. thoái hoá.",
+                    "C. phổ biến.",
+                    "D. liên tục."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.2.3",
+                  "type": "multiple_choice",
+                  "question": "Cấu trúc của một gene bao gồm những vùng nào sau đây?",
+                  "options": [
+                    "A. Vùng khởi động, vùng điều hoà và vùng mã hoá.",
+                    "B. Vùng khởi động, vùng mã hoá.",
+                    "C. Vùng mã hoá và vùng kết thúc.",
+                    "D. Vùng điều hoà, vùng mã hoá, vùng kết thúc."
+                  ],
+                  "answer": "D"
+                },
+                {
+                  "id": "1.2.4",
+                  "type": "multiple_choice",
+                  "question": "Khi nói về gene, phát biểu nào dưới đây đúng?",
+                  "options": [
+                    "A. Một gene gồm vùng khởi động, vùng phiên mã, vùng kết thúc.",
+                    "B. Gene là một đoạn DNA mã hoá cho một chuỗi polypeptide hoặc một phân tử RNA.",
+                    "C. Gene là một đoạn DNA mã hoá cho một enzyme.",
+                    "D. Gene là một trình tự ribonucleotide mã hoá cho một phân tử RNA."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.2.5",
+                  "type": "multiple_choice",
+                  "question": "Đặc điểm nào sau đây không thuộc về phân tử mRNA?",
+                  "options": [
+                    "A. Có cấu trúc mạch đơn polynucleotide.",
+                    "B. Là loại RNA có tỉ lệ nhiều nhất trong các loại RNA.",
+                    "C. Là phân tử trung gian truyền thông tin di truyền từ gene đến protein.",
+                    "D. Là phân tử để ribosome bám vào trong dịch mã."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.2.6",
+                  "type": "multiple_choice",
+                  "question": "Phát biểu nào sau đây đúng về quá trình phiên mã?",
+                  "options": [
+                    "A. Quá trình phiên mã dựa trên nguyên tắc bổ sung A – T, G – C.",
+                    "B. Hai mạch trên gene đều làm khuôn để tổng hợp RNA.",
+                    "C. Ở sinh vật nhân chuẩn phiên mã diễn ra trong nhân tế bào.",
+                    "D. Enzyme RNA polymerase di chuyển trên mạch khuôn theo chiều 5′ →3′."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.2.7",
+                  "type": "multiple_choice",
+                  "question": "Phiên mã ngược là phiên mã",
+                  "options": [
+                    "A. theo chiều 5′ →3′ trên mạch khuôn DNA.",
+                    "B. theo chiều 3′ →5′ trên mạch khuôn DNA.",
+                    "C. tổng hợp DNA dựa trên khuôn RNA.",
+                    "D. tổng hợp RNA dựa trên chuỗi polypeptide."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.2.8",
+                  "type": "multiple_choice",
+                  "question": "Khi nói về quá trình dịch mã, phát biểu nào sau đây không đúng?",
+                  "options": [
+                    "A. Khi ribosome tiếp xúc với bộ ba 5′UGA3′ trên phân tử mARN thì quá trình dịch mã dừng lại.",
+                    "B. Ở sinh vật nhân sơ, trên mỗi phân tử mARN có thể có nhiều ribosome cùng tham gia quá trình dịch mã.",
+                    "C. Khi dịch mã, ribosome chuyển dịch theo chiều 3′ →5′ trên phân tử mARN.",
+                    "D. Mỗi phân tử tARN mang một anticodon tương ứng với codon trên phân tử mARN."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.2.9",
+                  "type": "multiple_choice",
+                  "question": "Bộ ba đối mã của tRNA mang amino acid mở đầu tiến vào ribosome tham gia dịch mã là",
+                  "options": [
+                    "A. 3'UAC5'.",
+                    "B. 5'UAC3'.",
+                    "C. 5'CUA5'.",
+                    "D. 3'CUA5'."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.2.10",
+                  "type": "multiple_choice",
+                  "question": "Trong quá trình dịch mã, codon 5'AUG3' khớp bổ sung với anticcodon nào sau đây?",
+                  "options": [
+                    "A. 3'UAC5'.",
+                    "B. 5'TAC3'.",
+                    "C. 3'TAC5'.",
+                    "D. 5'UAC3'."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.2.11",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về quá trình phiên mã và dịch mã, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. Phiên mã là quá trình tổng hợp phân tử RNA từ mạch gốc của gene.",
+                    "b. Quá trình dịch mã diễn ra ở trong nhân tế bào.",
+                    "c. Mỗi phân tử tARN mang một bộ ba đối mã (anticodon) và một amino acid tương ứng.",
+                    "d. Ribosome dịch chuyển trên mRNA theo chiều 5' → 3' và tổng hợp chuỗi polypeptide theo chiều từ đầu N đến đầu C."
+                  ],
+                  "answers": [
+                    true,
+                    false,
+                    true,
+                    true
+                  ]
+                },
+                {
+                  "id": "1.2.12",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về mã di truyền, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. Mã di truyền là mã bộ ba, có 64 bộ ba mã hóa cho 20 loại amino acid.",
+                    "b. Mã di truyền có tính đặc hiệu, nghĩa là một bộ ba chỉ mã hóa cho một loại amino acid.",
+                    "c. Mã di truyền có tính thoái hóa, nghĩa là nhiều bộ ba khác nhau cùng mã hóa cho một amino acid.",
+                    "d. Mã di truyền có tính phổ biến, nghĩa là tất cả các loài sinh vật đều có chung một bộ mã di truyền."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    false
+                  ]
+                },
+                {
+                  "id": "1.2.13",
+                  "type": "short_answer",
+                  "question": "Giả sử đoạn mRNA có trình tự nucleotide như sau: 5'AUGGGGGCUUCGAAAACCUAGCAGUUU3' chuỗi polypeptide được tổng hợp từ đoạn mRNA nói trên có bao nhiêu amino acid?",
+                  "answer": "6"
+                },
+                {
+                  "id": "1.2.14",
+                  "type": "short_answer",
+                  "question": "Cho các thành phần sau đây: mạch khuôn DNA, ribosome, mRNA, tRNA, amino acid, enzyme RNA polymerase. Có bao nhiêu thành phần tham gia vào quá trình phiên mã?",
+                  "answer": "2"
+                }
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "ĐIỀU HÒA HOẠT ĐỘNG CỦA GENE",
+              "questions": [
+                {
+                  "id": "1.3.1",
+                  "type": "multiple_choice",
+                  "question": "Theo Jacob và Monod, các thành phần cấu tạo của operon lac gồm:",
+                  "options": [
+                    "A. gene điều hoà, nhóm gene cấu trúc, vùng khởi động (P).",
+                    "B. vùng vận hành (O), nhóm gene cấu trúc, vùng khởi động (P).",
+                    "C. gene điều hoà, nhóm gene cấu trúc, vùng vận hành (O).",
+                    "D. gene điều hoà, nhóm gene cấu trúc, vùng vận hành (O), vùng khởi động (P)."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.3.2",
+                  "type": "multiple_choice",
+                  "question": "Trong cơ chế điều hoà hoạt động gene ở sinh vật nhân sơ, gene điều hoà có vai trò nào sau đây?",
+                  "options": [
+                    "A. Nơi tiếp xúc với enzyme RNA polymerase.",
+                    "B. Mang thông tin quy định protein ức chế.",
+                    "C. Mang thông tin quy định enzyme RNA polymerase.",
+                    "D. Nơi liên kết với protein ức chế."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.3.3",
+                  "type": "multiple_choice",
+                  "question": "Thành phần nào sau đây không thuộc thành phần của operon lac?",
+                  "options": [
+                    "A. Trình tự promoter.",
+                    "B. Trình tự operator.",
+                    "C. Gene lacI.",
+                    "D. Gene lacZ."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.3.4",
+                  "type": "multiple_choice",
+                  "question": "Trong hoạt động của operon lac, hiện tượng nào sau đây xảy ra khi môi trường có lactose?",
+                  "options": [
+                    "A. Protein ức chế không liên kết với operator.",
+                    "B. Enzyme RNA polymerase không thể liên kết với promoter.",
+                    "C. Các gene cấu trúc không phiên mã được.",
+                    "D. Gene lacI không phiên mã được."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.3.5",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về điều hòa hoạt động của operon Lac ở E. coli, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. Gene điều hòa (lacI) mã hóa cho protein ức chế.",
+                    "b. Vùng khởi động (P) là nơi enzyme RNA polymerase bám vào để phiên mã.",
+                    "c. Vùng vận hành (O) là vùng liên kết với protein ức chế.",
+                    "d. Khi có lactose, lactose liên kết với protein ức chế làm cho protein ức chế không bám vào vùng O, do đó các gene cấu trúc được phiên mã."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                },
+                {
+                  "id": "1.3.6",
+                  "type": "short_answer",
+                  "question": "Trong cơ chế điều hòa hoạt động của operon Lac, nếu vùng khởi động (P) bị đột biến làm mất khả năng liên kết với RNA polymerase thì điều gì sẽ xảy ra?",
+                  "answer": "Các gene cấu trúc không được phiên mã, enzyme phân giải lactose không được tổng hợp."
+                }
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "ĐỘT BIẾN GENE",
+              "questions": [
+                {
+                  "id": "1.4.1",
+                  "type": "multiple_choice",
+                  "question": "Đột biến nào sau đây thuộc về đột biến điểm?",
+                  "options": [
+                    "A. Mất một cặp nucleotide.",
+                    "B. Thêm hai cặp nucleotide.",
+                    "C. Mất một nhiễm sắc thể.",
+                    "D. Đảo đoạn nhiễm sắc thể."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.4.2",
+                  "type": "multiple_choice",
+                  "question": "Trong quá trình nhân đôi DNA, nếu tác nhân hoá học 5-bromouracil thấm vào tế bào sẽ gây đột biến gene dạng nào sau đây?",
+                  "options": [
+                    "A. Thay thế cặp G – C bằng cặp A – T.",
+                    "B. Thay thế cặp A – T bằng cặp G - C.",
+                    "C. Mất một cặp G - C.",
+                    "D. Thêm một cặp A – T."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.4.3",
+                  "type": "multiple_choice",
+                  "question": "Khi nói về đột biến gene, phát biểu nào sau đây không đúng?",
+                  "options": [
+                    "A. Làm thay đổi vị trí của gene trên nhiễm sắc thể.",
+                    "B. Làm xuất hiện các allele khác nhau trong quần thể.",
+                    "C. Là những biến đổi trong cấu trúc gene.",
+                    "D. Có thể gây hại nhưng cũng có thể vô hại hoặc có lợi cho thể đột biến."
+                  ],
+                  "answer": "A"
+                },
+                {
+                  "id": "1.4.4",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về đột biến gene, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. Đột biến gene là những biến đổi trong cấu trúc của gene, liên quan đến một hoặc một số cặp nucleotide.",
+                    "b. Đột biến gene thường xảy ra trong quá trình nhân đôi DNA.",
+                    "c. Thể đột biến là cá thể mang gene đột biến và biểu hiện kiểu hình đột biến.",
+                    "d. Tất cả các đột biến gene đều có hại cho sinh vật."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    false
+                  ]
+                },
+                {
+                  "id": "1.4.5",
+                  "type": "short_answer",
+                  "question": "Giả sử một gene có trình tự mạch gốc như sau: 3' TAX GXA GTA 5'. Nếu xảy ra đột biến thay thế nucleotide thứ 3 (tính từ đầu 3' của mạch gốc) từ X thành T, hãy cho biết loại đột biến này thuộc dạng nào (đồng nghĩa, sai nghĩa hay vô nghĩa)? Biết bộ ba TAX trên mRNA là AUG (mã mở đầu).",
+                  "answer": "Đột biến sai nghĩa."
+                }
+              ]
+            },
+            {
+              "id": "1.5",
+              "name": "CÔNG NGHỆ GENE",
+              "questions": [
+                {
+                  "id": "1.5.1",
+                  "type": "multiple_choice",
+                  "question": "Để tách DNA của lá bắp cải, một học sinh đã xay nhuyễn lá bắp cải, lấy dịch trong rồi hoà với nước rửa bát. Học sinh đó bổ sung nước rửa bát nhằm mục đích nào sau đây?",
+                  "options": [
+                    "A. Phá vỡ thành tế bào.",
+                    "B. Phá vỡ màng tế bào.",
+                    "C. Kết tủa DNA.",
+                    "D. Loại bỏ protein."
+                  ],
+                  "answer": "B"
+                },
+                {
+                  "id": "1.5.2",
+                  "type": "multiple_choice",
+                  "question": "Quá trình tách chiết DNA từ tế bào sinh vật được thực hiện trên cơ sở nào sau đây?",
+                  "options": [
+                    "A. Phá vỡ nhân tế bào và DNA bằng chất tẩy rửa và kết tủa bằng ethanol.",
+                    "B. Kết tủa DNA trong nhân tế bào nhờ chất tẩy rửa và ethanol.",
+                    "C. Phá vỡ tế bào bằng chất tẩy rửa và NaCl, kết tủa DNA bằng dung môi ethanol.",
+                    "D. Sử dụng chất tẩy rửa để làm sạch DNA."
+                  ],
+                  "answer": "C"
+                },
+                {
+                  "id": "1.5.3",
+                  "type": "multiple_choice",
+                  "question": "Trong quá trình tách chiết DNA từ tế bào sinh vật, mẫu vật được nghiền, được bổ sung nước rửa bát dạng lỏng, lắc trộn đều nhằm mục đích nào sau đây?",
+                  "options": [
+                    "A. Làm sạch mẫu vật.",
+                    "B. Kết tủa DNA trong nhân tế bào.",
+                    "C. Làm sạch DNA.",
+                    "D. Phá vỡ tế bào."
+                  ],
+                  "answer": "D"
+                },
+                {
+                  "id": "1.5.4",
+                  "type": "true_false",
+                  "question": "Cho các phát biểu sau về công nghệ gene, hãy xác định đúng/sai.",
+                  "statements": [
+                    "a. DNA tái tổ hợp là phân tử DNA gồm gene cần chuyển và thể truyền.",
+                    "b. Enzyme cắt giới hạn (Restrictase) và enzyme nối (Ligase) được sử dụng để tạo DNA tái tổ hợp.",
+                    "c. Plasmid là một loại vector thường được sử dụng trong kỹ thuật chuyển gene.",
+                    "d. Sinh vật biến đổi gene là sinh vật chứa gene ngoại lai trong hệ gene."
+                  ],
+                  "answers": [
+                    true,
+                    true,
+                    true,
+                    true
+                  ]
+                },
+                {
+                  "id": "1.5.5",
+                  "type": "short_answer",
+                  "question": "Quy trình tạo DNA tái tổ hợp gồm 3 bước chính. Hãy kể tên các bước đó.",
+                  "answer": "Bước 1: Tạo dòng gene cần chuyển; Bước 2: Tạo DNA tái tổ hợp; Bước 3: Chuyển DNA tái tổ hợp vào tế bào nhận."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "VẤN ĐỀ 2: DI TRUYỀN NHIỄM SẮC THỂ",
+          "questions": [
+            {
+              "id": "2.1.1",
+              "type": "multiple_choice",
+              "question": "Một loài có bộ NST 2n = 24, tiến hành quan sát NST trong tế bào sinh dưỡng, người ta thấy có 23 NST. Đột biến trên thuộc dạng nào sau đây?",
+              "options": [
+                "A. Thể một nhiễm.",
+                "B. Thể khuyết nhiễm.",
+                "C. Thể dị đa bội.",
+                "D. Thể khảm."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.1.2",
+              "type": "multiple_choice",
+              "question": "Dạng đột biến cấu trúc NST nào sau đây có thể làm cho 2 allele khác nhau của một gene cùng nằm trên 1 NST đơn?",
+              "options": [
+                "A. Mất đoạn.",
+                "B. Đảo đoạn.",
+                "C. Chuyển đoạn.",
+                "D. Lặp đoạn."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "2.1.3",
+              "type": "multiple_choice",
+              "question": "Có bao nhiêu phát biểu sau đây đúng với đột biến chuyển đoạn nhiễm sắc thể? I. Làm thay đổi vị trí gene trên nhiễm sắc thể. II. Làm tăng số lượng bản sao của gene trên nhiễm sắc thể. III. Làm thay đổi kích thước cũng như nhóm gene liên kết. IV. Có thể tạo ra gene mới hoặc hỏng cả hai gene.",
+              "options": [
+                "A. 1.",
+                "B. 2.",
+                "C. 3.",
+                "D. 4."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.1.4",
+              "type": "multiple_choice",
+              "question": "Hình bên mô tả cơ chế phát sinh dạng đột biến cấu trúc nào sau đây? (Hình ảnh minh họa)",
+              "options": [
+                "A. Đột biến mất đoạn và lặp đoạn.",
+                "B. Đột biến chuyển đoạn tương hỗ.",
+                "C. Đột biến đảo đoạn mang tâm động.",
+                "D. Đột biến chuyển đoạn không tương hỗ."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.1.5",
+              "type": "multiple_choice",
+              "question": "Sự biến đổi từ NST ban đầu (hình a) thành NST sau khi đột biến (hình b) là dạng đột biến nào sau đây? (Hình ảnh minh họa)",
+              "options": [
+                "A. Đảo đoạn.",
+                "B. Lặp đoạn.",
+                "C. Mất đoạn.",
+                "D. Chuyển đoạn."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.1.6",
+              "type": "multiple_choice",
+              "question": "Bằng phương pháp sử dụng các nucleotide phóng xạ đưa vào môi trường nuôi cấy tế bào, các nhà khoa học có thể xác định hàm lượng DNA ở người (2n = 46) được biểu diễn trong đồ thị như hình bên. Dựa vào đồ thị, nhận xét nào sau đây đúng? (Hình ảnh minh họa)",
+              "options": [
+                "A. Đồ thị này mô tả sự phát triển của 1 tế bào sinh dục.",
+                "B. Ở giai đoạn a, c, e thuộc kì cuối của giảm phân 2.",
+                "C. Giai đoạn h, i thuộc kì đầu của giảm phân I.",
+                "D. Giai đoạn b, d, g tế bào có 23 nhiễm sắc thể dạng kép."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.1.7",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về NST, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Một chiếc NST gồm 1 phân tử DNA và các protein Histone.",
+                "b. Tâm động là nơi gắn thoi phân bào.",
+                "c. Vùng đầu mút có chức năng bảo vệ NST không bị dính vào nhau.",
+                "d. NST kép gồm 2 phân tử DNA và 2 tâm động."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "2.1.8",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về đột biến cấu trúc NST, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Đột biến mất đoạn thường gây chết hoặc giảm sức sống.",
+                "b. Đột biến lặp đoạn làm tăng số lượng bản sao của gene, có thể tăng cường biểu hiện tính trạng.",
+                "c. Đột biến đảo đoạn không làm thay đổi số lượng gene, ít ảnh hưởng đến sức sống.",
+                "d. Đột biến chuyển đoạn là dạng duy nhất làm thay đổi nhóm gene liên kết."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "2.1.9",
+              "type": "short_answer",
+              "question": "Một loài thực vật lưỡng bội có 12 nhóm gene liên kết. Số NST có trong mỗi tế bào ở thể tứ bội của loài này khi đang ở kì sau của giảm phân I là bao nhiêu?",
+              "answer": "48"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "VẤN ĐỀ 3: DI TRUYỀN HỌC QUẦN THỂ",
+          "questions": [
+            {
+              "id": "3.1.1",
+              "type": "multiple_choice",
+              "question": "Điều kiện nào dưới đây không nghiệm đúng định luật Hardy - Weinberg?",
+              "options": [
+                "A. Quần thể có kích thước lớn và ngẫu phối.",
+                "B. Các cá thể có sức sống và khả năng sinh sản như nhau.",
+                "C. Không có đột biến xảy ra trong quần thể.",
+                "D. Có sự trao đổi cá thể với các quần thể khác."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.1.2",
+              "type": "multiple_choice",
+              "question": "Xét một quần thể ngẫu phối đang cân bằng di truyền có tần số các allele gồm 0,6A : 0,4a. Theo lí thuyết, tỉ lệ các cá thể thuần chủng trong quần thể này là",
+              "options": [
+                "A. 36%.",
+                "B. 100%.",
+                "C. 16%.",
+                "D. 52%."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.1.3",
+              "type": "multiple_choice",
+              "question": "Một quần thể tự thụ phấn có thành phần kiểu gene (P) là 0,4AA : 0,5 Aa : 0,1 aa. Nếu quần thể không chịu tác động của các nhân tố tiến hoá khác. Ở thế hệ F2, quần thể đạt trạng thái cân bằng di truyền.",
+              "options": [
+                "A. Đúng",
+                "B. Sai"
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.1.4",
+              "type": "multiple_choice",
+              "question": "Đặc điểm nào sau đây không thuộc về cấu trúc di truyền của quần thể tự thụ phấn?",
+              "options": [
+                "A. Tần số alen duy trì ổn định qua các thế hệ.",
+                "B. Tần số kiểu gene duy trì ổn định qua các thế hệ.",
+                "C. Tần số thể dị hợp giảm dần qua các thế hệ.",
+                "D. Tần số thể đồng hợp tăng dần qua các thế hệ."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.1.5",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về quần thể ngẫu phối, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Quần thể ngẫu phối có thành phần kiểu gene đạt trạng thái cân bằng sau một thế hệ giao phối.",
+                "b. Định luật Hardy-Weinberg chỉ đúng với quần thể ngẫu phối và có kích thước lớn.",
+                "c. Tần số alen trong quần thể ngẫu phối không thay đổi qua các thế hệ.",
+                "d. Cấu trúc di truyền của quần thể ngẫu phối được duy trì ổn định nếu không có tác động của các nhân tố tiến hóa."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "3.1.6",
+              "type": "short_answer",
+              "question": "Một quần thể có 1000 cá thể, trong đó có 490 cá thể có kiểu gen AA, 420 cá thể Aa và 90 cá thể aa. Hãy tính tần số alen A và a của quần thể.",
+              "answer": "Tần số A = 0,7; Tần số a = 0,3"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "VẤN ĐỀ 4: MỐI QUAN HỆ KIỂU GENE – KIỂU HÌNH – MÔI TRƯỜNG",
+          "questions": [
+            {
+              "id": "4.1.1",
+              "type": "multiple_choice",
+              "question": "Tập hợp kiểu hình của một kiểu gene tương ứng với các điều kiện môi trường khác nhau được gọi là",
+              "options": [
+                "A. mức phản ứng của kiểu gene.",
+                "B. biến dị tổ hợp.",
+                "C. sự tương tác giữa kiểu gene và kiểu hình.",
+                "D. thể đột biến."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "4.1.2",
+              "type": "multiple_choice",
+              "question": "Tắc kè hoa thay đổi màu sắc theo nền môi trường là ví dụ về",
+              "options": [
+                "A. đột biến gen.",
+                "B. đột biến NST.",
+                "C. thường biến.",
+                "D. mức phản ứng."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "4.1.3",
+              "type": "multiple_choice",
+              "question": "Màu sắc hoa cẩm tú cầu thay đổi khi trồng ở đất có độ pH khác nhau là ví dụ về",
+              "options": [
+                "A. gene trội không hoàn toàn.",
+                "B. đột biến gene.",
+                "C. thường biến.",
+                "D. di truyền ngoài nhân."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "4.1.4",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về mối quan hệ giữa kiểu gene, kiểu hình và môi trường, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Kiểu hình là kết quả của sự tương tác giữa kiểu gene và môi trường.",
+                "b. Mức phản ứng của một kiểu gene là tập hợp các kiểu hình của kiểu gene đó trong các môi trường khác nhau.",
+                "c. Thường biến là biến dị không di truyền, xảy ra do tác động của môi trường.",
+                "d. Bố mẹ truyền cho con những kiểu hình có sẵn."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "4.1.5",
+              "type": "short_answer",
+              "question": "Mức phản ứng của một kiểu gene có di truyền không? Vì sao?",
+              "answer": "Có di truyền, vì mức phản ứng do kiểu gene quy định."
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "VẤN ĐỀ 5: DI TRUYỀN HỌC NGƯỜI",
+          "questions": [
+            {
+              "id": "5.1.1",
+              "type": "multiple_choice",
+              "question": "Phả hệ dưới đây cho biết sự di truyền của một bệnh ở người do một trong hai alen A và a quy định. Đặc điểm di truyền của gene gây bệnh thuộc dạng nào sau đây? (Hình ảnh minh họa)",
+              "options": [
+                "A. Allele trội gây bệnh trên NST thường.",
+                "B. Allele lặn gây bệnh trên NST thường.",
+                "C. Allele trội gây bệnh trên NST X.",
+                "D. Allele lặn gây bệnh trên NST X."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "5.1.2",
+              "type": "multiple_choice",
+              "question": "Ở người, bệnh nào sau đây do đột biến gene lặn trên NST X gây ra?",
+              "options": [
+                "A. Bệnh bạch tạng.",
+                "B. Bệnh máu khó đông.",
+                "C. Bệnh phenylketonuria.",
+                "D. Bệnh thiếu máu hồng cầu hình liềm."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "5.1.3",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về bệnh di truyền ở người, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Bệnh bạch tạng do đột biến gene lặn trên NST thường gây ra.",
+                "b. Hội chứng Down là do đột biến thể ba nhiễm ở cặp NST số 21.",
+                "c. Bệnh máu khó đông do đột biến gene lặn trên NST X gây ra, biểu hiện nhiều ở nam hơn ở nữ.",
+                "d. Bệnh ung thư có thể do đột biến gene hoặc đột biến NST gây ra."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "5.1.4",
+              "type": "short_answer",
+              "question": "Phương pháp nghiên cứu phả hệ có thể xác định được điều gì?",
+              "answer": "Xác định gene quy định tính trạng là trội hay lặn, nằm trên NST thường hay giới tính, di truyền theo quy luật nào."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "TIẾN HOÁ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "VẤN ĐỀ 1: CÁC BẰNG CHỨNG TIẾN HÓA",
+          "questions": [
+            {
+              "id": "2.1.1",
+              "type": "multiple_choice",
+              "question": "Phát biểu nào sau đây không chính xác khi nói về cơ quan tương đồng?",
+              "options": [
+                "A. Phản ánh sự tiến hoá phân li.",
+                "B. Phản ánh sự tiến hoá đồng quy.",
+                "C. Phản ánh nguồn gốc chung.",
+                "D. Phản ánh mối liên quan giữa các loài."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.1.2",
+              "type": "multiple_choice",
+              "question": "Cấu trúc và hình thái của chi trước ở một số loài thú được mô tả ở hình bên. Phát biểu nào sau đây phù hợp nhất với hình? (Hình ảnh minh họa)",
+              "options": [
+                "A. Do điều kiện sống khác nhau của các loài nên cấu trúc chi trước khác nhau.",
+                "B. Đây là hình ảnh minh hoạ cơ quan tương tự.",
+                "C. Ví dụ phản ánh hướng tiến hoá phân li của sinh vật.",
+                "D. Là bằng chứng trực tiếp phản ánh nguồn gốc chung giữa các loài."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.1.3",
+              "type": "multiple_choice",
+              "question": "Tay người và vây cá voi là bằng chứng về",
+              "options": [
+                "A. cấu trúc tương tự.",
+                "B. cấu trúc thoái hoá.",
+                "C. cấu trúc tương đồng.",
+                "D. phôi sinh học."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "2.1.4",
+              "type": "multiple_choice",
+              "question": "Mang cá và mang tôm, chân chuột chũi và chân đế dũi (đế trũi), cánh sâu bọ và cánh dơi là những bằng chứng về",
+              "options": [
+                "A. cấu trúc tương tự.",
+                "B. cấu trúc tương đồng.",
+                "C. cấu trúc thoái hoá.",
+                "D. tế bào học."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.1.5",
+              "type": "multiple_choice",
+              "question": "Khi nghiên cứu lịch sử phát triển của sinh giới, người ta đã căn cứ vào loại bằng chứng trực tiếp nào sau đây để có thể xác định loài nào xuất hiện trước, loài nào xuất hiện sau?",
+              "options": [
+                "A. Cấu trúc thoái hoá.",
+                "B. Cấu trúc tương tự.",
+                "C. Cấu trúc tương đồng.",
+                "D. Hoá thạch."
+              ],
+              "answer": "D"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "VẤN ĐỀ 2: CÁC HỌC THUYẾT TIẾN HÓA",
+          "questions": [
+            {
+              "id": "2.2.1",
+              "type": "multiple_choice",
+              "question": "Theo Darwin, đối tượng chịu tác động trực tiếp của chọn lọc tự nhiên là",
+              "options": [
+                "A. cá thể.",
+                "B. quần xã.",
+                "C. quần thể.",
+                "D. hệ sinh thái."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.2.2",
+              "type": "multiple_choice",
+              "question": "Đơn vị của tiến hoá nhỏ là",
+              "options": [
+                "A. cá thể.",
+                "B. quần thể.",
+                "C. loài.",
+                "D. quần xã."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.2.3",
+              "type": "multiple_choice",
+              "question": "Theo quan niệm hiện đại, nhân tố nào sau đây có vai trò quy định chiều hướng tiến hoá?",
+              "options": [
+                "A. Chọn lọc tự nhiên.",
+                "B. Phiêu bạt di truyền.",
+                "C. Dòng gene.",
+                "D. Đột biến."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.2.4",
+              "type": "multiple_choice",
+              "question": "Nhân tố tiến hoá làm thay đổi tần số allele chậm nhất là",
+              "options": [
+                "A. giao phối không ngẫu nhiên.",
+                "B. đột biến.",
+                "C. chọn lọc tự nhiên.",
+                "D. dòng gene."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.2.5",
+              "type": "multiple_choice",
+              "question": "Nhân tố tiến hoá làm xuất hiện allele mới là",
+              "options": [
+                "A. giao phối không ngẫu nhiên.",
+                "B. đột biến.",
+                "C. chọn lọc tự nhiên.",
+                "D. dòng gene."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "2.2.6",
+              "type": "multiple_choice",
+              "question": "Trong các nhân tố tiến hoá sau, nhân tố có thể làm biến đổi tần số allele của quần thể một cách nhanh chóng, đặc biệt khi kích thước quần thể nhỏ bị giảm đột ngột là",
+              "options": [
+                "A. đột biến.",
+                "B. di nhập gene.",
+                "C. phiêu bạt di truyền.",
+                "D. giao phối không ngẫu nhiên."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "2.2.7",
+              "type": "multiple_choice",
+              "question": "Theo quan niệm của Darwin, sự hình thành nhiều giống vật nuôi, cây trồng trong mỗi loài xuất phát từ một hoặc vài dạng tổ tiên hoang dại là kết quả của quá trình:",
+              "options": [
+                "A. Phân li tính trạng trong chọn lọc nhân tạo.",
+                "B. Phân li tính trạng trong chọn lọc tự nhiên.",
+                "C. Tích luỹ những biến dị có lợi đối với sinh vật.",
+                "D. Phát sinh các biến dị cá thể."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.2.8",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về nhân tố tiến hóa, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Đột biến rất hiếm gặp nên sự thay đổi tần số allele gây nên bởi đột biến từ thế hệ này sang thế hệ khác là rất nhỏ.",
+                "b. Giao phối không ngẫu nhiên làm thay đổi tần số allele nhưng không ảnh hưởng đến tần số kiểu gene trong quần thể.",
+                "c. Chọn lọc tự nhiên, phiêu bạt di truyền và dòng gene trực tiếp làm thay đổi tần số allele và gây nên sự thay đổi tiến hoá mạnh nhất.",
+                "d. Đột biến và dòng gene đều có thể mang allele mới đến cho một quần thể và chọn lọc tự nhiên sau đó có thể làm tăng hoặc giảm tần số allele đó trong quần thể."
+              ],
+              "answers": [
+                true,
+                false,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "2.2.9",
+              "type": "short_answer",
+              "question": "Trong số các nhân tố tiến hoá, đột biến, dòng gene, giao phối không ngẫu nhiên, phiêu bạt di truyền, chọn lọc tự nhiên, có bao nhiêu nhân tố tiến hoá làm thay đổi tần số allele của quần thể?",
+              "answer": "4"
+            },
+            {
+              "id": "2.2.10",
+              "type": "short_answer",
+              "question": "Trong số các nhân tố tiến hoá: đột biến, dòng gene, giao phối không ngẫu nhiên, phiêu bạt di truyền. Có bao nhiêu nhân tố tiến hoá có thể làm phong phú vốn gene của quần thể?",
+              "answer": "2"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "VẤN ĐỀ 3: NGUỒN GỐC SỰ SỐNG",
+          "questions": [
+            {
+              "id": "2.3.1",
+              "type": "multiple_choice",
+              "question": "Quá trình nào sau đây diễn ra trong giai đoạn tiến hoá hoá học?",
+              "options": [
+                "A. Tổng hợp các chất hữu cơ từ các chất vô cơ theo phương thức hoá học.",
+                "B. Tạo thành các coacervate theo phương thức hoá học.",
+                "C. Hình thành mầm mống những cơ thể đầu tiên theo phương thức hoá học.",
+                "D. Xuất hiện các enzyme theo phương thức hoá học."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "2.3.2",
+              "type": "multiple_choice",
+              "question": "Dấu hiệu đánh dấu sự bắt đầu của giai đoạn tiến hoá sinh học là xuất hiện",
+              "options": [
+                "A. quy luật chọn lọc tự nhiên.",
+                "B. các hạt coacervate.",
+                "C. các hệ tương tác giữa các đại phân tử hữu cơ.",
+                "D. các sinh vật đơn giản đầu tiên."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "2.3.3",
+              "type": "multiple_choice",
+              "question": "Tiến hoá sinh học được bắt đầu từ khi tế bào được hình thành. Hoá thạch tế bào nhân sơ cổ nhất có tuổi khoảng",
+              "options": [
+                "A. 3,5 tỉ năm.",
+                "B. 1,8 tỉ năm.",
+                "C. 4,5 tỉ năm.",
+                "D. 4,4 triệu năm."
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "SINH THÁI HỌC",
+      "topics": [
+        {
+          "id": 1,
+          "name": "VẤN ĐỀ 1: MÔI TRƯỜNG VÀ CÁC NHÂN TỐ SINH THÁI",
+          "questions": [
+            {
+              "id": "3.1.1",
+              "type": "multiple_choice",
+              "question": "Nhân tố sinh thái vô sinh bao gồm",
+              "options": [
+                "A. các yếu tố vật lí, hoá học, thổ nhưỡng của môi trường.",
+                "B. đất, nước, không khí, độ ẩm, ánh sáng, nhiệt độ của môi trường xung quanh sinh vật.",
+                "C. các yếu tố vật lí, hoá học, sinh học của môi trường.",
+                "D. nhiệt độ, ánh sáng, nước, áp suất, sinh vật của môi trường."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.1.2",
+              "type": "multiple_choice",
+              "question": "Giới hạn sinh thái là",
+              "options": [
+                "A. khoảng giá trị xác định của một nhân tố sinh thái mà sinh vật có thể tồn tại và phát triển.",
+                "B. khoảng giá trị xác định của một nhân tố sinh thái mà sinh vật có thể phát triển thuận lợi.",
+                "C. khoảng cực thuận, phù hợp nhất cho sự phát triển của mọi loài sinh vật.",
+                "D. khoảng giá trị xác định của một nhân tố sinh thái mà sinh vật có thể tồn tại nhưng năng lượng bị hao tổn nhiều."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.1.3",
+              "type": "multiple_choice",
+              "question": "Một \"không gian sinh thái\" mà ở đó tất cả các nhân tố sinh thái của môi trường nằm trong giới hạn cho phép loài đó tồn tại và phát triển. Đây là định nghĩa khái niệm",
+              "options": [
+                "A. nơi ở của loài.",
+                "B. ổ sinh thái của loài.",
+                "C. ổ sinh thái của quần thể.",
+                "D. giới hạn sinh thái của loài."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.1.4",
+              "type": "multiple_choice",
+              "question": "Cây lúa (Oryza sativa L.) thường có giới hạn sinh thái về nhiệt độ môi trường trong khoảng từ 12°C đến 38°C, trong đó nhiệt độ thuận lợi cho sinh trưởng và phát triển khoảng 25°C đến 32°C. Khoảng thuận lợi về nhiệt độ của cây lúa là",
+              "options": [
+                "A. từ 12°C đến 38°C.",
+                "B. từ 12°C đến 32°C.",
+                "C. từ 12°C đến 38°C.",
+                "D. từ 25°C đến 32°C."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.1.5",
+              "type": "multiple_choice",
+              "question": "Cho các thông tin về giới hạn nhiệt độ của các loài sinh vật dưới đây: - Loài chân bụng Hydrobia aponensis: 1°C - 60°C. - Loài đỉa phiến: 0,5°C - 24°C. - Loài chuột cát đài nguyên: (-5°C) - (+30°C). - Loài cá chép Việt Nam: 2°C - 44°C. Trong các loài trên, loài nào có khả năng phân bố rộng nhất?",
+              "options": [
+                "A. Cá chép.",
+                "B. Chân bụng Hydrobia aponensis.",
+                "C. Đỉa phiến.",
+                "D. Chuột cát."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.1.6",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về giới hạn sinh thái và ổ sinh thái, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Giới hạn sinh thái là khoảng giá trị xác định của một nhân tố sinh thái mà sinh vật có thể tồn tại và phát triển.",
+                "b. Ổ sinh thái là nơi cư trú của sinh vật.",
+                "c. Các sinh vật khác loài có ổ sinh thái trùng nhau thì sẽ cạnh tranh với nhau.",
+                "d. Các loài có ổ sinh thái khác nhau có thể sống chung trong một môi trường."
+              ],
+              "answers": [
+                true,
+                false,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "3.1.7",
+              "type": "short_answer",
+              "question": "Sinh vật nào sau đây luôn được xếp vào bậc dinh dưỡng cấp 1?",
+              "answer": "Cây lúa"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "VẤN ĐỀ 2: SINH THÁI HỌC QUẦN THỂ",
+          "questions": [
+            {
+              "id": "3.2.1",
+              "type": "multiple_choice",
+              "question": "Khi điều kiện sống phân bố một cách đồng đều, giữa các cá thể trong quần thể không có sự cạnh tranh gay gắt các cá thể trong quần thể thường phân bố theo kiểu nào sau đây?",
+              "options": [
+                "A. Phân bố ngẫu nhiên.",
+                "B. Phân bố đồng đều.",
+                "C. Phân bố theo nhóm.",
+                "D. Phân bố đồng đều hoặc ngẫu nhiên."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.2.2",
+              "type": "multiple_choice",
+              "question": "Cạnh tranh giữa các cá thể cùng loài không có vai trò nào sau đây?",
+              "options": [
+                "A. Làm tăng số lượng các cá thể của quần thể, tăng kích thước quần thể.",
+                "B. Tạo động lực thúc đẩy sự hình thành các đặc điểm thích nghi mới.",
+                "C. Làm mở rộng ổ sinh thái của loài, tạo điều kiện để loài phân li thành các loài mới.",
+                "D. Duy trì số lượng và sự phân bố cá thể ở mức phù hợp."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.2.3",
+              "type": "multiple_choice",
+              "question": "Khi nói về kích thước quần thể sinh vật, phát biểu nào sau đây sai?",
+              "options": [
+                "A. Nếu kích thước quần thể xuống dưới mức tối thiểu, quần thể dễ rơi vào trạng thái suy giảm dẫn tới diệt vong.",
+                "B. Kích thước quần thể dao động từ giá trị tối thiểu tới giá trị tối đa và sự dao động này là khác nhau giữa các loài.",
+                "C. Kích thước quần thể (tính theo số lượng cá thể) luôn tỉ lệ thuận với kích thước của cá thể trong quần thể.",
+                "D. Nếu kích thước quần thể vượt quá mức tối đa thì cạnh tranh giữa các cá thể trong quần thể tăng cao."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "3.2.4",
+              "type": "multiple_choice",
+              "question": "Khu phân bố của một quần thể có tổng diện tích 200 héc-ta (ha). Nếu mật độ quần thể là 2 cá thể/ha thì kích thước của quần thể này là",
+              "options": [
+                "A. 400 cá thể.",
+                "B. 100 cá thể.",
+                "C. 1440 cá thể.",
+                "D. 240 cá thể."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.2.5",
+              "type": "multiple_choice",
+              "question": "Vào mùa xuân và mùa hè có khí hậu ấm áp, sâu hại thường xuất hiện nhiều. Đây là dạng biến động số lượng",
+              "options": [
+                "A. theo chu kì ngày đêm.",
+                "B. theo chu kì nhiều năm.",
+                "C. theo chu kì mùa.",
+                "D. theo chu kì tuần trăng."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "3.2.6",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về quần thể sinh vật, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Quần thể là tập hợp các cá thể cùng loài, sống trong một khoảng không gian xác định, có khả năng sinh sản.",
+                "b. Quan hệ hỗ trợ giúp quần thể khai thác tốt nguồn sống và chống lại kẻ thù.",
+                "c. Quan hệ cạnh tranh giữa các cá thể trong quần thể giúp duy trì số lượng cá thể ở mức phù hợp với môi trường.",
+                "d. Mật độ quần thể không thay đổi theo mùa và điều kiện môi trường."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": "3.2.7",
+              "type": "short_answer",
+              "question": "Một quần thể có 500 cá thể, trong đó có 200 cá thể đực và 300 cá thể cái. Tỉ lệ giới tính của quần thể là bao nhiêu?",
+              "answer": "2/3 (đực:cái)"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "VẤN ĐỀ 3: SINH THÁI HỌC QUẦN XÃ",
+          "questions": [
+            {
+              "id": "3.3.1",
+              "type": "multiple_choice",
+              "question": "Ổ mối quan hệ sinh thái nào sau đây không có loài nào bị hại?",
+              "options": [
+                "A. Ức chế cảm nhiễm.",
+                "B. Cạnh tranh khác loài.",
+                "C. Kí sinh.",
+                "D. Hội sinh."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.3.2",
+              "type": "multiple_choice",
+              "question": "Hải quỳ là nơi đẻ trứng, trú ẩn cho cá hề tránh khỏi sự đe doạ của các loài khác. Cá hề khuấy động khu vực nước giúp làm tăng thêm lượng oxy cần thiết cho hải quỳ và phần thức ăn sót lại của cá hề làm nguồn dinh dưỡng tốt cho hải quỳ. Đây là ví dụ về mối quan hệ sinh thái nào sau đây?",
+              "options": [
+                "A. Vật chủ - vật kí sinh.",
+                "B. Con mồi - vật ăn thịt.",
+                "C. Ức chế - cảm nhiễm.",
+                "D. Cộng sinh."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.3.3",
+              "type": "multiple_choice",
+              "question": "Cho chuỗi thức ăn sau đây: Lúa → Chuột đồng → Rắn hồ mang → Diều hâu. Phát biểu nào sau đây đúng?",
+              "options": [
+                "A. Chuột đồng thuộc bậc dinh dưỡng cấp 1.",
+                "B. Năng lượng tích luỹ trong quần thể diều hâu là cao nhất.",
+                "C. Việc tiêu diệt bớt diều hâu sẽ làm giảm số lượng chuột đồng.",
+                "D. Rắn hổ mang là sinh vật tiêu thụ cấp 3."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "3.3.4",
+              "type": "multiple_choice",
+              "question": "Hiện tượng khống chế sinh học có thể xảy ra giữa các quần thể nào sau đây trong quần xã?",
+              "options": [
+                "A. Quần thể ếch đồng và quần thể chim sẻ.",
+                "B. Quần thể cá chép và quần thể cá mè.",
+                "C. Quần thể chim sẻ và quần thể chim chào mào.",
+                "D. Quần thể chim sâu và quần thể sâu đo."
+              ],
+              "answer": "D"
+            },
+            {
+              "id": "3.3.5",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về quần xã sinh vật, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Quần xã là tập hợp nhiều quần thể khác loài cùng sống trong một không gian và thời gian xác định.",
+                "b. Trong quần xã, các loài có mối quan hệ gắn bó với nhau, chủ yếu là quan hệ dinh dưỡng.",
+                "c. Loài ưu thế là loài có vai trò quan trọng trong quần xã, quyết định quá trình diễn thế.",
+                "d. Sự phân tầng trong quần xã giúp giảm cạnh tranh và tăng hiệu quả sử dụng nguồn sống."
+              ],
+              "answers": [
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "3.3.6",
+              "type": "short_answer",
+              "question": "Trong một lưới thức ăn, tất cả các loài có cùng mức dinh dưỡng tạo thành một đơn vị gọi là gì?",
+              "answer": "Bậc dinh dưỡng"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "VẤN ĐỀ 4: HỆ SINH THÁI",
+          "questions": [
+            {
+              "id": "3.4.1",
+              "type": "multiple_choice",
+              "question": "Giả sử một chuỗi thức ăn trong quần xã sinh vật được mô tả bằng sơ đồ sau: cỏ → sâu → gà → cáo → hổ. Trong chuỗi thức ăn này, sinh vật tiêu thụ bậc 2 là",
+              "options": [
+                "A. cỏ.",
+                "B. gà.",
+                "C. sâu.",
+                "D. hổ."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.4.2",
+              "type": "multiple_choice",
+              "question": "Cho các nhóm sinh vật trong một hệ sinh thái: (1) Động vật ăn động vật. (2) Động vật ăn thực vật. (3) Sinh vật sản xuất. Sơ đồ thể hiện đúng thứ tự truyền của dòng năng lượng qua các bậc dinh dưỡng trong hệ sinh thái là",
+              "options": [
+                "A. (2) → (3) → (1).",
+                "B. (3) → (2) → (1).",
+                "C. (1) → (3) → (2).",
+                "D. (1) → (2) → (3)."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.4.3",
+              "type": "multiple_choice",
+              "question": "Trong hệ sinh thái, năng lượng bị tiêu hao qua mỗi bậc dinh dưỡng khoảng 90% do nguyên nhân chủ yếu nào dưới đây?",
+              "options": [
+                "A. Sự rụng lá, tỉa cành ở thực vật.",
+                "B. Hoạt động lột xác, đẻ con ở động vật.",
+                "C. Hô hấp, tạo nhiệt ở cơ thể sinh vật.",
+                "D. Sự thải phân, chất bài tiết."
+              ],
+              "answer": "C"
+            },
+            {
+              "id": "3.4.4",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về hệ sinh thái, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Hệ sinh thái bao gồm quần xã sinh vật và sinh cảnh.",
+                "b. Sinh vật sản xuất có khả năng tổng hợp chất hữu cơ từ chất vô cơ.",
+                "c. Dòng năng lượng trong hệ sinh thái có tính tuần hoàn.",
+                "d. Tháp năng lượng là tháp hoàn thiện nhất phản ánh chính xác quy luật chuyển hóa năng lượng trong hệ sinh thái."
+              ],
+              "answers": [
+                true,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": "3.4.5",
+              "type": "short_answer",
+              "question": "Ở một hệ sinh thái, năng lượng của sinh vật sản xuất là 10.000 kcal. Hiệu suất sinh thái giữa bậc dinh dưỡng là 10%. Hãy tính năng lượng tích lũy ở bậc dinh dưỡng cấp 3.",
+              "answer": "100 kcal"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "VẤN ĐỀ 5: SINH THÁI HỌC PHỤC HỒI – BẢO TỒN VÀ PHÁT TRIỂN BỀN VỮNG",
+          "questions": [
+            {
+              "id": "3.5.1",
+              "type": "multiple_choice",
+              "question": "Diễn thế sinh thái là một quá trình tự nhiên trong hệ sinh thái. Nhận định nào sau đây đúng khi nói về diễn thế sinh thái?",
+              "options": [
+                "A. Trong những điều kiện nhất định, diễn thế thứ sinh có thể hình thành nên một quần xã ổn định tương đối.",
+                "B. Diễn thế nguyên sinh xảy ra ở môi trường đã có một quần xã sinh vật nhất định.",
+                "C. Động lực chủ yếu của quá trình diễn thế là sự thay đổi các yếu tố vô sinh, hữu sinh của môi trường.",
+                "D. Hoạt động khai thác tài nguyên của con người luôn dẫn đến quá trình diễn thế sinh thái của quần xã tự nhiên."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "3.5.2",
+              "type": "multiple_choice",
+              "question": "Phát triển bền vững là sự phát triển đáp ứng nhu cầu của thế hệ hiện tại mà không làm ảnh hưởng đến khả năng đáp ứng nhu cầu của thế hệ tương lai. Phát triển bền vững dựa trên 3 trụ cột nào?",
+              "options": [
+                "A. Kinh tế, xã hội, văn hóa.",
+                "B. Kinh tế, xã hội, môi trường.",
+                "C. Kinh tế, giáo dục, môi trường.",
+                "D. Văn hóa, xã hội, môi trường."
+              ],
+              "answer": "B"
+            },
+            {
+              "id": "3.5.3",
+              "type": "true_false",
+              "question": "Cho các phát biểu sau về diễn thế sinh thái, hãy xác định đúng/sai.",
+              "statements": [
+                "a. Diễn thế nguyên sinh là diễn thế khởi đầu từ môi trường trống trơn.",
+                "b. Diễn thế thứ sinh luôn kết thúc bằng một quần xã ổn định.",
+                "c. Nguyên nhân bên trong của diễn thế là sự cạnh tranh giữa các loài trong quần xã.",
+                "d. Nghiên cứu diễn thế giúp dự đoán quần xã trong tương lai và đề xuất biện pháp bảo vệ tài nguyên."
+              ],
+              "answers": [
+                true,
+                false,
+                true,
+                true
+              ]
+            },
+            {
+              "id": "3.5.4",
+              "type": "short_answer",
+              "question": "Kể tên 3 biện pháp phát triển bền vững.",
+              "answer": "Sử dụng hợp lý tài nguyên thiên nhiên, hạn chế gây ô nhiễm môi trường, bảo tồn đa dạng sinh học."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

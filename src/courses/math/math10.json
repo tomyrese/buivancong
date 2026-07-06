@@ -1,0 +1,40 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "MỆNH ĐỀ VÀ TẬP HỢP",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Mệnh đề toán học",
+          "questions": [
+            {
+              "id": "math10.1.1.1",
+              "type": "multiple_choice",
+              "question": "Câu nào sau đây là một mệnh đề toán học?",
+              "options": [
+                "A. Số 5 là một số nguyên tố.",
+                "B. Thời tiết hôm nay đẹp quá!",
+                "C. Bạn học lớp mấy?",
+                "D. Hãy làm bài tập này đi."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "math10.1.1.2",
+              "type": "multiple_choice",
+              "question": "Phủ định của mệnh đề 'Mọi số thực đều dương' là",
+              "options": [
+                "A. Tồn tại ít nhất một số thực không dương.",
+                "B. Mọi số thực đều không dương.",
+                "C. Tồn tại ít nhất một số thực âm.",
+                "D. Không có số thực nào dương."
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

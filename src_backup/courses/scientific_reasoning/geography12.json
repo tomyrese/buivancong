@@ -1,0 +1,58 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "ĐỊA LÝ TỰ NHIÊN VIỆT NAM",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Vị trí địa lý và phạm vi lãnh thổ",
+          "questions": [
+            {
+              "id": "geo12.1.1.1",
+              "type": "multiple_choice",
+              "question": "Lãnh thổ Việt Nam nằm hoàn toàn trong vùng",
+              "options": [
+                "A. nội chí tuyến bán cầu Bắc.",
+                "B. ôn đới bán cầu Bắc.",
+                "C. cận nhiệt đới bán cầu Nam.",
+                "D. xích đạo bán cầu Nam."
+              ],
+              "answer": "A"
+            },
+            {
+              "id": "geo12.1.1.2",
+              "type": "multiple_choice",
+              "question": "Ý nghĩa kinh tế của vị trí địa lý nước ta là",
+              "options": [
+                "A. tạo điều kiện thuận lợi giao lưu với các nước.",
+                "B. tự nhiên có sự phân hóa đa dạng.",
+                "C. phát triển nền văn hóa giàu bản sắc.",
+                "D. bảo vệ vững chắc an ninh quốc phòng."
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Thiên nhiên nhiệt đới ẩm gió mùa",
+          "questions": [
+            {
+              "id": "geo12.1.2.1",
+              "type": "multiple_choice",
+              "question": "Tính chất nhiệt đới của khí hậu nước ta được quy định bởi",
+              "options": [
+                "A. vị trí nằm trong vùng nội chí tuyến.",
+                "B. địa hình chủ yếu là đồi núi thấp.",
+                "C. ảnh hưởng của Biển Đông rộng lớn.",
+                "D. hoạt động của gió mùa Đông Bắc."
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "name": "ỨNG DỤNG ĐẠO HÀM KHẢO SÁT HÀM SỐ",
+      "topics": [
+        {
+          "id": 1,
+          "name": "Tính đơn điệu của hàm số",
+          "questions": [
+            {
+              "id": "math12.1.1.1",
+              "type": "multiple_choice",
+              "question": "Hàm số y = x^3 - 3x đồng biến trên khoảng nào sau đây?",
+              "options": [
+                "A. (-infinity; -1) và (1; +infinity).",
+                "B. (-1; 1).",
+                "C. (-infinity; 1).",
+                "D. (-1; +infinity)."
+              ],
+              "answer": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

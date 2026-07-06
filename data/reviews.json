@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rev-1",
+    "courseId": "physics-12",
+    "userName": "Hoàng Nam",
+    "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    "rating": 5,
+    "comment": "Khóa học Vật lý của thầy Công quá hay! Thầy giảng rất kỹ phần lý thuyết nhiệt học, giúp mình nắm chắc 100% phần suy luận khoa học trong đề minh họa.",
+    "createdAt": "2026-06-15T08:30:00Z"
+  },
+  {
+    "id": "rev-2",
+    "courseId": "biology-12",
+    "userName": "Thu Trang",
+    "userAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+    "rating": 5,
+    "comment": "Thầy giải thích cơ chế di truyền học phân tử cực kỳ dễ hiểu. Nhờ sơ đồ tư duy của thầy mà mình không còn sợ câu hỏi phả hệ phức tạp nữa.",
+    "createdAt": "2026-06-20T10:15:00Z"
+  },
+  {
+    "id": "rev-3",
+    "courseId": "math-12",
+    "userName": "Minh Quân",
+    "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    "rating": 5,
+    "comment": "Phương pháp ứng dụng đạo hàm khảo sát hàm số để làm trắc nghiệm ĐGNL của thầy siêu nhanh! Giúp mình tiết kiệm được rất nhiều thời gian làm bài thực tế.",
+    "createdAt": "2026-06-22T14:45:00Z"
+  },
+  {
+    "id": "rev-4",
+    "courseId": "history-12",
+    "userName": "Lan Anh",
+    "userAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
+    "rating": 5,
+    "comment": "Giao diện học tập trực quan, tài liệu PDF đính kèm của thầy Công rất chất lượng. Phần tóm tắt lịch sử thế giới và Việt Nam siêu đầy đủ.",
+    "createdAt": "2026-06-24T09:00:00Z"
+  }
+]

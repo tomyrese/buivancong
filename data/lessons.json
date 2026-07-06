@@ -1,0 +1,198 @@
+[
+  {
+    "id": "l-phys12-1-1",
+    "courseId": "physics-12",
+    "title": "Chủ đề 1: Cấu tạo chất - Sự chuyển thể",
+    "duration": 45,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Cấu tạo chất và Sự chuyển thể\n\nNội dung chính bao gồm:\n- Thuyết động học phân tử chất khí.\n- Đặc điểm cấu trúc các thể rắn, lỏng, khí.\n- Quá trình chuyển thể: nóng chảy, đông đặc, hóa hơi, ngưng tụ, thăng hoa và ngưng kết.\n\n## 1. Thuyết động học phân tử\n- Các chất được cấu tạo từ các hạt riêng biệt là nguyên tử, phân tử.\n- Các phân tử chuyển động hỗn độn không ngừng. Nhiệt độ càng cao, chuyển động càng nhanh.\n- Giữa các phân tử có lực tương tác (hút và đẩy).",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Vật Lý 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Vật Lý 12.pdf", "size": "18.2 MB" }
+    ]
+  },
+  {
+    "id": "l-phys12-1-2",
+    "courseId": "physics-12",
+    "title": "Chủ đề 2: Thang nhiệt độ",
+    "duration": 40,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Thang nhiệt độ & Đo nhiệt độ\n\n## 1. Các thang nhiệt độ thông dụng\n- **Thang Celsius (°C)**: Lấy nhiệt độ đông đặc của nước là 0°C và nhiệt độ sôi là 100°C làm chuẩn.\n- **Thang Kelvin (K)**: Thang nhiệt độ tuyệt đối. Độ không tuyệt đối (0 K) là nhiệt độ mà các phân tử dừng chuyển động nhiệt.\n  - Công thức liên hệ: $T(K) = t(^oC) + 273.15$\n- **Thang Fahrenheit (°F)**: Thường dùng ở các nước nói tiếng Anh.\n  - Công thức liên hệ: $t(^oF) = 1.8 \\cdot t(^oC) + 32$",
+    "order": 2,
+    "isPreview": false,
+    "resources": [
+      { "name": "Tài liệu Vật Lý 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Vật Lý 12.pdf", "size": "18.2 MB" }
+    ]
+  },
+  {
+    "id": "l-bio12-1-1",
+    "courseId": "biology-12",
+    "title": "Chủ đề 1: DNA & Quá trình tái bản DNA",
+    "duration": 50,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Cấu trúc DNA và Quá trình nhân đôi DNA\n\n## 1. Cấu trúc DNA\n- DNA cấu tạo theo nguyên tắc đa phân, đơn phân là các nucleotide (A, T, G, C).\n- Cấu trúc xoắn kép song song, ngược chiều (3' -> 5' và 5' -> 3').\n- Liên kết hydrogen bổ sung: A liên kết với T bằng 2 liên kết, G liên kết với C bằng 3 liên kết.\n\n## 2. Quá trình tái bản (nhân đôi) DNA\n- Diễn ra theo nguyên tắc bổ sung và nguyên tắc bán bảo toàn (giữ lại một nửa).",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Sinh học 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Sinh học 12.pdf", "size": "10.0 MB" }
+    ]
+  },
+  {
+    "id": "l-bio12-1-2",
+    "courseId": "biology-12",
+    "title": "Chủ đề 2: Gene và Cơ chế di truyền",
+    "duration": 45,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Phiên mã và Dịch mã\n\n## 1. Phiên mã\n- Quá trình tổng hợp mRNA dựa trên mạch khuôn gốc (3' -> 5') của gene dưới tác dụng của enzyme RNA polymerase.\n\n## 2. Dịch mã\n- Quá trình tổng hợp chuỗi polypeptide tại ribosome dựa trên thông tin mã hóa của mRNA.\n- Các codon khớp bổ sung với các anticodon trên tRNA mang axit amin tương ứng.",
+    "order": 2,
+    "isPreview": false,
+    "resources": [
+      { "name": "Tài liệu Sinh học 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Sinh học 12.pdf", "size": "10.0 MB" }
+    ]
+  },
+  {
+    "id": "l-hist12-1-1",
+    "courseId": "history-12",
+    "title": "Chủ đề 1: Liên hợp quốc (UN)",
+    "duration": 35,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Tổ chức Liên hợp quốc (UN)\n\n## 1. Sự ra đời\n- Được thành lập chính thức vào ngày 24-10-1945 sau hội nghị Ianta và hội nghị Xan Phran-xi-xcô.\n\n## 2. Mục đích hoạt động\n- Duy trì hòa bình và an ninh thế giới.\n- Phát triển các mối quan hệ hữu nghị giữa các dân tộc.\n- Hợp tác quốc tế giải quyết các vấn đề kinh tế, xã hội, nhân đạo.",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Lịch sử 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Lịch sử 12.pdf", "size": "6.8 MB" }
+    ]
+  },
+  {
+    "id": "l-hist12-1-2",
+    "courseId": "history-12",
+    "title": "Chủ đề 2: Lịch sử hình thành ASEAN",
+    "duration": 40,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Hiệp hội các quốc gia Đông Nam Á (ASEAN)\n\n## 1. Thành lập\n- Thành lập ngày 8-8-1967 tại Băng Cốc (Thái Lan) với 5 nước sáng lập: In-đô-nê-xi-a, Ma-lay-xi-a, Phi-lip-pin, Xin-ga-po và Thái Lan.\n\n## 2. Các chặng đường phát triển\n- Giai đoạn đầu (1967-1976): Hợp tác lỏng lẻo.\n- Hiệp ước Bali (1976): Đánh dấu bước phát triển mới, xác định nguyên tắc quan hệ tôn trọng chủ quyền lãnh thổ.",
+    "order": 2,
+    "isPreview": false,
+    "resources": [
+      { "name": "Tài liệu Lịch sử 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Lịch sử 12.pdf", "size": "6.8 MB" }
+    ]
+  },
+  {
+    "id": "l-chem12-1-1",
+    "courseId": "chemistry-12",
+    "title": "Chủ đề 1: Khái niệm & Tính chất của Este",
+    "duration": 45,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Este - Khái niệm & Tính chất\n\n## 1. Định nghĩa\n- Khi thay nhóm -OH ở nhóm cacboxyl của axit cacboxylic bằng nhóm -OR' thì được este.\n- Công thức đơn giản este đơn chức: R-COO-R'.\n\n## 2. Tính chất vật lý & hóa học\n- Nhiệt độ sôi thấp hơn ancol cùng phân tử khối vì không tạo liên kết hiđro liên phân tử.\n- Phản ứng thủy phân trong môi trường axit (thuận nghịch) và môi trường kiềm (phản ứng xà phòng hóa - một chiều).",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Hoá 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Hoá 12.pdf", "size": "21.6 MB" }
+    ]
+  },
+  {
+    "id": "l-chem12-1-2",
+    "courseId": "chemistry-12",
+    "title": "Chủ đề 2: Lipit và Chất béo",
+    "duration": 40,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Lipit và Chất béo\n\n## 1. Định nghĩa chất béo\n- Chất béo là trieste của glixerol với các axit béo, gọi chung là triaxylglixerol.\n- Các axit béo thường gặp: Axit stearic ($C_{17}H_{35}COOH$), Axit panmitic ($C_{15}H_{31}COOH$), Axit oleic ($C_{17}H_{33}COOH$).",
+    "order": 2,
+    "isPreview": false,
+    "resources": [
+      { "name": "Tài liệu Hoá 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Hoá 12.pdf", "size": "21.6 MB" }
+    ]
+  },
+  {
+    "id": "l-law12-1-1",
+    "courseId": "economy-law-12",
+    "title": "Chủ đề 1: Quyền học tập, sáng tạo của công dân",
+    "duration": 45,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Quyền học tập và Sáng tạo của công dân\n\n## 1. Quyền học tập\n- Mọi công dân đều có quyền học tập không hạn chế, học từ thấp đến cao, học bất kỳ ngành nghề nào phù hợp, học thường xuyên học suốt đời và được đối xử bình đẳng.\n\n## 2. Quyền sáng tạo\n- Tự do nghiên cứu khoa học, phát minh, sáng chế, tạo ra các tác phẩm văn học nghệ thuật và được pháp luật bảo hộ quyền tác giả, quyền sở hữu trí tuệ.",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu KT-PL 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/KT-PL 12.pdf", "size": "4.3 MB" }
+    ]
+  },
+  {
+    "id": "l-geo12-1-1",
+    "courseId": "geography-12",
+    "title": "Chủ đề 1: Vị trí địa lý và phạm vi lãnh thổ",
+    "duration": 40,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Vị trí địa lý Việt Nam\n\n## 1. Đặc điểm\n- Nằm ở rìa phía đông của bán đảo Đông Dương, gần trung tâm khu vực Đông Nam Á.\n- Tọa độ địa lý chí tuyến Bắc, nước ta nằm hoàn toàn trong vùng nhiệt đới bán cầu Bắc.\n\n## 2. Ý nghĩa\n- Thiên nhiên mang tính chất nhiệt đới ẩm gió mùa.\n- Nằm ngã tư đường hàng hải và hàng không quốc tế, thuận lợi phát triển kinh tế biển.",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Địa lý 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Địa lý 12.pdf", "size": "6.5 MB" }
+    ]
+  },
+  {
+    "id": "l-geo12-1-2",
+    "courseId": "geography-12",
+    "title": "Chủ đề 2: Thiên nhiên nhiệt đới ẩm gió mùa",
+    "duration": 45,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Khí hậu Nhiệt đới ẩm gió mùa Việt Nam\n\n## 1. Biểu hiện\n- Nhiệt độ trung bình năm cao (>20°C), tổng số giờ nắng lớn.\n- Lượng mưa lớn (1500 - 2000 mm/năm), độ ẩm không khí cao (>80%).\n- Chịu ảnh hưởng sâu sắc của hai mùa gió mùa: Gió mùa mùa đông (gió mùa Đông Bắc) và Gió mùa mùa hạ (gió Tây Nam).",
+    "order": 2,
+    "isPreview": false,
+    "resources": [
+      { "name": "Tài liệu Địa lý 12.pdf", "url": "/src/pdf/Suy Luận Khoa Học/Địa lý 12.pdf", "size": "6.5 MB" }
+    ]
+  },
+  {
+    "id": "l-math10-1-1",
+    "courseId": "math-10",
+    "title": "Chủ đề 1: Mệnh đề & Tập hợp số",
+    "duration": 50,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Mệnh đề và các phép toán tập hợp\n\n## 1. Mệnh đề\n- Mệnh đề toán học là một câu khẳng định chỉ có thể đúng hoặc sai.\n- Mệnh đề chứa biến là câu khẳng định chứa biến nhận giá trị đúng/sai tùy thuộc vào giá trị của biến.\n\n## 2. Tập hợp\n- Các phép toán giao ($A \\cap B$), hợp ($A \\cup B$), hiệu ($A \\setminus B$) và phần bù ($C_U A$).",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Toán Lớp 10.pdf", "url": "/src/pdf/Toán/Lớp 10/Bài tập Mệnh đề.pdf", "size": "2.4 MB" }
+    ]
+  },
+  {
+    "id": "l-math11-1-1",
+    "courseId": "math-11",
+    "title": "Chủ đề 1: Góc và công thức lượng giác",
+    "duration": 50,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Công thức lượng giác lớp 11\n\n## 1. Công thức cộng\n- $\\cos(a \\pm b) = \\cos a \\cos b \\mp \\sin a \\sin b$\n- $\\sin(a \\pm b) = \\sin a \\cos b \\pm \\cos a \\sin b$\n\n## 2. Công thức nhân đôi\n- $\\sin 2a = 2\\sin a \\cos a$\n- $\\cos 2a = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1 = 1 - 2\\sin^2 a$",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Toán Lớp 11.pdf", "url": "/src/pdf/Toán/Lớp 11/Bài tập Lượng giác.pdf", "size": "3.1 MB" }
+    ]
+  },
+  {
+    "id": "l-math12-1-1",
+    "courseId": "math-12",
+    "title": "Chủ đề 1: Tính đơn điệu & Cực trị hàm số",
+    "duration": 55,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "type": "video",
+    "content": "# Ứng dụng đạo hàm khảo sát hàm số\n\n## 1. Tính đơn điệu\n- Hàm số $y = f(x)$ đồng biến trên K khi và chỉ khi $f'(x) \\ge 0 \\forall x \\in K$ (dấu bằng xảy ra tại hữu hạn điểm).\n- Hàm số nghịch biến khi và chỉ khi $f'(x) \\le 0 \\forall x \\in K$.\n\n## 2. Điểm cực trị\n- Nếu đạo hàm $f'(x)$ đổi dấu khi đi qua điểm $x_0$, thì $x_0$ là một điểm cực trị của hàm số.",
+    "order": 1,
+    "isPreview": true,
+    "resources": [
+      { "name": "Tài liệu Toán Lớp 12.pdf", "url": "/src/pdf/Toán/Lớp 12/Bài tập Khảo sát hàm số.pdf", "size": "4.5 MB" }
+    ]
+  }
+]

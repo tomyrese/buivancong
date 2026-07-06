@@ -1,0 +1,276 @@
+[
+  {
+    "id": "physics-12",
+    "title": "Suy luận Khoa học - Vật lý 12",
+    "slug": "suy-luan-khoa-hoc-vat-ly-12",
+    "description": "Luyện thi Đánh giá Năng lực môn Vật lý 12 bám sát cấu trúc đề thi của thầy Bùi Văn Công.",
+    "longDescription": "Khóa học được thiết kế đặc biệt dành riêng cho học sinh ôn thi Đánh giá Năng lực (ĐGNL) ĐHQG, tập trung vào phần thi Suy luận Khoa học - phân môn Vật lý 12. Nội dung bao gồm toàn bộ lý thuyết trọng tâm về Vật lý nhiệt, Khí lí tưởng, và các dạng bài tập thực tiễn giúp học sinh giải quyết nhanh các câu hỏi trắc nghiệm khách quan.",
+    "thumbnail": "/imgs/physics.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Trung bình",
+    "rating": 4.9,
+    "enrolledCount": 12500,
+    "lessonsCount": 2,
+    "duration": 12,
+    "isFeatured": true,
+    "requirements": [
+      "Nắm vững kiến thức Vật lý cơ bản lớp 11.",
+      "Có máy tính hoặc máy tính bảng kết nối Internet."
+    ],
+    "outcomes": [
+      "Làm chủ lý thuyết về Nhiệt học và Thuyết động học phân tử.",
+      "Giải quyết trọn vẹn các bài toán suy luận logic Vật lý trong đề thi ĐGNL.",
+      "Tối ưu hóa thời gian làm bài trắc nghiệm thực chiến."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-phys12-1",
+        "title": "Chương 1: Vật lý nhiệt & Cấu tạo chất",
+        "lessonIds": ["l-phys12-1-1", "l-phys12-1-2"]
+      }
+    ]
+  },
+  {
+    "id": "biology-12",
+    "title": "Suy luận Khoa học - Sinh học 12",
+    "slug": "suy-luan-khoa-hoc-sinh-hoc-12",
+    "description": "Khóa học chuyên sâu Sinh học 12 giúp bứt phá điểm số phần Suy luận Khoa học ĐGNL.",
+    "longDescription": "Môn Sinh học 12 trong đề thi ĐGNL đòi hỏi khả năng tư duy hệ thống và phân tích dữ liệu thực nghiệm thay vì chỉ học vẹt. Khóa học này của thầy Bùi Văn Công cung cấp phương pháp phân tích nhanh các sơ đồ phả hệ, cơ chế di truyền học phân tử, di truyền nhiễm sắc thể và sinh thái học.",
+    "thumbnail": "/imgs/biology.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Khó",
+    "rating": 4.8,
+    "enrolledCount": 9800,
+    "lessonsCount": 2,
+    "duration": 15,
+    "isFeatured": true,
+    "requirements": [
+      "Có kiến thức nền tảng Sinh học 11 và di truyền học cơ bản."
+    ],
+    "outcomes": [
+      "Nắm vững bản chất di truyền học phân tử và nhân đôi DNA.",
+      "Thành thạo kỹ năng giải phả hệ và các dạng bài tập đột biến cấu trúc NST.",
+      "Nắm chắc điểm phần Sinh thái học và Tiến hóa trong đề thi ĐGNL."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-bio12-1",
+        "title": "Chương 1: Di truyền học phân tử & NST",
+        "lessonIds": ["l-bio12-1-1", "l-bio12-1-2"]
+      }
+    ]
+  },
+  {
+    "id": "history-12",
+    "title": "Suy luận Khoa học - Lịch sử 12",
+    "slug": "suy-luan-khoa-hoc-lich-su-12",
+    "description": "Hệ thống hóa kiến thức Lịch sử 12 theo sơ đồ tư duy phục vụ thi ĐGNL.",
+    "longDescription": "Lịch sử không còn là môn học thuộc lòng máy móc. Thầy Bùi Văn Công sẽ hướng dẫn bạn cách tư duy liên hệ lịch sử, phân tích nguồn dữ liệu văn bản, bảng biểu, hiểu rõ các mốc lịch sử Việt Nam và thế giới giai đoạn cận - hiện đại để dễ dàng khoanh đúng đáp án ĐGNL.",
+    "thumbnail": "/imgs/history.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Cơ bản",
+    "rating": 4.9,
+    "enrolledCount": 11000,
+    "lessonsCount": 2,
+    "duration": 10,
+    "isFeatured": true,
+    "requirements": [
+      "Yêu thích tìm hiểu lịch sử và xã hội."
+    ],
+    "outcomes": [
+      "Nhớ lâu các sự kiện lịch sử thông qua sơ đồ tư duy.",
+      "Kỹ năng đọc hiểu văn bản lịch sử để trích xuất câu trả lời chuẩn xác.",
+      "Đạt điểm tối đa phần Lịch sử trong bài thi tổ hợp Khoa học Xã hội."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-hist12-1",
+        "title": "Chương 1: Thế giới sau Chiến tranh lạnh & ASEAN",
+        "lessonIds": ["l-hist12-1-1", "l-hist12-1-2"]
+      }
+    ]
+  },
+  {
+    "id": "chemistry-12",
+    "title": "Suy luận Khoa học - Hóa học 12",
+    "slug": "suy-luan-khoa-hoc-hoa-hoc-12",
+    "description": "Luyện thi ĐGNL môn Hóa học 12 bám sát cấu trúc đề thi của thầy Bùi Văn Công.",
+    "longDescription": "Khóa học trang bị các công thức giải nhanh, tư duy phân tích thực nghiệm hóa học, nhận biết chất và xử lý các câu hỏi tích hợp đồ thị hóa học trong đề thi ĐGNL của thầy Bùi Văn Công.",
+    "thumbnail": "/imgs/chemistry.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Trung bình",
+    "rating": 4.8,
+    "enrolledCount": 7500,
+    "lessonsCount": 2,
+    "duration": 14,
+    "isFeatured": false,
+    "requirements": [
+      "Kiến thức Hóa học vô cơ và hữu cơ lớp 11."
+    ],
+    "outcomes": [
+      "Nắm chắc tính chất hóa học của Este, Lipit và Cacbohiđrat.",
+      "Kỹ năng xử lý bài toán đồ thị lý thuyết hóa học cực nhanh."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-chem12-1",
+        "title": "Chương 1: Este, Lipit và Xà phòng",
+        "lessonIds": ["l-chem12-1-1", "l-chem12-1-2"]
+      }
+    ]
+  },
+  {
+    "id": "economy-law-12",
+    "title": "Suy luận Khoa học - Kinh tế & Pháp luật 12",
+    "slug": "suy-luan-khoa-hoc-kinh-te-phap-luat-12",
+    "description": "Luyện thi ĐGNL môn GDCD / Kinh tế & Pháp luật 12 cùng thầy Bùi Văn Công.",
+    "longDescription": "Khóa học cung cấp kiến thức nền tảng về hệ thống pháp luật Việt Nam, quyền và nghĩa vụ công dân, giúp học sinh giải quyết trọn vẹn các câu hỏi tình huống pháp lý phức tạp trong đề thi ĐGNL.",
+    "thumbnail": "/imgs/economyandlaw.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Cơ bản",
+    "rating": 4.7,
+    "enrolledCount": 6800,
+    "lessonsCount": 1,
+    "duration": 8,
+    "isFeatured": false,
+    "requirements": [
+      "Ý thức tự học và tìm hiểu pháp luật."
+    ],
+    "outcomes": [
+      "Nhận diện đúng sai các hành vi pháp luật thực tế.",
+      "Đạt điểm tối đa các câu hỏi GDCD/Pháp luật trong đề thi ĐGNL."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-law12-1",
+        "title": "Chương 1: Quyền và nghĩa vụ pháp luật của công dân",
+        "lessonIds": ["l-law12-1-1"]
+      }
+    ]
+  },
+  {
+    "id": "geography-12",
+    "title": "Suy luận Khoa học - Địa lý 12",
+    "slug": "suy-luan-khoa-hoc-dia-ly-12",
+    "description": "Luyện thi ĐGNL Địa lý 12, thực hành khai thác Atlat nhanh gọn.",
+    "longDescription": "Bao gồm phương pháp nhận diện biểu đồ, đọc Atlat Địa lý Việt Nam siêu tốc, và hệ thống hóa kiến thức Địa lý tự nhiên, dân cư, kinh tế Việt Nam giúp bứt phá điểm số.",
+    "thumbnail": "/imgs/geography.jpg",
+    "categoryId": "scientific-reasoning",
+    "teacherId": "tc-1",
+    "difficulty": "Cơ bản",
+    "rating": 4.9,
+    "enrolledCount": 10500,
+    "lessonsCount": 2,
+    "duration": 9,
+    "isFeatured": false,
+    "requirements": [
+      "Có quyển Atlat Địa lý Việt Nam."
+    ],
+    "outcomes": [
+      "Khai thác hiệu quả 100% dữ liệu từ Atlat Địa lý.",
+      "Đọc và hiểu nhanh các bảng số liệu, biểu đồ kinh tế."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-geo12-1",
+        "title": "Chương 1: Địa lý tự nhiên Việt Nam",
+        "lessonIds": ["l-geo12-1-1", "l-geo12-1-2"]
+      }
+    ]
+  },
+  {
+    "id": "math-10",
+    "title": "Toán học lớp 10 - Ôn thi ĐGNL",
+    "slug": "toan-hoc-lop-10",
+    "description": "Hệ thống kiến thức Toán 10 phục vụ đánh giá năng lực tư duy toán học.",
+    "longDescription": "Toán 10 đóng vai trò cốt lõi trong phần Tư duy định lượng của đề thi ĐGNL. Khóa học củng cố về Mệnh đề, Tập hợp, Hàm số bậc hai, Vectơ và Thống kê cơ bản.",
+    "thumbnail": "/imgs/math.jpg",
+    "categoryId": "math",
+    "teacherId": "tc-1",
+    "difficulty": "Trung bình",
+    "rating": 4.8,
+    "enrolledCount": 13000,
+    "lessonsCount": 1,
+    "duration": 10,
+    "isFeatured": false,
+    "requirements": [
+      "Đã học chương trình Toán lớp 10."
+    ],
+    "outcomes": [
+      "Nắm vững các phép toán tập hợp và mệnh đề toán học.",
+      "Giải quyết tốt các bài toán thực tế sử dụng hàm số bậc hai."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-math10-1",
+        "title": "Chương 1: Mệnh đề và tập hợp",
+        "lessonIds": ["l-math10-1-1"]
+      }
+    ]
+  },
+  {
+    "id": "math-11",
+    "title": "Toán học lớp 11 - Ôn thi ĐGNL",
+    "slug": "toan-hoc-lop-11",
+    "description": "Bứt phá điểm số Toán 11 chuyên sâu luyện thi ĐGNL cùng thầy Bùi Văn Công.",
+    "longDescription": "Khóa học tập trung giải quyết các mảng kiến thức cực khó của lớp 11 thường xuất hiện trong đề thi ĐGNL: Lượng giác, Tổ hợp - Xác suất, Cấp số cộng - Cấp số nhân, và Hình học không gian.",
+    "thumbnail": "/imgs/math.jpg",
+    "categoryId": "math",
+    "teacherId": "tc-1",
+    "difficulty": "Khó",
+    "rating": 4.9,
+    "enrolledCount": 14200,
+    "lessonsCount": 1,
+    "duration": 15,
+    "isFeatured": true,
+    "requirements": [
+      "Nắm vững công thức lượng giác cơ bản."
+    ],
+    "outcomes": [
+      "Giải quyết nhanh gọn bài toán Tổ hợp, Xác suất thực tế.",
+      "Tư duy tốt hình không gian vẽ thêm đường phụ."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-math11-1",
+        "title": "Chương 1: Lượng giác và phương trình lượng giác",
+        "lessonIds": ["l-math11-1-1"]
+      }
+    ]
+  },
+  {
+    "id": "math-12",
+    "title": "Toán học lớp 12 - Ôn thi ĐGNL",
+    "slug": "toan-hoc-lop-12",
+    "description": "Trọn bộ chuyên đề Toán 12 thi ĐGNL thầy Bùi Văn Công.",
+    "longDescription": "Chuyên đề Toán 12 trọng tâm bao gồm khảo sát hàm số, Hàm số lũy thừa - mũ - logarit, Nguyên hàm - Tích phân, Số phức và Hình học Oxyz. Giáo án rút gọn tối ưu cho kỳ thi ĐGNL.",
+    "thumbnail": "/imgs/math.jpg",
+    "categoryId": "math",
+    "teacherId": "tc-1",
+    "difficulty": "Khó",
+    "rating": 4.9,
+    "enrolledCount": 16500,
+    "lessonsCount": 1,
+    "duration": 20,
+    "isFeatured": true,
+    "requirements": [
+      "Học hết chương trình Toán phổ thông."
+    ],
+    "outcomes": [
+      "Thành thạo ứng dụng đạo hàm tìm tiệm cận, cực trị.",
+      "Giải nhanh các bài toán cực trị số phức và hình học tọa độ Oxyz."
+    ],
+    "syllabus": [
+      {
+        "id": "sy-math12-1",
+        "title": "Chương 1: Ứng dụng đạo hàm & khảo sát hàm số",
+        "lessonIds": ["l-math12-1-1"]
+      }
+    ]
+  }
+]

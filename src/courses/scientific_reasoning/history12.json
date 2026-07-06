@@ -1,0 +1,1216 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "THẾ GIỚI TRONG VÀ SAU CHIẾN TRANH LẠNH",
+            "topics": [
+                {
+                    "id": "1.1",
+                    "name": "LIÊN HỢP QUỐC",
+                    "questions": [
+                        {
+                            "id": "1.1.1",
+                            "type": "multiple_choice",
+                            "question": "Nhằm duy trì hoà bình và an ninh thế giới sau chiến tranh, Hội nghị I-an-ta (2-1945) có quyết định quan trọng nào sau đây?",
+                            "options": [
+                                "A. Thành lập Ban Thư kí Liên hợp quốc.",
+                                "B. Thành lập tổ chức Liên hợp quốc.",
+                                "C. Thành lập tổ chức Hội Quốc liên.",
+                                "D. Duy trì và mở rộng Hội Quốc liên."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.2",
+                            "type": "multiple_choice",
+                            "question": "Từ cuối tháng 4 đến cuối tháng 6-1945, 50 nước họp tại Xan Phran-xi-xcô (Mỹ) thông qua nội dung nào sau đây?",
+                            "options": [
+                                "A. Hiệp định đình chiến ở Đông Dương.",
+                                "B. Kết thúc chiến tranh Triều Tiên.",
+                                "C. Xét xử tội phạm chiến tranh thế giới.",
+                                "D. Hiến chương Liên hợp quốc."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.3",
+                            "type": "multiple_choice",
+                            "question": "\"Duy trì hoà bình và an ninh thế giới; thúc đẩy quan hệ hữu nghị giữa các quốc gia dựa trên sự tôn trọng nguyên tắc bình đẳng và quyền tự quyết của các dân tộc, củng cố hoà bình thế giới\" là nhiệm vụ chính của tổ chức quốc tế nào sau đây?",
+                            "options": [
+                                "A. Tổ chức ASEAN.",
+                                "B. Liên minh châu Âu.",
+                                "C. Liên hợp quốc.",
+                                "D. Tổ chức NATO."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.4",
+                            "type": "multiple_choice",
+                            "question": "Một trong những cơ quan chính của Liên hợp quốc được quy định trong Hiến chương Liên hợp quốc (năm 1945) là",
+                            "options": [
+                                "A. Ngân hàng Thế giới.",
+                                "B. Quỹ Nhi đồng.",
+                                "C. Hội đồng Bảo an.",
+                                "D. Tổ chức Thương mại Thế giới."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.5",
+                            "type": "multiple_choice",
+                            "question": "Liên hợp quốc được thành lập (1945) không nhằm mục tiêu nào sau đây?",
+                            "options": [
+                                "A. Hợp tác quốc tế giữa các nước thành viên.",
+                                "B. Duy trì nền hoà bình và an ninh trên thế giới.",
+                                "C. Phát triển quan hệ hữu nghị giữa các dân tộc.",
+                                "D. Duy trì Trật tự thế giới hai cực I-an-ta."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.6",
+                            "type": "multiple_choice",
+                            "question": "Một trong những nguyên tắc hoạt động của Liên hợp quốc được quy định trong Hiến chương Liên hợp quốc (năm 1945) là",
+                            "options": [
+                                "A. tôn trọng các nghĩa vụ và luật pháp quốc tế.",
+                                "B. tôn trọng quyết định của 5 nước Uỷ viên thường trực.",
+                                "C. không đưa quân đội Liên hợp quốc vào các khu vực.",
+                                "D. tôn trọng độc lập của 50 nước sáng lập Liên hợp quốc."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.7",
+                            "type": "multiple_choice",
+                            "question": "Trong quá trình hoạt động (từ năm 1945), Liên hợp quốc đã thực hiện được vai trò quan trọng nào sau đây?",
+                            "options": [
+                                "A. Ngăn chặn được mọi cuộc chiến tranh ở các khu vực.",
+                                "B. Góp phần vào chấm dứt nạn khủng bố trên toàn cầu.",
+                                "C. Ngăn chặn không để xảy ra cuộc chiến tranh thế giới mới.",
+                                "D. Góp phần chấm dứt tình trạng đói nghèo ở châu Phi."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.8",
+                            "type": "multiple_choice",
+                            "question": "Bản Hiến chương được đánh giá là văn kiện quan trọng hàng đầu của tổ chức Liên hợp quốc vì lí do nào sau đây?",
+                            "options": [
+                                "A. Là cơ sở pháp lí để các nước tham gia Liên hợp quốc.",
+                                "B. Nêu rõ các mục đích hoạt động của Liên hợp quốc.",
+                                "C. Quy định các tổ chức, cơ chế hoạt động của Liên hợp quốc.",
+                                "D. Đề ra các nguyên tắc hoạt động của Liên hợp quốc."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.9",
+                            "type": "true_false",
+                            "question": "Đọc đoạn thông tin sau đây: Tháng 6-1941, tại Luân Đôn (Anh), các nước Đồng minh ra tuyên bố cam kết cùng hợp tác cả trong chiến tranh và hoà bình. Sự kiện này đã đặt cơ sở cho việc hướng tới việc thành lập Liên hợp quốc. Từ đó, các nước Đồng minh (vai trò lớn nhất thuộc về Liên Xô, Mỹ và Anh) đã tổ chức nhiều cuộc họp ở Tê-hê-ran (I-ran) và Mát-xcơ-va (Liên Xô) để sớm thành lập một tổ chức quốc tế, nhằm thực hiện việc duy trì hoà bình và an ninh thế giới. Tại Hội nghị I-an-ta (2-1945), Liên Xô, Mỹ và Anh đã thống nhất thành lập tổ chức Liên hợp quốc. Ngày 24-10-1945, với sự phê chuẩn Hiến chương của các thành viên, tổ chức Liên hợp quốc chính thức được thành lập.",
+                            "statements": [
+                                "a. Quá trình hình thành Liên hợp quốc kéo dài từ năm 1941 đến năm 1945, phù hợp với khát vọng được sống trong hoà bình của nhân dân thế giới.",
+                                "b. Cho đến nay, Liên hợp quốc vẫn là tổ chức liên kết quốc tế lớn nhất hành tinh, có nhiệm vụ hàng đầu là tập trung vào ổn định nền kinh tế toàn cầu.",
+                                "c. Liên Xô, Mỹ và Anh là những nước có vị thế hàng đầu trong việc đặt cơ sở và tích cực trong quá trình thành lập Liên hợp quốc.",
+                                "d. Việt Nam là một trong những quốc gia sớm gia nhập Liên hợp quốc, sau khi nước Việt Nam Dân chủ Cộng hoà ra đời (9-1945)."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.1.10",
+                            "type": "true_false",
+                            "question": "Đọc tư liệu sau đây: \"Không có nội dung nào trong Hiến chương này cho phép Liên hợp quốc can thiệp vào các vấn đề về thực chất thuộc quyền nội bộ của bất kì quốc gia nào hoặc yêu cầu các thành viên đưa những vấn đề đó ra giải quyết theo Hiến chương hiện tại...\". (Trích: Điều 2, Hiến chương Liên hợp quốc)",
+                            "statements": [
+                                "a. Theo tư liệu, nguyên tắc hoạt động của Liên hợp quốc được thể hiện tại Điều 2 của Hiến chương Liên hợp quốc.",
+                                "b. Hiến chương Liên hợp quốc có nhiều nguyên tắc, trong đó nhấn mạnh việc không can thiệp vào công việc nội bộ của các quốc gia.",
+                                "c. Một nguyên tắc quan trọng trong quá trình hoạt động của Liên hợp quốc là nếu có tranh chấp quốc tế thì các bên phải giải quyết bằng biện pháp hoà bình.",
+                                "d. Liên hợp quốc quy định các nước thành viên phải tôn trọng toàn vẹn lãnh thổ và độc lập chính trị của 5 cường quốc (Liên Xô, Mỹ, Anh, Pháp và Trung Quốc)."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "1.2",
+                    "name": "TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH",
+                    "questions": [
+                        {
+                            "id": "1.2.1",
+                            "type": "multiple_choice",
+                            "question": "Trật tự thế giới hai cực I-an-ta được hình thành bắt nguồn từ những quyết định của",
+                            "options": [
+                                "A. Liên Xô và Mỹ ở Hội nghị Xan Phran-xi-xcô (1945).",
+                                "B. \"Hội nghị tam cường\" và Hội nghị Pốt-xđam (1945).",
+                                "C. Liên Xô, Mỹ, Anh trong Hội nghị Tê-hê-ran (1943).",
+                                "D. Hội nghị Tê-hê-ran (1943) và Hội nghị I-an-ta (1945)."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.2",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là một trong những quyết định của Hội nghị I-an-ta (2-1945)?",
+                            "options": [
+                                "A. Tiêu diệt tận gốc chủ nghĩa phát xít Đức và chủ nghĩa quân phiệt Nhật Bản.",
+                                "B. Xây dựng một trật tự thế giới mới nhằm giải quyết dứt điểm các vấn đề hậu chiến tranh.",
+                                "C. Đồng ý thành lập tổ chức Hội Quốc liên để duy trì hoà bình và an ninh thế giới.",
+                                "D. Thoả thuận việc phân chia phạm vi ảnh hưởng của Mỹ và Liên Xô ở châu Phi."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.3",
+                            "type": "multiple_choice",
+                            "question": "Theo thoả thuận của các cường quốc tại Hội nghị I-an-ta (2-1945), địa bàn nào sau đây ở châu Âu sẽ thuộc phạm vi ảnh hưởng của Mỹ?",
+                            "options": [
+                                "A. Béc-lin.",
+                                "B. Đông Đức.",
+                                "C. Đông Âu.",
+                                "D. Tây Âu."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.4",
+                            "type": "multiple_choice",
+                            "question": "Theo quyết định của các cường quốc tại Hội nghị I-an-ta (2-1945), vùng ảnh hưởng của Liên Xô ở châu Á sẽ là",
+                            "options": [
+                                "A. phía bắc vĩ tuyến 38 trên bán đảo Triều Tiên.",
+                                "B. phía nam vĩ tuyến 38 trên bán đảo Triều Tiên.",
+                                "C. khu vực Tây Á, Nam Á và Đông Nam Á.",
+                                "D. khu vực Trung Đông và bán đảo Triều Tiên."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.5",
+                            "type": "multiple_choice",
+                            "question": "Quyết định nào sau đây của Hội nghị I-an-ta (2-1945) tạo nên những bất lợi cho cách mạng Việt Nam trong những năm 1945 – 1946?",
+                            "options": [
+                                "A. Quân Anh cùng với quân Pháp làm nhiệm vụ giải giáp quân đội Nhật.",
+                                "B. Quân Anh và quân Trung Hoa Dân quốc vào kiểm soát Đông Dương.",
+                                "C. Liên Xô có phạm vi ảnh hưởng và kiểm soát ở các nước Đông Dương.",
+                                "D. Đông Nam Á vẫn thuộc phạm vi ảnh hưởng của các nước phương Tây."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.6",
+                            "type": "multiple_choice",
+                            "question": "Nhận xét nào sau đây là tác động của Hội nghị I-an-ta và Hội nghị Pốt-xđam (1945) đối với tình hình quốc tế?",
+                            "options": [
+                                "A. Tạo nên một trật tự thế giới mới giữa các nước thắng trận và bại trận.",
+                                "B. Giải quyết được mâu thuẫn về vấn đề thị trường cho các cường quốc.",
+                                "C. Tạo nên khuôn khổ của trật tự thế giới – trật tự nhất siêu, nhiều cực.",
+                                "D. Làm thay đổi sâu sắc quan hệ quốc tế, đặc biệt là quan hệ Xô – Mỹ."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.7",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là đặc điểm nổi bật của trật tự thế giới mới được hình thành sau Chiến tranh thế giới thứ hai?",
+                            "options": [
+                                "A. Một trật tự thế giới được thiết lập trên cơ sở nước thắng trận thống trị nước bại trận.",
+                                "B. Xác lập trật tự thế giới mới của các nước tư bản chủ nghĩa do Mỹ đứng đầu, chi phối.",
+                                "C. Hình thành trật tự thế giới hai cực đối lập: cực Liên Xô và cực Mỹ đứng đầu mỗi bên.",
+                                "D. Trật tự thế giới được thiết lập trên cơ sở các nước thắng trận đoàn kết, đồng thuận."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.8",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Trước kia, chế độ quân chủ tại Hy Lạp đã nhờ vào sự giúp đỡ của Anh, nhưng sau Chiến tranh thế giới thứ hai, kinh tế của nước Anh hoàn toàn suy kiệt, lo cho mình còn không xong, nên không thể giúp đỡ gì cho chế độ quân chủ ở Hy Lạp nữa. Vào ngày 12-3-1947, Tổng thống Tơ-ru-man đã đọc một bài diễn văn tại lưỡng viện Quốc hội Mỹ, cho rằng Hy Lạp và Thổ Nhĩ Kỳ nếu bị rơi vào khối xã hội chủ nghĩa, thì cả Trung Đông cũng sẽ rơi theo... sẽ làm cho cả Tây Âu bị ảnh hưởng. Do vậy, ông thuyết phục Quốc hội Mỹ chi viện kinh tế và quân sự cho Hy Lạp và Thổ Nhĩ Kỳ với số tiền 400 triệu đô la. Lí luận này về sau được gọi là \"Học thuyết Tơ-ru-man\".",
+                            "statements": [
+                                "a. Chiến tranh lạnh là cuộc đối đầu gay gắt giữa Mỹ và Liên Xô, chỉ diễn ra ở châu Âu.",
+                                "b. Thông điệp của Tổng thống Mỹ Tơ-ru-man đọc trước Quốc hội Mỹ ngày 12-3-1947 đã khởi đầu cuộc Chiến tranh lạnh chống lại Liên Xô và các nước Đông Âu.",
+                                "c. Nguồn gốc của sự đối đầu căng thẳng giữa Mỹ và Liên Xô xuất phát từ \"vấn đề Hy Lạp và Thổ Nhĩ Kỳ\" sau Chiến tranh thế giới thứ hai.",
+                                "d. Học thuyết Tơ-ru-man phản ánh chính sách đối ngoại của Mỹ sau Chiến tranh thế giới thứ hai, muốn đưa nước Mỹ trở thành bá chủ thế giới."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "name": "TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH",
+                    "questions": [
+                        {
+                            "id": "1.3.1",
+                            "type": "multiple_choice",
+                            "question": "Từ sau khi Chiến tranh lạnh kết thúc (1991), thế giới phát triển theo một trong những xu thế nào sau đây?",
+                            "options": [
+                                "A. Đa cực, nhiều trung tâm.",
+                                "B. Lấy chính trị làm nền tảng.",
+                                "C. Thoả hiệp để ổn định toàn cầu.",
+                                "D. Hạn chế phổ biến vũ khí hạt nhân."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.3.2",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây không phải xu thế phát triển của thế giới sau Chiến tranh lạnh?",
+                            "options": [
+                                "A. Quốc tế hoá — toàn cầu hoá.",
+                                "B. Đối thoại, hợp tác cùng phát triển.",
+                                "C. Lấy phát triển kinh tế làm trung tâm.",
+                                "D. Đa quốc gia, đa bản sắc văn hoá."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.3.3",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là xu thế phát triển của thế giới sau Chiến tranh lạnh được nhân dân các nước hi vọng, mong muốn trở thành hiện thực?",
+                            "options": [
+                                "A. Đa cực, đa phe trong đối ngoại quốc tế.",
+                                "B. Liên kết và hội nhập giữa các nước lớn.",
+                                "C. Hoà bình, ổn định để cùng phát triển.",
+                                "D. Phát triển kinh tế, quân sự là trung tâm."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.3.4",
+                            "type": "multiple_choice",
+                            "question": "Từ sau Chiến tranh lạnh, các nước trên thế giới có sự điều chỉnh quan hệ theo hướng đối thoại, thoả hiệp và tránh xung đột trực tiếp, chủ yếu vì lí do nào sau đây?",
+                            "options": [
+                                "A. Hợp tác địa — chính trị trở thành nội dung căn bản giữa các nước.",
+                                "B. Từng bước giảm bớt số lượng vũ khí hạt nhân của các cường quốc.",
+                                "C. Muốn có môi trường thuận lợi để vươn lên xác lập vị thế quốc tế.",
+                                "D. Cần tập trung vào cuộc đấu tranh chống lại chủ nghĩa khủng bố."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.3.5",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Trật tự thế giới mới này được hình thành như thế nào, còn tuỳ thuộc ở nhiều nhân tố: Sự phát triển về thực lực kinh tế, chính trị, quân sự của các cường quốc Mỹ, Nga, Trung Quốc, Anh, Pháp, Nhật Bản, Đức trong cuộc chạy đua về sức mạnh quốc gia tổng hợp,...; Sự lớn mạnh của lực lượng cách mạng thế giới (sự thành bại của công cuộc cải cách, đổi mới ở các nước xã hội chủ nghĩa,...); Sự phát triển của cách mạng khoa học – kĩ thuật sẽ còn tiếp tục tạo ra những \"đột phá\" và biến chuyển trên cục diện thế giới\".",
+                            "statements": [
+                                "a. Đoạn tư liệu là minh chứng cho xu thế đa cực, nhiều trung tâm trong quan hệ quốc tế trong thời gian diễn ra cuộc Chiến tranh lạnh.",
+                                "b. Trong quan hệ quốc tế, khái niệm đa cực chỉ trạng thái địa – chính trị toàn cầu với ba trung tâm quyền lực chi phối là Mỹ, Liên bang Nga và Trung Quốc.",
+                                "c. Khái niệm đa cực được dùng chủ yếu để chỉ trật tự thế giới sau Chiến tranh lạnh.",
+                                "d. Để có thể trở thành một cực trong xu thế đa cực, nhiều trung tâm, các nước phải có chiến lược xây dựng sức mạnh tổng hợp, trong đó sức mạnh kinh tế là trụ cột."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "ASEAN: NHỮNG CHẶNG ĐƯỜNG LỊCH SỬ",
+            "topics": [
+                {
+                    "id": "2.1",
+                    "name": "SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)",
+                    "questions": [
+                        {
+                            "id": "2.1.1",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là bối cảnh lịch sử thành lập Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+                            "options": [
+                                "A. Xu thế khu vực hoá đã xuất hiện và ngày càng phát triển mạnh mẽ.",
+                                "B. Nhiều nước Đông Nam Á đã vươn lên trở thành \"con rồng\" kinh tế.",
+                                "C. Xu thế toàn cầu hoá đã xuất hiện và ngày càng phát triển mạnh mẽ.",
+                                "D. Liên Xô và các nước đã tuyên bố chấm dứt cuộc Chiến tranh lạnh."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.1.2",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là bối cảnh lịch sử thành lập Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+                            "options": [
+                                "A. Các nước trong khu vực đã gia nhập Tổ chức Thương mại Thế giới (WTO).",
+                                "B. Cuộc chiến tranh Mỹ xâm lược Việt Nam đang bước vào giai đoạn cuối.",
+                                "C. Các nước lớn đang tìm cách biến Đông Nam Á thành khu vực ảnh hưởng.",
+                                "D. Xu thế hoà hoãn Đông – Tây đang xuất hiện và trở thành xu thế chủ đạo."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.1.3",
+                            "type": "multiple_choice",
+                            "question": "Hiệp hội các quốc gia Đông Nam Á (ASEAN) được ra đời trong bối cảnh",
+                            "options": [
+                                "A. các quốc gia trong khu vực có chung một ngôn ngữ.",
+                                "B. cuộc chiến tranh trên bán đảo Triều Tiên đang diễn ra.",
+                                "C. cuộc Cách mạng công nghiệp lần thứ ba đã kết thúc.",
+                                "D. các tổ chức liên kết khu vực đã ra đời, hoạt động hiệu quả."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "2.1.4",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây không phải là bối cảnh thành lập Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+                            "options": [
+                                "A. Các nước trong khu vực có chung một tôn giáo và tín ngưỡng cộng đồng.",
+                                "B. Cuộc Chiến tranh lạnh đã tác động sâu sắc đến nhiều nước trong khu vực.",
+                                "C. Các nước đã có độc lập dân tộc, đặt ra yêu cầu hợp tác để cùng phát triển.",
+                                "D. Các nước lớn đang tìm cách biến Đông Nam Á thành khu vực ảnh hưởng."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.1.5",
+                            "type": "multiple_choice",
+                            "question": "Một trong những thành viên sáng lập Hiệp hội các quốc gia Đông Nam Á (ASEAN) là",
+                            "options": [
+                                "A. Mi-an-ma.",
+                                "B. Lào.",
+                                "C. Thái Lan.",
+                                "D. Cam-pu-chia."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.1.6",
+                            "type": "multiple_choice",
+                            "question": "Năm 1995, quốc gia nào sau đây được kết nạp, trở thành thành viên thứ 7 của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+                            "options": [
+                                "A. Mi-an-ma.",
+                                "B. Lào.",
+                                "C. Cam-pu-chia.",
+                                "D. Việt Nam."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "2.1.7",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Trong quá trình tìm kiếm sự hợp tác giữa các nước Đông Nam Á đã xuất hiện những tổ chức khu vực và kí kết các hiệp ước giữa các nước trong khu vực. Tháng 1-1959, Hiệp ước hữu nghị và kinh tế Đông Nam Á (SAFET) bao gồm Ma-lai-xi-a và Phi-lip-pin ra đời. Tháng 7-1961, Hội đồng Đông Nam Á (ASA) gồm Ma-lai-xi-a, Phi-lip-pin và Thái Lan được thành lập. Tháng 8-1963, một tổ chức gồm Ma-lai-xi-a, Phi-lip-pin, In-đô-nê-xi-a (MAPHILINDO) được thành lập. Tuy nhiên, những tổ chức trên đây không tồn tại được lâu do sự bất đồng giữa các nước về vấn đề lãnh thổ và chịu quyền\".",
+                            "statements": [
+                                "a. Ma-lai-xi-a, Phi-lip-pin, Thái Lan, In-đô-nê-xi-a là những quốc gia sớm có ý tưởng về việc thành lập một tổ chức khu vực ở Đông Nam Á.",
+                                "b. Yếu tố quyết định để thành lập và mở rộng Hiệp hội các quốc gia Đông Nam Á (ASEAN) là các nước phải tôn trọng độc lập, chủ quyền và lãnh thổ của nhau.",
+                                "c. Các tổ chức tiền thân của Hiệp hội các quốc gia Đông Nam Á (ASEAN) không tồn tại lâu là do không thống nhất được giá cả và thị trường tiêu thụ hàng hóa.",
+                                "d. Trong bối cảnh khu vực và quốc tế có nhiều biến động, yêu cầu hợp tác để cùng phát triển giữa các nước trong khu vực Đông Nam Á là yêu cầu tất yếu."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "2.2",
+                    "name": "CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC",
+                    "questions": [
+                        {
+                            "id": "2.2.1",
+                            "type": "multiple_choice",
+                            "question": "Ý tưởng về xây dựng Cộng đồng ASEAN được khởi nguồn từ khi",
+                            "options": [
+                                "A. các nước ASEAN kí kết Hiệp ước Ba-li (1976).",
+                                "B. thành lập tổ chức ASEAN (1967) tại Thái Lan.",
+                                "C. tổ chức ASEAN có đủ 10 nước thành viên (1999).",
+                                "D. \"vấn đề Cam-pu-chia\" được giải quyết (1991)."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "2.2.2",
+                            "type": "multiple_choice",
+                            "question": "ASEAN chính thức khẳng định ý tưởng thành lập Cộng đồng ASEAN tại Hội nghị nào sau đây?",
+                            "options": [
+                                "A. Hội nghị cấp cao ASEAN lần thứ 13 tại Xin-ga-po (2007).",
+                                "B. Hội nghị cấp cao ASEAN lần thứ nhất tại In-đô-nê-xi-a (1976).",
+                                "C. Hội nghị cấp cao ASEAN không chính thức ở Ma-lai-xi-a (1997).",
+                                "D. Hội nghị cấp cao ASEAN lần thứ 16 tại Hà Nội (2010)."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.2.3",
+                            "type": "multiple_choice",
+                            "question": "Năm 2015, Cộng đồng ASEAN đạt được thành quả cơ bản nào sau đây?",
+                            "options": [
+                                "A. Ý tưởng thành lập Cộng đồng ASEAN được các thành viên thông qua.",
+                                "B. Cộng đồng ASEAN có nhiều hoạt động để kết nối hai lục địa Á – Âu.",
+                                "C. Hoàn thành về cơ bản việc triển khai các kế hoạch xây dựng cộng đồng.",
+                                "D. Các kế hoạch xây dựng cộng đồng bắt đầu được triển khai ở Ma-lai-xi-a."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.2.4",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây không phải là trụ cột của Cộng đồng ASEAN?",
+                            "options": [
+                                "A. Cộng đồng Kinh tế ASEAN.",
+                                "B. Cộng đồng Văn hoá – Thể thao ASEAN.",
+                                "C. Cộng đồng Chính trị – An ninh ASEAN.",
+                                "D. Cộng đồng Văn hoá – Xã hội ASEAN."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "2.2.5",
+                            "type": "true_false",
+                            "question": "Đọc tư liệu sau đây: \"Toàn bộ Đông Nam Á sẽ là một cộng đồng ASEAN, nhận thức được các mối liên hệ lịch sử của mình, hiểu rõ di sản văn hoá của mình và gắn bó với nhau bằng một bản sắc chung của khu vực\".",
+                            "statements": [
+                                "a. Đoạn tư liệu là một phần nội dung được đề cập trong văn kiện Tầm nhìn ASEAN 2020.",
+                                "b. Việc thành lập Cộng đồng ASEAN đã tăng cường sự hợp tác giữa các nước ASEAN, đưa tổ chức này phát triển lên một nấc thang mới.",
+                                "c. Cộng đồng ASEAN ra đời không có mối liên hệ với Hiệp hội các quốc gia Đông Nam Á.",
+                                "d. Sự ra đời của Cộng đồng ASEAN là một trong những biểu hiện của xu thế toàn cầu hoá."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "CÁCH MẠNG THÁNG TÁM NĂM 1945, CHIẾN TRANH GIẢI PHÓNG DÂN TỘC VÀ CHIẾN TRANH BẢO VỆ TỔ QUỐC",
+            "topics": [
+                {
+                    "id": "3.1",
+                    "name": "CÁCH MẠNG THÁNG TÁM 1945",
+                    "questions": [
+                        {
+                            "id": "3.1.1",
+                            "type": "multiple_choice",
+                            "question": "Tổng khởi nghĩa tháng Tám năm 1945 ở Việt Nam nổ ra trong bối cảnh quốc tế nào sau đây?",
+                            "options": [
+                                "A. Phe Đồng minh vừa được thành lập và tuyên chiến với phát xít.",
+                                "B. Quân phiệt Nhật Bản đầu hàng quân Đồng minh không điều kiện.",
+                                "C. Chiến tranh lạnh bùng nổ và lôi kéo nhiều quốc gia tham chiến.",
+                                "D. Đức mở cuộc tấn công Liên Xô, bị Hồng quân Liên Xô đánh bại."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.1.2",
+                            "type": "multiple_choice",
+                            "question": "Hội nghị toàn quốc của Đảng Cộng sản Đông Dương họp tại Tân Trào (Tuyên Quang) trong hai ngày 14 và 15-8-1945 đưa ra chủ trương nào sau đây?",
+                            "options": [
+                                "A. Phát động Cao trào kháng Nhật cứu nước trên toàn quốc.",
+                                "B. Quyết định giành chính quyền ở Thủ đô Hà Nội trước tiên.",
+                                "C. Quyết định các vấn đề đối nội sau khi giành chính quyền.",
+                                "D. Phát động cuộc tổng công kích quân Nhật trên toàn quốc."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.1.3",
+                            "type": "multiple_choice",
+                            "question": "Trong hai ngày 16 và 17-8-1945, Đại hội Quốc dân tại Tân Trào (Tuyên Quang) đã",
+                            "options": [
+                                "A. bầu Chính phủ liên hiệp kháng chiến chống Nhật.",
+                                "B. tán thành chủ trương Tổng khởi nghĩa của Đảng.",
+                                "C. phát động cuộc chiến tranh du kích trên toàn quốc.",
+                                "D. thông qua bản Quân lệnh số 1, chuẩn bị hành động."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.1.4",
+                            "type": "multiple_choice",
+                            "question": "Những địa phương nào sau đây giành chính quyền ở tỉnh lị sớm nhất trong Cách mạng tháng Tám năm 1945 ở Việt Nam?",
+                            "options": [
+                                "A. Bắc Giang, Hải Dương, Hải Phòng và Thanh Hoá.",
+                                "B. Bắc Giang, Hải Dương, Hà Tĩnh và Quảng Nam.",
+                                "C. Thủ đô Hà Nội, Hải Phòng, Huế và Quảng Nam.",
+                                "D. Thủ đô Hà Nội, Huế, Sài Gòn và Đồng Nai Thượng."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.1.5",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Không những giật tung được xiềng xích của bọn đế quốc phát xít, Cách mạng tháng Tám lại lật nhào được chế độ quân chủ thành lập trên đất nước ta hàng chục thế kỉ, làm cho nước Việt Nam thành một nước cộng hoà dân chủ ... Cách mạng tháng Tám tỏ rõ tinh thần chống phát xít và yêu chuộng dân chủ và hòa bình của nhân dân Việt Nam... Cách mạng tháng Tám đã chọc thủng được hệ thống thuộc địa của chủ nghĩa đế quốc ở một trong những mắt xích yếu nhất của nó, mở đầu cho quá trình tan rã không thể cứu vãn được của chủ nghĩa thực dân thế giới\".",
+                            "statements": [
+                                "a. Cách mạng tháng Tám năm 1945 ở Việt Nam đã chấm dứt chế độ quân chủ tồn tại nhiều thế kỉ.",
+                                "b. Cách mạng tháng Tám đã xoá bỏ mọi tàn dư của chủ nghĩa thực dân cũ trên đất nước Việt Nam.",
+                                "c. Cách mạng tháng Tám góp phần làm tan rã hệ thống thuộc địa của chủ nghĩa thực dân trên thế giới.",
+                                "d. Cách mạng tháng Tám ở Việt Nam mang tính chất dân chủ, góp phần vào giải phóng con người."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3.2",
+                    "name": "CUỘC KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP (1945-1954)",
+                    "questions": [
+                        {
+                            "id": "3.2.1",
+                            "type": "multiple_choice",
+                            "question": "Sau Cách mạng tháng Tám năm 1945, quân đội quốc gia nào sau đây vào phía bắc vĩ tuyến 16 của Việt Nam để giải giáp vũ khí quân đội Nhật Bản?",
+                            "options": [
+                                "A. Tây Ban Nha.",
+                                "B. Anh.",
+                                "C. Mỹ.",
+                                "D. Trung Hoa Dân quốc."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "3.2.2",
+                            "type": "multiple_choice",
+                            "question": "Ngay sau khi Cách mạng tháng Tám thành công (1945), nước Việt Nam Dân chủ Cộng hoà phải đối phó với khó khăn nào sau đây?",
+                            "options": [
+                                "A. Nhiều quân đội nước ngoài chiếm đóng.",
+                                "B. Mỹ đưa quân viễn chỉnh vào miền Nam.",
+                                "C. Chưa có lực lượng vũ trang cách mạng.",
+                                "D. Mỹ tăng cường viện trợ cho Pháp."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.2.3",
+                            "type": "multiple_choice",
+                            "question": "Sự kiện nào sau đây mở đầu cuộc chiến tranh xâm lược Việt Nam lần thứ hai của thực dân Pháp?",
+                            "options": [
+                                "A. Pháp đề ra kế hoạch Na-va và tấn công Điện Biên Phủ.",
+                                "B. Pháp mở chiến dịch tấn công lên căn cứ Việt Bắc.",
+                                "C. Pháp gửi tối hậu thư đòi Chính phủ Việt Nam đầu hàng.",
+                                "D. Pháp đánh úp trụ sở Uỷ ban Nhân dân Nam Bộ."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "3.2.4",
+                            "type": "multiple_choice",
+                            "question": "Chiến dịch tấn công lớn đầu tiên của quân dân Việt Nam trong cuộc kháng chiến chống thực dân Pháp (1945 – 1954) là chiến dịch",
+                            "options": [
+                                "A. Việt Bắc.",
+                                "B. Điện Biên Phủ.",
+                                "C. Biên giới.",
+                                "D. Hồ Chí Minh."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.2.5",
+                            "type": "multiple_choice",
+                            "question": "Sự kiện nào sau đây đánh dấu chiến dịch Điện Biên Phủ (1954) của quân dân Việt Nam toàn thắng?",
+                            "options": [
+                                "A. Pháp phải rút toàn bộ quân viễn chỉnh và quân đồng minh khỏi Việt Bắc.",
+                                "B. Toàn bộ quân Pháp phải rút khỏi các đô thị phía bắc vĩ tuyến 16.",
+                                "C. Tướng Đờ Ca-xtơ-ri và toàn bộ Bộ Tham mưu quân Pháp ra hàng.",
+                                "D. Pháp kí Hiệp định Giơ-ne-vơ về kết thúc chiến tranh ở Đông Dương."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.2.6",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Cuộc kháng chiến chống Pháp đã kéo dài 9 năm, chúng ta đã lần lượt đánh bại các âm mưu và kế hoạch chiến lược của địch. Với chiến thắng Việt Bắc, quân và dân ta đã đánh bại hoàn toàn chiến lược đánh nhanh giải quyết nhanh của quân đội Pháp. Tiếp đó quân và dân ta đẩy mạnh chiến tranh du kích, tích cực chống địch càn quét, bình định, lấn chiếm, phá tan âm mưu dùng người Việt đánh người Việt, lấy chiến tranh nuôi chiến tranh của chúng. Thắng lợi của chiến dịch Biên giới đã tạo ra một bước ngoặt cơ bản trong cục diện của cuộc kháng chiến. Từ đó ta đã liên tiếp mở nhiều chiến dịch tấn công và phản công với quy mô ngày càng lớn đi đôi với đẩy mạnh phong trào chiến tranh du kích rộng khắp và phong trào nổi dậy của quần chúng ở vùng sau lưng địch. Quân và dân ta đã tiêu diệt được nhiều sinh lực địch và làm sụp đổ từng mảng lớn hệ thống nguỵ quyền của chúng, tiến lên giành những thắng lợi quyết định trong chiến cuộc Đông – Xuân 1953 – 1954, mà đỉnh cao là chiến dịch Điện Biên Phủ\".",
+                            "statements": [
+                                "a. Sau chiến thắng Biên giới, quân dân Việt Nam không còn sử dụng chiến tranh du kích mà chuyển hẳn sang chiến tranh chính quy trên quy mô lớn.",
+                                "b. Chiến thắng Việt Bắc bước đầu làm phá sản âm mưu \"đánh nhanh, thắng nhanh\" của thực dân Pháp.",
+                                "c. Chiến tranh xâm lược Việt Nam của thực dân Pháp là loại hình chiến tranh thực dân mới, sử dụng quân đội viễn chinh là chủ yếu.",
+                                "d. Chiến dịch Điện Biên Phủ có ý nghĩa quyết định, là thắng lợi quân sự lớn nhất của quân dân Việt Nam trong 9 năm kháng chiến."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3.3",
+                    "name": "CUỘC KHÁNG CHIẾN CHỐNG MỸ CỨU NƯỚC (1954-1975)",
+                    "questions": [
+                        {
+                            "id": "3.3.1",
+                            "type": "multiple_choice",
+                            "question": "Hai cuộc kháng chiến của nhân dân Việt Nam chống thực dân Pháp và đế quốc Mỹ xâm lược (1945 – 1975) đều được phát động trong điều kiện quốc tế nào sau đây?",
+                            "options": [
+                                "A. Có sự ủng hộ của phe xã hội chủ nghĩa.",
+                                "B. Chiến tranh thế giới thứ hai đang đến hồi kết.",
+                                "C. Quan hệ quốc tế đang có diễn biến phức tạp.",
+                                "D. Xu thế toàn cầu hoá đã xuất hiện ở châu Âu."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.3.2",
+                            "type": "multiple_choice",
+                            "question": "Trong những năm 1954 – 1960, miền Bắc đã thực hiện nhiều nhiệm vụ khác nhau, nhưng không có nhiệm vụ nào sau đây?",
+                            "options": [
+                                "A. Xây dựng kinh tế thị trường theo định hướng xã hội chủ nghĩa.",
+                                "B. Cải tạo quan hệ sản xuất, bước đầu phát triển kinh tế – xã hội.",
+                                "C. Thực hiện khôi phục kinh tế, hàn gắn vết thương chiến tranh.",
+                                "D. Hoàn thành việc cải cách ruộng đất để \"người cày có ruộng\"."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.3.3",
+                            "type": "multiple_choice",
+                            "question": "Trong những năm 1961 – 1965, Mỹ tiến hành chiến lược chiến tranh nào sau đây ở miền Nam Việt Nam?",
+                            "options": [
+                                "A. Chiến tranh cục bộ.",
+                                "B. Chiến tranh đơn phương.",
+                                "C. Việt Nam hoá chiến tranh.",
+                                "D. Chiến tranh đặc biệt."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "3.3.4",
+                            "type": "multiple_choice",
+                            "question": "Chiến thắng nào của quân dân miền Nam đã buộc Mỹ phải tuyên bố \"phi Mỹ hoá\" cuộc chiến tranh xâm lược ở Việt Nam?",
+                            "options": [
+                                "A. Cuộc Tiến công chiến lược năm 1972.",
+                                "B. Chiến thắng Vạn Tường năm 1965.",
+                                "C. Cuộc Tổng tiến công và nổi dậy năm 1968.",
+                                "D. Chiến thắng Áp Bắc năm 1963."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.3.5",
+                            "type": "multiple_choice",
+                            "question": "Sự kiện nào sau đây ghi nhận nhân dân Việt Nam đã \"căn bản\" hoàn thành nhiệm vụ đánh cho \"Mỹ cút\"?",
+                            "options": [
+                                "A. Cuộc Tổng tiến công và nổi dậy Xuân 1975.",
+                                "B. Mỹ chấp nhận kí kết Hiệp định Pa-ri (1-1973).",
+                                "C. Chiến thắng \"Điện Biên Phủ trên không\" (12-1972).",
+                                "D. Mỹ ngồi vào bàn đàm phán ở Hội nghị Pa-ri (1968)."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.3.6",
+                            "type": "true_false",
+                            "question": "Đọc đoạn thông tin sau đây: Cuộc Tổng tiến công và nổi dậy vào dịp Tết Mậu Thân 1968 đã tác động trực tiếp, buộc Mỹ phải chấp nhận bàn đàm phán ở Hội nghị Pa-ri (từ tháng 5-1968), nhưng việc đàm phán giữa Việt Nam và Mỹ luôn căng thẳng và bế tắc,... Sau những thắng lợi của Quân Giải phóng miền Nam trong cuộc Tiến công chiến lược (1972), quân dân miền Bắc đã lập nên chiến công vang dội trong trong 12 ngày đêm cuối năm 1972: đánh bại cuộc tập kích đường không chiến lược bằng máy bay B52 của Mỹ vào Hà Nội, Hải Phòng,... Mỹ đã phải quay trở lại bàn đàm phán và kí Hiệp định Pa-ri về chấm dứt chiến tranh, lập lại hoà bình ở Việt Nam (27-1-1973).",
+                            "statements": [
+                                "a. Cuộc Tổng tiến công và nổi dậy vào dịp Tết Mậu Thân 1968 đã đánh dấu bước ngoặt của cuộc kháng chiến chống Mỹ, cứu nước.",
+                                "b. Quá trình đàm phán giữa Việt Nam và Mỹ kéo dài nhiều năm là do sự tác động của xu thế hoà hoãn Đông – Tây chưa có hồi kết.",
+                                "c. Thắng lợi quân sự của quân dân hai miền Nam – Bắc Việt Nam đã tác động trực tiếp đến việc Mỹ phải đến bàn đàm phán và kí Hiệp định Pa-ri.",
+                                "d. Từ thực tiễn Hội nghị Pa-ri (1968 – 1973) cho thấy, Việt Nam muốn giành thắng lợi trên mặt trận ngoại giao phải có thắng lợi quân sự quyết định."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3.4",
+                    "name": "ĐẤU TRANH BẢO VỆ TỔ QUỐC TỪ SAU THÁNG 4-1975 ĐẾN NAY",
+                    "questions": [
+                        {
+                            "id": "3.4.1",
+                            "type": "multiple_choice",
+                            "question": "Sau Đại thắng mùa Xuân năm 1975, công cuộc xây dựng và bảo vệ Tổ quốc ở Việt Nam có thuận lợi cơ bản nào sau đây?",
+                            "options": [
+                                "A. Đất nước đã phát triển, Việt Nam trở thành nước có thu nhập cao.",
+                                "B. Xu thế hoà hoãn Đông – Tây diễn ra, thế giới không còn xung đột.",
+                                "C. Đất nước đã thống nhất, cùng tiến lên xây dựng chủ nghĩa xã hội.",
+                                "D. Các nước đế quốc đã từ bỏ âm mưu chống phá dân tộc Việt Nam."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.4.2",
+                            "type": "multiple_choice",
+                            "question": "Sau năm 1975, nhân dân Việt Nam tiến hành cuộc đấu tranh bảo vệ Tổ quốc ở vùng biên giới Tây Nam chống lại kẻ thù nào sau đây?",
+                            "options": [
+                                "A. Quân Pôn Pốt.",
+                                "B. Đế quốc Mỹ.",
+                                "C. Thực dân Pháp.",
+                                "D. Phát xít Nhật."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.4.3",
+                            "type": "multiple_choice",
+                            "question": "Sau năm 1975, nước Cộng hoà xã hội chủ nghĩa Việt Nam quản lí toàn bộ lãnh thổ đất nước, trong đó bao gồm",
+                            "options": [
+                                "A. tất cả các đảo trên vùng Biển Đông.",
+                                "B. tất cả các đảo và quần đảo thuộc vịnh Thái Lan.",
+                                "C. quần đảo Hoàng Sa và Trường Sa.",
+                                "D. các đặc khu kinh tế trên bán đảo Đông Dương."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.4.4",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Ngay sau khi cuộc kháng chiến chống Mỹ kết thúc thắng lợi, chính quyền Cam-pu-chia Dân chủ do Pôn Pốt cầm đầu đã thực hiện chính sách diệt chủng đối với đồng bào Cam-pu-chia, đồng thời tiến hành những hành động phiêu lưu quân sự chống Việt Nam. Miền Nam Việt Nam vừa được giải phóng thì tập đoàn Pôn Pốt đã mở ngay những cuộc hành quân khiêu khích, lấn chiếm lãnh thổ Việt Nam như chiếm đảo Phú Quốc ngày 3-5-1975, Thổ Chu ngày 10-5-1975 và xâm phạm nhiều vùng lãnh thổ khác dọc biên giới từ Hà Tiên đến Tây Ninh. Từ tháng 4-1977, tập đoàn Pôn Pốt tăng cường những cuộc hành quân lấn chiếm, mở rộng dần thành cuộc chiến tranh lớn trên toàn tuyến biên giới Tây Nam... Để bảo vệ chủ quyền và toàn vẹn lãnh thổ, quân và dân Việt Nam đã đánh trả quyết liệt, tiêu diệt toàn bộ cánh quân xâm lược. Cuộc tiến công quy mô lớn của tập đoàn Pôn Pốt hoàn toàn bị đập tan. Chiến thắng biên giới Tây Nam đã đè bẹp ý đồ xâm lược của tập đoàn Pôn Pốt, giáng một đòn mạnh vào lực lượng quân đội của chúng, tạo thời cơ thuận lợi cho cách mạng Cam-pu-chia thắng lợi\".",
+                            "statements": [
+                                "a. Sau khi lên nắm quyền ở Cam-pu-chia (4-1975), chính quyền Pôn Pốt đã phát động chiến tranh xâm lược biên giới Tây Nam của Việt Nam.",
+                                "b. Cuộc đấu tranh bảo vệ biên giới Tây Nam của Việt Nam đã tạo thời cơ thuận lợi cho nhân dân Cam-pu-chia lật đổ ách cai trị của tập đoàn Pôn Pốt.",
+                                "c. Chiến thắng của quân dân Việt Nam trước quân Pôn Pốt là thắng lợi của chủ trương đánh nhanh, thắng nhanh, không bị tổn thất người và của.",
+                                "d. Cuộc đấu tranh bảo vệ Tổ quốc ở biên giới Tây Nam cho thấy sức mạnh chính nghĩa của quân dân Việt Nam, không chỉ có ý nghĩa trong nước mà còn góp phần duy trì hoà bình và ổn định khu vực."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "CÔNG CUỘC ĐỔI MỚI Ở VIỆT NAM TỪ NĂM 1986-NAY",
+            "topics": [
+                {
+                    "id": "4.1",
+                    "name": "KHÁI QUÁT VỀ CÔNG CUỘC ĐỔI MỚI TỪ NĂM 1986 - NAY",
+                    "questions": [
+                        {
+                            "id": "4.1.1",
+                            "type": "multiple_choice",
+                            "question": "Đường lối đổi mới toàn diện và đồng bộ đất nước do Đảng Cộng sản Việt Nam tiến hành lần đầu tiên được thông qua tại Đại hội đại biểu toàn quốc",
+                            "options": [
+                                "A. lần thứ IV (1976).",
+                                "B. lần thứ V (1982).",
+                                "C. lần thứ VI (1986).",
+                                "D. lần thứ VII (1991)."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.1.2",
+                            "type": "multiple_choice",
+                            "question": "Trọng tâm của công cuộc Đổi mới ở Việt Nam (từ năm 1986) là tập trung vào lĩnh vực",
+                            "options": [
+                                "A. chính trị.",
+                                "B. kinh tế.",
+                                "C. văn hoá.",
+                                "D. tư tưởng."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.1.3",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là đúng về đường lối đổi mới trong hoạt động đối ngoại của Đảng Cộng sản Việt Nam (từ năm 1986 đến năm 1995)?",
+                            "options": [
+                                "A. Coi trọng đa phương hoá, đa dạng hoá quan hệ đối ngoại.",
+                                "B. Tập trung vào giải quyết quan hệ với Liên Xô, Trung Quốc.",
+                                "C. Coi quan hệ với Liên Xô là \"hòn đá tảng\" trong đối ngoại.",
+                                "D. Chỉ phát triển quan hệ với Nga và nhóm các nước Á - Âu."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.1.4",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Xây dựng và tổ chức thực hiện ba chương trình về lương thực – thực phẩm, hàng tiêu dùng và hàng xuất khẩu… Ba chương trình mục tiêu là nội dung chủ yếu của kế hoạch 5 năm 1986 – 1990, phải được tập trung cao độ sức người, sức của để thực hiện … Đổi mới cơ chế quản lí kinh tế nhằm tạo ra động lực thúc đẩy các đơn vị kinh tế và quần chúng lao động hăng hái phát triển sản xuất, nâng cao năng suất, chất lượng và hiệu quả kinh tế. Kiên quyết xoá bỏ cơ chế tập trung quan liêu, bao cấp, thiết lập và hình thành đồng bộ cơ chế kế hoạch hoá theo phương thức hạch toán kinh doanh xã hội chủ nghĩa\".",
+                            "statements": [
+                                "a. Đảng Cộng sản Việt Nam đưa ra chủ trương xoá bỏ cơ chế quan liêu, bao cấp và xây dựng cơ chế quản lí kinh tế mới.",
+                                "b. Thực hiện ba chương trình kinh tế là nhiệm vụ chủ yếu của toàn bộ hoạt động kinh tế – xã hội, được tiến hành ngay sau năm 1975.",
+                                "c. Mục tiêu của ba chương trình kinh tế là giải quyết các vấn đề dân sinh cấp bách và bước đầu hướng đến xuất khẩu.",
+                                "d. Các chính sách đổi mới kinh tế của Đảng nhằm xoá bỏ rào cản, tạo động lực cho toàn bộ nền kinh tế vượt qua khủng hoảng."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4.2",
+                    "name": "THÀNH TỰU CƠ BẢN VÀ BÀI HỌC CỦA CÔNG CUỘC ĐỔI MỚI",
+                    "questions": [
+                        {
+                            "id": "4.2.1",
+                            "type": "multiple_choice",
+                            "question": "Về chính trị, trong thời kì Đổi mới, Việt Nam đã đạt được thành tựu tiêu biểu nào sau đây?",
+                            "options": [
+                                "A. Xây dựng Nhà nước pháp quyền xã hội chủ nghĩa.",
+                                "B. Xây dựng được mô hình Nhà nước chuyên chính vô sản.",
+                                "C. Xoá bỏ chế độ phong kiến, xây dựng chế độ mới, dân chủ.",
+                                "D. Thay đổi phương hướng tiến lên chủ nghĩa xã hội."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.2.2",
+                            "type": "multiple_choice",
+                            "question": "Một trong những thành tựu kinh tế của Việt Nam trong thời kì Đổi mới là",
+                            "options": [
+                                "A. chuyển dịch cơ cấu kinh tế theo hướng tăng tỉ trọng công nghiệp.",
+                                "B. chuyển dịch cơ cấu kinh tế theo hướng tăng tỉ trọng nông nghiệp.",
+                                "C. trở thành nước công nghiệp hiện đại có thu nhập đầu người cao.",
+                                "D. xây dựng nền kinh tế kế hoạch hoá do Nhà nước quản lí hiệu quả."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.2.3",
+                            "type": "multiple_choice",
+                            "question": "Trong thời kì Đổi mới, Việt Nam đạt được thành tựu văn hoá – xã hội nào sau đây?",
+                            "options": [
+                                "A. Giải quyết được vấn đề lao động và việc làm.",
+                                "B. Xoá bỏ được tình trạng lao động thất nghiệp.",
+                                "C. Chỉ số phát triển con người đứng đầu ASEAN.",
+                                "D. Miễn phí mọi chi phí về y tế cho nhân dân."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.2.4",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Nhìn lại 35 năm thực hiện công cuộc Đổi mới, 30 năm thực hiện Cương lĩnh xây dựng đất nước trong thời kì quá độ lên chủ nghĩa xã hội, lí luận về đường lối đổi mới, về chủ nghĩa xã hội và con đường đi lên chủ nghĩa xã hội của Việt Nam ngày càng hoàn thiện và từng bước được hiện thực hoá. Đất nước đã đạt được những thành tựu to lớn, có ý nghĩa lịch sử, phát triển mạnh mẽ, toàn diện so với những năm trước đổi mới. Quy mô, trình độ nền kinh tế được nâng lên. Đời sống nhân dân cả về vật chất và tinh thần được cải thiện rõ rệt. Đất nước ta chưa bao giờ có được cơ đồ, tiềm lực, vị thế và uy tín quốc tế như ngày nay\".",
+                            "statements": [
+                                "a. Ngay khi tiến hành Đổi mới, Đảng Cộng sản Việt Nam đã hoàn thiện lí luận về con đường đi lên chủ nghĩa xã hội.",
+                                "b. Cương lĩnh xây dựng đất nước trong thời kì quá độ lên chủ nghĩa xã hội là cương lĩnh chính trị đầu tiên trong lịch sử của Đảng Cộng sản Việt Nam, đặt cơ sở cho đổi mới đất nước.",
+                                "c. Thành tựu của công cuộc Đổi mới đã chứng minh đường lối đổi mới đất nước của Đảng Cộng sản Việt Nam là đúng đắn và ngày càng được hoàn thiện.",
+                                "d. Một trong những ý nghĩa quan trọng về thành tựu của Đổi mới ở Việt Nam là không ngừng nâng cao vị thế và sức mạnh tổng hợp của quốc gia."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "LỊCH SỬ ĐỐI NGOẠI CỦA VIỆT NAM THỜI CẬN – HIỆN ĐẠI",
+            "topics": [
+                {
+                    "id": "5.1",
+                    "name": "HOẠT ĐỘNG ĐỐI NGOẠI CỦA VIỆT NAM TRONG ĐẤU TRANH GIÀNH ĐỘC LẬP DÂN TỘC (TỪ ĐẦU THẾ KỈ XX ĐẾN CÁCH MẠNG THÁNG TÁM NĂM 1945)",
+                    "questions": [
+                        {
+                            "id": "5.1.1",
+                            "type": "multiple_choice",
+                            "question": "Với mục tiêu đánh đuổi thực dân Pháp để giành lại độc lập, năm 1905, Phan Bội Châu khởi xướng phong trào đưa thanh niên Việt Nam sang Nhật Bản để học tập, được gọi là phong trào",
+                            "options": [
+                                "A. Đông du.",
+                                "B. Cần vương.",
+                                "C. cải tiến.",
+                                "D. Duy tân."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.1.2",
+                            "type": "multiple_choice",
+                            "question": "Trong những năm 1944 – 1945, Hồ Chí Minh và Đảng Cộng sản Đông Dương đã chủ động liên lạc với lực lượng Đồng minh thông qua quốc gia nào sau đây để cùng đấu tranh chống Nhật Bản?",
+                            "options": [
+                                "A. Mỹ.",
+                                "B. Ấn Độ.",
+                                "C. Phi-lip-pin.",
+                                "D. In-đô-nê-xi-a."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.1.3",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Giữa năm 1921, tại Pháp, Nguyễn Ái Quốc cùng một số nhà cách mạng của An-giê-ri, Tuy-ni-di, Ma-rốc, Ma-đa-ga-xca,... thành lập Hội Liên hiệp thuộc địa... Với tư cách Trưởng Tiểu ban Đông Dương của Đảng Cộng sản Pháp, Nguyễn Ái Quốc cũng đã góp phần quan trọng vào việc tố cáo tội ác của chủ nghĩa thực dân Pháp ở các thuộc địa, đồng thời tiến hành tuyên truyền tư tưởng Mác – Lê-nin, xây dựng mối quan hệ gắn bó giữa những người cộng sản và nhân dân lao động Pháp với các nước thuộc địa và phụ thuộc\".",
+                            "statements": [
+                                "a. Nguyễn Ái Quốc sáng lập Hội Liên hiệp các dân tộc bị áp bức Á Đông năm 1921.",
+                                "b. Hoạt động đối ngoại của Nguyễn Ái Quốc có mục đích tố cáo tội ác của chủ nghĩa đế quốc.",
+                                "c. Hoạt động đối ngoại sôi nổi của Nguyễn Ái Quốc ở Pháp đã đưa Đảng Cộng sản Đông Dương trở thành một phân bộ độc lập của Quốc tế Cộng sản.",
+                                "d. Hội Liên hiệp thuộc địa là cơ quan lãnh đạo cao nhất của toàn bộ phong trào kháng chiến ở các thuộc địa của Pháp."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "5.2",
+                    "name": "HOẠT ĐỘNG ĐỐI NGOẠI CỦA VIỆT NAM TRONG KHÁNG CHIẾN CHỐNG PHÁP (1945-1954) VÀ KHÁNG CHIẾN CHỐNG MỸ (1954-1975)",
+                    "questions": [
+                        {
+                            "id": "5.2.1",
+                            "type": "multiple_choice",
+                            "question": "Một trong những hoạt động đối ngoại của nước Việt Nam Dân chủ Cộng hoà ngay sau Cách mạng tháng Tám là",
+                            "options": [
+                                "A. gửi yêu cầu ngừng bắn đến nước Pháp.",
+                                "B. gửi công hàm đến Liên hợp quốc.",
+                                "C. yêu cầu nước Pháp trao trả độc lập.",
+                                "D. thành lập Liên minh Việt – Miên–Lào."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.2.2",
+                            "type": "multiple_choice",
+                            "question": "Một trong những chính sách đối ngoại của Đảng và Chính phủ Việt Nam trong cuộc kháng chiến chống Mỹ, cứu nước (1954 – 1975) là",
+                            "options": [
+                                "A. củng cố, phát triển quan hệ với các nước xã hội chủ nghĩa.",
+                                "B. củng cố, phát triển quan hệ với các nước tư bản chủ nghĩa.",
+                                "C. bình thường hoá quan hệ với Trung Quốc và Ấn Độ.",
+                                "D. hợp tác toàn diện với Nhật Bản, Hàn Quốc và Pháp."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.2.3",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Với cương vị Chủ tịch Chính phủ Lâm thời của nước Việt Nam Dân chủ Cộng hoà kiêm Bộ trưởng Bộ ngoại giao, Chủ tịch Hồ Chí Minh đã công bố \"chính sách ngoại giao của Chính phủ lâm thời\"... Nhiệm vụ của ngoại giao nước ta làm rõ trước toàn thế giới ba điều khẳng định: 1. Việt Nam là một nước tự do độc lập. 2. Nhân dân Việt Nam quyết tâm bảo vệ nền tự do độc lập ấy, bất cứ ai xâm phạm đến nền tự do độc lập ấy đều bị nhân dân Việt Nam chống lại. 3. Nhân dân Việt Nam đoàn kết với nhân dân các nước, phấn đấu duy trì hoà bình ổn định giữa các nước trong khu vực và thế giới, tôn trọng công lí và luật pháp quốc tế\".",
+                            "statements": [
+                                "a. Một trong những nhiệm vụ của ngoại giao Việt Nam sau năm 1945 là khẳng định Việt Nam là một quốc gia tự do, thuộc khối Liên hiệp Pháp.",
+                                "b. Cụm từ \"nhân dân Việt Nam đoàn kết với nhân dân các nước\" trong đoạn tư liệu được hiểu là nhân dân các nước xã hội chủ nghĩa.",
+                                "c. Ngoại giao là một phương thức để thể hiện quyết tâm bảo vệ độc lập dân tộc Việt Nam.",
+                                "d. Cụm từ \"ba điều khẳng định\" trong đoạn tư liệu là chỉ những chính sách nhất thời, ngắn hạn của Chính phủ lâm thời nước Việt Nam Dân chủ Cộng hoà."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "5.3",
+                    "name": "HOẠT ĐỘNG ĐỐI NGOẠI CỦA VIỆT NAM TỪ NĂM 1975 - NAY",
+                    "questions": [
+                        {
+                            "id": "5.3.1",
+                            "type": "multiple_choice",
+                            "question": "Giai đoạn 1975 – 1985, Việt Nam thực hiện chính sách đối ngoại nào sau đây?",
+                            "options": [
+                                "A. Bình thường hoá quan hệ ngoại giao với Mỹ.",
+                                "B. Hợp tác toàn diện với các nước xã hội chủ nghĩa.",
+                                "C. Hợp tác toàn diện với các nước tư bản chủ nghĩa.",
+                                "D. Bình thường hoá quan hệ ngoại giao với Trung Quốc."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.3.2",
+                            "type": "multiple_choice",
+                            "question": "Năm 1991, Việt Nam bình thường hoá quan hệ với quốc gia nào sau đây?",
+                            "options": [
+                                "A. Mỹ.",
+                                "B. Trung Quốc.",
+                                "C. Nhật Bản.",
+                                "D. Thái Lan."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.3.3",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Công cuộc Đổi mới bắt đầu chưa được bao lâu thì cuối những năm 1980, đầu những năm 1990, các nước xã hội chủ nghĩa Đông Âu sụp đổ, Liên Xô tan rã... Ngoại giao Việt Nam bước sang một giai đoạn mới trong bối cảnh quốc tế có những biến đổi sâu sắc và phức tạp. Đặc biệt, các mối quan hệ đối tác – đối thủ, hợp tác – cạnh tranh diễn ra nhiều chiều, đan xen nhau, đòi hỏi ngoại giao phải nâng cao tính linh hoạt, chủ động và sáng tạo... Nắm bắt đặc điểm đó của tình hình quốc tế, ngoại giao đã chuyển hướng mạnh sang phục vụ kinh tế và để làm được điều đó, chúng ta đã ra sức tạo môi trường ổn định và điều kiện quốc tế thuận lợi, tranh thủ sự hợp tác của các nước...\".",
+                            "statements": [
+                                "a. Theo đoạn trích, bối cảnh quốc tế cuối những năm 80, đầu những năm 90 của thế kỉ XX có nhiều thay đổi và phức tạp.",
+                                "b. Sự tan rã của hệ thống chủ nghĩa xã hội ở Liên Xô và Đông Âu là một yếu tố thúc đẩy Việt Nam điều chỉnh chính sách đối ngoại.",
+                                "c. Từ những năm 80 của thế kỉ XX, ngoại giao Việt Nam chuyển hẳn từ ngoại giao chính trị sang ngoại giao kinh tế.",
+                                "d. Một trong những bài học từ thực tiễn hoạt động đối ngoại của Việt Nam thời kì Đổi mới là phải chủ động, sáng tạo, dựa vào nước ngoài để đưa ra chính sách."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "HỒ CHÍ MINH TRONG LỊCH SỬ VIỆT NAM",
+            "topics": [
+                {
+                    "id": "6.1",
+                    "name": "KHÁI QUÁT CUỘC ĐỜI VÀ SỰ NGHIỆP CỦA HỒ CHÍ MINH",
+                    "questions": [
+                        {
+                            "id": "6.1.1",
+                            "type": "multiple_choice",
+                            "question": "Trước khi Nguyễn Tất Thành ra đi tìm đường cứu nước (1911), tình hình Việt Nam có đặc điểm nổi bật nào sau đây?",
+                            "options": [
+                                "A. Mâu thuẫn giữa công nhân với địa chủ phong kiến và tay sai là cơ bản.",
+                                "B. Thực dân Pháp câu kết với tay sai mở đầu cuộc chiến tranh xâm lược.",
+                                "C. Phong trào chống Pháp và tay sai diễn ra sôi nổi nhưng đều bị thất bại.",
+                                "D. Khuynh hướng cứu nước phong kiến và dân chủ tư sản cùng xuất hiện."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "6.1.2",
+                            "type": "multiple_choice",
+                            "question": "Nội dung nào sau đây là một trong những yếu tố cơ bản tác động đến quyết định ra đi tìm đường cứu nước (1911) của Nguyễn Tất Thành?",
+                            "options": [
+                                "A. Phong trào yêu nước chống Pháp theo khuynh hướng tư sản đã chấm dứt.",
+                                "B. Đất nước bị mất độc lập, sự nghiệp cứu nước rơi vào khủng hoảng, bế tắc.",
+                                "C. Phong trào đấu tranh chống Pháp và phong kiến tay sai đã ngừng hoạt động.",
+                                "D. Nhân dân phản đối cuộc đấu tranh chống Pháp của các sĩ phu phong kiến."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "6.1.3",
+                            "type": "multiple_choice",
+                            "question": "Trong cuộc đời hoạt động cách mạng (1911 – 1969), Nguyễn Ái Quốc – Hồ Chí Minh được kế thừa những truyền thống nào sau đây của quê hương Nghệ An và gia đình?",
+                            "options": [
+                                "A. Truyền thống khoa bảng và tinh thần chống phát xít.",
+                                "B. Yêu chuộng hoà bình, chống chủ nghĩa phát xít.",
+                                "C. Truyền thống hiếu học và chống phát xít.",
+                                "D. Truyền thống yêu nước, hiếu học và đoàn kết."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "6.1.4",
+                            "type": "true_false",
+                            "question": "Đọc đoạn thông tin sau đây: Trong thời gian hoạt động ở Pháp (1918 – 1923), Nguyễn Ái Quốc có nhiều quyết định quan trọng: Gửi đến Hội nghị Véc-xai bản Yêu sách của nhân dân An Nam (1919) để đòi quyền lợi cho dân tộc; Quyết định lựa chọn con đường cứu nước giải phóng dân tộc Việt Nam theo khuynh hướng cách mạng vô sản (1920); Bước đầu chuẩn bị các điều kiện về tư tưởng, chính trị để thành lập Đảng Cộng sản của Việt Nam. Trong những năm hoạt động ở Trung Quốc (1924 – 1927), Nguyễn Ái Quốc tiếp tục chuẩn bị về tư tưởng, chính trị; chuẩn bị về tổ chức, mở nhiều lớp bồi dưỡng, đào tạo cán bộ cho cách mạng Việt Nam.",
+                            "statements": [
+                                "a. Nguyễn Ái Quốc sáng lập Đảng Cộng sản Việt Nam trong thời gian hoạt động ở nước Pháp.",
+                                "b. Nguyễn Ái Quốc đã xác định nhiệm vụ giải phóng dân tộc phải gắn với giải phóng xã hội.",
+                                "c. Nguyễn Ái Quốc lựa chọn con đường cứu nước giải phóng dân tộc khi hoạt động ở Liên Xô.",
+                                "d. Từ năm 1920, hoạt động cách mạng của Nguyễn Ái Quốc gắn với chủ nghĩa Mác – Lê-nin."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6.2",
+                    "name": "HỒ CHÍ MINH - ANH HÙNG GIẢI PHÓNG DÂN TỘC",
+                    "questions": [
+                        {
+                            "id": "6.2.1",
+                            "type": "multiple_choice",
+                            "question": "Yếu tố nào sau đây quyết định đến việc Nguyễn Tất Thành ra đi tìm đường cứu nước (1911)?",
+                            "options": [
+                                "A. Đất nước bị khủng hoảng, bế tắc về con đường cứu nước.",
+                                "B. Những truyền thống của gia đình và quê hương xứ Nghệ.",
+                                "C. Mong muốn tìm hiểu, khám phá lịch sử văn minh thế giới.",
+                                "D. Chế độ phong kiến không còn phù hợp với dân tộc."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.2.2",
+                            "type": "multiple_choice",
+                            "question": "\"Muốn cứu nước và giải phóng dân tộc, không con đường nào khác ngoài con đường cách mạng vô sản\" là quyết định của Nguyễn Ái Quốc khi đọc",
+                            "options": [
+                                "A. Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lê-nin.",
+                                "B. báo Đời sống công nhân, báo Nhân đạo và cuốn Bản án chế độ thực dân Pháp.",
+                                "C. báo Thanh niên – cơ quan ngôn luận của Hội Việt Nam Cách mạng Thanh niên.",
+                                "D. Tác phẩm Đường Kách mệnh và các bài viết của Lê-nin đăng trên Tạp chí Thư tín quốc tế."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.2.3",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"Bài đó [Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa của Lê-nin] khó hiểu, vì có những từ ngữ mà tôi không biết rõ. Nhưng tôi đọc đi đọc lại, và dần dần tôi hiểu ý nghĩa của nó một cách sâu sắc. Luận cương của Lê-nin làm cho tôi rất cảm động, phấn khởi, sáng tỏ, tin tưởng biết bao. Tôi vui mừng đến phát khóc lên. Ngồi một mình trong buồng mà tôi nói to lên như đang nói trước quần chúng đông đảo: \"Hỡi đồng bào bị đoạ đày đau khổ! Đây là cái cần thiết cho chúng ta, đây là con đường giải phóng chúng ta! Từ đó tôi hoàn toàn tin theo Lê-nin, tin theo Quốc tế thứ ba\".",
+                            "statements": [
+                                "a. Lúc đầu, chính là chủ nghĩa yêu nước, chứ chưa phải là chủ nghĩa cộng sản đã đưa Nguyễn Ái Quốc đến với Lê-nin, tin theo Quốc tế thứ ba.",
+                                "b. Việc Nguyễn Ái Quốc \"hoàn toàn tin theo Lê-nin, tin theo Quốc tế thứ ba\" đã mở ra cơ hội mới trong cuộc hành trình tìm đường cứu nước.",
+                                "c. Trước khi đọc Sơ thảo lần thứ nhất những luận cương về vấn đề dân tộc và vấn đề thuộc địa, Nguyễn Ái Quốc đã đọc nhiều cuốn sách của Lê-nin.",
+                                "d. Cụm từ \"đây là con đường giải phóng chúng ta!\" trong đoạn tư liệu trên chính là con đường cứu nước theo khuynh hướng cách mạng vô sản."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "6.3",
+                    "name": "DẤU ẤN HỒ CHÍ MINH TRONG LÒNG NHÂN DÂN THẾ GIỚI VÀ VIỆT NAM",
+                    "questions": [
+                        {
+                            "id": "6.3.1",
+                            "type": "multiple_choice",
+                            "question": "Năm 1987, cuộc họp Đại hội đồng UNESCO lần thứ 24 tại Pa-ri (Pháp) đã ra Nghị quyết số 24C/18.65, ghi nhận Chủ tịch Hồ Chí Minh là",
+                            "options": [
+                                "A. một nhà ngoại giao có tầm ảnh hưởng lớn ở châu Á trong thế kỉ XX.",
+                                "B. nhà chính trị, quân sự, nhà thơ nổi tiếng của Việt Nam thời phong kiến.",
+                                "C. Anh hùng giải phóng dân tộc và Nhà văn hoá kiệt xuất của Việt Nam.",
+                                "D. người vận dụng xuất sắc chủ nghĩa Mác – Lê-nin vào thực tiễn Việt Nam."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "6.3.2",
+                            "type": "true_false",
+                            "question": "Đọc đoạn tư liệu sau đây: \"... Chủ tịch Hồ Chí Minh, một biểu tượng xuất sắc về sự tự khẳng định dân tộc, đã cống hiến trọn đời mình cho sự nghiệp giải phóng dân tộc của nhân dân Việt Nam, góp phần vào cuộc đấu tranh chung của các dân tộc vì hoà bình, độc lập dân tộc, dân chủ và tiến bộ xã hội\".",
+                            "statements": [
+                                "a. Chủ tịch Hồ Chí Minh đã cống hiến trọn đời mình cho dân tộc Việt Nam.",
+                                "b. Chủ tịch Hồ Chí Minh được UNESCO ghi nhận có nhiều đóng góp cho nhân loại.",
+                                "c. Liên hợp quốc đã ghi nhận Chủ tịch Hồ Chí Minh là \"Anh hùng giải phóng dân tộc và Nhà văn hoá kiệt xuất của Việt Nam\" vào dịp kỉ niệm 45 năm Cách mạng tháng Tám thành công.",
+                                "d. Nhân dân Việt Nam và thế giới vinh danh và tri ân Chủ tịch Hồ Chí Minh bằng nhiều hình thức khác nhau và nối tiếp qua nhiều thế hệ."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
