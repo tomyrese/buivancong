@@ -52,6 +52,11 @@ export async function POST(request: Request) {
     const apiBaseUrl = process.env.NINEROUTER_API_BASE_URL || 'https://api.9router.com/v1';
     const model = process.env.NINEROUTER_MODEL || 'openai/gpt-4o-mini';
 
+    console.log('--- AI Route Debug ---');
+    console.log('apiKey loaded:', apiKey ? `${apiKey.substring(0, 8)}...` : 'undefined');
+    console.log('apiBaseUrl loaded:', apiBaseUrl);
+    console.log('model loaded:', model);
+
     const isLocal = apiBaseUrl.includes('localhost') || apiBaseUrl.includes('127.0.0.1');
     if (isLocal && (!apiKey || apiKey === 'mock')) {
       apiKey = 'local';
@@ -59,10 +64,12 @@ export async function POST(request: Request) {
 
     // Fallback if API key is not configured or in testing environment
     if (!apiKey || apiKey === 'mock') {
+      console.log('Fallback triggered: missing/mock API key.');
       return fallbackResponse(messages);
     }
 
     const url = `${apiBaseUrl.replace(/\/$/, '')}/chat/completions`;
+    console.log('Fetching 9router URL:', url);
     const apiResponse = await fetch(url, {
       method: 'POST',
       headers: {
@@ -79,6 +86,8 @@ export async function POST(request: Request) {
         max_tokens: 800
       })
     });
+
+    console.log('apiResponse status:', apiResponse.status, apiResponse.statusText);
 
     if (!apiResponse.ok) {
       const errorText = await apiResponse.text();

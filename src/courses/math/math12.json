@@ -1,28 +1,1103 @@
 {
-  "chapters": [
-    {
-      "id": 1,
-      "name": "ỨNG DỤNG ĐẠO HÀM KHẢO SÁT HÀM SỐ",
-      "topics": [
+    "chapters": [
         {
-          "id": 1,
-          "name": "Tính đơn điệu của hàm số",
-          "questions": [
-            {
-              "id": "math12.1.1.1",
-              "type": "multiple_choice",
-              "question": "Hàm số y = x^3 - 3x đồng biến trên khoảng nào sau đây?",
-              "options": [
-                "A. (-infinity; -1) và (1; +infinity).",
-                "B. (-1; 1).",
-                "C. (-infinity; 1).",
-                "D. (-1; +infinity)."
-              ],
-              "answer": "A"
-            }
-          ]
+            "id": 1,
+            "name": "ỨNG DỤNG ĐẠO HÀM ĐỂ KHẢO SÁT VÀ VẼ ĐỒ THỊ HÀM SỐ",
+            "topics": [
+                {
+                    "id": "1.1",
+                    "name": "Tính đơn điệu của hàm số",
+                    "questions": [
+                        {
+                            "id": "1.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số f(x) có bảng xét dấu của đạo hàm như sau:\n\nx      | -∞  |  -2  |  1  | +∞\nf'(x)  |  -  |  0  |  +  | 0  |  -\n\nHàm số đã cho đồng biến trên khoảng nào dưới đây?",
+                            "options": [
+                                "A. (-∞; -2)",
+                                "B. (1; +∞)",
+                                "C. (-2; 1)",
+                                "D. (-2; +∞)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = f(x) có đồ thị như hình vẽ bên (đồ thị đi lên trên khoảng (-2;0) và (2;+∞), đi xuống trên khoảng (0;2)). Hàm số đã cho nghịch biến trên khoảng nào?",
+                            "options": [
+                                "A. (-∞; 0)",
+                                "B. (0; 2)",
+                                "C. (2; +∞)",
+                                "D. (-2; 2)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số y = f(x) có đạo hàm f'(x) = x² + 2025, ∀x ∈ R. Xét tính đúng sai của các mệnh đề sau:",
+                            "statements": [
+                                "a) Hàm số đồng biến trên R.",
+                                "b) Hàm số nghịch biến trên khoảng (-∞; 0).",
+                                "c) Hàm số đồng biến trên khoảng (0; +∞).",
+                                "d) Hàm số nghịch biến trên khoảng (-∞; 2025)."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.1.4",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = x³ - 3x² + 5. Mệnh đề nào dưới đây đúng?",
+                            "options": [
+                                "A. Hàm số nghịch biến trên khoảng (-∞; 0)",
+                                "B. Hàm số nghịch biến trên khoảng (0; 2)",
+                                "C. Hàm số nghịch biến trên khoảng (2; +∞)",
+                                "D. Hàm số đồng biến trên khoảng (0; 2)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.5",
+                            "type": "short_answer",
+                            "question": "Chứng minh rằng hàm số g(x) = x / (x - 1) nghịch biến trên khoảng (1; +∞).",
+                            "answer": "Ta có g'(x) = -1 / (x - 1)² < 0 với mọi x > 1. Vậy hàm số nghịch biến trên khoảng (1; +∞)."
+                        }
+                    ]
+                },
+                {
+                    "id": "1.2",
+                    "name": "Cực trị của hàm số",
+                    "questions": [
+                        {
+                            "id": "1.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = f(x) có bảng biến thiên như sau:\n\nx | -∞ | -1 | 1 | +∞\nf'(x) | + | 0 | - | 0 | +\nf(x) | -∞ | 3 | -1 | +∞\n\nHàm số đạt cực đại tại điểm nào?",
+                            "options": [
+                                "A. x = 1",
+                                "B. x = -1",
+                                "C. x = 3",
+                                "D. x = -∞"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.2",
+                            "type": "multiple_choice",
+                            "question": "Hàm số y = f(x) xác định, liên tục trên R và có bảng biến thiên như hình vẽ bên dưới. Khẳng định nào sau đây đúng?\n\nx | -∞ | 0 | 1 | 2 | +∞\nf'(x) | + || - | 0 | + | 0 | -\nf(x) | -∞ | 0 | -1 | 0 | -∞",
+                            "options": [
+                                "A. Hàm số đạt cực tiểu tại x = -1",
+                                "B. Hàm số có giá trị lớn nhất bằng 1 và giá trị nhỏ nhất bằng -1",
+                                "C. Hàm số có đúng hai cực trị",
+                                "D. Hàm số đạt cực đại tại x = 0, x = 1 và đạt cực tiểu tại x = 2"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.3",
+                            "type": "multiple_choice",
+                            "question": "Tìm điểm cực đại x₀ của hàm số y = x³ - 3x + 1.",
+                            "options": [
+                                "A. x₀ = 2",
+                                "B. x₀ = 1",
+                                "C. x₀ = -1",
+                                "D. x₀ = 3"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.4",
+                            "type": "true_false",
+                            "question": "Cho hàm số y = f(x). Các mệnh đề sau đúng hay sai?",
+                            "statements": [
+                                "a) Nếu phương trình f'(x) = 0 vô nghiệm thì hàm số y = f(x) không có cực trị.",
+                                "b) Nếu f'(x₀) = 0 thì hàm số y = f(x) đạt cực trị tại x = x₀.",
+                                "c) Nếu hàm số y = f(x) đạt cực trị tại x = x₀ thì đạo hàm đổi dấu khi x chạy qua x₀.",
+                                "d) Nếu hàm số y = f(x) đạt cực trị tại x = x₀ thì f''(x₀) ≠ 0."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.5",
+                            "type": "short_answer",
+                            "question": "Tìm cực trị của hàm số f(x) = 2x³ - 9x² - 24x + 1.",
+                            "answer": "f'(x) = 6x² - 18x - 24. Cho f'(x) = 0 ⇒ x = 4 hoặc x = -1.\nTa có bảng biến thiên, hàm số đạt cực đại tại x = -1, f(-1) = 14; hàm số đạt cực tiểu tại x = 4, f(4) = -111."
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "name": "Giá trị lớn nhất và giá trị nhỏ nhất của hàm số",
+                    "questions": [
+                        {
+                            "id": "1.3.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = f(x) liên tục trên đoạn [-1;3] và có đồ thị như hình vẽ. Gọi M, m lần lượt là giá trị lớn nhất và nhỏ nhất của hàm số trên đoạn [-1;3]. Giá trị M - m bằng bao nhiêu? (Biết đồ thị cắt trục tung tại y=2, cắt trục hoành tại x=1,5 và x=3, đạt cực tiểu tại x=2, y=-2)",
+                            "options": [
+                                "A. 0",
+                                "B. 1",
+                                "C. 4",
+                                "D. 5"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.3.2",
+                            "type": "multiple_choice",
+                            "question": "Gọi M và m lần lượt là giá trị lớn nhất và giá trị nhỏ nhất của hàm số y = 2x³ + 3x² - 12x + 2 trên đoạn [-1;2]. Tỉ số M/m bằng?",
+                            "options": [
+                                "A. 6/5",
+                                "B. -3",
+                                "C. 5/2",
+                                "D. -2"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.3.3",
+                            "type": "multiple_choice",
+                            "question": "Giá trị nhỏ nhất của hàm số y = x + 9/x trên đoạn [2;4] là:",
+                            "options": [
+                                "A. 6",
+                                "B. 25/4",
+                                "C. 13/2",
+                                "D. 9/2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.3.4",
+                            "type": "true_false",
+                            "question": "Xét hàm số y = x - 1 trên [0;1]. Khẳng định nào sau đây đúng? (Chọn Đúng/Sai cho các mệnh đề sau)",
+                            "statements": [
+                                "a) min y = -1 trên [0;1]",
+                                "b) max y = 0 trên [0;1]",
+                                "c) Hàm số nghịch biến trên [0;1]",
+                                "d) Hàm số có giá trị lớn nhất bằng 1"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.3.5",
+                            "type": "short_answer",
+                            "question": "Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số y = x³ - 3x² - 9x + 5 trên đoạn [0;5].",
+                            "answer": "y' = 3x² - 6x - 9 = 0 ⇒ x = -1 (loại) hoặc x = 3.\nTính f(0) = 5, f(3) = -22, f(5) = -20. Vậy max y = 5 (tại x=0), min y = -22 (tại x=3)."
+                        }
+                    ]
+                },
+                {
+                    "id": "1.4",
+                    "name": "Đường tiệm cận của đồ thị hàm số",
+                    "questions": [
+                        {
+                            "id": "1.4.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = f(x) có bảng biến thiên như sau:\n\nx | -∞ | -1 | +∞\ny' | - | - |\ny | 5 | -∞ | +∞ | 2\n\nKhẳng định nào sau đây đúng?",
+                            "options": [
+                                "A. Đồ thị hàm số có hai tiệm cận ngang y = 2, y = 5 và một tiệm cận đứng x = -1",
+                                "B. Đồ thị hàm số có bốn đường tiệm cận",
+                                "C. Đồ thị hàm số có hai đường tiệm cận",
+                                "D. Đồ thị hàm số có một đường tiệm cận"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.4.2",
+                            "type": "multiple_choice",
+                            "question": "Tìm tiệm cận ngang của đồ thị hàm số y = (3x - 2) / (x + 1).",
+                            "options": [
+                                "A. y = 3",
+                                "B. y = 2",
+                                "C. x = -1",
+                                "D. y = -2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.4.3",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = (x² - 3x + 2) / (x² - 1). Số đường tiệm cận của đồ thị hàm số là?",
+                            "options": [
+                                "A. 1",
+                                "B. 2",
+                                "C. 3",
+                                "D. 4"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.4.4",
+                            "type": "true_false",
+                            "question": "Các mệnh đề sau đúng hay sai về đồ thị hàm số y = (3x - 1) / (2x - 1)?",
+                            "statements": [
+                                "a) Đường thẳng y = -3 là tiệm cận ngang của đồ thị.",
+                                "b) Đường thẳng y = 3/2 là tiệm cận đứng của đồ thị.",
+                                "c) Đường thẳng x = 1/2 là tiệm cận đứng của đồ thị.",
+                                "d) Đường thẳng y = 3/2 là tiệm cận ngang của đồ thị."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.4.5",
+                            "type": "short_answer",
+                            "question": "Tìm tiệm cận xiên của đồ thị hàm số y = (x² - x + 2) / (x + 1).",
+                            "answer": "Thực hiện phép chia đa thức: (x² - x + 2) / (x + 1) = x - 2 + 4/(x+1). Vậy tiệm cận xiên của đồ thị là y = x - 2."
+                        }
+                    ]
+                },
+                {
+                    "id": "1.5",
+                    "name": "Khảo sát và vẽ đồ thị hàm số",
+                    "questions": [
+                        {
+                            "id": "1.5.1",
+                            "type": "multiple_choice",
+                            "question": "Đường cong trong hình vẽ bên là đồ thị của hàm số nào trong các hàm số dưới đây? (Đồ thị hình chữ S, đi qua O(0;0), đạt cực đại tại x=-1, y=2, đạt cực tiểu tại x=1, y=-2)",
+                            "options": [
+                                "A. y = x³ - 3x + 2",
+                                "B. y = x³ - 3x",
+                                "C. y = -x³ + 3x",
+                                "D. y = -x³ + 3x + 2"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.5.2",
+                            "type": "multiple_choice",
+                            "question": "Hàm số nào dưới đây có bảng biến thiên như hình bên (Hàm số giảm trên cả hai khoảng xác định, TCN y=-1, TCĐ x=1)?",
+                            "options": [
+                                "A. y = (-x - 3) / (x - 1)",
+                                "B. y = (-x - 2) / (x - 1)",
+                                "C. y = (-x + 3) / (x - 1)",
+                                "D. y = (x + 3) / (x - 1)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.5.3",
+                            "type": "short_answer",
+                            "question": "Khảo sát sự biến thiên và vẽ đồ thị của hàm số y = x³ - 3x² + 2.",
+                            "answer": "1. Tập xác định: D = R.\n2. Chiều biến thiên: y' = 3x² - 6x = 3x(x - 2). y' = 0 ⇒ x = 0 hoặc x = 2.\n- Hàm số đồng biến trên các khoảng (-∞; 0) và (2; +∞); nghịch biến trên (0; 2).\n- Cực trị: Hàm số đạt cực đại tại x = 0, yCĐ = 2; đạt cực tiểu tại x = 2, yCT = -2.\n- Giới hạn: lim y = -∞ (x→-∞), lim y = +∞ (x→+∞).\n3. Đồ thị: Đi qua các điểm (0;2), (1;0), (2;-2), (3;2)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "VECTƠ TRONG KHÔNG GIAN. HỆ TỌA ĐỘ TRONG KHÔNG GIAN",
+            "topics": [
+                {
+                    "id": "2.1",
+                    "name": "Vectơ trong không gian",
+                    "questions": [
+                        {
+                            "id": "2.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình hộp ABCD.A'B'C'D'. Tổng của ba vectơ AB + AD + AA' bằng vectơ nào?",
+                            "options": [
+                                "A. AC'",
+                                "B. AD'",
+                                "C. AB'",
+                                "D. AA'"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho tứ diện ABCD. Gọi G là trọng tâm của tam giác BCD. Mệnh đề nào sau đây đúng?",
+                            "options": [
+                                "A. AB + AC + AD = 3AG",
+                                "B. AB + AC + AD = 4AG",
+                                "C. AB + AC + AD = 2AG",
+                                "D. AB + AC + AD = -3AG"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.1.3",
+                            "type": "true_false",
+                            "question": "Cho hình hộp ABCD.A'B'C'D'. Các mệnh đề sau đúng hay sai?",
+                            "statements": [
+                                "a) AC' = AB + AD + AA'",
+                                "b) AB + B'C' + CD = 0",
+                                "c) BD' = C'D' + B'C' + AA'",
+                                "d) AC' = AB + AC + AD"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "2.1.4",
+                            "type": "short_answer",
+                            "question": "Cho tứ diện ABCD. Chứng minh rằng AB + CD = AD + CB.",
+                            "answer": "Ta có: AB = AD + DB. Vế phải: AD + CB = AD + CD + DB.\nVậy AB + CD = AD + DB + CD = AD + CD + DB = AD + CB. (Điều phải chứng minh)."
+                        },
+                        {
+                            "id": "2.1.5",
+                            "type": "multiple_choice",
+                            "question": "Tích vô hướng của hai vectơ a và b trong không gian được xác định bởi công thức:",
+                            "options": [
+                                "A. a.b = |a|.|b|.cos(a,b)",
+                                "B. a.b = |a|.|b|.sin(a,b)",
+                                "C. a.b = |a| + |b|",
+                                "D. a.b = |a|² + |b|²"
+                            ],
+                            "answer": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.2",
+                    "name": "Hệ tọa độ trong không gian",
+                    "questions": [
+                        {
+                            "id": "2.2.1",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, hình chiếu vuông góc của điểm M(1; 2; 3) lên mặt phẳng (Oxy) có tọa độ là?",
+                            "options": [
+                                "A. M'(1; 2; 0)",
+                                "B. M'(0; 2; 3)",
+                                "C. M'(1; 0; 3)",
+                                "D. M'(0; 0; 3)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.2.2",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho hai điểm A(1; 1; -1) và B(2; 3; 2). Vectơ AB có tọa độ là:",
+                            "options": [
+                                "A. (3; 4; 1)",
+                                "B. (-1; -2; 3)",
+                                "C. (1; 2; 3)",
+                                "D. (3; 5; 1)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.2.3",
+                            "type": "true_false",
+                            "question": "Trong không gian Oxyz, cho hai điểm A(2;-4;3) và B(2;2;7). Trung điểm I của đoạn AB có tọa độ là (2;-1;5).",
+                            "statements": [
+                                "a) Trung điểm I có tọa độ (2;-1;5).",
+                                "b) Vectơ AB có tọa độ (0;6;4).",
+                                "c) Khoảng cách AB là 2√13.",
+                                "d) Điểm M(-2;-10;-1) là điểm đối xứng với B qua A."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "2.2.4",
+                            "type": "short_answer",
+                            "question": "Trong không gian Oxyz, cho hình hộp chữ nhật ABCD.A'B'C'D' có A(0;0;0), B(2;0;0), D(0;3;0), A'(0;0;4). Tìm tọa độ đỉnh C'.",
+                            "answer": "C' là đỉnh đối diện với A, nên C' = B + D + A' = (2;0;0) + (0;3;0) + (0;0;4) = (2;3;4)."
+                        },
+                        {
+                            "id": "2.2.5",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, điểm đối xứng của A(1; 2; 3) qua mặt phẳng (Oyz) là điểm nào?",
+                            "options": [
+                                "A. Q(-1; 2; 3)",
+                                "B. N(1; -2; 3)",
+                                "C. P(1; 2; -3)",
+                                "D. M(1; -2; -3)"
+                            ],
+                            "answer": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.3",
+                    "name": "Biểu thức tọa độ của các phép toán vectơ",
+                    "questions": [
+                        {
+                            "id": "2.3.1",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho ba điểm A(1; 0; -2), B(2; 1; -1), C(1; -2; 2). Tìm tọa độ trọng tâm G của tam giác ABC.",
+                            "options": [
+                                "A. G(4/3; -1/3; -1/3)",
+                                "B. G(4/3; 1/3; -1/3)",
+                                "C. G(4/3; -1/3; 1/3)",
+                                "D. G(-4/3; 1/3; 1/3)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.3.2",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian với hệ tọa độ Oxyz, cho vectơ u = (1; 0; 3) và v = (x; -1; 1). Biết u.v = 3. Độ dài của vectơ v bằng bao nhiêu?",
+                            "options": [
+                                "A. 2",
+                                "B. 3",
+                                "C. √2",
+                                "D. √6"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "2.3.3",
+                            "type": "true_false",
+                            "question": "Trong không gian Oxyz, cho tam giác ABC có A(1;-1;1), B(0;1;2), C(1;0;1). Xét tính đúng sai của các phát biểu sau:",
+                            "statements": [
+                                "a) Trung điểm M của AB có tọa độ (1/2; 0; 3/2).",
+                                "b) Trọng tâm G của tam giác ABC có tọa độ (2/3; 0; 4/3).",
+                                "c) Vectơ AB = (-1; 2; 1).",
+                                "d) Độ dài AB = √6."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "2.3.4",
+                            "type": "short_answer",
+                            "question": "Trong không gian Oxyz, cho hai vectơ a = (1; 2; 0) và b = (-1; 3; 2). Tính tọa độ của vectơ c = 2a - 3b.",
+                            "answer": "2a = (2; 4; 0), 3b = (-3; 9; 6). Vậy c = (2 - (-3); 4 - 9; 0 - 6) = (5; -5; -6)."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "THỐNG KÊ",
+            "topics": [
+                {
+                    "id": "3.1",
+                    "name": "Khoảng biến thiên và khoảng tứ phân vị",
+                    "questions": [
+                        {
+                            "id": "3.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho một mẫu dữ liệu đã được sắp xếp theo thứ tự không giảm x₁ ≤ x₂ ≤ x₃ ≤ ... ≤ xₙ. Khi đó khoảng biến thiên R của mẫu số liệu bằng:",
+                            "options": [
+                                "A. R = xₙ - x₁",
+                                "B. R = x₁ - xₙ",
+                                "C. R = (xₙ - x₁)/2",
+                                "D. R = (x₁ - xₙ)/2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.1.2",
+                            "type": "multiple_choice",
+                            "question": "Tìm khoảng tứ phân vị của mẫu số liệu sau: 200 240 220 210 225 235 225 270 250 280.",
+                            "options": [
+                                "A. 80",
+                                "B. 20",
+                                "C. 30",
+                                "D. 10"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.1.3",
+                            "type": "true_false",
+                            "question": "Mẫu số liệu sau đây cho biết chiều cao của các bạn học sinh trong tổ: 163 159 172 167 165 168 170 161. Xét tính đúng sai của các mệnh đề:",
+                            "statements": [
+                                "a) Giá trị nhỏ nhất của mẫu là 159.",
+                                "b) Giá trị lớn nhất của mẫu là 172.",
+                                "c) Khoảng biến thiên R = 12.",
+                                "d) Tứ phân vị thứ nhất Q₁ = 162."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "3.1.4",
+                            "type": "short_answer",
+                            "question": "Mẫu số liệu sau cho biết số ghế trống tại một rạp chiếu phim trong 9 ngày: 7, 8, 22, 20, 15, 18, 19, 13, 11. Tìm khoảng tứ phân vị cho mẫu số liệu này.",
+                            "answer": "Sắp xếp: 7, 8, 11, 13, 15, 18, 19, 20, 22. Q₂ = 15. Q₁ = (11+13)/2 = 12. Q₃ = (19+20)/2 = 19.5. ΔQ = Q₃ - Q₁ = 19.5 - 12 = 7.5."
+                        }
+                    ]
+                },
+                {
+                    "id": "3.2",
+                    "name": "Phương sai và độ lệch chuẩn",
+                    "questions": [
+                        {
+                            "id": "3.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho dãy số liệu thống kê: 1, 2, 3, 4, 5, 6, 7. Phương sai của mẫu số liệu thống kê đã cho là:",
+                            "options": [
+                                "A. 1",
+                                "B. 2",
+                                "C. 3",
+                                "D. 4"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "3.2.2",
+                            "type": "multiple_choice",
+                            "question": "Theo kết quả thống kê điểm thi giữa kỳ 2 môn toán khối 11 của một trường THPT, người ta tính được phương sai của bảng thống kê đó là s² = 0,573. Độ lệch chuẩn của bảng thống kê đó bằng:",
+                            "options": [
+                                "A. 0,812",
+                                "B. 0,757",
+                                "C. 0,936",
+                                "D. 0,657"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.2.3",
+                            "type": "true_false",
+                            "question": "Các mệnh đề sau đúng hay sai về Phương sai và Độ lệch chuẩn?",
+                            "statements": [
+                                "a) Độ lệch chuẩn là bình phương của phương sai.",
+                                "b) Độ lệch chuẩn là căn bậc hai của phương sai.",
+                                "c) Phương sai càng lớn thì độ phân tán quanh số trung bình càng lớn.",
+                                "d) Phương sai luôn là một số không âm."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "3.2.4",
+                            "type": "short_answer",
+                            "question": "Mẫu số liệu sau đây cho biết sĩ số của 5 lớp khối 10 tại một trường Trung học: 43 45 46 41 40. Tìm phương sai và độ lệch chuẩn cho mẫu số liệu này.",
+                            "answer": "Số trung bình: x̄ = (43+45+46+41+40)/5 = 43.\nPhương sai: s² = [(0)² + (2)² + (3)² + (-2)² + (-3)²] / 5 = 26 / 5 = 5.2.\nĐộ lệch chuẩn: s = √5.2 ≈ 2.28."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "NGUYÊN HÀM - TÍCH PHÂN",
+            "topics": [
+                {
+                    "id": "4.1",
+                    "name": "Nguyên hàm",
+                    "questions": [
+                        {
+                            "id": "4.1.1",
+                            "type": "multiple_choice",
+                            "question": "Hàm số F(x) là một nguyên hàm của hàm số f(x) trên khoảng K nếu:",
+                            "options": [
+                                "A. F'(x) = -f(x), ∀x∈K",
+                                "B. f'(x) = F(x), ∀x∈K",
+                                "C. F'(x) = f(x), ∀x∈K",
+                                "D. f'(x) = -F(x), ∀x∈K"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.1.2",
+                            "type": "multiple_choice",
+                            "question": "Tìm nguyên hàm của hàm số f(x) = cos3x.",
+                            "options": [
+                                "A. ∫cos3x dx = 3sin3x + C",
+                                "B. ∫cos3x dx = (sin3x)/3 + C",
+                                "C. ∫cos3x dx = sin3x + C",
+                                "D. ∫cos3x dx = -(sin3x)/3 + C"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.1.3",
+                            "type": "multiple_choice",
+                            "question": "Hàm số F(x) = x³/3 là một nguyên hàm của hàm số nào?",
+                            "options": [
+                                "A. f(x) = x²",
+                                "B. f(x) = x³",
+                                "C. f(x) = x",
+                                "D. f(x) = 3x²"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.1.4",
+                            "type": "true_false",
+                            "question": "Cho hàm số f(x) = 2x² + 3x + 1. Xét tính đúng sai của các mệnh đề sau:",
+                            "statements": [
+                                "a) Một nguyên hàm của f(x) là F(x) = (2/3)x³ + (3/2)x² + x.",
+                                "b) Một nguyên hàm của f(x) là G(x) = (2/3)x³ + (3/2)x² + x + 5.",
+                                "c) Họ nguyên hàm của f(x) là F(x) = (2/3)x³ + (3/2)x² + x + C.",
+                                "d) Nguyên hàm của f(x) thỏa mãn F(0) = 2 là F(x) = (2/3)x³ + (3/2)x² + x + 2."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "4.1.5",
+                            "type": "short_answer",
+                            "question": "Một vật chuyển động có gia tốc là a(t) = 2t + 3 (m/s²). Biết vận tốc ban đầu là 2 m/s. Tìm vận tốc của vật sau 2 giây.",
+                            "answer": "Vận tốc v(t) = ∫a(t)dt = t² + 3t + C. v(0) = 2 ⇒ C = 2. Vậy v(t) = t² + 3t + 2. Sau 2 giây, v(2) = 4 + 6 + 2 = 12 m/s."
+                        }
+                    ]
+                },
+                {
+                    "id": "4.2",
+                    "name": "Tích phân",
+                    "questions": [
+                        {
+                            "id": "4.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho f, g là hai hàm liên tục trên đoạn [1;3] thoả ∫[1->3] (f(x) + g(x)) dx = 10, ∫[1->3] (2f(x) - g(x)) dx = 6. Tính I = ∫[1->3] (f(x) + g(x)) dx.",
+                            "options": [
+                                "A. I = 4",
+                                "B. I = 16",
+                                "C. I = 2",
+                                "D. I = 8"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "4.2.2",
+                            "type": "multiple_choice",
+                            "question": "Tính tích phân I = ∫[0->1] (2x² - 1) dx.",
+                            "options": [
+                                "A. -1/3",
+                                "B. 1/3",
+                                "C. -2/3",
+                                "D. 2/3"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.2.3",
+                            "type": "multiple_choice",
+                            "question": "Biết F(x) = x² là một nguyên hàm của hàm số f(x) trên R. Giá trị của ∫[1->2] (f(x) + 2) dx bằng bao nhiêu?",
+                            "options": [
+                                "A. 3",
+                                "B. 5",
+                                "C. 13/3",
+                                "D. 7/3"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.2.4",
+                            "type": "true_false",
+                            "question": "Xét tính đúng sai của các khẳng định sau về tích phân:",
+                            "statements": [
+                                "a) ∫[a->b] f(x) dx = F(b) - F(a) với F là nguyên hàm của f.",
+                                "b) ∫[a->b] f(x) dx = -∫[b->a] f(x) dx.",
+                                "c) ∫[a->a] f(x) dx = 1.",
+                                "d) ∫[a->b] k.f(x) dx = k.∫[a->b] f(x) dx."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4.3",
+                    "name": "Ứng dụng hình học của tích phân",
+                    "questions": [
+                        {
+                            "id": "4.3.1",
+                            "type": "multiple_choice",
+                            "question": "Diện tích hình phẳng giới hạn bởi đồ thị hàm số y = x³, trục hoành và hai đường thẳng x = 1, x = 8 là:",
+                            "options": [
+                                "A. 45/2",
+                                "B. 45/4",
+                                "C. 45/7",
+                                "D. 45/8"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.3.2",
+                            "type": "multiple_choice",
+                            "question": "Thể tích khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị hàm số y = tanx, trục hoành và các đường thẳng x = 0, x = π/4 quanh trục hoành là:",
+                            "options": [
+                                "A. π(π/4 - 1)",
+                                "B. π(π/4 - 1/2)",
+                                "C. π(π/4 - 1/4)",
+                                "D. π(1 - π/4)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.3.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số y = f(x) liên tục trên [a;b]. Xét tính đúng sai của các mệnh đề sau về diện tích hình phẳng S:",
+                            "statements": [
+                                "a) S = ∫[a->b] |f(x)| dx.",
+                                "b) Nếu f(x) ≥ 0 trên [a;b] thì S = ∫[a->b] f(x) dx.",
+                                "c) Nếu f(x) ≤ 0 trên [a;b] thì S = -∫[a->b] f(x) dx.",
+                                "d) S = ∫[a->b] f(x) dx luôn luôn đúng."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "4.3.4",
+                            "type": "short_answer",
+                            "question": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số y = x² - 2x, trục hoành và hai đường thẳng x = -1, x = 1.",
+                            "answer": "Phương trình hoành độ giao điểm: x² - 2x = 0 ⇒ x = 0 (nhận), x = 2 (loại).\nS = |∫[-1->0] (x² - 2x) dx| + |∫[0->1] (x² - 2x) dx| = |(-1/3 - 1)| + |(1/3 - 1)| = 4/3 + 2/3 = 2."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN",
+            "topics": [
+                {
+                    "id": "5.1",
+                    "name": "Phương trình mặt phẳng",
+                    "questions": [
+                        {
+                            "id": "5.1.1",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, mặt phẳng (P): 2x - y + 3z - 1 = 0 có một vectơ pháp tuyến là:",
+                            "options": [
+                                "A. n = (2; -1; 3)",
+                                "B. n = (2; 1; 3)",
+                                "C. n = (-2; 1; -3)",
+                                "D. n = (1; -1; 3)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.1.2",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, phương trình mặt phẳng đi qua điểm M(2; 1; -3) và có vectơ pháp tuyến n = (3; -2; 6) là:",
+                            "options": [
+                                "A. 3x - 2y + 6z + 14 = 0",
+                                "B. 3x - 2y + 6z - 14 = 0",
+                                "C. 2x + y - 3z + 14 = 0",
+                                "D. 2x + y - 3z - 14 = 0"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.1.3",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho hai mặt phẳng (P): x + y - z + 1 = 0 và (Q): 2x + 2y - 2z + 3 = 0. Vị trí tương đối của hai mặt phẳng (P) và (Q) là:",
+                            "options": [
+                                "A. Vuông góc",
+                                "B. Cắt nhau",
+                                "C. Song song",
+                                "D. Trùng nhau"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "5.1.4",
+                            "type": "true_false",
+                            "question": "Trong không gian Oxyz, cho mặt phẳng (P): 2x + 3y + z - 2024 = 0. Xét tính đúng sai của các mệnh đề:",
+                            "statements": [
+                                "a) Mặt phẳng (P) có một vectơ pháp tuyến là (2;3;1).",
+                                "b) Mặt phẳng (Oxz) có vectơ pháp tuyến là (0;1;0).",
+                                "c) Điểm M(0;0;2024) thuộc mặt phẳng (P).",
+                                "d) Khoảng cách từ gốc tọa độ O đến (P) là 2024/√14."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "5.1.5",
+                            "type": "short_answer",
+                            "question": "Trong không gian Oxyz, viết phương trình mặt phẳng (ABC) với A(1;0;2), B(2;3;1), C(3;2;1).",
+                            "answer": "AB = (1;3;-1), AC = (2;2;-1). Vectơ pháp tuyến n = [AB, AC] = (-1; -1; -4). Phương trình mặt phẳng (ABC): -(x - 1) - (y - 0) - 4(z - 2) = 0 ⇔ x + y + 4z - 9 = 0."
+                        }
+                    ]
+                },
+                {
+                    "id": "5.2",
+                    "name": "Phương trình đường thẳng trong không gian",
+                    "questions": [
+                        {
+                            "id": "5.2.1",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, đường thẳng đi qua hai điểm A(1; 3; -5) và B(2; -1; 7) có phương trình chính tắc là:",
+                            "options": [
+                                "A. (x-1)/1 = (y-3)/-4 = (z+5)/12",
+                                "B. (x-1)/1 = (y-3)/4 = (z+5)/12",
+                                "C. (x-1)/-1 = (y-3)/4 = (z-5)/-12",
+                                "D. (x+1)/1 = (y+3)/-4 = (z-5)/-12"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.2.2",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho đường thẳng d: x = 1 - t, y = 2 + 3t, z = -3t. Vectơ nào dưới đây là một vectơ chỉ phương của d?",
+                            "options": [
+                                "A. u = (-1; 3; -3)",
+                                "B. u = (1; 3; -3)",
+                                "C. u = (-1; -3; -3)",
+                                "D. u = (1; -3; 3)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.2.3",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho hai đường thẳng d₁: (x-1)/2 = (y+2)/-1 = (z-3)/1 và d₂: x = 2 + t, y = 3 - 2t, z = 4 + 2t. Xét vị trí tương đối của hai đường thẳng này:",
+                            "options": [
+                                "A. Cắt nhau",
+                                "B. Song song",
+                                "C. Chéo nhau",
+                                "D. Trùng nhau"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.2.4",
+                            "type": "true_false",
+                            "question": "Trong không gian Oxyz, cho đường thẳng d: x = 2 + t, y = -3 + 2t, z = 1 - t. Xét tính đúng sai:",
+                            "statements": [
+                                "a) Điểm A(3;-1;0) thuộc đường thẳng d.",
+                                "b) Điểm B(0;-7;3) thuộc đường thẳng d.",
+                                "c) Vectơ chỉ phương của d là u = (1;2;-1).",
+                                "d) Đường thẳng d vuông góc với mặt phẳng (P): x + 2y - z + 5 = 0."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "5.2.5",
+                            "type": "short_answer",
+                            "question": "Trong không gian Oxyz, viết phương trình tham số của đường thẳng đi qua điểm A(1; -2; 3) và vuông góc với mặt phẳng (P): 2x - y + 4z - 1 = 0.",
+                            "answer": "Vectơ chỉ phương của đường thẳng là vectơ pháp tuyến của (P): u = n_P = (2; -1; 4).\nPhương trình tham số: x = 1 + 2t, y = -2 - t, z = 3 + 4t."
+                        }
+                    ]
+                },
+                {
+                    "id": "5.3",
+                    "name": "Phương trình mặt cầu trong không gian",
+                    "questions": [
+                        {
+                            "id": "5.3.1",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, mặt cầu (x - 2)² + (y + 1)² + z² = 9 có tâm I và bán kính R là:",
+                            "options": [
+                                "A. I(-2; 1; 0), R = 9",
+                                "B. I(2; -1; 0), R = 9",
+                                "C. I(2; -1; 0), R = 3",
+                                "D. I(-2; 1; 0), R = 3"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "5.3.2",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, phương trình nào sau đây là phương trình mặt cầu?",
+                            "options": [
+                                "A. x² + y² + z² - 2x + 4y - 6z + 14 = 0",
+                                "B. x² + y² + z² - 2x + 4y - 6z + 4 = 0",
+                                "C. x² + y² + z² - 4x + 2y - 2z + 6 = 0",
+                                "D. x² + y² + z² - 2x + 2y - 4z + 5 = 0"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.3.3",
+                            "type": "multiple_choice",
+                            "question": "Trong không gian Oxyz, cho điểm I(1; 2; -3). Mặt cầu tâm I và tiếp xúc với trục Oz có phương trình là:",
+                            "options": [
+                                "A. (x-1)² + (y-2)² + (z+3)² = 5",
+                                "B. (x-1)² + (y-2)² + (z+3)² = 13",
+                                "C. (x-1)² + (y-2)² + (z+3)² = 1",
+                                "D. (x-1)² + (y-2)² + (z+3)² = 9"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "5.3.4",
+                            "type": "true_false",
+                            "question": "Cho mặt cầu (S): x² + y² + z² - 2x + 4y - 6z + 5 = 0. Xét tính đúng sai của các mệnh đề sau:",
+                            "statements": [
+                                "a) Mặt cầu (S) có tâm I(1; -2; 3) và bán kính R = 3.",
+                                "b) Điểm A(1; -2; 0) nằm trên mặt cầu (S).",
+                                "c) Điểm B(1; 0; 3) nằm trong mặt cầu (S).",
+                                "d) Mặt cầu (S) tiếp xúc với mặt phẳng (Oxy)."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "5.3.5",
+                            "type": "short_answer",
+                            "question": "Trong không gian Oxyz, viết phương trình mặt cầu đi qua bốn điểm A(1;0;0), B(0;1;0), C(0;0;1) và D(1;1;1).",
+                            "answer": "Gọi tâm mặt cầu I(a;b;c). Ta có IA² = IB² = IC² = ID².\nTừ IA² = IB² ⇒ a = b. Từ IA² = IC² ⇒ a = c. Suy ra I(a;a;a).\nIA² = ID² ⇒ (1-a)² + a² + a² = (1-a)² + (1-a)² + (1-a)² ⇒ 3a² = 3(1-a)² ⇒ a = 1/2.\nVậy I(1/2; 1/2; 1/2). R² = IA² = (1/2)² + (1/2)² + (1/2)² = 3/4. PT: (x-1/2)² + (y-1/2)² + (z-1/2)² = 3/4."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "XÁC SUẤT",
+            "topics": [
+                {
+                    "id": "6.1",
+                    "name": "Xác suất có điều kiện",
+                    "questions": [
+                        {
+                            "id": "6.1.1",
+                            "type": "multiple_choice",
+                            "question": "Một hộp chứa 8 bi trắng, 2 bi đỏ. Lần lượt bốc từng bi không hoàn lại. Giả sử lần đầu tiên bốc được bi trắng. Xác định xác suất để lần thứ hai bốc được bi đỏ.",
+                            "options": [
+                                "A. 2/9",
+                                "B. 2/10",
+                                "C. 1/5",
+                                "D. 8/9"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hai biến cố A và B, với P(A) = 0.6, P(B) = 0.7, P(A∩B) = 0.3. Tính P(B|A).",
+                            "options": [
+                                "A. 3/7",
+                                "B. 1/2",
+                                "C. 6/7",
+                                "D. 1/7"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "6.1.3",
+                            "type": "true_false",
+                            "question": "Cho hai biến cố A và B là hai biến cố độc lập, với P(A) = 0.7, P(B) = 0.6. Xét tính đúng sai:",
+                            "statements": [
+                                "a) P(A|B) = 0.7",
+                                "b) P(B|A) = 0.6",
+                                "c) P(A∪B) = 0.88",
+                                "d) P(A∩B) = 0.42"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "6.1.4",
+                            "type": "short_answer",
+                            "question": "Gieo hai con xúc xắc cân đối, đồng chất. Tính xác suất để tổng số chấm xuất hiện trên hai con xúc xắc lớn hơn hoặc bằng 10, biết rằng có ít nhất một con đã ra mặt 5 chấm.",
+                            "answer": "Biến cố B: 'Có ít nhất một con ra mặt 5 chấm' ⇒ n(B) = 6 + 6 - 1 = 11.\nBiến cố A: 'Tổng số chấm ≥ 10'. Các kết quả thuận lợi cho A∩B: (5,5), (5,6), (6,5) ⇒ n(A∩B) = 3.\nVậy P(A|B) = 3/11."
+                        }
+                    ]
+                },
+                {
+                    "id": "6.2",
+                    "name": "Công thức xác suất toàn phần và công thức Bayes",
+                    "questions": [
+                        {
+                            "id": "6.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hai biến cố A và B với 0 < P(B) < 1. Công thức xác suất toàn phần để tính P(A) là:",
+                            "options": [
+                                "A. P(A) = P(B).P(A|B) + P(\\overline{B}).P(A|\\overline{B})",
+                                "B. P(A) = P(B).P(B|A) + P(\\overline{B}).P(B|\\overline{A})",
+                                "C. P(A) = P(A).P(A|B) + P(\\overline{A}).P(A|\\overline{B})",
+                                "D. P(A) = P(B).P(B|A) + P(A).P(A|B)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.2.2",
+                            "type": "multiple_choice",
+                            "question": "Một căn bệnh có 1% dân số mắc phải. Một phương pháp xét nghiệm có tỷ lệ chính xác là 99%. Nếu một người xét nghiệm và kết quả dương tính, xác suất để người đó thực sự bị bệnh là bao nhiêu?",
+                            "options": [
+                                "A. 0.99",
+                                "B. 0.50",
+                                "C. 0.01",
+                                "D. 0.35"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "6.2.3",
+                            "type": "true_false",
+                            "question": "Giả sử 5% email bạn nhận được là email rác. Hệ thống lọc email rác có khả năng lọc đúng email rác là 95% và có 10% email không phải rác vẫn bị lọc. Xét tính đúng sai:",
+                            "statements": [
+                                "a) Xác suất email nhận được là email rác là 0.05.",
+                                "b) Xác suất một email rác bị lọc là 0.95.",
+                                "c) Xác suất chọn một email bị lọc và thực sự là rác là 0.0475.",
+                                "d) Xác suất một email bị lọc là 0.1425."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "6.2.4",
+                            "type": "short_answer",
+                            "question": "Một hộp có 4 viên bi, mỗi viên có thể là màu đen hoặc trắng. Lấy ngẫu nhiên ra 2 viên bi. Tính xác suất để lấy được 2 bi trắng. (Giả sử mỗi viên có xác suất trắng/đen bằng nhau là 0.5)",
+                            "answer": "Chọn ngẫu nhiên 2 viên từ 4 viên. Không gian mẫu n(Ω) = C(4,2) = 6.\nSố cách chọn 2 bi trắng: n(A) = C(2,2) = 1.\nVậy P(A) = 1/6."
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
