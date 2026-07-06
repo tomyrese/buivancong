@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { CourseService, Course, Category, Teacher, QuizQuestion } from '@/services/courseService';
+import { NewsletterService } from '@/services/newsletterService';
 import { 
   ShieldAlert, 
   LayoutDashboard, 
@@ -15,7 +16,8 @@ import {
   Check, 
   HelpCircle,
   X,
-  FileText
+  FileText,
+  MailCheck
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
@@ -27,13 +29,14 @@ export default function AdminPage() {
   const [courses, setCourses] = React.useState<Course[]>([]);
   const [categories, setCategories] = React.useState<Category[]>([]);
   const [teachers, setTeachers] = React.useState<Teacher[]>([]);
+  const [newsletterEmails, setNewsletterEmails] = React.useState<string[]>([]);
   
   // Quizzes state
   const [quizzes, setQuizzes] = React.useState<{ [courseId: string]: QuizQuestion[] }>({});
   const [activeQuizCourse, setActiveQuizCourse] = React.useState<Course | null>(null);
   
   // Tab selector
-  const [activeTab, setActiveTab] = React.useState<'courses' | 'categories'>('courses');
+  const [activeTab, setActiveTab] = React.useState<'courses' | 'categories' | 'newsletters'>('courses');
   const [isClient, setIsClient] = React.useState(false);
   const [successMsg, setSuccessMsg] = React.useState('');
 
@@ -73,6 +76,7 @@ export default function AdminPage() {
     const allCategories = CourseService.getCategories();
     setCategories(allCategories);
     setTeachers(CourseService.getTeachers());
+    setNewsletterEmails(NewsletterService.getEmails());
 
     // Load initial quizzes
     const initialQuizzes: { [courseId: string]: QuizQuestion[] } = {};
@@ -86,6 +90,15 @@ export default function AdminPage() {
     });
     setQuizzes(initialQuizzes);
   }, []);
+
+  const handleDeleteNewsletter = (email: string) => {
+    if (confirm(`Bạn có chắc chắn muốn xóa email "${email}" khỏi danh sách nhận bản tin?`)) {
+      NewsletterService.deleteEmail(email);
+      setNewsletterEmails(NewsletterService.getEmails());
+      setSuccessMsg('Đã xóa email khỏi danh sách nhận bản tin thành công!');
+      setTimeout(() => setSuccessMsg(''), 3000);
+    }
+  };
 
   if (!isClient) return null;
 
@@ -379,7 +392,8 @@ export default function AdminPage() {
         <div className="flex border-b border-border/60 overflow-x-auto scrollbar-none gap-2">
           {[
             { id: 'courses', label: 'Quản lý Khóa học' },
-            { id: 'categories', label: 'Quản lý Danh mục' }
+            { id: 'categories', label: 'Quản lý Danh mục' },
+            { id: 'newsletters', label: 'Quản lý Đăng ký Bản tin' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -909,6 +923,71 @@ export default function AdminPage() {
                             </td>
                           </tr>
                         ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Tab Newsletters */}
+            {activeTab === 'newsletters' && (
+              <div className="space-y-6">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="text-xs font-bold text-foreground uppercase tracking-wider">Danh sách đăng ký bản tin</h3>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">Danh sách các học sinh đăng ký nhận tin tức và tài liệu học tập qua email.</p>
+                  </div>
+                  <div className="rounded-xl border border-border/80 px-3 py-1.5 text-2xs font-semibold text-muted-foreground bg-muted/20">
+                    Tổng cộng: {newsletterEmails.length} Email
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm">
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse text-left text-xs text-muted-foreground">
+                      <thead className="bg-muted/40 text-foreground font-bold border-b border-border/80 text-[10px] uppercase tracking-wider">
+                        <tr>
+                          <th className="px-6 py-4">Thứ tự</th>
+                          <th className="px-6 py-4">Địa chỉ Email học viên</th>
+                          <th className="px-6 py-4">Trạng thái nhận tin</th>
+                          <th className="px-6 py-4 text-right">Thao tác</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-border/60 bg-card/60">
+                        {newsletterEmails.length === 0 ? (
+                          <tr>
+                            <td colSpan={4} className="px-6 py-12 text-center text-muted-foreground text-xs font-semibold">
+                              Chưa có email nào đăng ký nhận bản tin.
+                            </td>
+                          </tr>
+                        ) : (
+                          newsletterEmails.map((email, idx) => (
+                            <tr key={email} className="hover:bg-muted/10 transition-colors">
+                              <td className="px-6 py-4 font-bold text-foreground">{idx + 1}</td>
+                              <td className="px-6 py-4 text-foreground font-semibold">
+                                <div className="flex items-center gap-2">
+                                  <MailCheck className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
+                                  <span>{email}</span>
+                                </div>
+                              </td>
+                              <td className="px-6 py-4">
+                                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-500 border border-emerald-500/20">
+                                  Hoạt động
+                                </span>
+                              </td>
+                              <td className="px-6 py-4 text-right">
+                                <button
+                                  onClick={() => handleDeleteNewsletter(email)}
+                                  className="rounded p-1.5 hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors"
+                                  title="Xóa email khỏi danh sách"
+                                >
+                                  <Trash2 className="h-4 w-4" />
+                                </button>
+                              </td>
+                            </tr>
+                          ))
+                        )}
                       </tbody>
                     </table>
                   </div>

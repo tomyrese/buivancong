@@ -1,16 +1,41 @@
 'use client';
 
+import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BookOpen, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import logoImg from '@/src/imgs/logo.png';
+import { NewsletterService } from '@/services/newsletterService';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const pathname = usePathname();
   const isPackagesActive = pathname === '/packages';
+
+  const [newsletterEmail, setNewsletterEmail] = React.useState('');
+  const [newsletterStatus, setNewsletterStatus] = React.useState<'idle' | 'success' | 'duplicate' | 'error'>('idle');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    const emailToSubscribe = newsletterEmail.trim().toLowerCase();
+    if (!emailToSubscribe) return;
+    
+    const existing = NewsletterService.getEmails();
+    if (existing.includes(emailToSubscribe)) {
+      setNewsletterStatus('duplicate');
+      return;
+    }
+    
+    const success = NewsletterService.addEmail(emailToSubscribe);
+    if (success) {
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } else {
+      setNewsletterStatus('error');
+    }
+  };
 
   return (
     <footer className="border-t border-border bg-card/50 transition-all duration-300">
@@ -110,19 +135,42 @@ export default function Footer() {
             <p className="text-xs text-muted-foreground leading-relaxed">
               Đăng ký nhận thông báo về các khóa học mới nhất và tài liệu học tập chọn lọc miễn phí.
             </p>
-            <form className="flex max-w-sm items-center gap-1.5" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Email của bạn..."
-                className="w-full rounded-lg border border-border bg-background px-3 py-1.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-              />
-              <button
-                type="submit"
-                className="rounded-lg bg-primary p-1.5 text-white hover:bg-primary/90 transition-colors"
-                aria-label="Subscribe"
-              >
-                <Send className="h-3.5 w-3.5" />
-              </button>
+            <form className="flex max-w-sm flex-col gap-1.5" onSubmit={handleSubscribe}>
+              <div className="flex gap-1.5 w-full">
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => {
+                    setNewsletterEmail(e.target.value);
+                    if (newsletterStatus !== 'idle') setNewsletterStatus('idle');
+                  }}
+                  placeholder="Email của bạn..."
+                  required
+                  className="w-full rounded-lg border border-border bg-background px-3 py-1.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                />
+                <button
+                  type="submit"
+                  className="rounded-lg bg-primary p-1.5 text-white hover:bg-primary/90 transition-colors shrink-0"
+                  aria-label="Subscribe"
+                >
+                  <Send className="h-3.5 w-3.5" />
+                </button>
+              </div>
+              {newsletterStatus === 'success' && (
+                <span className="text-[10px] text-emerald-500 font-bold animate-in fade-in">
+                  ✓ Đăng ký nhận bản tin thành công!
+                </span>
+              )}
+              {newsletterStatus === 'duplicate' && (
+                <span className="text-[10px] text-amber-500 font-bold animate-in fade-in">
+                  • Email này đã được đăng ký trước đó.
+                </span>
+              )}
+              {newsletterStatus === 'error' && (
+                <span className="text-[10px] text-red-500 font-bold animate-in fade-in">
+                  ✗ Định dạng email không hợp lệ.
+                </span>
+              )}
             </form>
           </div>
         </div>
