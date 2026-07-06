@@ -23,7 +23,7 @@ export default function Footer() {
     if (!emailToSubscribe) return;
     
     const existing = NewsletterService.getEmails();
-    if (existing.includes(emailToSubscribe)) {
+    if (existing.some(s => s.email === emailToSubscribe)) {
       setNewsletterStatus('duplicate');
       return;
     }

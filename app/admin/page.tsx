@@ -1,9 +1,10 @@
 'use client';
 
 import * as React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuthStore } from '@/store/useAuthStore';
 import { CourseService, Course, Category, Teacher, QuizQuestion } from '@/services/courseService';
-import { NewsletterService } from '@/services/newsletterService';
+import { NewsletterService, NewsletterSubscription } from '@/services/newsletterService';
 import { 
   ShieldAlert, 
   LayoutDashboard, 
@@ -29,7 +30,7 @@ export default function AdminPage() {
   const [courses, setCourses] = React.useState<Course[]>([]);
   const [categories, setCategories] = React.useState<Category[]>([]);
   const [teachers, setTeachers] = React.useState<Teacher[]>([]);
-  const [newsletterEmails, setNewsletterEmails] = React.useState<string[]>([]);
+  const [newsletterEmails, setNewsletterEmails] = React.useState<NewsletterSubscription[]>([]);
   
   // Quizzes state
   const [quizzes, setQuizzes] = React.useState<{ [courseId: string]: QuizQuestion[] }>({});
@@ -417,11 +418,17 @@ export default function AdminPage() {
       )}
 
       {/* Tab Contents */}
-      <div className="animate-in fade-in duration-200">
-        
-        {/* Quiz questions management panel (renders when activeQuizCourse is selected) */}
-        {activeQuizCourse ? (
-          <div className="space-y-6">
+      <div className="min-h-[400px]">
+        <AnimatePresence mode="wait">
+          {activeQuizCourse ? (
+            <motion.div
+              key={`quiz-${activeQuizCourse.id}`}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="text-3xs font-extrabold text-primary tracking-widest uppercase">Quản lý câu hỏi</span>
@@ -631,10 +638,16 @@ export default function AdminPage() {
                 </tbody>
               </table>
             </div>
-          </div>
+          </motion.div>
         ) : (
-          /* Main view: standard tables depending on activeTab */
-          <>
+          <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-6"
+            >
             {/* Tab Courses */}
             {activeTab === 'courses' && (
               <div className="space-y-6">
@@ -950,7 +963,7 @@ export default function AdminPage() {
                         <tr>
                           <th className="px-6 py-4">Thứ tự</th>
                           <th className="px-6 py-4">Địa chỉ Email học viên</th>
-                          <th className="px-6 py-4">Trạng thái nhận tin</th>
+                          <th className="px-6 py-4">Thời gian đăng ký</th>
                           <th className="px-6 py-4 text-right">Thao tác</th>
                         </tr>
                       </thead>
@@ -962,23 +975,23 @@ export default function AdminPage() {
                             </td>
                           </tr>
                         ) : (
-                          newsletterEmails.map((email, idx) => (
-                            <tr key={email} className="hover:bg-muted/10 transition-colors">
+                          newsletterEmails.map((sub, idx) => (
+                            <tr key={sub.email} className="hover:bg-muted/10 transition-colors">
                               <td className="px-6 py-4 font-bold text-foreground">{idx + 1}</td>
                               <td className="px-6 py-4 text-foreground font-semibold">
                                 <div className="flex items-center gap-2">
                                   <MailCheck className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
-                                  <span>{email}</span>
+                                  <span>{sub.email}</span>
                                 </div>
                               </td>
                               <td className="px-6 py-4">
-                                <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-500 border border-emerald-500/20">
-                                  Hoạt động
+                                <span className="text-2xs font-semibold text-muted-foreground bg-muted px-2.5 py-1 rounded-lg border border-border">
+                                  {new Date(sub.subscribedAt).toLocaleString('vi-VN')}
                                 </span>
                               </td>
                               <td className="px-6 py-4 text-right">
                                 <button
-                                  onClick={() => handleDeleteNewsletter(email)}
+                                  onClick={() => handleDeleteNewsletter(sub.email)}
                                   className="rounded p-1.5 hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors"
                                   title="Xóa email khỏi danh sách"
                                 >
@@ -994,8 +1007,9 @@ export default function AdminPage() {
                 </div>
               </div>
             )}
-          </>
+          </motion.div>
         )}
+      </AnimatePresence>
 
       </div>
     </div>
