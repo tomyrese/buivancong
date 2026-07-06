@@ -2,21 +2,21 @@
 
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const testimonials = [
   {
     id: 1,
     name: 'Hoàng Nam',
     role: 'Đỗ ĐH Bách khoa - ĐHQG TP.HCM',
-    content: 'Khóa học ôn thi ĐGNL của thầy Công thực sự là bệ phóng giúp mình đạt điểm số 115/150. Các chuyên đề Suy luận Khoa học Vật lý và Hóa học được thầy tóm tắt vô cùng logic và dễ nhớ.',
+    content: 'Khóa học ôn thi ĐGNL của thầy Công thực sự là bệ phóng giúp mình tiến bộ vượt bậc. Các chuyên đề Suy luận Khoa học Vật lý và Hóa học được thầy tóm tắt vô cùng logic và dễ nhớ.',
     rating: 5,
   },
   {
     id: 2,
     name: 'Thu Trang',
     role: 'Đỗ ĐH Ngoại thương CS2 - TP.HCM',
-    content: 'Em cực kỳ ấn tượng với phương pháp giải nhanh Toán trắc nghiệm của thầy Bùi Văn Công. Nhờ khóa học của thầy mà phần tư duy định lượng của em đạt điểm số gần như tối đa.',
+    content: 'Em cực kỳ ấn tượng với phương pháp giải nhanh Toán trắc nghiệm của thầy Bùi Văn Công. Nhờ khóa học của thầy mà phần tư duy định lượng của em đạt kết quả xuất sắc.',
     rating: 5,
   },
   {
@@ -69,12 +69,6 @@ export default function Testimonials() {
                   transition={{ duration: 0.3 }}
                   className="space-y-6"
                 >
-                  {/* Stars */}
-                  <div className="flex gap-1 justify-center sm:justify-start">
-                    {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
 
                   {/* Feedback Text */}
                   <p className="text-sm sm:text-base text-foreground italic leading-relaxed text-center sm:text-left">
