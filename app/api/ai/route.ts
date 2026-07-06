@@ -95,7 +95,17 @@ export async function POST(request: Request) {
       return fallbackResponse(messages);
     }
 
-    const data = await apiResponse.json();
+    const rawText = await apiResponse.text();
+    let cleanText = rawText.trim();
+    
+    // 9Router local proxy bug workaround: it appends "data: [DONE]" to non-stream response bodies,
+    // which triggers SyntaxError. We extract only the JSON part up to the last closing brace.
+    const lastBraceIndex = cleanText.lastIndexOf('}');
+    if (lastBraceIndex !== -1) {
+      cleanText = cleanText.substring(0, lastBraceIndex + 1);
+    }
+    
+    const data = JSON.parse(cleanText);
     const content = data.choices[0]?.message?.content || 'Xin lỗi, tôi không thể xử lý câu trả lời lúc này.';
     
     return NextResponse.json({ content });
