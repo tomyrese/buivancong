@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import { useAuthStore } from './useAuthStore';
 
 export interface Note {
   id: string;
@@ -149,6 +150,31 @@ export const useProgressStore = create<ProgressState>()(
     }),
     {
       name: 'istudent-progress',
+      storage: createJSONStorage(() => ({
+        getItem: (name) => {
+          if (typeof window === 'undefined') return null;
+          const userId = useAuthStore.getState().user?.id || 'guest';
+          const key = `${name}-${userId}`;
+          const value = localStorage.getItem(key);
+          // If guest, fall back to key without guest suffix if it exists (for compatibility)
+          if (!value && userId === 'guest') {
+            return localStorage.getItem(name);
+          }
+          return value;
+        },
+        setItem: (name, value) => {
+          if (typeof window === 'undefined') return;
+          const userId = useAuthStore.getState().user?.id || 'guest';
+          const key = `${name}-${userId}`;
+          localStorage.setItem(key, value);
+        },
+        removeItem: (name) => {
+          if (typeof window === 'undefined') return;
+          const userId = useAuthStore.getState().user?.id || 'guest';
+          const key = `${name}-${userId}`;
+          localStorage.removeItem(key);
+        }
+      }))
     }
   )
 );

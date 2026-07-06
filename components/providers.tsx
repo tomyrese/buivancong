@@ -5,6 +5,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore, User } from '@/store/useAuthStore';
+import { useProgressStore } from '@/store/useProgressStore';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = React.useState(
@@ -47,6 +48,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
         const currentAuthState = useAuthStore.getState();
         if (!currentAuthState.isAuthenticated || currentAuthState.user?.id !== userProfile.id) {
           useAuthStore.setState({ user: userProfile, isAuthenticated: true });
+          // Load user-specific progress from localStorage
+          useProgressStore.persist.rehydrate();
         }
 
         // Clean up URL hash to prevent infinite hydration refresh loops
@@ -58,12 +61,30 @@ export function Providers({ children }: { children: React.ReactNode }) {
         const currentAuthState = useAuthStore.getState();
         if (currentAuthState.isAuthenticated) {
           useAuthStore.setState({ user: null, isAuthenticated: false });
+          // Load guest progress from localStorage
+          useProgressStore.persist.rehydrate();
         }
       }
     });
 
     return () => {
       subscription.unsubscribe();
+    };
+  }, []);
+
+  React.useEffect(() => {
+    let prevUserId = useAuthStore.getState().user?.id;
+    const unsubscribe = useAuthStore.subscribe((state) => {
+      const currentUserId = state.user?.id;
+      if (currentUserId !== prevUserId) {
+        prevUserId = currentUserId;
+        // Trigger rehydration of progress store to fetch the correct user-specific storage keys
+        useProgressStore.persist.rehydrate();
+      }
+    });
+
+    return () => {
+      unsubscribe();
     };
   }, []);
 
