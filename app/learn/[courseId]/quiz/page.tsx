@@ -419,7 +419,7 @@ export default function QuizPage() {
                   <div 
                     key={q.id}
                     className={`rounded-2xl border p-5 space-y-3 bg-card/80 ${
-                      isCorrect ? 'border-emerald-500/20' : 'border-destructive/20'
+                      isCorrect ? 'border-emerald-500/20' : 'border-red-500/20'
                     }`}
                   >
                     <div className="flex items-start justify-between gap-3">
@@ -431,7 +431,7 @@ export default function QuizPage() {
                           Đúng
                         </span>
                       ) : (
-                        <span className="rounded-full bg-destructive/10 border border-destructive/20 px-2.5 py-0.5 text-3xs font-semibold text-destructive shrink-0">
+                        <span className="rounded-full bg-red-500/10 border border-red-500/20 px-2.5 py-0.5 text-3xs font-semibold text-red-500 shrink-0">
                           Sai
                         </span>
                       )}
@@ -444,7 +444,7 @@ export default function QuizPage() {
                         const isRight = corrAns === optIdx;
 
                         let optionStyle = 'border-border';
-                        if (isSelected) optionStyle = 'border-destructive bg-destructive/5 text-destructive';
+                        if (isSelected) optionStyle = 'border-red-500 bg-red-500/5 text-red-600';
                         if (isRight) optionStyle = 'border-emerald-500 bg-emerald-500/5 text-emerald-500';
 
                         return (
@@ -456,7 +456,7 @@ export default function QuizPage() {
                               isRight 
                                 ? 'border-emerald-500 bg-emerald-500 text-white font-bold' 
                                 : isSelected 
-                                ? 'border-destructive bg-destructive text-white font-bold' 
+                                ? 'border-red-500 bg-red-500 text-white font-bold' 
                                 : 'border-border'
                             }`}>
                               {String.fromCharCode(65 + optIdx)}

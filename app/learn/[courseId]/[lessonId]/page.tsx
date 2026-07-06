@@ -187,8 +187,8 @@ export default function LearnPage() {
                                   buttonClass = 'border-emerald-500 bg-emerald-500/5 text-emerald-600';
                                   badgeClass = 'border-emerald-500 bg-emerald-500 text-white font-bold';
                                 } else if (isCurrentSelected) {
-                                  buttonClass = 'border-destructive bg-destructive/5 text-destructive';
-                                  badgeClass = 'border-destructive bg-destructive text-white font-bold';
+                                  buttonClass = 'border-red-500 bg-red-500/5 text-red-600';
+                                  badgeClass = 'border-red-500 bg-red-500 text-white font-bold';
                                 } else {
                                   buttonClass = 'border-border bg-card/40 opacity-60 text-muted-foreground pointer-events-none';
                                 }
@@ -214,8 +214,8 @@ export default function LearnPage() {
                           {isAnswered && (
                             <div className="rounded-xl bg-slate-50 border border-border p-3.5 text-xs text-muted-foreground leading-relaxed animate-in fade-in duration-200">
                               <div className="flex items-center gap-1.5 mb-1">
-                                <span className={`h-2 w-2 rounded-full ${isCorrect ? 'bg-emerald-500' : 'bg-destructive'}`} />
-                                <span className={`font-bold ${isCorrect ? 'text-emerald-600' : 'text-destructive'}`}>
+                                <span className={`h-2 w-2 rounded-full ${isCorrect ? 'bg-emerald-500' : 'bg-red-500'}`} />
+                                <span className={`font-bold ${isCorrect ? 'text-emerald-600' : 'text-red-600'}`}>
                                   {isCorrect ? 'Chính xác!' : 'Chưa chính xác!'}
                                 </span>
                               </div>
@@ -318,7 +318,7 @@ export default function LearnPage() {
                             <div 
                               key={q.id}
                               className={`rounded-2xl border p-4 space-y-3 bg-card/40 ${
-                                isCorrect ? 'border-emerald-500/20' : 'border-destructive/20'
+                                isCorrect ? 'border-emerald-500/20' : 'border-red-500/20'
                               }`}
                             >
                               <div className="flex items-start justify-between gap-3">
@@ -326,7 +326,7 @@ export default function LearnPage() {
                                   Câu {idx + 1}: {q.question}
                                 </h5>
                                 <span className={`rounded-full px-2 py-0.5 text-[10px] font-semibold shrink-0 ${
-                                  isCorrect ? 'bg-emerald-500/10 text-emerald-500' : 'bg-destructive/10 text-destructive'
+                                  isCorrect ? 'bg-emerald-500/10 text-emerald-500' : 'bg-red-500/10 text-red-500'
                                 }`}>
                                   {isCorrect ? 'Đúng' : 'Sai'}
                                 </span>
@@ -338,7 +338,7 @@ export default function LearnPage() {
                                   const isRight = q.correctAnswer === oIdx;
 
                                   let optionStyle = 'border-border bg-card/20';
-                                  if (isSelected) optionStyle = 'border-destructive bg-destructive/5 text-destructive';
+                                  if (isSelected) optionStyle = 'border-red-500 bg-red-500/5 text-red-600';
                                   if (isRight) optionStyle = 'border-emerald-500 bg-emerald-500/5 text-emerald-500';
 
                                   return (
@@ -350,7 +350,7 @@ export default function LearnPage() {
                                         isRight 
                                           ? 'border-emerald-500 bg-emerald-500 text-white font-bold' 
                                           : isSelected 
-                                          ? 'border-destructive bg-destructive text-white font-bold' 
+                                          ? 'border-red-500 bg-red-500 text-white font-bold' 
                                           : 'border-border'
                                       }`}>
                                         {String.fromCharCode(65 + oIdx)}
