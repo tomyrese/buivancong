@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { X, Mail, Lock, User as UserIcon, ArrowRight, Sparkles } from 'lucide-react';
+import { X, Mail, Lock, User as UserIcon, ArrowRight, Sparkles, Phone } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { supabase } from '@/lib/supabase';
 
@@ -18,6 +18,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const [password, setPassword] = React.useState('');
   const [confirmPassword, setConfirmPassword] = React.useState('');
   const [name, setName] = React.useState('');
+  const [phone, setPhone] = React.useState('');
   const [error, setError] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const [success, setSuccess] = React.useState('');
@@ -31,6 +32,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       setPassword('');
       setConfirmPassword('');
       setName('');
+      setPhone('');
       setError('');
       setSuccess('');
       setLoading(false);
@@ -73,6 +75,10 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       setError('Vui lòng nhập họ và tên của bạn!');
       return false;
     }
+    if (!isLoginMode && !/^\d{9,11}$/.test(phone)) {
+      setError('Số điện thoại không hợp lệ (9 - 11 chữ số)!');
+      return false;
+    }
     if (!isLoginMode && password !== confirmPassword) {
       setError('Mật khẩu nhập lại không khớp!');
       return false;
@@ -112,7 +118,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
           await login(email, password);
           setSuccess('Đăng nhập thành công! Chào mừng bạn quay trở lại.');
         } else {
-          await register(name, email, password);
+          await register(name, email, password, phone);
           setSuccess('Đăng ký tài khoản thành công! Bắt đầu học ngay.');
         }
 
@@ -269,6 +275,24 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   placeholder="Nguyễn Văn A"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  disabled={loading || !!success}
+                  className="w-full rounded-2xl border border-border bg-background py-3 pl-10 pr-4 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Phone number input for registration */}
+          {!isForgotPasswordMode && !isLoginMode && (
+            <div className="space-y-1">
+              <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider pl-1">Số điện thoại</label>
+              <div className="relative flex items-center">
+                <Phone className="absolute left-3.5 h-4 w-4 text-muted-foreground" />
+                <input
+                  type="tel"
+                  placeholder="0912345678"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   disabled={loading || !!success}
                   className="w-full rounded-2xl border border-border bg-background py-3 pl-10 pr-4 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all"
                 />

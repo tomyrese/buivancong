@@ -46,7 +46,7 @@ const packageCodeMap: Record<string, string> = {
 export default function PackagesPage() {
   const { user, isAuthenticated } = useAuthStore();
   const [selectedPackage, setSelectedPackage] = React.useState<Package | null>(null);
-  const [checkoutStep, setCheckoutStep] = React.useState<'info' | 'success'>('info');
+  const [checkoutStep, setCheckoutStep] = React.useState<'info' | 'qr' | 'success'>('info');
   const [paymentMode, setPaymentMode] = React.useState<'vietqr' | 'manual'>('vietqr');
   const [showAuthModal, setShowAuthModal] = React.useState(false);
   const [phone, setPhone] = React.useState('');
@@ -122,9 +122,17 @@ export default function PackagesPage() {
       return;
     }
     setSelectedPackage(pkg);
-    setCheckoutStep('info');
     setPaymentMode('vietqr');
-    setPhone('');
+    
+    // Check if user has phone configured
+    if (!user?.phone || user.phone.trim() === '') {
+      setCheckoutStep('info'); // Show info step to collect phone number first
+      setPhone('');
+    } else {
+      setCheckoutStep('qr'); // Go straight to QR code if phone is configured
+      setPhone(user.phone);
+    }
+    
     setFullName(user?.name || '');
     setEmail(user?.email || '');
     setHasFile(false);
@@ -134,7 +142,7 @@ export default function PackagesPage() {
   React.useEffect(() => {
     let checkInterval: NodeJS.Timeout;
     
-    if (selectedPackage && checkoutStep === 'info' && paymentMode === 'vietqr' && isAuthenticated) {
+    if (selectedPackage && checkoutStep === 'qr' && paymentMode === 'vietqr' && isAuthenticated) {
       checkInterval = setInterval(async () => {
         try {
           // Fetch latest user details from Supabase to check if the package is activated
@@ -160,7 +168,7 @@ export default function PackagesPage() {
     };
   }, [selectedPackage, checkoutStep, paymentMode, isAuthenticated]);
 
-  const handleCheckoutSubmit = (e: React.FormEvent) => {
+  const handleCheckoutSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -176,17 +184,43 @@ export default function PackagesPage() {
       setError('Email không đúng định dạng!');
       return;
     }
-    if (!hasFile) {
-      setError('Vui lòng tải lên ảnh chụp biên lai/minh chứng chuyển khoản!');
-      return;
-    }
 
     setLoading(true);
-    // Simulate manual transaction submission
-    setTimeout(() => {
+    try {
+      if (paymentMode === 'vietqr') {
+        // Update user profile on Supabase with phone number
+        const url = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+        const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_PUBLISHABLE_KEY;
+        const isSupabaseConfigured = url && key && !url.includes('placeholder') && !key.includes('placeholder');
+
+        if (isSupabaseConfigured) {
+          const { error } = await supabase.auth.updateUser({
+            data: { name: fullName, phone: phone }
+          });
+          if (error) throw error;
+        }
+        
+        // Update local Zustand auth store profile
+        useAuthStore.getState().updateProfile({ name: fullName, phone: phone });
+        
+        // Transition to QR payment step
+        setCheckoutStep('qr');
+      } else {
+        if (!hasFile) {
+          setError('Vui lòng tải lên ảnh chụp biên lai/minh chứng chuyển khoản!');
+          setLoading(false);
+          return;
+        }
+        // Simulate manual transaction submission
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        setCheckoutStep('success');
+      }
+    } catch (err: any) {
+      console.error(err);
+      setError(err.message || 'Có lỗi xảy ra khi cập nhật thông tin!');
+    } finally {
       setLoading(false);
-      setCheckoutStep('success');
-    }, 1200);
+    }
   };
 
   const formatPrice = (value: number) => {
@@ -406,18 +440,23 @@ export default function PackagesPage() {
               </button>
 
               {checkoutStep === 'info' ? (
-                /* Form / Waiting block */
-                <div className="space-y-4 h-full flex flex-col justify-between">
+                /* Form block for updating profile / submitting manual receipt */
+                <form onSubmit={handleCheckoutSubmit} className="space-y-4 h-full flex flex-col justify-between">
                   <div className="space-y-4">
                     {/* Step Title & Selector */}
                     <div className="space-y-2">
-                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Xác nhận</span>
+                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Xác nhận thông tin</span>
                       
                       {/* Payment Mode Selector Tabs */}
                       <div className="flex rounded-xl bg-muted p-1 border border-border">
                         <button
                           type="button"
-                          onClick={() => setPaymentMode('vietqr')}
+                          onClick={() => {
+                            setPaymentMode('vietqr');
+                            if (user?.phone && user.phone.trim() !== '') {
+                              setCheckoutStep('qr');
+                            }
+                          }}
                           className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
                             paymentMode === 'vietqr'
                               ? 'bg-card text-foreground shadow-xs'
@@ -446,75 +485,51 @@ export default function PackagesPage() {
                       </div>
                     )}
 
-                    {paymentMode === 'vietqr' ? (
-                      /* Automatic Payment: QR Scanner & Real-time webhook waiting state */
-                      <div className="space-y-4 py-2">
-                        <div className="rounded-2xl bg-primary/5 border border-primary/10 p-4 text-center space-y-3">
-                          <div className="relative flex items-center justify-center">
-                            <div className="absolute h-10 w-10 rounded-full bg-primary/20 animate-ping" />
-                            <div className="relative h-7 w-7 rounded-full bg-primary/15 flex items-center justify-center text-primary">
-                              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-                            </div>
-                          </div>
-                          <div className="space-y-1">
-                            <h4 className="text-xs font-bold text-foreground">Đang đợi thanh toán tự động...</h4>
-                            <p className="text-3xs text-muted-foreground leading-relaxed">
-                              Vui lòng giữ nguyên cửa sổ này. Sau khi bạn chuyển khoản qua app ngân hàng, hệ thống sẽ nhận biến động số dư và kích hoạt khóa học sau 10 - 30 giây.
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Developer sandbox info box */}
-                        <div className="rounded-xl bg-muted border border-border p-3 text-[10px] text-muted-foreground space-y-1.5 leading-relaxed">
-                          <div className="flex items-center gap-1 font-bold text-foreground">
-                            <Info className="h-3.5 w-3.5 text-blue-500" />
-                            <span>Mẹo Thử nghiệm Sandbox (Dev Tip)</span>
-                          </div>
-                          <p>
-                            Bạn có thể giả lập thanh toán bằng cách gửi webhook chứa nội dung chuyển khoản <strong>QRTBVC {user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} {packageCodeMap[selectedPackage.id]}</strong> tới endpoint API Callback của bạn để kích hoạt tức thì.
-                          </p>
-                        </div>
+                    {/* Personal Details Form */}
+                    <div className="space-y-3">
+                      <div className="rounded-xl bg-amber-500/5 border border-amber-500/10 p-3 text-[10px] text-amber-700 font-medium">
+                        💡 Yêu cầu bắt buộc: Phải cập nhật địa chỉ Email và Số điện thoại hợp lệ để hệ thống đối soát giao dịch tự động.
                       </div>
-                    ) : (
-                      /* Manual Payment Form */
-                      <form onSubmit={handleCheckoutSubmit} className="space-y-3.5">
-                        <div className="space-y-1">
-                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Số điện thoại liên hệ</label>
-                          <input
-                            type="tel"
-                            placeholder="Số điện thoại của bạn"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                            required
-                          />
-                        </div>
 
-                        <div className="space-y-1">
-                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Họ và tên học sinh</label>
-                          <input
-                            type="text"
-                            placeholder="Họ và tên của bạn"
-                            value={fullName}
-                            onChange={(e) => setFullName(e.target.value)}
-                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                            required
-                          />
-                        </div>
+                      <div className="space-y-1">
+                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Họ và tên học sinh</label>
+                        <input
+                          type="text"
+                          placeholder="Họ và tên của bạn"
+                          value={fullName}
+                          onChange={(e) => setFullName(e.target.value)}
+                          className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                          required
+                        />
+                      </div>
 
-                        <div className="space-y-1">
-                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Địa chỉ Email</label>
-                          <input
-                            type="email"
-                            placeholder="Email của bạn"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                            required
-                          />
-                        </div>
+                      <div className="space-y-1">
+                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Địa chỉ Email (Gmail)</label>
+                        <input
+                          type="email"
+                          placeholder="Email đăng ký của bạn"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                          required
+                        />
+                      </div>
 
-                        <div className="space-y-1">
+                      <div className="space-y-1">
+                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Số điện thoại liên hệ</label>
+                        <input
+                          type="tel"
+                          placeholder="Số điện thoại di động"
+                          value={phone}
+                          onChange={(e) => setPhone(e.target.value)}
+                          className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                          required
+                        />
+                      </div>
+
+                      {paymentMode === 'manual' && (
+                        /* Manual Mode Screenshot Upload */
+                        <div className="space-y-1 pt-1">
                           <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Ảnh chụp minh chứng</label>
                           <button
                             type="button"
@@ -531,26 +546,103 @@ export default function PackagesPage() {
                             </span>
                           </button>
                         </div>
-                      </form>
-                    )}
+                      )}
+                    </div>
                   </div>
 
-                  {paymentMode === 'manual' && (
-                    <button
-                      onClick={handleCheckoutSubmit}
-                      disabled={loading}
-                      className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4"
-                    >
-                      {loading ? (
-                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4" />
-                          Gửi xác nhận chuyển khoản
-                        </>
-                      )}
-                    </button>
-                  )}
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4"
+                  >
+                    {loading ? (
+                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    ) : paymentMode === 'vietqr' ? (
+                      <>
+                        <Send className="h-4 w-4" />
+                        Xác nhận & Tạo mã QR
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        Gửi xác nhận chuyển khoản
+                      </>
+                    )}
+                  </button>
+                </form>
+              ) : checkoutStep === 'qr' ? (
+                /* QR code waiting step */
+                <div className="space-y-4 h-full flex flex-col justify-between">
+                  <div className="space-y-4">
+                    {/* Step Title & Selector */}
+                    <div className="space-y-2">
+                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Chờ thanh toán</span>
+                      
+                      {/* Payment Mode Selector Tabs */}
+                      <div className="flex rounded-xl bg-muted p-1 border border-border">
+                        <button
+                          type="button"
+                          onClick={() => setPaymentMode('vietqr')}
+                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
+                            paymentMode === 'vietqr'
+                              ? 'bg-card text-foreground shadow-xs'
+                              : 'text-muted-foreground hover:text-foreground'
+                          }`}
+                        >
+                          ⚡ Tự động (VietQR)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setPaymentMode('manual');
+                            setCheckoutStep('info');
+                          }}
+                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
+                            paymentMode === 'manual'
+                              ? 'bg-card text-foreground shadow-xs'
+                              : 'text-muted-foreground hover:text-foreground'
+                          }`}
+                        >
+                          📝 Thủ công (Gửi ảnh)
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 py-2">
+                      <div className="rounded-2xl bg-primary/5 border border-primary/10 p-4 text-center space-y-3">
+                        <div className="relative flex items-center justify-center">
+                          <div className="absolute h-10 w-10 rounded-full bg-primary/20 animate-ping" />
+                          <div className="relative h-7 w-7 rounded-full bg-primary/15 flex items-center justify-center text-primary">
+                            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+                          </div>
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="text-xs font-bold text-foreground">Đang đợi thanh toán tự động...</h4>
+                          <p className="text-3xs text-muted-foreground leading-relaxed">
+                            Mở ứng dụng Ngân hàng quét mã QR ở ô bên trái. Hệ thống sẽ kích hoạt khóa học ngay sau khi nhận được chuyển khoản.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Developer sandbox info box */}
+                      <div className="rounded-xl bg-muted border border-border p-3 text-[10px] text-muted-foreground space-y-1.5 leading-relaxed">
+                        <div className="flex items-center gap-1 font-bold text-foreground">
+                          <Info className="h-3.5 w-3.5 text-blue-500" />
+                          <span>Mẹo Thử nghiệm Sandbox (Dev Tip)</span>
+                        </div>
+                        <p>
+                          Bạn có thể giả lập thanh toán bằng cách gửi webhook chứa nội dung chuyển khoản <strong>QRTBVC {user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} {packageCodeMap[selectedPackage.id]}</strong> tới endpoint API Callback của bạn để kích hoạt tức thì.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    onClick={() => setCheckoutStep('info')}
+                    className="w-full py-2.5 rounded-2xl border border-border bg-card text-2xs font-bold text-muted-foreground hover:bg-muted transition-colors text-center"
+                  >
+                    ✏️ Thay đổi thông tin cá nhân
+                  </button>
                 </div>
               ) : (
                 /* Success screen */

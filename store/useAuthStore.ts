@@ -6,6 +6,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  phone?: string;
   avatar: string;
   role: 'student' | 'admin';
   xp: number;
@@ -19,7 +20,7 @@ interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   login: (email: string, password?: string) => Promise<boolean>;
-  register: (name: string, email: string, password?: string) => Promise<boolean>;
+  register: (name: string, email: string, password?: string, phone?: string) => Promise<boolean>;
   logout: () => Promise<void>;
   updateProfile: (updates: Partial<User>) => void;
   addXP: (amount: number) => void;
@@ -51,6 +52,7 @@ export const useAuthStore = create<AuthState>()(
               id: data.user.id,
               name: data.user.user_metadata?.name || 'Học Viên',
               email: data.user.email || email,
+              phone: data.user.user_metadata?.phone || '',
               avatar: data.user.user_metadata?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
               role: isAdmin ? 'admin' : 'student',
               xp: data.user.user_metadata?.xp || 0,
@@ -93,7 +95,7 @@ export const useAuthStore = create<AuthState>()(
           return true;
         }
       },
-      register: async (name, email, password) => {
+      register: async (name, email, password, phone) => {
         if (isSupabaseConfigured()) {
           const { data, error } = await supabase.auth.signUp({
             email,
@@ -101,6 +103,7 @@ export const useAuthStore = create<AuthState>()(
             options: {
               data: {
                 name: name || 'Học Viên Mới',
+                phone: phone || '',
                 xp: 0,
                 level: 1,
                 streak: 1,
@@ -115,6 +118,7 @@ export const useAuthStore = create<AuthState>()(
               id: data.user.id,
               name: name || 'Học Viên Mới',
               email: data.user.email || email,
+              phone: phone || '',
               avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
               role: 'student',
               xp: 0,
@@ -132,6 +136,7 @@ export const useAuthStore = create<AuthState>()(
             id: `u-${Math.random().toString(36).substring(2, 9)}`,
             name: name || 'Học Viên Mới',
             email: email,
+            phone: phone || '',
             avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
             role: 'student',
             xp: 0,

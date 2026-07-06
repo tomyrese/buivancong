@@ -35,6 +35,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           id: session.user.id,
           name: session.user.user_metadata?.name || 'Học Viên',
           email: email,
+          phone: session.user.user_metadata?.phone || '',
           avatar: session.user.user_metadata?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
           role: isAdmin ? 'admin' : 'student',
           xp: session.user.user_metadata?.xp || 0,

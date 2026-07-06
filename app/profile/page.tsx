@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { useTheme } from 'next-themes';
+import { supabase } from '@/lib/supabase';
 import { 
   User as UserIcon, 
   Mail, 
@@ -13,7 +14,8 @@ import {
   Languages, 
   Award, 
   Check, 
-  Save 
+  Save,
+  Phone
 } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -23,6 +25,7 @@ export default function ProfilePage() {
   // Local state for forms
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
+  const [phone, setPhone] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [newPassword, setNewPassword] = React.useState('');
   const [lang, setLang] = React.useState('vi');
@@ -34,6 +37,7 @@ export default function ProfilePage() {
     if (user) {
       setName(user.name);
       setEmail(user.email);
+      setPhone(user.phone || '');
     }
   }, [user]);
 
@@ -48,11 +52,25 @@ export default function ProfilePage() {
     );
   }
 
-  const handleSaveProfile = (e: React.FormEvent) => {
+  const handleSaveProfile = async (e: React.FormEvent) => {
     e.preventDefault();
-    updateProfile({ name, email });
-    setSaveSuccess(true);
-    setTimeout(() => setSaveSuccess(false), 2000);
+    try {
+      const url = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+      const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_PUBLISHABLE_KEY;
+      const isSupabaseConfigured = url && key && !url.includes('placeholder') && !key.includes('placeholder');
+
+      if (isSupabaseConfigured) {
+        const { error } = await supabase.auth.updateUser({
+          data: { name, phone }
+        });
+        if (error) throw error;
+      }
+      updateProfile({ name, email, phone });
+      setSaveSuccess(true);
+      setTimeout(() => setSaveSuccess(false), 2000);
+    } catch (err: any) {
+      alert(err.message || 'Lỗi cập nhật hồ sơ');
+    }
   };
 
   const handleChangePassword = (e: React.FormEvent) => {
@@ -228,6 +246,21 @@ export default function ProfilePage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
+                      className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Số điện thoại</label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <input
+                      type="tel"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      required
+                      placeholder="0912345678"
                       className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                     />
                   </div>

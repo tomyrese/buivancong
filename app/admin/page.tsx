@@ -37,7 +37,24 @@ export default function AdminPage() {
   const [activeQuizCourse, setActiveQuizCourse] = React.useState<Course | null>(null);
   
   // Tab selector
-  const [activeTab, setActiveTab] = React.useState<'courses' | 'categories' | 'newsletters'>('courses');
+  const [activeTab, setActiveTab] = React.useState<'courses' | 'categories' | 'newsletters' | 'registrations'>('courses');
+  const [registrations, setRegistrations] = React.useState<any[]>([]);
+  const [regLoading, setRegLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    if (activeTab === 'registrations') {
+      setRegLoading(true);
+      fetch('/api/admin/registrations')
+        .then(res => res.json())
+        .then(data => {
+          if (data.registrations) {
+            setRegistrations(data.registrations);
+          }
+        })
+        .catch(err => console.error("Error loading registrations:", err))
+        .finally(() => setRegLoading(false));
+    }
+  }, [activeTab]);
   const [isClient, setIsClient] = React.useState(false);
   const [successMsg, setSuccessMsg] = React.useState('');
 
@@ -394,7 +411,8 @@ export default function AdminPage() {
           {[
             { id: 'courses', label: 'Quản lý Khóa học' },
             { id: 'categories', label: 'Quản lý Danh mục' },
-            { id: 'newsletters', label: 'Quản lý Đăng ký Bản tin' }
+            { id: 'newsletters', label: 'Quản lý Đăng ký Bản tin' },
+            { id: 'registrations', label: 'Học viên Đăng ký Gói' }
           ].map((tab) => (
             <button
               key={tab.id}
@@ -1003,6 +1021,78 @@ export default function AdminPage() {
                         )}
                       </tbody>
                     </table>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Tab Registrations */}
+            {activeTab === 'registrations' && (
+              <div className="space-y-6 animate-in fade-in duration-200">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xs font-bold text-foreground uppercase tracking-wider">Học viên đăng ký gói học</h3>
+                    <p className="text-[10px] text-muted-foreground mt-0.5">Danh sách các học viên đã hoàn tất giao dịch tự động thanh toán qua VietQR.</p>
+                  </div>
+                  <div className="rounded-xl border border-border/80 px-3 py-1.5 text-2xs font-semibold text-muted-foreground bg-muted/20 self-start">
+                    Tổng cộng: {registrations.length} Học viên
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm">
+                  <div className="overflow-x-auto">
+                    {regLoading ? (
+                      <div className="flex items-center justify-center py-16 gap-2">
+                        <div className="h-5 w-5 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+                        <span className="text-xs font-semibold text-muted-foreground">Đang tải danh sách học viên...</span>
+                      </div>
+                    ) : registrations.length === 0 ? (
+                      <div className="text-center py-16 text-muted-foreground text-xs font-semibold">
+                        Chưa có học viên nào đăng ký gói học.
+                      </div>
+                    ) : (
+                      <table className="w-full border-collapse text-left text-xs text-muted-foreground">
+                        <thead className="bg-muted/40 text-foreground font-bold border-b border-border/80 text-[10px] uppercase tracking-wider">
+                          <tr>
+                            <th className="px-6 py-4">Tên học viên</th>
+                            <th className="px-6 py-4">Email</th>
+                            <th className="px-6 py-4">Số điện thoại</th>
+                            <th className="px-6 py-4">Gói học sở hữu</th>
+                            <th className="px-6 py-4">Ngày đăng ký</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border/60 bg-card/60 text-foreground">
+                          {registrations.map((reg) => (
+                            <tr key={reg.userId} className="hover:bg-muted/10 transition-colors">
+                              <td className="px-6 py-4 font-bold">{reg.name}</td>
+                              <td className="px-6 py-4 text-muted-foreground">{reg.email}</td>
+                              <td className="px-6 py-4 font-semibold text-primary">{reg.phone}</td>
+                              <td className="px-6 py-4">
+                                <div className="flex flex-wrap gap-1">
+                                  {reg.purchasedPackages.map((pkgId: string) => {
+                                    const labels: Record<string, string> = {
+                                      'combo-toan-logic': 'Combo Toán & Logic',
+                                      'combo-khoa-hoc': 'Combo Khoa học',
+                                      'combo-toan-dien': 'Combo Toàn diện ĐGNL'
+                                    };
+                                    return (
+                                      <span key={pkgId} className="rounded-md bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-0.5 text-[10px] text-emerald-600 font-bold">
+                                        {labels[pkgId] || pkgId}
+                                      </span>
+                                    );
+                                  })}
+                                </div>
+                              </td>
+                              <td className="px-6 py-4">
+                                <span className="text-2xs font-semibold text-muted-foreground bg-muted px-2.5 py-1 rounded-lg border border-border">
+                                  {new Date(reg.createdAt).toLocaleString('vi-VN')}
+                                </span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    )}
                   </div>
                 </div>
               </div>
