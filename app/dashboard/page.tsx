@@ -55,12 +55,33 @@ export default function DashboardPage() {
     { name: 'Chủ Nhật', mins: 50, color: '#06B6D4' },
   ];
 
-  // Mock activity logs
-  const activities = [
-    { id: 1, text: 'Hoàn thành bài giảng: Chain-of-Thought (CoT)', time: '2 giờ trước' },
-    { id: 2, text: 'Lưu ghi chú tại bài học: Giới thiệu Generative AI', time: '1 ngày trước' },
-    { id: 3, text: 'Đạt danh hiệu "Khởi đầu học tập"', time: '2 ngày trước' },
-  ];
+  // Dynamic activity logs based on real user progress
+  const activities = React.useMemo(() => {
+    const list = [];
+    if (completedLessons.length > 0) {
+      // Get the last 3 completed lessons
+      const recentCompletes = completedLessons.slice(-3).reverse();
+      recentCompletes.forEach((lessonId, idx) => {
+        const lessonObj = CourseService.getLessonById(lessonId);
+        if (lessonObj) {
+          list.push({
+            id: `act-${lessonId}`,
+            text: `Hoàn thành bài học: ${lessonObj.title}`,
+            time: idx === 0 ? 'Vừa xong' : `${idx + 1} ngày trước`
+          });
+        }
+      });
+    }
+    
+    // Add default signup badge activity
+    list.push({
+      id: 'act-signup',
+      text: 'Đạt danh hiệu "Học viên Mới" khi tạo tài khoản iStudent',
+      time: 'Mới đây'
+    });
+    
+    return list;
+  }, [completedLessons]);
 
   // Achievements/Badges
   const badges = [
