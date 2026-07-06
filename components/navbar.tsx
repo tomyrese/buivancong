@@ -86,7 +86,9 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => {
               const Icon = link.icon;
-              const isActive = pathname === link.href;
+              const isActive = link.href === '/' 
+                ? pathname === '/' 
+                : pathname === link.href || pathname.startsWith(link.href + '/');
               return (
                 <Link
                   key={link.href}
@@ -102,13 +104,14 @@ export default function Navbar() {
               );
             })}
             
-            {/* Admin link if user is admin */}
             {user?.role === 'admin' && (
               <Link
                 href="/admin"
                 className={cn(
-                  "flex items-center gap-1.5 text-sm font-medium text-amber-500 hover:text-amber-600 transition-colors",
-                  pathname === '/admin' ? "font-bold" : ""
+                  "flex items-center gap-1.5 text-sm font-medium transition-colors",
+                  pathname === '/admin' 
+                    ? "text-amber-500 font-bold" 
+                    : "text-muted-foreground hover:text-amber-500"
                 )}
               >
                 <ShieldCheck className="h-4 w-4" />
@@ -222,7 +225,9 @@ export default function Navbar() {
           <div className="space-y-1 px-2 pb-3 pt-2">
             {navLinks.map((link) => {
               const Icon = link.icon;
-              const isActive = pathname === link.href;
+              const isActive = link.href === '/' 
+                ? pathname === '/' 
+                : pathname === link.href || pathname.startsWith(link.href + '/');
               return (
                 <Link
                   key={link.href}
@@ -246,7 +251,10 @@ export default function Navbar() {
                 href="/admin"
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "flex items-center gap-2 rounded-xl px-3 py-2 text-base font-medium text-amber-500 hover:bg-muted transition-colors"
+                  "flex items-center gap-2 rounded-xl px-3 py-2 text-base font-medium transition-colors",
+                  pathname === '/admin'
+                    ? "bg-amber-500/10 text-amber-500 font-bold"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
                 )}
               >
                 <ShieldCheck className="h-5 w-5" />
