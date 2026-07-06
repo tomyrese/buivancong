@@ -121,24 +121,26 @@ export default function ProfilePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-        {/* Left Column: Avatar & Personal Info */}
-        <div className="space-y-6">
-          {/* Avatar & Quick Stats */}
-          <div className="rounded-3xl border border-border bg-card p-6 text-center space-y-4 shadow-sm">
-            <div className="relative inline-block mx-auto">
-              <div className={`p-1 rounded-full bg-gradient-to-tr ${selectedBorder.gradient} shadow-md`}>
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-2xl font-bold text-white uppercase select-none ring-2 ring-background">
-                  {user.name.charAt(0)}
+      <div className="space-y-8">
+        {/* Row 1: Avatar & Borders */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {/* Left Column: Avatar & Quick Stats */}
+          <div className="md:col-span-1 rounded-3xl border border-border bg-card p-6 text-center space-y-4 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="relative inline-block mx-auto mt-2">
+                <div className={`p-1 rounded-full bg-gradient-to-tr ${selectedBorder.gradient} shadow-md`}>
+                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-2xl font-bold text-white uppercase select-none ring-2 ring-background">
+                    {user.name.charAt(0)}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-foreground">{user.name}</h3>
-              <p className="text-3xs text-muted-foreground mt-0.5">{user.email}</p>
+              <div className="mt-4">
+                <h3 className="text-sm font-bold text-foreground">{user.name}</h3>
+                <p className="text-3xs text-muted-foreground mt-0.5">{user.email}</p>
+              </div>
             </div>
 
-            <div className="rounded-2xl bg-muted/60 p-4 grid grid-cols-2 gap-2 text-center text-xs">
+            <div className="rounded-2xl bg-muted/60 p-4 grid grid-cols-2 gap-2 text-center text-xs mt-4">
               <div className="border-r border-border/60">
                 <span className="text-muted-foreground font-semibold text-3xs uppercase tracking-wider block">Cấp độ</span>
                 <span className="text-base font-extrabold text-primary">{user.level}</span>
@@ -150,64 +152,8 @@ export default function ProfilePage() {
             </div>
           </div>
 
-          {/* Profile details card */}
-          <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6">
-            <h3 className="text-xs font-bold text-foreground uppercase tracking-wider pb-3 border-b border-border/40">
-              Thông tin cá nhân
-            </h3>
-
-            <form onSubmit={handleSaveProfile} className="space-y-4 text-xs">
-              <div className="space-y-1.5">
-                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Họ và Tên</label>
-                <div className="relative">
-                  <UserIcon className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-1.5">
-                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Địa chỉ Email</label>
-                <div className="relative">
-                  <Mail className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 pt-2">
-                <button
-                  type="submit"
-                  className="flex items-center gap-1 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white shadow shadow-primary/10 hover:bg-primary/95 transition-all"
-                >
-                  <Save className="h-4 w-4" />
-                  Lưu thay đổi
-                </button>
-                {saveSuccess && (
-                  <span className="flex items-center gap-1 text-[11px] font-bold text-emerald-500 animate-fade-in">
-                    <Check className="h-4 w-4" />
-                    Đã lưu!
-                  </span>
-                )}
-              </div>
-            </form>
-          </div>
-        </div>
-
-        {/* Right Column: Avatar Borders & Password Change */}
-        <div className="space-y-6">
-          {/* Avatar Border Customizer */}
-          <div className="rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
+          {/* Right Column: Avatar Border Customizer */}
+          <div className="md:col-span-2 rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
             <div className="space-y-1">
               <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
                 <Award className="h-4.5 w-4.5 text-primary" />
@@ -247,53 +193,115 @@ export default function ProfilePage() {
               })}
             </div>
           </div>
+        </div>
 
-          {/* Change password card */}
-          <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6">
-            <h3 className="text-xs font-bold text-foreground uppercase tracking-wider pb-3 border-b border-border/40">
-              Đổi mật khẩu bảo mật
-            </h3>
+        {/* Row 2: Forms */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {/* Left Column: Personal Info */}
+          <div className="md:col-span-1 rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xs font-bold text-foreground uppercase tracking-wider pb-3 border-b border-border/40">
+                Thông tin cá nhân
+              </h3>
 
-            <form onSubmit={handleChangePassword} className="space-y-4 text-xs">
-              <div className="space-y-1.5">
-                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu hiện tại</label>
-                <div className="relative">
-                  <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    placeholder="••••••••"
-                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                  />
+              <form onSubmit={handleSaveProfile} className="space-y-4 text-xs mt-6">
+                <div className="space-y-1.5">
+                  <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Họ và Tên</label>
+                  <div className="relative">
+                    <UserIcon className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                      className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="space-y-1.5">
-                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu mới</label>
-                <div className="relative">
-                  <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <input
-                    type="password"
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
-                    required
-                    placeholder="••••••••"
-                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                  />
+                <div className="space-y-1.5">
+                  <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Địa chỉ Email</label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground placeholder-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="rounded-xl border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground hover:bg-muted transition-all w-full"
-                >
-                  Cập nhật mật khẩu
-                </button>
-              </div>
-            </form>
+                <div className="flex items-center gap-3 pt-2">
+                  <button
+                    type="submit"
+                    className="flex items-center gap-1 rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white shadow shadow-primary/10 hover:bg-primary/95 transition-all"
+                  >
+                    <Save className="h-4 w-4" />
+                    Lưu thay đổi
+                  </button>
+                  {saveSuccess && (
+                    <span className="flex items-center gap-1 text-[11px] font-bold text-emerald-500 animate-fade-in">
+                      <Check className="h-4 w-4" />
+                      Đã lưu!
+                    </span>
+                  )}
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* Right Column: Change Password */}
+          <div className="md:col-span-2 rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6 flex flex-col justify-between">
+            <div>
+              <h3 className="text-xs font-bold text-foreground uppercase tracking-wider pb-3 border-b border-border/40">
+                Đổi mật khẩu bảo mật
+              </h3>
+
+              <form onSubmit={handleChangePassword} className="space-y-4 text-xs mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu hiện tại</label>
+                    <div className="relative">
+                      <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                      <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        placeholder="••••••••"
+                        className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu mới</label>
+                    <div className="relative">
+                      <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                      <input
+                        type="password"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        required
+                        placeholder="••••••••"
+                        className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="rounded-xl border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground hover:bg-muted transition-all"
+                  >
+                    Cập nhật mật khẩu
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
