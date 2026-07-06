@@ -272,5 +272,27 @@ export const CourseService = {
     }
 
     return results;
+  },
+
+  getQuizQuestionsByLessonId: (courseId: string, lessonId: string): QuizQuestion[] => {
+    const courseQuiz = CourseService.getQuizByCourseId(courseId);
+    if (!courseQuiz || courseQuiz.questions.length === 0) return [];
+
+    const courseLessons = CourseService.getLessonsByCourseId(courseId);
+    const lessonIndex = courseLessons.findIndex(l => l.id === lessonId);
+    if (lessonIndex === -1) return courseQuiz.questions;
+
+    const totalQuestions = courseQuiz.questions.length;
+    const totalLessons = courseLessons.length;
+    
+    const questionsPerLesson = Math.max(1, Math.ceil(totalQuestions / totalLessons));
+    const startIdx = lessonIndex * questionsPerLesson;
+    const endIdx = Math.min(totalQuestions, startIdx + questionsPerLesson);
+
+    const lessonQuestions = courseQuiz.questions.slice(startIdx, endIdx);
+    if (lessonQuestions.length === 0) {
+      return courseQuiz.questions.slice(-Math.min(5, totalQuestions));
+    }
+    return lessonQuestions;
   }
 };

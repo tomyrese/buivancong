@@ -2,9 +2,8 @@
 
 import * as React from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { CourseService, Course, Lesson } from '@/services/courseService';
+import { CourseService, Course, Lesson, QuizQuestion } from '@/services/courseService';
 import { useProgressStore } from '@/store/useProgressStore';
-import VideoPlayer from '@/features/learn/video-player';
 import SidebarPlaylist from '@/features/learn/sidebar-playlist';
 import NotesTab from '@/features/learn/notes-tab';
 import DiscussionTab from '@/features/learn/discussion-tab';
@@ -21,8 +20,7 @@ export default function LearnPage() {
   const { enrolledCourses, completedLessons, completeLesson, toggleBookmark, bookmarks } = useProgressStore();
 
   const [activeTab, setActiveTab] = React.useState<'docs' | 'transcript' | 'notes' | 'discussion'>('docs');
-  const [currentVideoTime, setCurrentVideoTime] = React.useState(0);
-  const [seekToSeconds, setSeekToSeconds] = React.useState<number | null>(null);
+  const [userAnswers, setUserAnswers] = React.useState<{ [key: string]: number }>({});
   const [isClient, setIsClient] = React.useState(false);
 
   // Hydration fix
@@ -33,6 +31,12 @@ export default function LearnPage() {
   const course = React.useMemo(() => CourseService.getCourseById(courseId), [courseId]);
   const lesson = React.useMemo(() => CourseService.getLessonById(lessonId), [lessonId]);
   const lessons = React.useMemo(() => CourseService.getLessonsByCourseId(courseId), [courseId]);
+  const lessonQuestions = React.useMemo(() => CourseService.getQuizQuestionsByLessonId(courseId, lessonId), [courseId, lessonId]);
+
+  // Reset user answers when switching lessons
+  React.useEffect(() => {
+    setUserAnswers({});
+  }, [lessonId]);
 
   // Authorization check (Client-side redirect to course detail if not enrolled and lesson is not preview)
   React.useEffect(() => {
@@ -74,9 +78,11 @@ export default function LearnPage() {
     }
   };
 
-  const handleSeek = (seconds: number) => {
-    // We can just trigger an effect by setting state
-    setSeekToSeconds(seconds);
+  const handleAnswerSelect = (questionId: string, optionIdx: number) => {
+    setUserAnswers(prev => ({
+      ...prev,
+      [questionId]: optionIdx
+    }));
   };
 
   return (
@@ -123,14 +129,96 @@ export default function LearnPage() {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
         {/* Left Column: Player & Tabs content */}
         <div className="lg:col-span-8 space-y-6">
-          {/* Video Player */}
-          <VideoPlayer
-            url={lesson.videoUrl}
-            subtitles={lesson.subtitles}
-            onTimeUpdate={setCurrentVideoTime}
-            // Passing seek target if set
-            // In a real player wrapper, seekTo would trigger on state change
-          />
+          {/* Practice Quiz Section */}
+          <div className="rounded-3xl border border-border bg-card p-6 shadow-md space-y-6">
+            <div className="flex items-center gap-2 border-b border-border/60 pb-3">
+              <BookOpen className="h-5 w-5 text-primary" />
+              <h2 className="text-sm sm:text-base font-bold text-foreground">
+                Câu hỏi luyện tập ({lessonQuestions.length} câu)
+              </h2>
+            </div>
+
+            {lessonQuestions.length > 0 ? (
+              <div className="space-y-8">
+                {lessonQuestions.map((q, qIdx) => {
+                  const selectedAns = userAnswers[q.id];
+                  const isAnswered = selectedAns !== undefined;
+                  const isCorrect = isAnswered && selectedAns === q.correctAnswer;
+
+                  return (
+                    <div key={q.id} className="space-y-4 border-b border-border/40 pb-6 last:border-b-0 last:pb-0">
+                      <h3 className="text-xs sm:text-sm font-bold text-foreground leading-snug">
+                        Câu {qIdx + 1}: {q.question}
+                      </h3>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {q.options.map((option, oIdx) => {
+                          const isCurrentSelected = selectedAns === oIdx;
+                          const isCurrentCorrect = q.correctAnswer === oIdx;
+
+                          let buttonClass = 'border-border bg-card/60 hover:bg-muted text-foreground';
+                          let badgeClass = 'border-border';
+
+                          if (isAnswered) {
+                            if (isCurrentCorrect) {
+                              buttonClass = 'border-emerald-500 bg-emerald-500/5 text-emerald-600';
+                              badgeClass = 'border-emerald-500 bg-emerald-500 text-white font-bold';
+                            } else if (isCurrentSelected) {
+                              buttonClass = 'border-destructive bg-destructive/5 text-destructive';
+                              badgeClass = 'border-destructive bg-destructive text-white font-bold';
+                            } else {
+                              buttonClass = 'border-border bg-card/40 opacity-60 text-muted-foreground pointer-events-none';
+                            }
+                          }
+
+                          return (
+                            <button
+                              key={oIdx}
+                              disabled={isAnswered}
+                              onClick={() => handleAnswerSelect(q.id, oIdx)}
+                              className={`flex items-center w-full rounded-xl border p-3.5 text-left text-xs font-semibold transition-all cursor-pointer ${buttonClass}`}
+                            >
+                              <span className={`mr-2.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-lg border text-3xs ${badgeClass}`}>
+                                {String.fromCharCode(65 + oIdx)}
+                              </span>
+                              {option}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {/* Instant Explanation Box */}
+                      {isAnswered && (
+                        <div className="rounded-xl bg-slate-50 border border-border p-3.5 text-xs text-muted-foreground leading-relaxed animate-in fade-in duration-200">
+                          <div className="flex items-center gap-1.5 mb-1">
+                            <span className={`h-2 w-2 rounded-full ${isCorrect ? 'bg-emerald-500' : 'bg-destructive'}`} />
+                            <span className={`font-bold ${isCorrect ? 'text-emerald-600' : 'text-destructive'}`}>
+                              {isCorrect ? 'Chính xác!' : 'Chưa chính xác!'}
+                            </span>
+                          </div>
+                          <p className="font-bold text-foreground inline">Giải thích: </p>
+                          {q.explanation}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+
+                {/* Completion Celebration Card */}
+                {Object.keys(userAnswers).length === lessonQuestions.length && (
+                  <div className="rounded-2xl bg-emerald-500/10 border border-emerald-500/20 p-4 text-center space-y-2 animate-in zoom-in-95 duration-200">
+                    <CheckCircle2 className="h-8 w-8 text-emerald-500 mx-auto" />
+                    <h4 className="text-xs font-bold text-emerald-600">Tuyệt vời! Bạn đã hoàn thành hết các câu hỏi ôn tập.</h4>
+                    <p className="text-3xs text-muted-foreground">Hãy nhấp nút "Hoàn thành bài" ở trên để lưu trữ tiến độ học tập nhé!</p>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="text-center py-6 text-xs text-muted-foreground">
+                Không có câu hỏi trắc nghiệm nào cho bài học này. Bạn có thể tự học qua nội dung tài liệu lý thuyết bên dưới.
+              </div>
+            )}
+          </div>
 
           {/* Tab selectors */}
           <div className="flex border-b border-border/60 overflow-x-auto scrollbar-none gap-2">
@@ -196,8 +284,8 @@ export default function LearnPage() {
               <NotesTab
                 courseId={courseId}
                 lessonId={lessonId}
-                currentVideoTime={currentVideoTime}
-                onSeek={handleSeek}
+                currentVideoTime={0}
+                onSeek={() => {}}
               />
             )}
 
