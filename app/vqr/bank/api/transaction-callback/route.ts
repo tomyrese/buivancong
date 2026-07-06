@@ -112,11 +112,13 @@ export async function POST(request: Request) {
     }
 
     // 3. Search for the user in Supabase by matching the short ID prefix
-    const { data: { users }, error: listError } = await adminSupabase.auth.admin.listUsers();
-    if (listError) {
-      console.error('Error listing auth users:', listError);
-      return NextResponse.json({ error: 'Failed to query users database' }, { status: 500 });
+    const { data, error: listError } = await adminSupabase.auth.admin.listUsers();
+    if (listError || !data?.users) {
+      console.error('Error listing auth users:', listError || 'No data returned');
+      return NextResponse.json({ error: 'Failed to query users database. Please make sure SUPABASE_SECRET_KEY is configured on Vercel.' }, { status: 500 });
     }
+
+    const users = data.users;
 
     const user = users.find((u) => {
       const cleanId = u.id.replace(/-/g, '').toLowerCase();
