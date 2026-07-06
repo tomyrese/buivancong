@@ -56,6 +56,8 @@ export default function PackagesPage() {
   const [error, setError] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const [copiedText, setCopiedText] = React.useState('');
+  const [qrTimestamp, setQrTimestamp] = React.useState<number | null>(null);
+  const [timeLeft, setTimeLeft] = React.useState<number>(300);
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
@@ -131,6 +133,8 @@ export default function PackagesPage() {
     } else {
       setCheckoutStep('qr'); // Go straight to QR code if phone is configured
       setPhone(user.phone);
+      setQrTimestamp(Date.now());
+      setTimeLeft(300);
     }
     
     setFullName(user?.name || '');
@@ -139,10 +143,31 @@ export default function PackagesPage() {
     setError('');
   };
 
+  // QR Countdown Timer Effect
+  React.useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (checkoutStep === 'qr' && qrTimestamp) {
+      timer = setInterval(() => {
+        const elapsed = Math.floor((Date.now() - qrTimestamp) / 1000);
+        const remaining = 300 - elapsed;
+        if (remaining <= 0) {
+          setTimeLeft(0);
+          clearInterval(timer);
+        } else {
+          setTimeLeft(remaining);
+        }
+      }, 1000);
+    }
+    return () => {
+      if (timer) clearInterval(timer);
+    };
+  }, [checkoutStep, qrTimestamp]);
+
+  // Polling Check Effect
   React.useEffect(() => {
     let checkInterval: NodeJS.Timeout;
     
-    if (selectedPackage && checkoutStep === 'qr' && paymentMode === 'vietqr' && isAuthenticated) {
+    if (selectedPackage && checkoutStep === 'qr' && paymentMode === 'vietqr' && isAuthenticated && timeLeft > 0) {
       checkInterval = setInterval(async () => {
         try {
           // Fetch latest user details from Supabase to check if the package is activated
@@ -166,7 +191,7 @@ export default function PackagesPage() {
     return () => {
       if (checkInterval) clearInterval(checkInterval);
     };
-  }, [selectedPackage, checkoutStep, paymentMode, isAuthenticated]);
+  }, [selectedPackage, checkoutStep, paymentMode, isAuthenticated, timeLeft]);
 
   const handleCheckoutSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -205,6 +230,8 @@ export default function PackagesPage() {
         
         // Transition to QR payment step
         setCheckoutStep('qr');
+        setQrTimestamp(Date.now());
+        setTimeLeft(300);
       } else {
         if (!hasFile) {
           setError('Vui lòng tải lên ảnh chụp biên lai/minh chứng chuyển khoản!');
@@ -354,22 +381,49 @@ export default function PackagesPage() {
                 </div>
                 
                 {/* QR Code image source */}
-                <div className="bg-white p-2.5 rounded-xl border border-border w-52 h-52 mx-auto flex items-center justify-center relative shadow-inner">
+                <div className="bg-white p-2.5 rounded-xl border border-border w-52 h-52 mx-auto flex items-center justify-center relative shadow-inner overflow-hidden">
+                  {timeLeft <= 0 && paymentMode === 'vietqr' ? (
+                    <div className="absolute inset-0 bg-background/95 flex flex-col items-center justify-center p-4 text-center space-y-2 z-10 animate-in fade-in duration-200">
+                      <span className="text-[10px] font-bold text-red-500 uppercase">Mã QR đã hết hạn</span>
+                      <p className="text-[9px] text-muted-foreground leading-normal">Vui lòng bấm nút bên dưới để tạo mã QR mới.</p>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setQrTimestamp(Date.now());
+                          setTimeLeft(300);
+                        }}
+                        className="rounded-lg bg-primary px-3 py-1.5 text-[10px] font-bold text-white shadow hover:bg-primary/95 transition-all cursor-pointer"
+                      >
+                        Tạo mã mới
+                      </button>
+                    </div>
+                  ) : null}
+
                   {paymentMode === 'vietqr' ? (
                     <img 
-                      src={`https://img.vietqr.io/image/VCB-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=QRTBVC%20${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''}%20${packageCodeMap[selectedPackage.id] || 'CBTOAN'}&accountName=Nguyen%20Phu%20Quy`}
+                      src={`https://img.vietqr.io/image/vietcombank-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=QRTBVC%20${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''}%20${packageCodeMap[selectedPackage.id] || 'CBTOAN'}&accountName=Nguyen%20Phu%20Quy`}
                       alt="VietQR Automatic Payment"
-                      className="w-48 h-48 object-contain"
+                      className={`w-48 h-48 object-contain transition-opacity duration-300 ${timeLeft <= 0 && paymentMode === 'vietqr' ? 'opacity-10' : 'opacity-100'}`}
                     />
                   ) : (
                     <img 
-                      src={`https://img.vietqr.io/image/VCB-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=ISTUDENT%20${phone || 'SDT'}%20${selectedPackage.id.toUpperCase().replace(/-/g, '_')}&accountName=Nguyen%20Phu%20Quy`}
+                      src={`https://img.vietqr.io/image/vietcombank-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=ISTUDENT%20${phone || 'SDT'}%20${selectedPackage.id.toUpperCase().replace(/-/g, '_')}&accountName=Nguyen%20Phu%20Quy`}
                       alt="VietQR Manual Payment"
                       className="w-48 h-48 object-contain"
                     />
                   )}
                 </div>
-                <p className="text-[10px] text-muted-foreground">Mở app Ngân hàng quét QR để thanh toán nhanh</p>
+                
+                {paymentMode === 'vietqr' && timeLeft > 0 ? (
+                  <div className="text-[10px] font-bold text-amber-600 flex items-center justify-center gap-1">
+                    <span>Mã QR hết hạn sau:</span>
+                    <span className="font-mono text-xs bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
+                      {Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}
+                    </span>
+                  </div>
+                ) : (
+                  <p className="text-[10px] text-muted-foreground">Mở app Ngân hàng quét QR để thanh toán nhanh</p>
+                )}
               </div>
 
               {/* Bank Details */}
