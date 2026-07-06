@@ -25,14 +25,25 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
+                href="https://www.facebook.com/buivancong2020" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center" 
+                aria-label="Facebook"
+              >
+                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                </svg>
+              </a>
+              <a 
                 href="https://www.tiktok.com/@dgnlhcm.thaybuivancong" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-muted-foreground hover:text-primary transition-colors" 
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center" 
                 aria-label="TikTok"
               >
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.94 1.18 2.26 2.01 3.71 2.37v3.86a9.55 9.55 0 0 1-5.18-1.58c-.01 1.76-.02 3.53-.02 5.29A9.12 9.12 0 0 1 12.35 23a9.23 9.23 0 0 1-5.74-2.2 9.17 9.17 0 0 1-3.23-5.26 9.17 9.17 0 0 1 1.25-6.72A9.22 9.22 0 0 1 10.36 5c.12 2.06-1.07 3.96-2.95 4.79-.81.36-1.72.48-2.59.34A5.3 5.3 0 0 0 3.7 13.9a5.27 5.27 0 0 0 1.94 3.79 5.29 5.29 0 0 0 4.9.73 5.26 5.26 0 0 0 3.42-4.9c-.01-4.49 0-8.99-.02-13.49.86-.01 1.72-.01 2.58-.01z"/>
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .8.11V9.4a6.27 6.27 0 0 0-8.33 6 6.33 6.33 0 0 0 10.14 5.09A6.29 6.29 0 0 0 19.3 14.5a8.68 8.68 0 0 0 5.26 1.88v-3.4a5.3 5.3 0 0 1-5-6.29z"/>
                 </svg>
               </a>
             </div>

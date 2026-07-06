@@ -23,43 +23,31 @@
                         {
                             "id": "1.1.2",
                             "type": "multiple_choice",
-                            "question": "Đặc điểm nào sau đây không đúng với vùng trời của nước ta?",
+                            "question": "Đặc điểm nào sau đây không đúng với vùng đất của nước ta?",
                             "options": [
-                                "A. Gồm toàn bộ không gian trên đất liền.",
-                                "B. Gồm toàn bộ không gian trên các đảo, quần đảo.",
-                                "C. Là khoảng không gian bao trùm lãnh thổ.",
-                                "D. Mở rộng đến hết ranh giới ngoài của nội thuỷ."
+                                "A. Bao gồm toàn bộ đất liền và các hải đảo.",
+                                "B. Bao gồm toàn bộ phần đất liền hình chữ S.",
+                                "C. Tổng diện tích hiện nay là hơn 331 nghìn km².",
+                                "D. Giáp 3 quốc gia với gần 5000 km đường biên giới."
                             ],
-                            "answer": "C"
+                            "answer": "B"
                         },
                         {
                             "id": "1.1.3",
                             "type": "true_false",
-                            "question": "Đọc đoạn thông tin sau đây: \n\"Phần lãnh thổ đất liền của nước ta có tọa độ từ 8°34'B đến 23°23'B và từ kinh độ 102°09'Đ đến 109°28'Đ. Phần lãnh thổ trên biển nước ta còn kéo dài tới khoảng vĩ độ 6°50'B và từ kinh độ 101°Đ đến khoảng 117°20'Đ trên Biển Đông. Vùng trời của nước ta là khoảng không gian bao trùm lên phần đất liền, mở rộng đến hết ranh giới ngoài của lãnh hải và không gian trên các đảo, quần đảo.\"",
+                            "question": "Đọc đoạn thông tin sau, chọn đúng hoặc sai cho mỗi ý: 'Phần lãnh thổ đất liền của nước ta có tọa độ từ 8°34'B đến 23°23'B và từ kinh độ 102°09'Đ đến 109°28'Đ.'",
                             "statements": [
                                 "a. Việt Nam nằm hoàn toàn ở bán cầu Bắc và bán cầu Đông.",
                                 "b. Lãnh thổ đất liền nước ta kéo dài khoảng 17 vĩ độ.",
-                                "c. Chỗ rộng nhất trên đất liền nước ta ở Bắc Bộ khoảng 600 km.",
-                                "d. Vùng trời của nước ta lớn bao trùm toàn bộ các vùng biển, đảo."
+                                "c. Chỗ rộng nhất trên đất liền nước ta là ở Bắc Bộ khoảng 600 km.",
+                                "d. Vùng trời của nước ta là khoảng không gian bao trùm lên lãnh thổ, bao gồm vùng đất, vùng biển và các đảo."
                             ],
                             "answers": [
                                 true,
-                                false,
                                 true,
-                                false
+                                false,
+                                true
                             ]
-                        },
-                        {
-                            "id": "1.1.4",
-                            "type": "short_answer",
-                            "question": "Vùng biển của nước ta trên Biển Đông rộng lớn với tổng diện tích khoảng 1 triệu km². Biết vùng đất của nước ta có tổng diện tích hơn 331 nghìn km². Hỏi diện tích vùng biển rộng gấp bao nhiêu lần diện tích vùng đất? (Làm tròn kết quả đến hàng đơn vị).",
-                            "answer": "3"
-                        },
-                        {
-                            "id": "1.1.5",
-                            "type": "short_answer",
-                            "question": "Phần đất liền của nước ta kéo dài từ vĩ độ 8°34'B đến 23°23'B. Vậy phần lãnh thổ đất liền nước ta trải dài khoảng bao nhiêu vĩ độ? (Làm tròn kết quả đến hàng đơn vị).",
-                            "answer": "15"
                         }
                     ]
                 },
@@ -82,48 +70,120 @@
                         {
                             "id": "1.2.2",
                             "type": "multiple_choice",
-                            "question": "Kiểu thời tiết lạnh khô, ít mưa xuất hiện ở miền Bắc nước ta vào thời gian nào?",
+                            "question": "Đặc điểm nào sau đây không đúng với tính chất ẩm của khí hậu nước ta?",
                             "options": [
-                                "A. Nửa đầu mùa đông.",
-                                "B. Giữa mùa đông.",
-                                "C. Nửa cuối mùa đông.",
-                                "D. Giữa mùa xuân."
+                                "A. Tổng lượng mưa trong năm lớn.",
+                                "B. Độ ẩm tương đối của không khí cao.",
+                                "C. Lượng bốc hơi lớn hơn lượng mưa.",
+                                "D. Cân bằng ẩm trong năm luôn dương."
                             ],
-                            "answer": "A"
+                            "answer": "C"
                         },
                         {
                             "id": "1.2.3",
-                            "type": "true_false",
-                            "question": "Dựa vào bảng số liệu sau đây:\nTỔNG SỐ GIỜ NẮNG VÀ NHIỆT ĐỘ KHÔNG KHÍ TRUNG BÌNH NĂM TẠI MỘT SỐ TRẠM NĂM 2022\nTrạm | Lạng Sơn | Hà Nội | Đà Nẵng | Cà Mau\nTổng số giờ nắng năm (giờ) | 1 561,4 | 1 488,5 | 2 162,6 | 2 185,8\nNhiệt độ trung bình năm (°C) | 21,3 | 23,9 | 25,9 | 27,1",
-                            "statements": [
-                                "a. Tổng số giờ nắng và nhiệt độ trung bình năm tăng dần từ bắc vào nam.",
-                                "b. Tổng số giờ nắng và nhiệt độ trung bình năm giảm dần từ bắc vào nam.",
-                                "c. Tính nhiệt đới có xu hướng tăng dần từ bắc vào nam.",
-                                "d. Tính nhiệt đới có xu hướng giảm dần từ bắc vào nam."
+                            "type": "multiple_choice",
+                            "question": "Vào đầu mùa hạ, gió mùa Tây Nam gây mưa nhiều ở khu vực nào sau đây?",
+                            "options": [
+                                "A. Ở ven biển miền Trung và phần phía nam của Tây Bắc.",
+                                "B. Ở đồng bằng Nam Bộ và Tây Nguyên.",
+                                "C. Trên phạm vi cả nước, nhất là ở ĐBSH.",
+                                "D. Trên phạm vi cả nước, nhất là ở ĐBSCL."
                             ],
-                            "answers": [
-                                true,
-                                false,
-                                true,
-                                false
-                            ]
+                            "answer": "B"
                         },
                         {
                             "id": "1.2.4",
                             "type": "true_false",
-                            "question": "Đọc đoạn thông tin sau đây:\n\"Nguồn cung cấp nước chính của sông ngòi nước ta là nước mưa và nước ngầm. Chính vì thế, lưu lượng và chế độ dòng chảy sông ngòi phụ thuộc trực tiếp vào chế độ mưa mùa của khí hậu. Nói cách khác, thuỷ văn Việt Nam có sự phù hợp với điều kiện khí hậu nhiệt đới ẩm gió mùa.\"",
+                            "question": "Đọc đoạn thông tin và chọn đúng hoặc sai: 'Tính chất nhiệt đới ẩm gió mùa thể hiện trong tất cả các thành phần và cảnh quan tự nhiên với mức độ khác nhau.'",
                             "statements": [
-                                "a. Mùa lũ trùng với mùa mưa, mùa cạn trùng với mùa khô.",
-                                "b. Mùa lũ trùng với mùa khô, mùa cạn trùng với mùa mưa.",
-                                "c. Khoảng 70 – 80 % lượng nước tập trung vào mùa cạn.",
-                                "d. Khoảng 80 – 90 % lượng phù sa tập trung vào các tháng lũ."
+                                "a. Đặc điểm nổi bật nhất của tự nhiên Việt Nam là tính chất nhiệt đới gió mùa.",
+                                "b. Khí hậu là thành phần tự nhiên thể hiện rõ nhất tính chất nhiệt đới ẩm gió mùa của thiên nhiên nước ta.",
+                                "c. Tính chất nhiệt đới ẩm gió mùa của thiên nhiên nước ta chỉ thể hiện rõ rệt ở các yếu tố khí hậu.",
+                                "d. Tính chất nhiệt đới ẩm gió mùa của khí hậu có tác động mạnh mẽ đến địa hình, sông ngòi, thổ nhưỡng và sinh vật nước ta."
                             ],
                             "answers": [
                                 true,
-                                false,
+                                true,
                                 false,
                                 true
                             ]
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "name": "THIÊN NHIÊN PHÂN HÓA ĐA DẠNG",
+                    "questions": [
+                        {
+                            "id": "1.3.1",
+                            "type": "multiple_choice",
+                            "question": "Nhận định nào sau đây không đúng về sự phân hóa đa dạng của thiên nhiên nước ta?",
+                            "options": [
+                                "A. Phân hóa theo chiều bắc – nam thành 2 phần lãnh thổ.",
+                                "B. Phân hóa theo độ cao địa hình thành 3 đai tự nhiên.",
+                                "C. Phân hóa theo chiều đông – tây thành 4 dải rõ rệt.",
+                                "D. Phân hóa cảnh quan thiên nhiên thành 3 miền địa lí."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.3.2",
+                            "type": "multiple_choice",
+                            "question": "Cảnh sắc thiên nhiên nào sau đây đúng với phần lãnh thổ phía Nam nước ta?",
+                            "options": [
+                                "A. Mùa mưa cây cối xanh tốt; mùa khô xuất hiện cây chịu hạn, rụng lá.",
+                                "B. Mùa lũ cây cối xanh tốt; mùa cạn xuất hiện cây chịu hạn, rụng lá.",
+                                "C. Mùa xuân cây cối xanh tốt; mùa thu xuất hiện cây chịu hạn.",
+                                "D. Mùa hạ cây cối xanh tốt; mùa đông xuất hiện cây rụng lá."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.3.3",
+                            "type": "true_false",
+                            "question": "Đọc thông tin và chọn đúng hoặc sai: 'Lãnh thổ Việt Nam tuy diện tích không rộng nhưng thiên nhiên lại rất đa dạng và có sự phân hoá phức tạp...'",
+                            "statements": [
+                                "a. Thiên nhiên nước ta có sự phân hoá theo độ cao.",
+                                "b. Thiên nhiên nước ta có sự phân hoá theo vĩ độ.",
+                                "c. Thiên nhiên nước ta có sự phân hoá theo kinh độ.",
+                                "d. Sự phân hoá thiên nhiên ở nước ta chỉ theo quy luật địa đới."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "1.4",
+                    "name": "SỬ DỤNG HỢP LÍ TÀI NGUYÊN VÀ BẢO VỆ MÔI TRƯỜNG",
+                    "questions": [
+                        {
+                            "id": "1.4.1",
+                            "type": "multiple_choice",
+                            "question": "Biểu hiện không đúng với sự suy giảm tài nguyên sinh vật ở nước ta là",
+                            "options": [
+                                "A. suy giảm về số lượng các loài vật nuôi.",
+                                "B. suy giảm số lượng loài và nguồn gen quý.",
+                                "C. suy giảm về diện tích rừng tự nhiên.",
+                                "D. suy giảm về chất lượng rừng tự nhiên."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.4.2",
+                            "type": "multiple_choice",
+                            "question": "Nguyên nhân nào sau đây không gây suy giảm tài nguyên đất?",
+                            "options": [
+                                "A. Canh tác trên đất dốc không hợp lí.",
+                                "B. Thiên tai và biến đổi khí hậu.",
+                                "C. Do gia tăng diện tích rừng trồng.",
+                                "D. Do chất thải, nước thải từ sản xuất."
+                            ],
+                            "answer": "C"
                         }
                     ]
                 }
@@ -135,7 +195,7 @@
             "topics": [
                 {
                     "id": "2.1",
-                    "name": "DÂN SỐ VIỆT NAM",
+                    "name": "DÂN SỐ, LAO ĐỘNG VÀ VIỆC LÀM",
                     "questions": [
                         {
                             "id": "2.1.1",
@@ -152,19 +212,19 @@
                         {
                             "id": "2.1.2",
                             "type": "multiple_choice",
-                            "question": "Do quy mô dân số đông nên nước ta có",
+                            "question": "Vùng nào có mật độ dân số thấp nhất nước ta năm 2021 là",
                             "options": [
-                                "A. nguồn lao động dồi dào.",
-                                "B. nhiều dân tộc khác nhau.",
-                                "C. sự già hoá dân số nhanh.",
-                                "D. chất lượng lao động tăng."
+                                "A. Tây Nguyên.",
+                                "B. ĐBSCL.",
+                                "C. Đông Nam Bộ.",
+                                "D. TD&MNBB."
                             ],
                             "answer": "A"
                         },
                         {
                             "id": "2.1.3",
                             "type": "true_false",
-                            "question": "Đọc đoạn thông tin sau đây:\n\"Đến ngày 01/4/2021, dân số Việt Nam đạt 98,2 triệu người, trong đó có 12,5 triệu người từ 60 tuổi trở lên (12,7 %); 8,1 triệu người từ 65 tuổi trở lên (8,5 %); gần 2 triệu người từ 80 tuổi trở lên (2,0 %). Giai đoạn 2009 – 2019, dân số tăng bình quân 1,14 %/năm, trong khi dân số cao tuổi tăng bình quân 4,35 %/năm.\"",
+                            "question": "Đọc thông tin, chọn đúng hoặc sai: 'Đến ngày 01/4/2021, dân số Việt Nam đạt 98,2 triệu người, trong đó có 12,5 triệu người từ 60 tuổi trở lên (12,7 %)...'",
                             "statements": [
                                 "a. Dân số nước ta bước vào thời kì “già hoá” khi người cao tuổi chiếm tỉ lệ lớn nhất trong tổng dân số.",
                                 "b. Già hoá dân số Việt Nam do giảm tỉ suất tử vong và tăng tuổi thọ.",
@@ -177,24 +237,12 @@
                                 false,
                                 true
                             ]
-                        },
-                        {
-                            "id": "2.1.4",
-                            "type": "short_answer",
-                            "question": "Năm 2021 ở nước ta, dân số nam là 49 092 700 người, dân số nữ là 49 411 700 người. Tính tỉ lệ giới tính nam của nước ta năm 2021 (Đơn vị tính: %, làm tròn kết quả đến một chữ số của phần thập phân).",
-                            "answer": "49,8"
-                        },
-                        {
-                            "id": "2.1.5",
-                            "type": "short_answer",
-                            "question": "Năm 2021 ở nước ta, dân số là 98,5 triệu người, lực lượng lao động từ 15 tuổi trở lên là 50,6 triệu người. Tính tỉ lệ lao động so với tổng số dân của nước ta năm 2021 (Đơn vị tính: %, làm tròn kết quả đến hàng đơn vị).",
-                            "answer": "51"
                         }
                     ]
                 },
                 {
                     "id": "2.2",
-                    "name": "ĐÔ THỊ HOÁ",
+                    "name": "ĐÔ THỊ HÓA",
                     "questions": [
                         {
                             "id": "2.2.1",
@@ -211,14 +259,14 @@
                         {
                             "id": "2.2.2",
                             "type": "multiple_choice",
-                            "question": "Đặc điểm nào sau đây đúng với mạng lưới đô thị nước ta hiện nay?",
+                            "question": "Tác động lớn nhất của quá trình đô thị hoá tới nền kinh tế nước ta là",
                             "options": [
-                                "A. Chủ yếu có quy mô rất lớn.",
-                                "B. Chỉ tập trung ở đồng bằng.",
-                                "C. Phân bố rộng khắp các vùng.",
-                                "D. Phần lớn là đô thị đặc biệt."
+                                "A. tạo thêm nhiều cơ hội việc làm cho người lao động.",
+                                "B. thúc đẩy tăng trưởng và chuyển dịch cơ cấu kinh tế.",
+                                "C. lan toả rộng rãi lối sống thành thị tới khu vực nông thôn.",
+                                "D. tạo ra thị trường có sức mua lớn và mở rộng liên tục."
                             ],
-                            "answer": "C"
+                            "answer": "B"
                         }
                     ]
                 }
@@ -230,10 +278,40 @@
             "topics": [
                 {
                     "id": "3.1",
-                    "name": "NÔNG NGHIỆP, LÂM NGHIỆP VÀ THUỶ SẢN",
+                    "name": "CHUYỂN DỊCH CƠ CẤU KINH TẾ",
                     "questions": [
                         {
                             "id": "3.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cơ cấu kinh tế nước ta luôn biến đổi chủ yếu để phù hợp với",
+                            "options": [
+                                "A. yêu cầu phát triển của nền kinh tế.",
+                                "B. các tiến bộ của khoa học – công nghệ.",
+                                "C. sự chuyển dịch của cơ cấu lao động.",
+                                "D. yêu cầu của nền sản xuất hàng hoá."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.1.2",
+                            "type": "multiple_choice",
+                            "question": "Biểu hiện của chuyển dịch cơ cấu kinh tế theo lãnh thổ ở nước ta hiện nay là",
+                            "options": [
+                                "A. hình thành các vùng kinh tế trọng điểm.",
+                                "B. Nhà nước quản lí các lĩnh vực then chốt.",
+                                "C. Tỉ trọng ngành công nghiệp chế biến tăng.",
+                                "D. Một số hoạt động dịch vụ mới được ra đời."
+                            ],
+                            "answer": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.2",
+                    "name": "NÔNG NGHIỆP, LÂM NGHIỆP VÀ THUỶ SẢN",
+                    "questions": [
+                        {
+                            "id": "3.2.1",
                             "type": "multiple_choice",
                             "question": "Ngành kinh tế nào sau đây ở nước ta được xem là trụ đỡ của nền kinh tế?",
                             "options": [
@@ -245,22 +323,93 @@
                             "answer": "C"
                         },
                         {
-                            "id": "3.1.2",
+                            "id": "3.2.2",
                             "type": "multiple_choice",
-                            "question": "Việc đa dạng hoá trong sản xuất nông nghiệp có ý nghĩa chủ yếu nào sau đây?",
+                            "question": "Vùng trồng chè lớn nhất nước ta hiện nay là",
                             "options": [
-                                "A. Tạo nguyên liệu cho công nghiệp, sử dụng tốt lao động.",
-                                "B. Khai thác hợp lí nguồn lực, tạo ra nông sản hàng hoá.",
-                                "C. Thúc đẩy sự phát triển dịch vụ, tạo nhiều việc làm mới.",
-                                "D. Bảo vệ tài nguyên thiên nhiên, đẩy mạnh liên kết sản xuất."
+                                "A. Tây Nguyên.",
+                                "B. Đông Nam Bộ.",
+                                "C. BTB&DHMT.",
+                                "D. TD&MNB."
                             ],
-                            "answer": "B"
+                            "answer": "D"
                         },
                         {
-                            "id": "3.1.3",
-                            "type": "short_answer",
-                            "question": "Năm 2021 ở nước ta, diện tích gieo trồng lúa là 7,2 triệu ha, sản lượng lúa là 43,9 triệu tấn. Tính năng suất lúa của nước ta năm 2021 (Đơn vị tính: tạ/ha, làm tròn kết quả đến hàng đơn vị).",
-                            "answer": "61"
+                            "id": "3.2.3",
+                            "type": "true_false",
+                            "question": "Dựa vào bảng số liệu diện tích rừng giai đoạn 1943 – 2022, chọn đúng hoặc sai:",
+                            "statements": [
+                                "a. Tổng diện tích rừng nước ta có xu hướng tăng nhanh.",
+                                "b. Tổng diện tích rừng trồng nước ta có xu hướng tăng.",
+                                "c. Tổng diện tích rừng tăng chủ yếu do tăng diện tích rừng trồng.",
+                                "d. Biểu đồ cột ghép là thích hợp nhất để thể hiện số liệu theo bảng trên."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3.3",
+                    "name": "CÔNG NGHIỆP",
+                    "questions": [
+                        {
+                            "id": "3.3.1",
+                            "type": "multiple_choice",
+                            "question": "Đặc điểm nào sau đây đúng với công nghiệp nước ta hiện nay?",
+                            "options": [
+                                "A. Phân hoá theo lãnh thổ.",
+                                "B. Tập trung ở miền núi.",
+                                "C. Đều là ngành mũi nhọn.",
+                                "D. Chỉ phục vụ xuất khẩu."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.3.2",
+                            "type": "multiple_choice",
+                            "question": "Vùng nào có giá trị sản xuất công nghiệp đứng đầu cả nước năm 2021 là",
+                            "options": [
+                                "A. ĐBSH.",
+                                "B. DHNTB.",
+                                "C. Đông Nam Bộ.",
+                                "D. ĐBSCL."
+                            ],
+                            "answer": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.4",
+                    "name": "DỊCH VỤ",
+                    "questions": [
+                        {
+                            "id": "3.4.1",
+                            "type": "multiple_choice",
+                            "question": "Các ngành dịch vụ nào sau đây có vai trò quan trọng trong kết cấu hạ tầng kinh tế – xã hội ở nước ta?",
+                            "options": [
+                                "A. Tư vấn và bảo hiểm.",
+                                "B. Bảo hiểm và ngân hàng.",
+                                "C. GTVT và thông tin liên lạc.",
+                                "D. Tài chính và ngân hàng."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "3.4.2",
+                            "type": "multiple_choice",
+                            "question": "Đặc điểm nào sau đây đúng với hoạt động nội thương của nước ta hiện nay?",
+                            "options": [
+                                "A. Phát triển mạnh ở vùng miền núi.",
+                                "B. Chủ yếu các trung tâm thương mại.",
+                                "C. Chỉ phục vụ tiêu dùng của dân cư.",
+                                "D. Có hàng hoá phong phú, đa dạng."
+                            ],
+                            "answer": "D"
                         }
                     ]
                 }
@@ -272,12 +421,12 @@
             "topics": [
                 {
                     "id": "4.1",
-                    "name": "KHAI THÁC THẾ MẠNH Ở TRUNG DU VÀ MIỀN NÚI BẮC BỘ",
+                    "name": "TRUNG DU VÀ MIỀN NÚI BẮC BỘ",
                     "questions": [
                         {
                             "id": "4.1.1",
                             "type": "multiple_choice",
-                            "question": "Tỉnh nào sau đây hiện nay không thuộc vùng Trung du và miền núi Bắc Bộ?",
+                            "question": "Tỉnh nào sau đây hiện nay không thuộc vùng TD&MNBB?",
                             "options": [
                                 "A. Thái Nguyên.",
                                 "B. Bắc Giang.",
@@ -289,54 +438,245 @@
                         {
                             "id": "4.1.2",
                             "type": "multiple_choice",
-                            "question": "Đặc điểm nào sau đây đúng với vị trí và lãnh thổ vùng Trung du và miền núi Bắc Bộ?",
+                            "question": "Cây công nghiệp nguồn gốc cận nhiệt ở vùng TD&MNBB phát triển dựa trên điều kiện thuận lợi chủ yếu nào sau đây từ tự nhiên?",
                             "options": [
-                                "A. Có diện tích lớn nhất cả nước.",
-                                "B. Là vùng duy nhất không giáp biển.",
-                                "C. Lãnh thổ gồm 15 tỉnh.",
-                                "D. Tiếp giáp với Trung Quốc và Lào."
+                                "A. Có nhiều giống cây trồng cận nhiệt.",
+                                "B. Có mùa đông lạnh, nhiệt độ hạ thấp.",
+                                "C. Có đất phù sa cổ và đất phù sa mới.",
+                                "D. Có địa hình phân hoá đa dạng."
                             ],
-                            "answer": "D"
-                        },
-                        {
-                            "id": "4.1.3",
-                            "type": "true_false",
-                            "question": "Đọc đoạn thông tin sau đây:\n\"Vùng Trung du và miền núi Bắc Bộ có địa hình đa dạng, phức tạp. Ở đây có các dãy núi cao như: Hoàng Liên Sơn, Pu Đen Định, Pu Sam Sao,... và các dãy núi cánh cung như: Sông Gâm, Ngân Sơn, Bắc Sơn. Một số sơn nguyên như: Đồng Văn, Hà Giang, Cao Bằng,... và nhiều cao nguyên lớn như: Sơn La, Mộc Châu, Sín Chải, Tà Phình,... Đặc biệt nổi bật với dạng địa hình đồi thấp và khá phổ biến địa hình các-xtơ.\"",
-                            "statements": [
-                                "a. Địa hình là kết quả tác động tổng hợp của nội lực và ngoại lực.",
-                                "b. Dãy Hoàng Liên Sơn là dãy núi cao, đồ sộ nhất nước ta.",
-                                "c. Địa hình cac-xtơ là dạng địa hình do tác động chủ yếu của nội lực.",
-                                "d. Các cao nguyên tập trung chủ yếu ở khu vực Tây Bắc."
-                            ],
-                            "answers": [
-                                true,
-                                true,
-                                false,
-                                true
-                            ]
-                        },
-                        {
-                            "id": "4.1.4",
-                            "type": "short_answer",
-                            "question": "Năm 2021, vùng Trung du và miền núi Bắc Bộ có số dân khoảng 12,9 triệu người; tỉ lệ dân số thành thị chiếm khoảng 20,5 % tổng số dân của vùng. Tính số dân thành thị của vùng (Đơn vị tính: triệu người, làm tròn kết quả đến một chữ số của phần thập phân).",
-                            "answer": "2,6"
-                        },
-                        {
-                            "id": "4.1.5",
-                            "type": "short_answer",
-                            "question": "Số lượng đàn trâu của vùng TD&MNBB năm 2018 là 1 391,2 nghìn con, năm 2021 là 1 245,3 nghìn con. Tính tốc độ tăng trưởng số lượng trâu năm 2021 của vùng so với năm 2018 (Lấy năm 2018 = 100 %, đơn vị tính: %, làm tròn kết quả đến một chữ số của phần thập phân).",
-                            "answer": "89,5"
+                            "answer": "B"
                         }
                     ]
                 },
                 {
                     "id": "4.2",
-                    "name": "PHÁT TRIỂN KINH TẾ VÀ ĐẢM BẢO AN NINH QUỐC PHÒNG Ở BIỂN ĐÔNG VÀ CÁC ĐẢO, QUẦN ĐẢO",
+                    "name": "ĐỒNG BẰNG SÔNG HỒNG",
                     "questions": [
                         {
                             "id": "4.2.1",
                             "type": "multiple_choice",
-                            "question": "Biển Đông là biển lớn thứ hai trên Trái Đất và thuộc rìa tây của đại dương nào?",
+                            "question": "Đặc điểm nào sau đây không đúng về vị trí tiếp giáp của vùng ĐBSH?",
+                            "options": [
+                                "A. Tiếp giáp với Trung Quốc.",
+                                "B. Tiếp giáp với BTB&DHMT.",
+                                "C. Tiếp giáp với Lào.",
+                                "D. Tiếp giáp với vịnh Bắc Bộ."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.2.2",
+                            "type": "multiple_choice",
+                            "question": "Ngành công nghiệp của vùng ĐBSH có đặc điểm nào sau đây?",
+                            "options": [
+                                "A. Là ngành quan trọng nhất, giá trị tăng liên tục, đa dạng các ngành.",
+                                "B. Là ngành quan trọng trọng điểm, giá trị tăng liên tục, đa dạng các ngành.",
+                                "C. Là ngành quan trọng, giá trị tăng liên tục, đa dạng các ngành.",
+                                "D. Là ngành quan trọng, giá trị biến động mạnh, đa dạng các ngành."
+                            ],
+                            "answer": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.3",
+                    "name": "BẮC TRUNG BỘ",
+                    "questions": [
+                        {
+                            "id": "4.3.1",
+                            "type": "multiple_choice",
+                            "question": "Các tỉnh nào sau đây không thuộc Bắc Trung Bộ?",
+                            "options": [
+                                "A. Thanh Hoá, Nghệ An.",
+                                "B. Hoà Bình, Ninh Bình.",
+                                "C. Hà Tĩnh, Quảng Bình.",
+                                "D. Quảng Trị, Thừa Thiên Huế."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.3.2",
+                            "type": "true_false",
+                            "question": "Dựa vào bảng số liệu sản lượng lúa đông xuân một số tỉnh Bắc Trung Bộ, chọn đúng hoặc sai:",
+                            "statements": [
+                                "a. Nghệ An có sản lượng lúa tăng liên tục và đứng thứ hai.",
+                                "b. Sản lượng lúa của các tỉnh có xu hướng tăng liên tục.",
+                                "c. Thanh Hoá có sản lượng lúa luôn chiếm tỉ trọng cao nhất.",
+                                "d. Hà Tĩnh có tốc độ tăng trưởng sản lượng lúa thấp nhất."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4.4",
+                    "name": "DUYÊN HẢI NAM TRUNG BỘ",
+                    "questions": [
+                        {
+                            "id": "4.4.1",
+                            "type": "multiple_choice",
+                            "question": "Các tỉnh/thành phố trực thuộc Trung ương nào sau đây không thuộc DHNTB?",
+                            "options": [
+                                "A. Đà Nẵng, Quảng Nam, Quảng Ngãi.",
+                                "B. Bình Định, Phú Yên, Khánh Hoà.",
+                                "C. Ninh Thuận, Bình Thuận.",
+                                "D. Thừa Thiên Huế, Lâm Đồng."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "4.4.2",
+                            "type": "multiple_choice",
+                            "question": "Thuận lợi chủ yếu của DHNTB trong nuôi trồng thuỷ sản là",
+                            "options": [
+                                "A. Có các ngư trường trọng điểm.",
+                                "B. Có nhiều vịnh biển, đầm phá.",
+                                "C. Tỉnh nào cũng có bãi cá, bãi tôm.",
+                                "D. Diện tích rừng ngập mặn lớn."
+                            ],
+                            "answer": "B"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.5",
+                    "name": "TÂY NGUYÊN",
+                    "questions": [
+                        {
+                            "id": "4.5.1",
+                            "type": "multiple_choice",
+                            "question": "Các tỉnh nào sau đây thuộc vùng Tây Nguyên?",
+                            "options": [
+                                "A. Kon Tum, Gia Lai, Đắk Lắk, Đắk Nông, Ninh Thuận.",
+                                "B. Kon Tum, Gia Lai, Đắk Lắk, Đắk Nông, Bình Phước.",
+                                "C. Kon Tum, Gia Lai, Đắk Lắk, Đắk Nông, Lâm Đồng.",
+                                "D. Kon Tum, Gia Lai, Đắk Lắk, Đắk Nông, Bình Thuận."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.5.2",
+                            "type": "multiple_choice",
+                            "question": "Điều kiện tự nhiên thuận lợi hàng đầu để Tây Nguyên phát triển cây công nghiệp lâu năm là",
+                            "options": [
+                                "A. đất ba-dan có tầng phong hoá sâu.",
+                                "B. khí hậu cận xích đạo, nhiệt ẩm dồi dào.",
+                                "C. đất fe-ra-lit phân bố trên các cao nguyên xếp tầng.",
+                                "D. đất ba-dan giàu dinh dưỡng, khí hậu cận xích đạo."
+                            ],
+                            "answer": "D"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.6",
+                    "name": "ĐÔNG NAM BỘ",
+                    "questions": [
+                        {
+                            "id": "4.6.1",
+                            "type": "multiple_choice",
+                            "question": "Phía tây nam vùng Đông Nam Bộ tiếp giáp với vùng kinh tế nào sau đây?",
+                            "options": [
+                                "A. ĐBSCL.",
+                                "B. Tây Nguyên.",
+                                "C. BTB&DHMT.",
+                                "D. ĐBSH."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.6.2",
+                            "type": "multiple_choice",
+                            "question": "Những nguyên nhân nào sau đây làm cho vùng Đông Nam Bộ thu hút đông đảo nguồn lao động có chuyên môn cao?",
+                            "options": [
+                                "A. Ngành công nghiệp phát triển mạnh, chính sách thu hút lao động.",
+                                "B. Ngành dịch vụ phát triển mạnh, chính sách thu hút lao động.",
+                                "C. Nền kinh tế phát triển hàng đầu, chính sách thu hút nhân tài.",
+                                "D. Nền kinh tế chuyển dịch mạnh mẽ, nhiều việc làm được tạo mới."
+                            ],
+                            "answer": "C"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.7",
+                    "name": "ĐỒNG BẰNG SÔNG CỬU LONG",
+                    "questions": [
+                        {
+                            "id": "4.7.1",
+                            "type": "multiple_choice",
+                            "question": "Các tỉnh/thành phố nào sau đây không thuộc vùng ĐBSCL?",
+                            "options": [
+                                "A. An Giang, Kiên Giang, Hậu Giang, Tiền Giang.",
+                                "B. TP. Cần Thơ, Long An, Vĩnh Long, Bạc Liêu.",
+                                "C. Đồng Nai, Tây Ninh, Bình Phước, Bình Dương.",
+                                "D. Bến Tre, Trà Vinh, Sóc Trăng, Cà Mau, Đồng Tháp."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.7.2",
+                            "type": "multiple_choice",
+                            "question": "Khó khăn lớn nhất đối với việc phát triển nông nghiệp vào mùa khô ở ĐBSCL là",
+                            "options": [
+                                "A. thiếu nước ngọt.",
+                                "B. xâm nhập mặn.",
+                                "C. sâu bệnh.",
+                                "D. cháy rừng."
+                            ],
+                            "answer": "A"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.8",
+                    "name": "CÁC VÙNG KINH TẾ TRỌNG ĐIỂM",
+                    "questions": [
+                        {
+                            "id": "4.8.1",
+                            "type": "multiple_choice",
+                            "question": "Các vùng KTTĐ của nước ta đều có sự giống nhau về đặc điểm nào sau đây?",
+                            "options": [
+                                "A. Lãnh thổ chỉ gồm các thành phố thuộc Trung ương.",
+                                "B. Tập trung nhiều tiềm lực về kinh tế.",
+                                "C. Lịch sử hình thành và phát triển rất lâu đời.",
+                                "D. Cơ sở vật chất kĩ thuật hiện đại và đồng bộ."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "4.8.2",
+                            "type": "true_false",
+                            "question": "Đọc thông tin sau và chọn đúng hoặc sai: 'Trong quá trình hình thành và phát triển, các vùng kinh tế trọng điểm đang phát huy lợi thế, tạo nên thế mạnh của mình theo cơ cấu kinh tế mở...'",
+                            "statements": [
+                                "a. Các vùng KTTĐ tập trung nhiều tiềm lực về kinh tế.",
+                                "b. Các vùng KTTĐ làm nền tảng quan trọng thúc đẩy kinh tế cả nước.",
+                                "c. Các vùng KTTĐ có chỉ số năng lực cạnh tranh cấp tỉnh thấp.",
+                                "d. Các vùng KTTĐ có lãnh thổ gồm các thành phố trực thuộc Trung ương."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4.9",
+                    "name": "BIỂN ĐÔNG VÀ CÁC ĐẢO, QUẦN ĐẢO",
+                    "questions": [
+                        {
+                            "id": "4.9.1",
+                            "type": "multiple_choice",
+                            "question": "Biển Đông là biển lớn thứ hai trên Trái Đất và thuộc rìa tây của",
                             "options": [
                                 "A. Đại Tây Dương.",
                                 "B. Thái Bình Dương.",
@@ -346,39 +686,16 @@
                             "answer": "B"
                         },
                         {
-                            "id": "4.2.2",
+                            "id": "4.9.2",
                             "type": "multiple_choice",
-                            "question": "Hai vịnh biển có diện tích lớn của Biển Đông là",
+                            "question": "Đặc điểm nào sau đây đúng với vùng biển, các đảo và quần đảo nước ta?",
                             "options": [
-                                "A. vịnh Bắc Bộ và vịnh Vân Phong.",
-                                "B. vịnh Thái Lan và vịnh Cam Ranh.",
-                                "C. vịnh Bắc Bộ và vịnh Thái Lan.",
-                                "D. vịnh Quy Nhơn và vịnh Xuân Đài."
+                                "A. Có diện tích hơn 1 triệu km².",
+                                "B. Các đảo xa bờ tập trung ở vịnh Bắc Bộ.",
+                                "C. Các đảo ven bờ tập trung ở Bắc Trung Bộ.",
+                                "D. Cả nước có 20 tỉnh (thành phố) giáp biển."
                             ],
-                            "answer": "C"
-                        },
-                        {
-                            "id": "4.2.3",
-                            "type": "true_false",
-                            "question": "Dựa vào bảng số liệu sau đây:\nSẢN LƯỢNG KHAI THÁC THUỶ SẢN BIỂN CỦA NƯỚC TA GIAI ĐOẠN 2010 – 2021 (Đơn vị: nghìn tấn)\nNăm | 2010 | 2015 | 2020 | 2021\nTổng số | 2 273,9 | 2 998,1 | 3 700,3 | 3 745,1\nTrong đó – Cá biển | 1 664,8 | 2 235,1 | 2 884,3 | 2 923,6\n– Các loại thủy sản khác | 609,1 | 763,0 | 816,0 | 821,5",
-                            "statements": [
-                                "a. Sản lượng khai thác thuỷ sản biển có xu hướng tăng đều.",
-                                "b. Các loài thuỷ sản khác có tốc độ tăng trưởng nhanh nhất.",
-                                "c. Sản lượng cá biển luôn chiếm trên 70 % tổng sản lượng.",
-                                "d. Tỉ trọng cá biển trong tổng sản lượng tăng không liên tục."
-                            ],
-                            "answers": [
-                                true,
-                                false,
-                                true,
-                                false
-                            ]
-                        },
-                        {
-                            "id": "4.2.4",
-                            "type": "short_answer",
-                            "question": "Biết diện tích vùng đất liền của nước ta năm 2021 là 331 345 km², chiều dài đường bờ biển trên 3 260 km. Tính tỉ lệ giữa diện tích đất liền và chiều dài đường bờ biển năm 2021 (Đơn vị tính: km²/km, làm tròn kết quả đến hàng đơn vị).",
-                            "answer": "102"
+                            "answer": "A"
                         }
                     ]
                 }
