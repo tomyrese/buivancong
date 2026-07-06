@@ -49,18 +49,18 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 1: Courses */}
+          {/* Column 1: Lessons */}
           <div>
-            <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">Khóa học</h3>
+            <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">Bài học</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/courses?category=scientific-reasoning" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Suy luận Khoa học
+                  Bài học Khoa học
                 </Link>
               </li>
               <li>
                 <Link href="/courses?category=math" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Toán học
+                  Bài học Toán học
                 </Link>
               </li>
             </ul>
@@ -71,24 +71,24 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">Tài nguyên</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/packages" className="text-xs text-primary font-semibold hover:text-primary/80 transition-colors">
+                  Mua Gói Khóa học (Combo)
+                </Link>
+              </li>
+              <li>
+                <Link href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                   Tài liệu học tập
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                   Luyện đề trắc nghiệm
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/courses?ai=true" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/courses?ai=true" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                   Hỏi đáp AI
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Hỏi đáp (FAQs)
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

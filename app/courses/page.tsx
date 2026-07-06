@@ -103,10 +103,10 @@ function CoursesContent() {
       {/* Title */}
       <div>
         <h1 className="text-2xl font-extrabold text-foreground tracking-tight sm:text-3xl">
-          Tìm kiếm Khóa học
+          Bài học ôn luyện ĐGNL
         </h1>
         <p className="text-xs text-muted-foreground mt-1">
-          Khám phá danh sách khóa học phong phú được cập nhật liên tục bởi các chuyên gia hàng đầu.
+          Khám phá danh sách bài học ôn tập thi ĐGNL chất lượng cao lớp Thầy Bùi Văn Công.
         </p>
       </div>
 
@@ -227,7 +227,7 @@ function CoursesContent() {
                   disabled={loading}
                   className="rounded-2xl border border-border bg-card px-6 py-3 text-xs font-semibold text-foreground hover:bg-muted transition-all active:scale-95 disabled:opacity-50"
                 >
-                  {loading ? 'Đang tải...' : 'Tải thêm khóa học'}
+                  {loading ? 'Đang tải...' : 'Tải thêm bài học'}
                 </button>
               </div>
             )}
@@ -237,7 +237,7 @@ function CoursesContent() {
           <div className="py-16 text-center space-y-4 rounded-3xl border border-dashed border-border bg-card/45">
             <Smile className="h-12 w-12 text-muted-foreground mx-auto" />
             <div className="space-y-1">
-              <h3 className="text-base font-bold text-foreground">Không tìm thấy khóa học nào</h3>
+              <h3 className="text-base font-bold text-foreground">Không tìm thấy bài học nào</h3>
               <p className="text-xs text-muted-foreground max-w-sm mx-auto">
                 Hãy thử tìm kiếm với các từ khóa khác hoặc sử dụng công cụ Gợi ý AI để tìm lộ trình phù hợp nhất.
               </p>

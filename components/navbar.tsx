@@ -51,7 +51,8 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Trang chủ', href: '/', icon: Home },
-    { name: 'Khóa học', href: '/courses', icon: BookOpen },
+    { name: 'Khóa học', href: '/packages', icon: Award },
+    { name: 'Bài học', href: '/courses', icon: BookOpen },
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   ];
 
