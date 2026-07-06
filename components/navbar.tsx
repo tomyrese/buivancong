@@ -16,7 +16,8 @@ import {
   LayoutDashboard, 
   Sparkles,
   Settings,
-  ShieldCheck
+  ShieldCheck,
+  Home
 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { cn } from '@/lib/utils';
@@ -47,6 +48,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: 'Trang chủ', href: '/', icon: Home },
     { name: 'Khóa học', href: '/courses', icon: BookOpen },
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
   ];
