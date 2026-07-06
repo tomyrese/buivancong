@@ -4,6 +4,8 @@ import * as React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { CourseService, Course, Lesson, QuizQuestion } from '@/services/courseService';
 import { useProgressStore } from '@/store/useProgressStore';
+import { useAuthStore } from '@/store/useAuthStore';
+import AuthModal from '@/components/auth-modal';
 import SidebarPlaylist from '@/features/learn/sidebar-playlist';
 import DiscussionTab from '@/features/learn/discussion-tab';
 import { BookOpen, FileText, Settings, ShieldAlert, Sparkles, Bookmark, CheckCircle2 } from 'lucide-react';
@@ -18,6 +20,8 @@ export default function LearnPage() {
   const lessonId = params.lessonId as string;
 
   const { enrolledCourses, completedLessons, completeLesson, toggleBookmark, bookmarks } = useProgressStore();
+  const { isAuthenticated } = useAuthStore();
+  const [showAuthModal, setShowAuthModal] = React.useState(false);
 
   const [activeTab, setActiveTab] = React.useState<'docs' | 'discussion'>('docs');
   const [userAnswers, setUserAnswers] = React.useState<{ [key: string]: number }>({});
@@ -57,6 +61,37 @@ export default function LearnPage() {
     return (
       <div className="mx-auto max-w-7xl px-4 py-20 text-center text-xs text-muted-foreground animate-pulse">
         Đang tải giao diện học tập...
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    return (
+      <div className="mx-auto max-w-lg px-4 py-24 text-center space-y-6">
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-500/10 text-amber-500 border border-amber-500/20 shadow-lg shadow-amber-500/5 animate-bounce">
+          <ShieldAlert className="h-8 w-8" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-extrabold text-foreground tracking-tight">Yêu cầu Đăng nhập để tiếp tục</h2>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            Khóa học chất lượng cao của Thầy Bùi Văn Công yêu cầu học viên đăng nhập tài khoản để học lý thuyết, làm bài trắc nghiệm và theo dõi tiến trình học tập.
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+          <button
+            onClick={() => setShowAuthModal(true)}
+            className="rounded-2xl bg-primary px-6 py-3 text-xs font-bold text-white shadow-md shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
+            Đăng nhập ngay
+          </button>
+          <Link
+            href="/courses"
+            className="rounded-2xl border border-border bg-card px-6 py-3 text-xs font-bold text-foreground hover:bg-muted transition-all"
+          >
+            Danh sách khóa học
+          </Link>
+        </div>
+        <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
       </div>
     );
   }
