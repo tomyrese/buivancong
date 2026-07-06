@@ -8,15 +8,22 @@ import {
   ArrowRight, 
   Lock, 
   Info, 
-  Award,
-  BookOpen,
-  Smartphone,
-  Send,
-  Upload,
-  CheckCircle,
-  X
+  Award, 
+  BookOpen, 
+  Smartphone, 
+  Send, 
+  Upload, 
+  CheckCircle, 
+  X,
+  Copy,
+  CheckCircle2,
+  AlertCircle
 } from 'lucide-react';
 import Link from 'next/link';
+import { useAuthStore } from '@/store/useAuthStore';
+import { useProgressStore } from '@/store/useProgressStore';
+import { supabase } from '@/lib/supabase';
+import AuthModal from '@/components/auth-modal';
 
 interface Package {
   id: string;
@@ -30,15 +37,31 @@ interface Package {
   features: string[];
 }
 
+const packageCodeMap: Record<string, string> = {
+  'combo-toan-logic': 'CBTOAN',
+  'combo-khoa-hoc': 'CBKH',
+  'combo-toan-dien': 'CBDN'
+};
+
 export default function PackagesPage() {
+  const { user, isAuthenticated } = useAuthStore();
   const [selectedPackage, setSelectedPackage] = React.useState<Package | null>(null);
   const [checkoutStep, setCheckoutStep] = React.useState<'info' | 'success'>('info');
+  const [paymentMode, setPaymentMode] = React.useState<'vietqr' | 'manual'>('vietqr');
+  const [showAuthModal, setShowAuthModal] = React.useState(false);
   const [phone, setPhone] = React.useState('');
   const [fullName, setFullName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [hasFile, setHasFile] = React.useState(false);
   const [error, setError] = React.useState('');
   const [loading, setLoading] = React.useState(false);
+  const [copiedText, setCopiedText] = React.useState('');
+
+  const handleCopy = (text: string, label: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedText(label);
+    setTimeout(() => setCopiedText(''), 2000);
+  };
 
   const packages: Package[] = [
     {
@@ -94,14 +117,48 @@ export default function PackagesPage() {
   ];
 
   const handleCheckoutOpen = (pkg: Package) => {
+    if (!isAuthenticated) {
+      setShowAuthModal(true);
+      return;
+    }
     setSelectedPackage(pkg);
     setCheckoutStep('info');
+    setPaymentMode('vietqr');
     setPhone('');
-    setFullName('');
-    setEmail('');
+    setFullName(user?.name || '');
+    setEmail(user?.email || '');
     setHasFile(false);
     setError('');
   };
+
+  React.useEffect(() => {
+    let checkInterval: NodeJS.Timeout;
+    
+    if (selectedPackage && checkoutStep === 'info' && paymentMode === 'vietqr' && isAuthenticated) {
+      checkInterval = setInterval(async () => {
+        try {
+          // Fetch latest user details from Supabase to check if the package is activated
+          const { data: { user: latestUser } } = await supabase.auth.getUser();
+          if (latestUser?.user_metadata?.purchased_packages?.includes(selectedPackage.id)) {
+            clearInterval(checkInterval);
+            setCheckoutStep('success');
+            
+            // Sync courses list from Supabase db user_metadata
+            const dbEnrolledCourses = latestUser.user_metadata?.enrolled_courses;
+            if (Array.isArray(dbEnrolledCourses) && dbEnrolledCourses.length > 0) {
+              useProgressStore.setState({ enrolledCourses: dbEnrolledCourses });
+            }
+          }
+        } catch (err) {
+          console.error("Error checking activation status:", err);
+        }
+      }, 3000);
+    }
+    
+    return () => {
+      if (checkInterval) clearInterval(checkInterval);
+    };
+  }, [selectedPackage, checkoutStep, paymentMode, isAuthenticated]);
 
   const handleCheckoutSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -125,7 +182,7 @@ export default function PackagesPage() {
     }
 
     setLoading(true);
-    // Simulate transaction submission
+    // Simulate manual transaction submission
     setTimeout(() => {
       setLoading(false);
       setCheckoutStep('success');
@@ -230,7 +287,7 @@ export default function PackagesPage() {
         <div className="space-y-1">
           <h4 className="text-xs font-bold text-foreground">Giao dịch được bảo vệ và hỗ trợ 24/7</h4>
           <p className="text-2xs text-muted-foreground leading-relaxed">
-            Các khoản thanh toán chuyển khoản thủ công được đối soát bảo mật. Khi giao dịch hoàn tất, hệ thống sẽ kích hoạt khóa học tự động. Mọi thắc mắc kỹ thuật vui lòng liên hệ hotline lớp học của Thầy để hỗ trợ ngay lập tức.
+            Các khoản thanh toán chuyển khoản được xử lý bảo mật. Khi giao dịch hoàn tất, hệ thống sẽ kích hoạt khóa học tự động. Mọi thắc mắc kỹ thuật vui lòng liên hệ hotline lớp học của Thầy để hỗ trợ ngay lập tức.
           </p>
         </div>
       </div>
@@ -248,76 +305,90 @@ export default function PackagesPage() {
           <div className="relative w-full max-w-2xl transform rounded-3xl border border-border bg-card shadow-2xl transition-all duration-300 z-10 overflow-hidden flex flex-col md:flex-row animate-in zoom-in-95 duration-200">
             
             {/* Left side: payment information */}
-            <div className="flex-1 bg-muted/50 p-6 border-b md:border-b-0 md:border-r border-border space-y-6">
+            <div className="flex-1 bg-muted/50 p-6 border-b md:border-b-0 md:border-r border-border space-y-5">
               <div className="space-y-1">
-                <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 1: Chuyển khoản</span>
-                <h3 className="text-sm font-bold text-foreground">Thông tin tài khoản</h3>
+                <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 1: Quét mã QR</span>
+                <h3 className="text-sm font-bold text-foreground">
+                  {paymentMode === 'vietqr' ? 'Thanh toán tự động' : 'Chuyển khoản thủ công'}
+                </h3>
               </div>
 
               {/* VietQR design */}
               <div className="rounded-2xl border border-border bg-card p-4 text-center space-y-4 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 left-0 bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-br-lg border-r border-b border-border/60">
-                  VietQR
+                <div className="absolute top-0 left-0 bg-primary/10 text-primary text-[10px] font-bold px-2.5 py-0.5 rounded-br-lg border-r border-b border-border/60">
+                  {paymentMode === 'vietqr' ? 'VietQR Tự Động' : 'Vietcombank'}
                 </div>
-                {/* Custom Vector Simulated QR Code */}
-                <div className="bg-white p-3 rounded-xl border border-border w-52 h-52 mx-auto flex items-center justify-center">
-                  <svg className="w-48 h-48 text-slate-900" viewBox="0 0 100 100" fill="currentColor">
-                    <rect x="5" y="5" width="20" height="20" rx="1" />
-                    <rect x="9" y="9" width="12" height="12" fill="white" />
-                    <rect x="12" y="12" width="6" height="6" />
-                    
-                    <rect x="75" y="5" width="20" height="20" rx="1" />
-                    <rect x="79" y="9" width="12" height="12" fill="white" />
-                    <rect x="82" y="12" width="6" height="6" />
-
-                    <rect x="5" y="75" width="20" height="20" rx="1" />
-                    <rect x="9" y="79" width="12" height="12" fill="white" />
-                    <rect x="12" y="82" width="6" height="6" />
-
-                    <rect x="32" y="10" width="8" height="8" />
-                    <rect x="45" y="5" width="12" height="6" />
-                    <rect x="62" y="15" width="8" height="8" />
-                    <rect x="35" y="25" width="25" height="6" />
-                    <rect x="10" y="35" width="6" height="25" />
-                    <rect x="25" y="45" width="15" height="15" />
-                    <rect x="50" y="40" width="8" height="8" />
-                    <rect x="65" y="32" width="20" height="20" fill="transparent" />
-                    <rect x="65" y="32" width="10" height="10" />
-                    <rect x="80" y="45" width="15" height="8" />
-                    <rect x="48" y="60" width="22" height="6" />
-                    <rect x="75" y="60" width="15" height="10" />
-                    <rect x="30" y="70" width="10" height="20" />
-                    <rect x="45" y="80" width="25" height="10" />
-                    <rect x="75" y="80" width="18" height="15" />
-                    <rect x="15" y="65" width="8" height="6" />
-                  </svg>
+                
+                {/* QR Code image source */}
+                <div className="bg-white p-2.5 rounded-xl border border-border w-52 h-52 mx-auto flex items-center justify-center relative shadow-inner">
+                  {paymentMode === 'vietqr' ? (
+                    <img 
+                      src={`https://img.vietqr.io/image/VCB-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=QRTBVC%20${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''}%20${packageCodeMap[selectedPackage.id] || 'CBTOAN'}&accountName=Nguyen%20Phu%20Quy`}
+                      alt="VietQR Automatic Payment"
+                      className="w-48 h-48 object-contain"
+                    />
+                  ) : (
+                    <img 
+                      src={`https://img.vietqr.io/image/VCB-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=ISTUDENT%20${phone || 'SDT'}%20${selectedPackage.id.toUpperCase().replace(/-/g, '_')}&accountName=Nguyen%20Phu%20Quy`}
+                      alt="VietQR Manual Payment"
+                      className="w-48 h-48 object-contain"
+                    />
+                  )}
                 </div>
-                <p className="text-[10px] text-muted-foreground">Quét mã QR để tự động điền thông tin chuyển khoản</p>
+                <p className="text-[10px] text-muted-foreground">Mở app Ngân hàng quét QR để thanh toán nhanh</p>
               </div>
 
               {/* Bank Details */}
-              <div className="space-y-3 text-xs">
-                <div className="flex justify-between py-1.5 border-b border-border/50">
+              <div className="space-y-2.5 text-xs">
+                <div className="flex justify-between py-1 border-b border-border/40">
                   <span className="text-muted-foreground">Ngân hàng:</span>
-                  <span className="font-bold text-foreground">MB Bank (Quân Đội)</span>
+                  <span className="font-bold text-foreground">Vietcombank (VCB)</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-border/50">
+                <div className="flex justify-between items-center py-1 border-b border-border/40">
                   <span className="text-muted-foreground">Số tài khoản:</span>
-                  <span className="font-extrabold text-primary select-all">0988888888</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="font-extrabold text-primary select-all">1019248902</span>
+                    <button 
+                      onClick={() => handleCopy('1019248902', 'stk')}
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      title="Sao chép"
+                    >
+                      <Copy className="h-3.5 w-3.5" />
+                    </button>
+                    {copiedText === 'stk' && <span className="text-[10px] text-emerald-600 font-bold">Đã chép!</span>}
+                  </div>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-border/50">
+                <div className="flex justify-between py-1 border-b border-border/40">
                   <span className="text-muted-foreground">Chủ tài khoản:</span>
-                  <span className="font-bold text-foreground">BUI VAN CONG</span>
+                  <span className="font-bold text-foreground uppercase">Nguyen Phu Quy</span>
                 </div>
-                <div className="flex justify-between py-1.5 border-b border-border/50">
+                <div className="flex justify-between py-1 border-b border-border/40">
                   <span className="text-muted-foreground">Số tiền:</span>
                   <span className="font-extrabold text-foreground">{formatPrice(selectedPackage.price)}</span>
                 </div>
-                <div className="flex flex-col gap-1 py-1.5">
+                <div className="flex flex-col gap-0.5 py-1">
                   <span className="text-muted-foreground">Nội dung chuyển khoản:</span>
-                  <span className="font-extrabold text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg select-all text-center tracking-wide mt-1">
-                    ISTUDENT {phone ? phone.trim() : '[SĐT_CỦA_BẠN]'} {selectedPackage.id.toUpperCase().replace(/-/g, '_')}
-                  </span>
+                  <div className="flex items-center justify-between gap-2 font-extrabold text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg mt-1">
+                    <span className="select-all tracking-wide text-xs">
+                      {paymentMode === 'vietqr' 
+                        ? `QRTBVC ${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} ${packageCodeMap[selectedPackage.id] || 'CBTOAN'}`
+                        : `ISTUDENT ${phone ? phone.trim() : '[SĐT_CỦA_BẠN]'} ${selectedPackage.id.toUpperCase().replace(/-/g, '_')}`
+                      }
+                    </span>
+                    <button 
+                      onClick={() => handleCopy(
+                        paymentMode === 'vietqr' 
+                          ? `QRTBVC ${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} ${packageCodeMap[selectedPackage.id] || 'CBTOAN'}`
+                          : `ISTUDENT ${phone ? phone.trim() : 'SDT'} ${selectedPackage.id.toUpperCase().replace(/-/g, '_')}`,
+                        'ndck'
+                      )}
+                      className="text-amber-700 hover:text-amber-900 transition-colors"
+                      title="Sao chép nội dung"
+                    >
+                      <Copy className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+                  {copiedText === 'ndck' && <span className="text-[10px] text-emerald-600 font-bold self-end mt-0.5">Đã chép nội dung chuyển!</span>}
                 </div>
               </div>
             </div>
@@ -335,12 +406,38 @@ export default function PackagesPage() {
               </button>
 
               {checkoutStep === 'info' ? (
-                /* Form block */
-                <form onSubmit={handleCheckoutSubmit} className="space-y-5 h-full flex flex-col justify-between">
+                /* Form / Waiting block */
+                <div className="space-y-4 h-full flex flex-col justify-between">
                   <div className="space-y-4">
-                    <div className="space-y-1">
-                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Gửi minh chứng</span>
-                      <h3 className="text-base font-black text-foreground">Xác nhận chuyển khoản</h3>
+                    {/* Step Title & Selector */}
+                    <div className="space-y-2">
+                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Xác nhận</span>
+                      
+                      {/* Payment Mode Selector Tabs */}
+                      <div className="flex rounded-xl bg-muted p-1 border border-border">
+                        <button
+                          type="button"
+                          onClick={() => setPaymentMode('vietqr')}
+                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
+                            paymentMode === 'vietqr'
+                              ? 'bg-card text-foreground shadow-xs'
+                              : 'text-muted-foreground hover:text-foreground'
+                          }`}
+                        >
+                          ⚡ Tự động (VietQR)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setPaymentMode('manual')}
+                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
+                            paymentMode === 'manual'
+                              ? 'bg-card text-foreground shadow-xs'
+                              : 'text-muted-foreground hover:text-foreground'
+                          }`}
+                        >
+                          📝 Thủ công (Gửi ảnh)
+                        </button>
+                      </div>
                     </div>
 
                     {error && (
@@ -349,80 +446,112 @@ export default function PackagesPage() {
                       </div>
                     )}
 
-                    {/* Inputs */}
-                    <div className="space-y-3.5">
-                      <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Số điện thoại đăng ký học</label>
-                        <input
-                          type="tel"
-                          placeholder="Số điện thoại dùng đăng nhập"
-                          value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          className="w-full rounded-xl border border-border bg-background px-3 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                          required
-                        />
-                      </div>
+                    {paymentMode === 'vietqr' ? (
+                      /* Automatic Payment: QR Scanner & Real-time webhook waiting state */
+                      <div className="space-y-4 py-2">
+                        <div className="rounded-2xl bg-primary/5 border border-primary/10 p-4 text-center space-y-3">
+                          <div className="relative flex items-center justify-center">
+                            <div className="absolute h-10 w-10 rounded-full bg-primary/20 animate-ping" />
+                            <div className="relative h-7 w-7 rounded-full bg-primary/15 flex items-center justify-center text-primary">
+                              <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+                            </div>
+                          </div>
+                          <div className="space-y-1">
+                            <h4 className="text-xs font-bold text-foreground">Đang đợi thanh toán tự động...</h4>
+                            <p className="text-3xs text-muted-foreground leading-relaxed">
+                              Vui lòng giữ nguyên cửa sổ này. Sau khi bạn chuyển khoản qua app ngân hàng, hệ thống sẽ nhận biến động số dư và kích hoạt khóa học sau 10 - 30 giây.
+                            </p>
+                          </div>
+                        </div>
 
-                      <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Họ và tên học sinh</label>
-                        <input
-                          type="text"
-                          placeholder="Họ và tên của bạn"
-                          value={fullName}
-                          onChange={(e) => setFullName(e.target.value)}
-                          className="w-full rounded-xl border border-border bg-background px-3 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                          required
-                        />
+                        {/* Developer sandbox info box */}
+                        <div className="rounded-xl bg-muted border border-border p-3 text-[10px] text-muted-foreground space-y-1.5 leading-relaxed">
+                          <div className="flex items-center gap-1 font-bold text-foreground">
+                            <Info className="h-3.5 w-3.5 text-blue-500" />
+                            <span>Mẹo Thử nghiệm Sandbox (Dev Tip)</span>
+                          </div>
+                          <p>
+                            Bạn có thể giả lập thanh toán bằng cách gửi webhook chứa nội dung chuyển khoản <strong>QRTBVC {user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} {packageCodeMap[selectedPackage.id]}</strong> tới endpoint API Callback của bạn để kích hoạt tức thì.
+                          </p>
+                        </div>
                       </div>
+                    ) : (
+                      /* Manual Payment Form */
+                      <form onSubmit={handleCheckoutSubmit} className="space-y-3.5">
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Số điện thoại liên hệ</label>
+                          <input
+                            type="tel"
+                            placeholder="Số điện thoại của bạn"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                            required
+                          />
+                        </div>
 
-                      <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Địa chỉ Email</label>
-                        <input
-                          type="email"
-                          placeholder="Email nhận mã kích hoạt"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          className="w-full rounded-xl border border-border bg-background px-3 py-2.5 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
-                          required
-                        />
-                      </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Họ và tên học sinh</label>
+                          <input
+                            type="text"
+                            placeholder="Họ và tên của bạn"
+                            value={fullName}
+                            onChange={(e) => setFullName(e.target.value)}
+                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                            required
+                          />
+                        </div>
 
-                      {/* File upload */}
-                      <div className="space-y-1">
-                        <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Ảnh chụp màn hình chuyển khoản</label>
-                        <button
-                          type="button"
-                          onClick={() => setHasFile(true)}
-                          className={`w-full rounded-2xl border-2 border-dashed p-4 text-center transition-all flex flex-col items-center justify-center gap-1.5 ${
-                            hasFile 
-                              ? 'border-emerald-500 bg-emerald-500/5 text-emerald-600' 
-                              : 'border-border hover:border-primary/40 hover:bg-muted/40 text-muted-foreground'
-                          }`}
-                        >
-                          <Upload className="h-6 w-6" />
-                          <span className="text-3xs font-semibold">
-                            {hasFile ? 'Đã đính kèm: bienlai.png (Thay đổi)' : 'Tải ảnh biên lai giao dịch lên'}
-                          </span>
-                        </button>
-                      </div>
-                    </div>
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Địa chỉ Email</label>
+                          <input
+                            type="email"
+                            placeholder="Email của bạn"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full rounded-xl border border-border bg-background px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-primary/40"
+                            required
+                          />
+                        </div>
+
+                        <div className="space-y-1">
+                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Ảnh chụp minh chứng</label>
+                          <button
+                            type="button"
+                            onClick={() => setHasFile(true)}
+                            className={`w-full rounded-xl border-2 border-dashed p-3 text-center transition-all flex flex-col items-center justify-center gap-1 ${
+                              hasFile 
+                                ? 'border-emerald-500 bg-emerald-500/5 text-emerald-600' 
+                                : 'border-border hover:border-primary/40 hover:bg-muted/40 text-muted-foreground'
+                            }`}
+                          >
+                            <Upload className="h-5 w-5" />
+                            <span className="text-[10px] font-semibold">
+                              {hasFile ? 'Đã đính kèm: bienlai.png (Thay đổi)' : 'Tải biên lai giao dịch lên'}
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    )}
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3.5 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4"
-                  >
-                    {loading ? (
-                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4" />
-                        Xác nhận đã thanh toán
-                      </>
-                    )}
-                  </button>
-                </form>
+                  {paymentMode === 'manual' && (
+                    <button
+                      onClick={handleCheckoutSubmit}
+                      disabled={loading}
+                      className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4"
+                    >
+                      {loading ? (
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4" />
+                          Gửi xác nhận chuyển khoản
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
               ) : (
                 /* Success screen */
                 <div className="text-center py-8 space-y-6 flex flex-col justify-center h-full">
@@ -430,12 +559,12 @@ export default function PackagesPage() {
                     <CheckCircle className="h-8 w-8 animate-in zoom-in-50 duration-300" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-base font-black text-foreground">Gửi thông tin đăng ký thành công!</h3>
+                    <h3 className="text-base font-black text-foreground">Kích hoạt khóa học thành công!</h3>
                     <p className="text-2xs text-muted-foreground leading-relaxed max-w-sm mx-auto">
-                      Cám ơn <strong>{fullName}</strong> đã đăng ký khóa học của Thầy Công. Hệ thống đang tiến hành kiểm tra giao dịch chuyển khoản.
+                      Cám ơn bạn đã đăng ký khóa học của Thầy Công. Hệ thống đã xác thực giao dịch chuyển khoản thành công và mở khóa tài khoản của bạn.
                     </p>
-                    <p className="text-2xs text-amber-600 bg-amber-500/10 border border-amber-500/20 rounded-lg p-2.5 leading-relaxed max-w-sm mx-auto">
-                      💡 Khóa học của bạn sẽ tự động được kích hoạt và gửi email thông báo sau <strong>5 - 10 phút</strong>.
+                    <p className="text-2xs text-emerald-600 bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-2.5 leading-relaxed max-w-sm mx-auto">
+                      🎉 Tài khoản học viên của bạn đã được ghi nhận quyền sở hữu trọn bộ chuyên đề thuộc <strong>{selectedPackage.name}</strong>.
                     </p>
                   </div>
                   <div className="pt-4 flex flex-col gap-2">
@@ -444,7 +573,7 @@ export default function PackagesPage() {
                       onClick={() => setSelectedPackage(null)}
                       className="w-full rounded-2xl bg-primary py-3 text-xs font-bold text-white shadow hover:bg-primary/95 transition-all text-center block"
                     >
-                      Vào ôn tập Bài học
+                      Vào ôn tập Bài học ngay
                     </Link>
                     <button
                       onClick={() => setSelectedPackage(null)}
@@ -458,6 +587,14 @@ export default function PackagesPage() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* AuthModal rendering for non-logged-in users trying to purchase */}
+      {showAuthModal && (
+        <AuthModal 
+          isOpen={showAuthModal} 
+          onClose={() => setShowAuthModal(false)} 
+        />
       )}
     </div>
   );

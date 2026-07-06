@@ -48,8 +48,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
         const currentAuthState = useAuthStore.getState();
         if (!currentAuthState.isAuthenticated || currentAuthState.user?.id !== userProfile.id) {
           useAuthStore.setState({ user: userProfile, isAuthenticated: true });
-          // Load user-specific progress from localStorage
+          // Load user-specific progress from localStorage first
           useProgressStore.persist.rehydrate();
+
+          // Sync / merge course enrollment state from database user_metadata
+          const dbEnrolledCourses = session.user.user_metadata?.enrolled_courses;
+          if (Array.isArray(dbEnrolledCourses) && dbEnrolledCourses.length > 0) {
+            const currentEnrolled = useProgressStore.getState().enrolledCourses;
+            const merged = Array.from(new Set([...currentEnrolled, ...dbEnrolledCourses]));
+            useProgressStore.setState({ enrolledCourses: merged });
+          }
         }
 
         // Clean up URL hash to prevent infinite hydration refresh loops
