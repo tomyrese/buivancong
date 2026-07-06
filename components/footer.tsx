@@ -1,10 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BookOpen, Send } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+  const isPackagesActive = pathname === '/packages';
 
   return (
     <footer className="border-t border-border bg-card/50 transition-all duration-300">
@@ -71,7 +75,15 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">Tài nguyên</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/packages" className="text-xs text-primary font-semibold hover:text-primary/80 transition-colors">
+                <Link 
+                  href="/packages" 
+                  className={cn(
+                    "text-xs font-semibold transition-colors",
+                    isPackagesActive 
+                      ? "text-primary font-bold" 
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
                   Mua Gói Khóa học (Combo)
                 </Link>
               </li>
