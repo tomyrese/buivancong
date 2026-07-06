@@ -67,7 +67,7 @@ export default function PackagesPage() {
     {
       id: 'combo-toan-logic',
       name: 'Combo Toán học & Tư duy Logic',
-      price: 499000,
+      price: 10000,
       originalPrice: 1000000,
       description: 'Lộ trình tối ưu cho phần Tư duy định lượng & Logic học của kỳ thi ĐGNL.',
       icon: BookOpen,
@@ -83,7 +83,7 @@ export default function PackagesPage() {
     {
       id: 'combo-toan-dien',
       name: 'Combo Toàn Diện ĐGNL 9 Môn',
-      price: 1299000,
+      price: 10000,
       originalPrice: 2500000,
       badge: 'Bán chạy nhất',
       description: 'Giải pháp học tập hoàn hảo và bứt phá nhất bao trọn toàn bộ 9 môn thi ĐGNL ĐHQG TP.HCM.',
@@ -101,7 +101,7 @@ export default function PackagesPage() {
     {
       id: 'combo-khoa-hoc',
       name: 'Combo Suy luận Khoa học',
-      price: 899000,
+      price: 10000,
       originalPrice: 1800000,
       description: 'Bí kíp làm chủ 6 môn Lý - Hóa - Sinh - Sử - Địa - Kinh tế & Pháp luật.',
       icon: Award,
