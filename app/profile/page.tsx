@@ -121,9 +121,10 @@ export default function ProfilePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-        {/* Left Column: Avatar & Quick Stats */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {/* Left Column: Avatar & Personal Info */}
         <div className="space-y-6">
+          {/* Avatar & Quick Stats */}
           <div className="rounded-3xl border border-border bg-card p-6 text-center space-y-4 shadow-sm">
             <div className="relative inline-block mx-auto">
               <div className={`p-1 rounded-full bg-gradient-to-tr ${selectedBorder.gradient} shadow-md`}>
@@ -146,52 +147,6 @@ export default function ProfilePage() {
                 <span className="text-muted-foreground font-semibold text-3xs uppercase tracking-wider block">Kinh nghiệm</span>
                 <span className="text-base font-extrabold text-secondary">{user.xp} XP</span>
               </div>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Right Column: Update Info Form */}
-        <div className="md:col-span-2 space-y-6">
-          {/* Avatar Border Customizer */}
-          <div className="rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
-            <div className="space-y-1">
-              <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-                <Award className="h-4.5 w-4.5 text-primary" />
-                Trang trí Viền Avatar
-              </h3>
-              <p className="text-[10px] text-muted-foreground">Mở khóa viền bằng cách đạt cấp độ hoặc điểm tích lũy.</p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-2 pt-2">
-              {borderOptions.map((opt) => {
-                const isSelected = (user.avatarBorder || 'default') === opt.id;
-                return (
-                  <button
-                    key={opt.id}
-                    disabled={!opt.isUnlocked}
-                    onClick={() => {
-                      updateProfile({ avatarBorder: opt.id });
-                    }}
-                    className={`p-2.5 rounded-2xl border text-left transition-all relative flex flex-col justify-between h-20 ${
-                      isSelected
-                        ? 'border-primary bg-primary/5 ring-2 ring-primary/20'
-                        : opt.isUnlocked
-                        ? 'border-border bg-card hover:bg-muted'
-                        : 'border-border/40 bg-muted/40 opacity-60 cursor-not-allowed'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between w-full">
-                      <span className="text-[11px] font-bold text-foreground">{opt.name}</span>
-                      <div className={`h-3 w-3 rounded-full bg-gradient-to-tr ${opt.gradient} border border-background`} />
-                    </div>
-                    
-                    <span className={`text-[9px] ${opt.isUnlocked ? 'text-muted-foreground' : 'text-amber-600 font-semibold'}`}>
-                      {opt.isUnlocked ? (isSelected ? '✓ Đang dùng' : '• Đã mở khóa') : `🔒 ${opt.requirement}`}
-                    </span>
-                  </button>
-                );
-              })}
             </div>
           </div>
 
@@ -241,11 +196,56 @@ export default function ProfilePage() {
                 {saveSuccess && (
                   <span className="flex items-center gap-1 text-[11px] font-bold text-emerald-500 animate-fade-in">
                     <Check className="h-4 w-4" />
-                    Đã lưu thay đổi thành công!
+                    Đã lưu!
                   </span>
                 )}
               </div>
             </form>
+          </div>
+        </div>
+
+        {/* Right Column: Avatar Borders & Password Change */}
+        <div className="space-y-6">
+          {/* Avatar Border Customizer */}
+          <div className="rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
+            <div className="space-y-1">
+              <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                <Award className="h-4.5 w-4.5 text-primary" />
+                Trang trí Viền Avatar
+              </h3>
+              <p className="text-[10px] text-muted-foreground">Mở khóa viền bằng cách đạt cấp độ hoặc điểm tích lũy.</p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2 pt-2">
+              {borderOptions.map((opt) => {
+                const isSelected = (user.avatarBorder || 'default') === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    disabled={!opt.isUnlocked}
+                    onClick={() => {
+                      updateProfile({ avatarBorder: opt.id });
+                    }}
+                    className={`p-2.5 rounded-2xl border text-left transition-all relative flex flex-col justify-between h-20 ${
+                      isSelected
+                        ? 'border-primary bg-primary/5 ring-2 ring-primary/20'
+                        : opt.isUnlocked
+                        ? 'border-border bg-card hover:bg-muted'
+                        : 'border-border/40 bg-muted/40 opacity-60 cursor-not-allowed'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <span className="text-[11px] font-bold text-foreground">{opt.name}</span>
+                      <div className={`h-3 w-3 rounded-full bg-gradient-to-tr ${opt.gradient} border border-background`} />
+                    </div>
+                    
+                    <span className={`text-[9px] ${opt.isUnlocked ? 'text-muted-foreground' : 'text-amber-600 font-semibold'}`}>
+                      {opt.isUnlocked ? (isSelected ? '✓ Đang dùng' : '• Đã mở khóa') : `🔒 ${opt.requirement}`}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Change password card */}
@@ -255,42 +255,40 @@ export default function ProfilePage() {
             </h3>
 
             <form onSubmit={handleChangePassword} className="space-y-4 text-xs">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1.5">
-                  <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu hiện tại</label>
-                  <div className="relative">
-                    <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                    <input
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                      placeholder="••••••••"
-                      className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                    />
-                  </div>
+              <div className="space-y-1.5">
+                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu hiện tại</label>
+                <div className="relative">
+                  <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    placeholder="••••••••"
+                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                  />
                 </div>
+              </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu mới</label>
-                  <div className="relative">
-                    <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-                    <input
-                      type="password"
-                      value={newPassword}
-                      onChange={(e) => setNewPassword(e.target.value)}
-                      required
-                      placeholder="••••••••"
-                      className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
-                    />
-                  </div>
+              <div className="space-y-1.5">
+                <label className="text-3xs font-bold text-muted-foreground uppercase tracking-wider block">Mật khẩu mới</label>
+                <div className="relative">
+                  <Key className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <input
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                    placeholder="••••••••"
+                    className="w-full rounded-xl border border-border bg-background pl-9 pr-4 py-2.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                  />
                 </div>
               </div>
 
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="rounded-xl border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground hover:bg-muted transition-all"
+                  className="rounded-xl border border-border bg-card px-5 py-2.5 text-xs font-bold text-foreground hover:bg-muted transition-all w-full"
                 >
                   Cập nhật mật khẩu
                 </button>
