@@ -1,40 +1,1264 @@
 {
-  "chapters": [
-    {
-      "id": 1,
-      "name": "MỆNH ĐỀ VÀ TẬP HỢP",
-      "topics": [
+    "chapters": [
         {
-          "id": 1,
-          "name": "Mệnh đề toán học",
-          "questions": [
-            {
-              "id": "math10.1.1.1",
-              "type": "multiple_choice",
-              "question": "Câu nào sau đây là một mệnh đề toán học?",
-              "options": [
-                "A. Số 5 là một số nguyên tố.",
-                "B. Thời tiết hôm nay đẹp quá!",
-                "C. Bạn học lớp mấy?",
-                "D. Hãy làm bài tập này đi."
-              ],
-              "answer": "A"
-            },
-            {
-              "id": "math10.1.1.2",
-              "type": "multiple_choice",
-              "question": "Phủ định của mệnh đề 'Mọi số thực đều dương' là",
-              "options": [
-                "A. Tồn tại ít nhất một số thực không dương.",
-                "B. Mọi số thực đều không dương.",
-                "C. Tồn tại ít nhất một số thực âm.",
-                "D. Không có số thực nào dương."
-              ],
-              "answer": "A"
-            }
-          ]
+            "id": 1,
+            "name": "MỆNH ĐỀ VÀ TẬP HỢP",
+            "topics": [
+                {
+                    "id": "1.1",
+                    "name": "MỆNH ĐỀ",
+                    "questions": [
+                        {
+                            "id": "1.1.1",
+                            "type": "multiple_choice",
+                            "question": "Phát biểu nào sau đây là một mệnh đề?",
+                            "options": [
+                                "A. Mùa thu Hà Nội đẹp quá!",
+                                "B. Bạn có đi học không?",
+                                "C. Đề thi môn Toán khó quá!",
+                                "D. Hà Nội là thủ đô của Việt Nam."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho các phát biểu sau đây:\n1. \"17 là số nguyên tố\"\n2. \"Tam giác vuông có một đường trung tuyến bằng nửa cạnh huyền\"\n3. \"Các em C14 hãy cố gắng học tập thật tốt nhé!\"\n4. \"Mọi hình chữ nhật đều nội tiếp được đường tròn\"\nHỏi có bao nhiêu phát biểu là một mệnh đề?",
+                            "options": [
+                                "A. 4.",
+                                "B. 3.",
+                                "C. 2.",
+                                "D. 1."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.3",
+                            "type": "multiple_choice",
+                            "question": "Câu nào trong các câu sau không phải là mệnh đề?",
+                            "options": [
+                                "A. √3 có phải là một số vô tỷ không?",
+                                "B. 2 + 2 = 5.",
+                                "C. 2 là một số hữu tỷ.",
+                                "D. 4/2 = 2."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.4",
+                            "type": "multiple_choice",
+                            "question": "Trong các câu sau, câu nào không phải là mệnh đề?",
+                            "options": [
+                                "A. Buồn ngủ quá!",
+                                "B. Hình thoi có hai đường chéo vuông góc với nhau.",
+                                "C. 8 là số chính phương.",
+                                "D. Băng Cốc là thủ đô của Mianma."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.5",
+                            "type": "multiple_choice",
+                            "question": "Trong các câu sau, có bao nhiêu câu là mệnh đề?\na) Hãy đi nhanh lên!\nb) Hà Nội là thủ đô của Việt Nam.\nc) 5 + 7 + 4 = 15.\nd) Năm 2018 là năm nhuận.",
+                            "options": [
+                                "A. 4",
+                                "B. 3",
+                                "C. 1",
+                                "D. 2"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.6",
+                            "type": "multiple_choice",
+                            "question": "Trong các câu sau, câu nào là mệnh đề?",
+                            "options": [
+                                "A. Đi ngủ đi!",
+                                "B. Trung Quốc là nước đông dân nhất thế giới.",
+                                "C. Bạn học trường nào?",
+                                "D. Không được làm việc riêng trong giờ học."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.7",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề ∀x∈ℝ, x² - 2 + a > 0 với a là số thực cho trước. Tìm a để mệnh đề đúng",
+                            "options": [
+                                "A. a ≤ 2",
+                                "B. a < 2",
+                                "C. a = 2",
+                                "D. a ≥ 2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.8",
+                            "type": "multiple_choice",
+                            "question": "Với giá trị nào của x thì \"x² - 1 = 0, x∈ℕ\" là mệnh đề đúng.",
+                            "options": [
+                                "A. x = 1",
+                                "B. x = -1",
+                                "C. x = ±1",
+                                "D. x = 0"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.9",
+                            "type": "multiple_choice",
+                            "question": "Chọn mệnh đề đúng trong các mệnh đề sau.",
+                            "options": [
+                                "A. ∀x∈ℝ sao cho x + 1 > x.",
+                                "B. ∀x∈ℕ sao cho x² = x.",
+                                "C. ∃x∈ℝ sao cho x - 3 = x².",
+                                "D. ∃x∈ℝ sao cho x² < 0."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.10",
+                            "type": "multiple_choice",
+                            "question": "Trong các mệnh đề sau, mệnh đề nào đúng?",
+                            "options": [
+                                "A. 6√2 là số hữu tỷ.",
+                                "B. Phương trình x² + 7x - 2 = 0 có 2 nghiệm trái dấu.",
+                                "C. 17 là số chẵn.",
+                                "D. Phương trình x² + x + 7 = 0 có nghiệm."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.11",
+                            "type": "multiple_choice",
+                            "question": "Trong các câu sau, câu nào là mệnh đề đúng?",
+                            "options": [
+                                "A. Nếu a ≥ b thì a² ≥ b².",
+                                "B. Nếu a chia hết cho 9 thì a chia hết cho 3.",
+                                "C. Nếu em chăm chỉ thì em thành công.",
+                                "D. Nếu một tam giác có một góc bằng 60° thì tam giác đó đều."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.12",
+                            "type": "multiple_choice",
+                            "question": "Trong các mệnh đề sau, mệnh đề nào sai?",
+                            "options": [
+                                "A. x < -2 ⇔ x² < 4.",
+                                "B. x < 4 ⇔ x² < 16.",
+                                "C. √23 < 5 ⇔ 2√23 < 10.",
+                                "D. √23 < 5 ⇔ -2√23 > -10."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.13",
+                            "type": "multiple_choice",
+                            "question": "Hỏi trong các mệnh đề sau đây mệnh đề nào là mệnh đề đúng?",
+                            "options": [
+                                "A. \"∀x∈ℝ, x > 3 ⇒ x² > 9\".",
+                                "B. \"∀x∈ℝ, x > -3 ⇒ x² > 9\".",
+                                "C. \"∀x∈ℝ, x² > 9 ⇒ x > 3\".",
+                                "D. \"∀x∈ℝ, x² > 9 ⇒ x > -3\"."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.14",
+                            "type": "multiple_choice",
+                            "question": "Cho mệnh đề: \"∀x∈ℝ, x² + 3x + 5 > 0\". Mệnh đề phủ định của mệnh đề trên là",
+                            "options": [
+                                "A. \"∀x∈ℝ, x² + 3x + 5 ≤ 0\".",
+                                "B. \"∃x∈ℝ, x² + 3x + 5 ≤ 0\".",
+                                "C. \"∀x∈ℝ, x² + 3x + 5 < 0\".",
+                                "D. \"∃x∈ℝ, x² + 3x + 5 > 0\"."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.15",
+                            "type": "multiple_choice",
+                            "question": "Cho mệnh đề \"Có một học sinh trong lớp C4 không chấp hành luật giao thông\". Mệnh đề phủ định của mệnh đề này là",
+                            "options": [
+                                "A. Không có học sinh nào trong lớp C4 chấp hành luật giao thông.",
+                                "B. Mọi học sinh trong lớp C4 đều chấp hành luật giao thông.",
+                                "C. Có một học sinh trong lớp C4 chấp hành luật giao thông.",
+                                "D. Mọi học sinh trong lớp C4 không chấp hành luật giao thông."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.16",
+                            "type": "multiple_choice",
+                            "question": "Cho mệnh đề: \"Có một học sinh trong lớp 10A không thích học môn Toán\". Mệnh đề phủ định của mệnh đề này là:",
+                            "options": [
+                                "A. \"Mọi học sinh trong lớp 10A đều thích học môn Toán\".",
+                                "B. \"Mọi học sinh trong lớp 10A đều không thích học môn Toán\".",
+                                "C. \"Mọi học sinh trong lớp 10A đều thích học môn Văn\".",
+                                "D. \"Có một học sinh trong lớp 10A thích học môn Toán\"."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.17",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề phủ định của mệnh đề \"2018 là số tự nhiên chẵn\" là",
+                            "options": [
+                                "A. 2018 là số chẵn.",
+                                "B. 2018 là số nguyên tố.",
+                                "C. 2018 không là số tự nhiên chẵn.",
+                                "D. 2018 là số chính phương."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.18",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề: \"Mọi động vật đều di chuyển\" có mệnh đề phủ định là",
+                            "options": [
+                                "A. Có ít nhất một động vật di chuyển.",
+                                "B. Mọi động vật đều đứng yên.",
+                                "C. Có ít nhất một động vật không di chuyển.",
+                                "D. Mọi động vật đều không di chuyển."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.19",
+                            "type": "multiple_choice",
+                            "question": "Cho mệnh đề: \"∃x∈ℝ, 2x² - 3x - 5 < 0\". Mệnh đề phủ định sẽ là",
+                            "options": [
+                                "A. \"∀x∈ℝ, 2x² + 3x - 5 ≥ 0\".",
+                                "B. \"∀x∈ℝ, 2x² + 3x - 5 > 0\".",
+                                "C. \"∃x∈ℝ, 2x² + 3x - 5 > 0\".",
+                                "D. \"∃x∈ℝ, 2x² + 3x - 5 ≥ 0\"."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.20",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề phủ định của mệnh đề: ∀x∈ℝ, x² + x + 5 > 0 là",
+                            "options": [
+                                "A. ∃x∈ℝ, x² + x + 5 ≤ 0.",
+                                "B. ∀x∈ℝ, x² + x + 5 ≤ 0.",
+                                "C. ∃x∈ℝ, x² + x + 5 < 0.",
+                                "D. ∀x∈ℝ, x² + x + 5 < 0."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.21",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề phủ định của mệnh đề \"Phương trình ax² + bx + c = 0 (a ≠ 0) vô nghiệm\" là mệnh đề nào sau đây?",
+                            "options": [
+                                "A. Phương trình ax² + bx + c = 0 (a ≠ 0) có nghiệm.",
+                                "B. Phương trình ax² + bx + c = 0 (a ≠ 0) có 2 nghiệm phân biệt.",
+                                "C. Phương trình ax² + bx + c = 0 (a ≠ 0) có nghiệm kép.",
+                                "D. Phương trình ax² + bx + c = 0 (a ≠ 0) không có nghiệm."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.22",
+                            "type": "multiple_choice",
+                            "question": "Tìm mệnh đề phủ định của mệnh đề: ∀x∈ℝ, x² + x + 5 > 0.",
+                            "options": [
+                                "A. ∃x∈ℝ, x² + x + 5 < 0.",
+                                "B. ∀x∈ℝ, x² + x + 5 < 0.",
+                                "C. ∀x∈ℝ, x² + x + 5 ≤ 0.",
+                                "D. ∃x∈ℝ, x² + x + 5 ≤ 0."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.23",
+                            "type": "multiple_choice",
+                            "question": "Tìm mệnh đề phủ định của mệnh đề \"∀x∈ℝ: x² > x\".",
+                            "options": [
+                                "A. ∀x∈ℝ: x² ≤ x.",
+                                "B. ∃x∈ℝ: x² > x.",
+                                "C. ∃x∈ℝ: x² ≤ x.",
+                                "D. ∃x∈ℝ: x² < x."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.24",
+                            "type": "multiple_choice",
+                            "question": "Cho x là số tự nhiên. Phủ định của mệnh đề \"∀x chẵn, x² + x là số chẵn\" là mệnh đề:",
+                            "options": [
+                                "A. ∃x lẻ, x² + x là số lẻ.",
+                                "B. ∃x lẻ, x² + x là số chẵn.",
+                                "C. ∀x lẻ, x² + x là số lẻ.",
+                                "D. ∃x chẵn, x² + x là số lẻ."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.25",
+                            "type": "multiple_choice",
+                            "question": "Phủ định của mệnh đề \"∃x∈ℝ: 2x² - 5x + 2 = 0\" là",
+                            "options": [
+                                "A. \"∃x∈ℝ: 2x² - 5x + 2 > 0\".",
+                                "B. \"∃x∈ℝ: 2x² - 5x + 2 ≠ 0\".",
+                                "C. \"∀x∈ℝ: 2x² - 5x + 2 ≠ 0\".",
+                                "D. \"∀x∈ℝ: 2x² - 5x + 2 = 0\"."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.26",
+                            "type": "multiple_choice",
+                            "question": "Cho mệnh đề \"∀x∈ℝ, x² - x + 7 < 0\". Hỏi mệnh đề nào là mệnh đề phủ định của mệnh đề trên?",
+                            "options": [
+                                "A. ∀x∈ℝ, x² - x + 7 > 0.",
+                                "B. x∈ℝ, x² - x + 7 < 0.",
+                                "C. ∃x∈ℝ, x² - x + 7 ≥ 0.",
+                                "D. ∃x∈ℝ, x² - x + 7 ≤ 0."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.27",
+                            "type": "multiple_choice",
+                            "question": "Tìm mệnh đề phủ định của mệnh đề P: \"∀x∈ℝ; x² + x - 1 > 0\".",
+                            "options": [
+                                "A. P̄: \"∀x∈ℝ; x² + x - 1 > 0\".",
+                                "B. P̄: \"∃x∈ℝ; x² + x - 1 ≤ 0\".",
+                                "C. P̄: \"∃x∈ℝ; x² + x - 1 > 0\".",
+                                "D. P̄: \"∀x∈ℝ; x² + x - 1 ≤ 0\"."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.28",
+                            "type": "multiple_choice",
+                            "question": "Trong các mệnh đề sau đây, mệnh đề nào có mệnh đề đảo là đúng?",
+                            "options": [
+                                "A. Nếu a và b cùng chia hết cho c thì a + b chia hết cho c.",
+                                "B. Nếu hai tam giác bằng nhau thì diện tích bằng nhau.",
+                                "C. Nếu a chia hết cho 3 thì a chia hết cho 9.",
+                                "D. Nếu một số tận cùng bằng 0 thì số đó chia hết cho 5."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.29",
+                            "type": "multiple_choice",
+                            "question": "Trong các mệnh đề sau, mệnh đề nào là định lí?",
+                            "options": [
+                                "A. ∀x∈ℝ, x > -2 ⇒ x² > 4.",
+                                "B. ∀x∈ℝ, x > 2 ⇒ x² > 4.",
+                                "C. ∀x∈ℝ, x² > 4 ⇒ x > 2.",
+                                "D. Nếu a + b chia hết cho 3 thì a, b đều chia hết cho 3."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.30",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề \"∃x∈ℝ, x² = 3\" khẳng định rằng:",
+                            "options": [
+                                "A. Bình phương của mỗi số thực bằng 3.",
+                                "B. Có ít nhất một số thực mà bình phương của nó bằng 3.",
+                                "C. Chỉ có một số thực có bình phương bằng 3.",
+                                "D. Nếu x là số thực thì x² = 3."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.31",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề nào sau đây là phủ định của mệnh đề: \"Mọi động vật đều di chuyển\"",
+                            "options": [
+                                "A. Mọi động vật đều không di chuyển.",
+                                "B. Mọi động vật đều đứng yên.",
+                                "C. Có ít nhất một động vật không di chuyển.",
+                                "D. Có ít nhất một động vật di chuyển."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.32",
+                            "type": "multiple_choice",
+                            "question": "Phủ định của mệnh đề: \"Có ít nhất một số vô tỷ là số thập phân vô hạn tuần hoàn\" là mệnh đề nào sau đây:",
+                            "options": [
+                                "A. Mọi số vô tỷ đều là số thập phân vô hạn tuần hoàn.",
+                                "B. Có ít nhất một số vô tỷ là số thập phân vô hạn không tuần hoàn.",
+                                "C. Mọi số vô tỷ đều là số thập phân vô hạn không tuần hoàn.",
+                                "D. Mọi số vô tỷ đều là số thập phân tuần hoàn."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.1.33",
+                            "type": "multiple_choice",
+                            "question": "Tìm mệnh đề sai.",
+                            "options": [
+                                "A. \"∀x; x² + 2x + 3 > 0\".",
+                                "B. \"∀x; x² ≥ x\".",
+                                "C. \"∃x; x² + 5x + 6 = 0\".",
+                                "D. \"∃x; x < 1/x\"."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.34",
+                            "type": "multiple_choice",
+                            "question": "Mệnh đề nào sau đây đúng?",
+                            "options": [
+                                "A. ∀x∈ℝ, x² - x + 1 > 0.",
+                                "B. ∃n∈ℕ, n < 0.",
+                                "C. ∃n∈ℕ, n² = 2.",
+                                "D. ∀x∈ℝ, 1/x > 0."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.35",
+                            "type": "multiple_choice",
+                            "question": "Chọn mệnh đề sai.",
+                            "options": [
+                                "A. \"∀x∈ℝ: x² > 0\".",
+                                "B. \"∃n∈ℕ: n² = n\".",
+                                "C. \"∀n∈ℕ: n ≤ 2n\".",
+                                "D. \"∃x∈ℕ: x < 1\"."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.1.36",
+                            "type": "true_false",
+                            "question": "Xét tính đúng, sai của các câu sau:",
+                            "statements": [
+                                "a. P: \"3 là số chính phương\" có mệnh đề phủ định là P̄: \"3 không là số chính phương\".",
+                                "b. Q: \"Tam giác ABC là tam giác cân\" có mệnh đề phủ định là Q̄: \"Tam giác ABC không là tam giác vuông\".",
+                                "c. R: \"2²⁰⁰³ - 1 là số nguyên tố\" có mệnh đề phủ định là R̄: \"2²⁰⁰³ - 1 không là số nguyên tố\".",
+                                "d. H: \"√2 là số vô tỉ\" có mệnh đề phủ định là H̄: \"√2 là số hữu tỉ\"."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.37",
+                            "type": "true_false",
+                            "question": "Hãy xác định tính đúng sai của mỗi mệnh đề sau:",
+                            "statements": [
+                                "a. A: \"Năm 2010 là năm nhuận\".",
+                                "b. B: \"31 là số nguyên tố\".",
+                                "c. P: \"Mùa xuân bắt đầu từ tháng 6 và kết thúc vào tháng 9\".",
+                                "d. Q: \"Hình thoi là hình có bốn cạnh bằng nhau\"."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.38",
+                            "type": "true_false",
+                            "question": "Cho mệnh đề \"P(x): x² - x - 2 = 0\" với x là các số thực. Với mỗi giá trị thực của x sau đây, ta nhận được mệnh đề đúng hay sai?",
+                            "statements": [
+                                "a. x = 0",
+                                "b. x = -1",
+                                "c. x = 1",
+                                "d. x = 2"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.39",
+                            "type": "true_false",
+                            "question": "Xét tính đúng, sai của các mệnh đề sau:",
+                            "statements": [
+                                "a. Phương trình x² - 3x + 8 = 0 có nghiệm.",
+                                "b. 16 không là số nguyên tố.",
+                                "c. Hai phương trình x² - 4x + 3 = 0 và x² - 1 = 0 có nghiệm chung.",
+                                "d. Buôn Mê Thuột là thành phố của tỉnh Quảng Ngãi."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.1.40",
+                            "type": "true_false",
+                            "question": "Xét tính đúng, sai của mỗi mệnh đề sau.",
+                            "statements": [
+                                "a. ∀x∈ℝ, x² > 0",
+                                "b. ∃a∈ℝ, a > a²",
+                                "c. ∀n∈ℕ, n² + n + 2 chia hết cho 2.",
+                                "d. ∀n∈ℕ, n(n+1)(n+2) không chia hết cho 3."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.1.41",
+                            "type": "true_false",
+                            "question": "Cho mệnh đề chứa biến P(x): \"x > x³\", xét tính đúng sai của các mệnh đề sau:",
+                            "statements": [
+                                "a. P(1)",
+                                "b. P(1/3)",
+                                "c. ∀x∈ℝ, P(x)",
+                                "d. ∃x∈ℝ, P(x)"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.42",
+                            "type": "true_false",
+                            "question": "Xét tính đúng, sai của các mệnh đề sau:",
+                            "statements": [
+                                "a. √6 không phải là một số vô tỉ.",
+                                "b. Phương trình x² + 3x + 5 = 0 vô nghiệm.",
+                                "c. Hàm số bậc hai y = x² có đồ thị là parabol với tọa độ đỉnh là O(0; 0).",
+                                "d. √7 + √48 và √7 - √48 là hai số nghịch đảo của nhau."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.43",
+                            "type": "true_false",
+                            "question": "Xét tính đúng sai của các mệnh đề sau:",
+                            "statements": [
+                                "a. A: \"∀x∈ℝ, ∀y∈ℝ: x + y = 1\"",
+                                "b. B: \"∃x∈ℝ, ∃y∈ℝ: x + y = 2\"",
+                                "c. C: \"∃x∈ℝ, ∀y∈ℝ: y = xy\"",
+                                "d. D: \"∀a∈ℝ, ∃b∈ℝ: a = 3b\""
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.44",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu giá trị của x để \"x² - 1 = 0, x∈ℕ\" là mệnh đề đúng?",
+                            "answer": "1"
+                        },
+                        {
+                            "id": "1.1.45",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu giá trị của x để \"x∈ℝ, x > 0 ⇒ x² - 4 < 0\" là mệnh đề đúng?",
+                            "answer": "1"
+                        },
+                        {
+                            "id": "1.1.46",
+                            "type": "short_answer",
+                            "question": "Cho các phát biểu sau: x∈ℝ, 2x < 3 (1); x∈ℝ, x⁴ - x² < 0 (2). Có bao nhiêu giá trị nguyên của x để (1) và (2) trở thành mệnh đề đúng?",
+                            "answer": "0"
+                        },
+                        {
+                            "id": "1.1.47",
+                            "type": "short_answer",
+                            "question": "Cho mệnh đề ∀x∈ℝ, x² - 2 + a > 0 với a là số thực cho trước. Có bao nhiêu giá trị nguyên của tham số a < 10 để mệnh đề đã cho là mệnh đề đúng?",
+                            "answer": "8"
+                        },
+                        {
+                            "id": "1.1.48",
+                            "type": "short_answer",
+                            "question": "Cho P(n) = n² - 6n + 10 với n là số tự nhiên. Có bao nhiêu giá trị của n để (2P(n) - 1)/(n - 3) là số nguyên?",
+                            "answer": "1"
+                        },
+                        {
+                            "id": "1.1.49",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu cặp số (x; y) để cả ba mệnh đề P, Q, R sau đây đều đúng: P(x;y): \"2x² - xy + 9 = 0\", Q(x;y): \"2x² + y² ≤ 81\", R(x): \"x∈ℤ\".",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.2",
+                    "name": "TẬP HỢP & CÁC PHÉP TOÁN TRÊN TẬP HỢP",
+                    "questions": [
+                        {
+                            "id": "1.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp A = {x + 1 | x∈ℕ, x ≤ 5}. Tập hợp A là:",
+                            "options": [
+                                "A. A = {1; 2; 3; 4; 5}",
+                                "B. A = {0; 1; 2; 3; 4; 5; 6}",
+                                "C. A = {0; 1; 2; 3; 4; 5}",
+                                "D. A = {1; 2; 3; 4; 5; 6}"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.2",
+                            "type": "multiple_choice",
+                            "question": "Liệt kê các phần tử của tập hợp X = {x∈ℝ | 2x² - 5x + 3 = 0}.",
+                            "options": [
+                                "A. X = {0}",
+                                "B. X = {1}",
+                                "C. X = {3/2}",
+                                "D. X = {1; 3/2}"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.3",
+                            "type": "multiple_choice",
+                            "question": "Trong các tập hợp sau, tập hợp nào khác rỗng?",
+                            "options": [
+                                "A. A = {x∈ℝ | x² + x + 1 = 0}.",
+                                "B. B = {x∈ℤ | x² - 2 = 0}.",
+                                "C. C = {x∈ℤ | x³ - 3x² + 1 = 0}.",
+                                "D. D = {x∈ℤ | x(x²+3) = 0}."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.4",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp A = (2; +∞). Khi đó CℝA (phần bù của A trong ℝ) là:",
+                            "options": [
+                                "A. [2; +∞)",
+                                "B. (2; +∞)",
+                                "C. (-∞; 2]",
+                                "D. (-∞; -2]"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.5",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A và B. Hình nào sau đây (biểu đồ Ven) minh họa A là tập con của B?",
+                            "options": [
+                                "A. (hình 1)",
+                                "B. (hình 2)",
+                                "C. (hình 3 - vòng tròn A nằm trọn trong vòng tròn B)",
+                                "D. (hình 4)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.6",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp X = {a; b; c}. Số tập con của X là",
+                            "options": [
+                                "A. 4",
+                                "B. 6",
+                                "C. 8",
+                                "D. 12"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.7",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp A = {1; 2; 5; 7} và B = {1; 2; 3}. Có tất cả bao nhiêu tập X thỏa mãn: X⊂A và X⊂B?",
+                            "options": [
+                                "A. 2",
+                                "B. 4",
+                                "C. 6",
+                                "D. 8"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.8",
+                            "type": "multiple_choice",
+                            "question": "Trong các tập hợp sau đây, tập hợp nào có đúng hai tập hợp con?",
+                            "options": [
+                                "A. {x; y}",
+                                "B. {x}",
+                                "C. {∅; x}",
+                                "D. {∅; x; y}"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.9",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp X = {1; 5}, Y = {1; 3; 5}. Tập X∩Y là tập hợp nào sau đây?",
+                            "options": [
+                                "A. {1}",
+                                "B. {1; 3}",
+                                "C. {1; 3; 5}",
+                                "D. {1; 5}"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.10",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp X = {a; b}, Y = {a; b; c}. X∪Y là tập hợp nào sau đây?",
+                            "options": [
+                                "A. {a; b; c; d}",
+                                "B. {a; b}",
+                                "C. {c}",
+                                "D. {a; b; c}"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.11",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A và B khác rỗng thỏa mãn A⊂B. Trong các mệnh đề sau, mệnh đề nào sai?",
+                            "options": [
+                                "A. A \\ B = ∅",
+                                "B. A∩B = A",
+                                "C. B \\ A = B",
+                                "D. A∪B = B"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.12",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = {0; 1} và B = {0; 1; 2; 3; 4}. Số tập hợp X thỏa mãn X⊂C_B(A) (phần bù của A trong B) là:",
+                            "options": [
+                                "A. 3",
+                                "B. 5",
+                                "C. 6",
+                                "D. 8"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.13",
+                            "type": "multiple_choice",
+                            "question": "Ký hiệu |X| là số phần tử của tập hợp X. Mệnh đề nào sai trong các mệnh đề sau?",
+                            "options": [
+                                "A. A∩B = ∅ ⇒ |A|+|B| = |A∪B|+|A∩B|",
+                                "B. A∩B ≠ ∅ ⇒ |A|+|B| = |A∪B|-|A∩B|",
+                                "C. A∩B ≠ ∅ ⇒ |A|+|B| = |A∪B|+|A∩B|",
+                                "D. A∩B = ∅ ⇒ |A|+|B| = |A∪B|"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.14",
+                            "type": "multiple_choice",
+                            "question": "Một lớp học có 25 học sinh giỏi môn Toán, 23 học sinh giỏi môn Lý, 14 học sinh giỏi cả môn Toán và Lý và có 6 học sinh không giỏi môn nào cả. Hỏi lớp đó có bao nhiêu học sinh?",
+                            "options": [
+                                "A. 54",
+                                "B. 40",
+                                "C. 26",
+                                "D. 68"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.15",
+                            "type": "multiple_choice",
+                            "question": "Ký hiệu H là tập hợp các học sinh của lớp 10A. T là tập hợp các học sinh nam, G là tập hợp các học sinh nữ của lớp 10A. Khẳng định nào sau đây sai?",
+                            "options": [
+                                "A. T∪G = H",
+                                "B. T∩G = ∅",
+                                "C. H \\ T = G",
+                                "D. G \\ T = ∅"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.16",
+                            "type": "multiple_choice",
+                            "question": "Cho A, B, C là ba tập hợp. Mệnh đề nào sau đây là sai?",
+                            "options": [
+                                "A. A⊂B ⇒ A∩C⊂B∩C",
+                                "B. A⊂B ⇒ C\\A⊂C\\B",
+                                "C. A⊂B ⇒ A∪C⊂B∪C",
+                                "D. A⊂B, B⊂C ⇒ A⊂C"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.17",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = {1; 2; 3; 4; 5}, B = {1; 3; 5; 7; 9}. Tập nào sau đây bằng tập A∩B?",
+                            "options": [
+                                "A. {1; 3; 5}",
+                                "B. {1; 2; 3; 4; 5}",
+                                "C. {2; 4; 6; 8}",
+                                "D. {1; 2; 3; 4; 5; 7; 9}"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.18",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp A = {2; 4; 6; 9}, B = {1; 2; 3; 4}. Tập nào sau đây bằng tập A \\ B?",
+                            "options": [
+                                "A. {1; 2; 3; 5}",
+                                "B. {1; 2; 3; 4; 6; 9}",
+                                "C. {6; 9}",
+                                "D. ∅"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.19",
+                            "type": "multiple_choice",
+                            "question": "Cho các tập hợp A = {x∈ℤ : x² - 7x + 6 = 0}, B = {x∈ℝ : x < 4}. Khi đó:",
+                            "options": [
+                                "A. A∪B = A",
+                                "B. A∩B = A∪B",
+                                "C. A \\ B ⊂ A",
+                                "D. B \\ A = ∅"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.20",
+                            "type": "multiple_choice",
+                            "question": "Lớp 10A có 45 học sinh trong đó có 25 em học giỏi môn Toán, 23 em học giỏi môn Lý, 20 em học giỏi môn Hóa, 11 em học giỏi cả môn Toán và môn Lý, 8 em học giỏi cả môn Lý và môn Hóa, 9 em học giỏi cả môn Toán và môn Hóa. Hỏi lớp 10A có bao nhiêu bạn học giỏi cả ba môn Toán, Lý, Hóa, biết rằng mỗi học sinh trong lớp học giỏi ít nhất một trong 3 môn?",
+                            "options": [
+                                "A. 3",
+                                "B. 4",
+                                "C. 5",
+                                "D. 6"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.21",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp X = {x∈ℝ | 1 ≤ |x| ≤ 3} thì X được biểu diễn là hình nào sau đây (trên trục số)?",
+                            "options": [
+                                "A. (hình 1)",
+                                "B. (hình 2)",
+                                "C. (hình 3)",
+                                "D. (hình 4: [-3;-1] ∪ [1;3])"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.22",
+                            "type": "multiple_choice",
+                            "question": "Sử dụng các kí hiệu khoảng, đoạn để viết tập hợp A = {x∈ℝ | 4 ≤ x ≤ 9}:",
+                            "options": [
+                                "A. A = [4; 9].",
+                                "B. A = (4; 9].",
+                                "C. A = [4; 9).",
+                                "D. A = (4; 9)."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.23",
+                            "type": "multiple_choice",
+                            "question": "Cho tập hợp A = (-∞; -1] và tập B = (-2; +∞). Khi đó A ∪ B là:",
+                            "options": [
+                                "A. (-2; +∞)",
+                                "B. (-2; -1]",
+                                "C. ℝ (toàn bộ tập số thực)",
+                                "D. ∅"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.24",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = [-5; 3), B = (1; +∞). Khi đó A ∩ B là tập nào sau đây?",
+                            "options": [
+                                "A. (1; 3)",
+                                "B. (1; 3]",
+                                "C. [-5; +∞)",
+                                "D. [-5; 1]"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.25",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = (1; 5], B = (2; 7]. Tập hợp A \\ B là:",
+                            "options": [
+                                "A. (1; 2]",
+                                "B. (2; 5)",
+                                "C. (-1; 7]",
+                                "D. (-1; 2)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.26",
+                            "type": "multiple_choice",
+                            "question": "Cho các số thực a, b, c, d và a < b < c < d. Khẳng định nào sau đây là đúng?",
+                            "options": [
+                                "A. (a; c) ∩ (b; d) = (b; c)",
+                                "B. (a; c) ∩ (b; d) = (b; c]",
+                                "C. (a; c) ∩ [b; d) = [b; c)",
+                                "D. (a; c) ∪ [b; d) = (b; c)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.27",
+                            "type": "multiple_choice",
+                            "question": "Cho ba tập hợp A = [-2; 2], B = (1; 5], C = [0; 1). Khi đó tập (A \\ B) ∩ C là:",
+                            "options": [
+                                "A. {0; 1}",
+                                "B. [0; 1)",
+                                "C. (-2; 1)",
+                                "D. [-2; 5]"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.28",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập A = {x∈ℝ | x + 3 < 4 + 2x}, B = {x∈ℝ | 5x - 3 < 4x - 1}. Tất cả các số tự nhiên thuộc cả hai tập A và B là:",
+                            "options": [
+                                "A. 0 và 1.",
+                                "B. 1.",
+                                "C. 0.",
+                                "D. Không có."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.29",
+                            "type": "multiple_choice",
+                            "question": "Cho A = [-4; 7], B = (-∞; -2) ∪ (3; +∞). Khi đó A ∩ B:",
+                            "options": [
+                                "A. [-4; -2) ∪ (3; 7].",
+                                "B. (-4; -2) ∪ (3; 7).",
+                                "C. (-∞; 2] ∪ (3; +∞).",
+                                "D. (-∞; -2) ∪ [3; +∞)."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.30",
+                            "type": "multiple_choice",
+                            "question": "Cho A = (-∞; -2], B = [3; +∞), C = (0; 4). Khi đó tập (A ∪ B) ∩ C là:",
+                            "options": [
+                                "A. [3; 4).",
+                                "B. (-∞; -2] ∪ [3; +∞).",
+                                "C. [3; 4).",
+                                "D. (-∞; -2) ∪ [3; +∞)."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.31",
+                            "type": "multiple_choice",
+                            "question": "Cho A = {x∈ℝ : x + 2 ≥ 0}, B = {x∈ℝ : 5 - x ≥ 0}. Khi đó A ∩ B là:",
+                            "options": [
+                                "A. [-2; 5].",
+                                "B. [-2; 6].",
+                                "C. [-5; 2].",
+                                "D. (-2; +∞)."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.32",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = [-2; 7), B = (1; 9]. Tìm A ∪ B.",
+                            "options": [
+                                "A. (1; 7)",
+                                "B. [-2; 9]",
+                                "C. [-2; 1)",
+                                "D. (7; 9]"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.33",
+                            "type": "multiple_choice",
+                            "question": "Cho A = (-1; 5], B = (2; 7). Tìm A \\ B.",
+                            "options": [
+                                "A. (-1; 2]",
+                                "B. (2; 5]",
+                                "C. (-1; 7)",
+                                "D. (-1; 2)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.34",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = [-2; 3], B = (m; m+6). Điều kiện để A ⊂ B là:",
+                            "options": [
+                                "A. -3 ≤ m ≤ -2",
+                                "B. -3 < m < -2",
+                                "C. m < -3",
+                                "D. m ≥ -2"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.2.35",
+                            "type": "multiple_choice",
+                            "question": "Cho hai tập hợp A = [-3; -1] ∪ [2; 4], B = (m-1; m+2). Tìm m để A ∩ B ≠ ∅.",
+                            "options": [
+                                "A. m < 5 và m ≠ 0",
+                                "B. m > 5",
+                                "C. 1 ≤ m ≤ 3",
+                                "D. m > 0"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.2.36",
+                            "type": "true_false",
+                            "question": "Cho hai tập hợp A = {-2; -1; 0; 1; 2}, B = {-2; 0; 2; 4}. Khi đó:",
+                            "statements": [
+                                "a. A∩B = {-2; 0; 2}",
+                                "b. A∪B = {-2; -1; 1; 2; 4}",
+                                "c. A \\ B = {-1; 1}",
+                                "d. B \\ A = {4}"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.2.37",
+                            "type": "true_false",
+                            "question": "Cho các tập hợp sau A = {x∈ℤ | (2x - x²)(2x² - 3x - 2) = 0} và B = {n∈ℕ* | 3 < n² < 30}. Khi đó:",
+                            "statements": [
+                                "a. Tập hợp A có 3 phần tử",
+                                "b. Tập hợp B có 4 phần tử",
+                                "c. Tập hợp A∩B có 1 phần tử",
+                                "d. Tập hợp A∪B có 5 phần tử"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.38",
+                            "type": "true_false",
+                            "question": "Cho đoạn A = [-5; -3], B = (-3; 2). Khi đó:",
+                            "statements": [
+                                "a. A ∪ B = [-3; 2)",
+                                "b. A ∩ B = (-3; 1]",
+                                "c. A \\ B = [-5; -3]",
+                                "d. C(A ∪ B) = (-∞; -5) ∪ [1; +∞)"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.39",
+                            "type": "true_false",
+                            "question": "Cho hai tập hợp A và B biết A \\ B = {a; f}, A ∪ B = {a; b; c; d; e; f; g; h}, B \\ A = {b; g; h}. Vậy:",
+                            "statements": [
+                                "a. A = {a; c; d; e; f}",
+                                "b. B = {b; c; d; e; g; h}",
+                                "c. A ∩ B = {c; d; e}",
+                                "d. A ⊂ B"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.40",
+                            "type": "true_false",
+                            "question": "Cho các tập hợp sau: A các số nguyên tố nhỏ hơn 11; B = {x∈ℝ | 3x² - 4x + 1 = 0}; C = {x∈ℝ | (x²-5x+6)(2x+1) = 0}; D = {x∈ℤ | |x+1| < 2}. Vậy:",
+                            "statements": [
+                                "a. Tập hợp A có 4 phần tử",
+                                "b. Tập hợp B có 3 phần tử",
+                                "c. Tập hợp C có 3 phần tử",
+                                "d. Tập hợp D có 3 phần tử"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.2.41",
+                            "type": "true_false",
+                            "question": "Cho ba tập hợp A = {2; 5}, B = {5; x}, C = {x; y; 5}, biết A = B = C. Khi đó:",
+                            "statements": [
+                                "a. x = y = 2 thì A = B = C",
+                                "b. x = y = 3 thì A = B = C",
+                                "c. x = 2, y = 5 thì A = B = C",
+                                "d. x = 1, y = 3 thì A = B = C"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.42",
+                            "type": "true_false",
+                            "question": "Cho các tập hợp sau A = {x∈ℤ | x² - x - 6 = 0}; B = {x∈ℤ | x⁴ - 11x² + 18 = 0}; C = {x∈ℤ | (x²-3x-10)(5x³-6x²+x) = 0}; D = {x∈ℤ | -2 < 3x+7 ≤ 10}. Khi đó:",
+                            "statements": [
+                                "a. Tập hợp A có 2 phần tử",
+                                "b. Tập hợp B có 3 phần tử",
+                                "c. Tập hợp C có 2 phần tử",
+                                "d. Tập hợp D có 4 phần tử"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.2.43",
+                            "type": "true_false",
+                            "question": "Cho các tập hợp A = {x∈ℝ | x ≥ 2}; B = {x∈ℝ | -3 < x+1 ≤ 4}; C = {x∈ℝ | -2023 ≤ x-1 < 2022}; D = {x∈ℝ | 2x ≥ 7}. Khi đó:",
+                            "statements": [
+                                "a. A = [2; +∞)",
+                                "b. B = (-4; 2]",
+                                "c. C = [-2021; 2023)",
+                                "d. D = [7/2; +∞)"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.2.44",
+                            "type": "true_false",
+                            "question": "Cho tập A = {0; 1; 2; 3; 4; 5; a; c} và B = {-2; 1; 3; 4; 6; a; b; c}. Khi đó:",
+                            "statements": [
+                                "a. A ∪ B = {-2; 0; 1; 2; 6; a; b; c}",
+                                "b. A ∩ B = {1; 3; 4; a; c}",
+                                "c. A \\ B = {0; 2; 5}",
+                                "d. B \\ A = {6; b}"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.45",
+                            "type": "true_false",
+                            "question": "Lớp 10C6 có 18 học sinh tham gia câu lạc bộ bóng đá và 15 học sinh tham gia câu lạc bộ bóng rổ. Biết rằng có 10 học sinh tham gia cả hai câu lạc bộ. Khi đó:",
+                            "statements": [
+                                "a. Có 8 học sinh tham gia câu lạc bộ bóng đá và không tham gia câu lạc bộ bóng rổ?",
+                                "b. Có 23 học sinh tham gia ít nhất một trong hai câu lạc bộ?",
+                                "c. Biết lớp 10C6 có 45 học sinh. Có 25 học sinh không tham gia câu lạc bộ bóng đá?",
+                                "d. Biết lớp 10C6 có 45 học sinh. Có 24 học sinh không tham gia cả hai câu lạc bộ?"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.46",
+                            "type": "short_answer",
+                            "question": "Cho hai tập hợp: A = [m-3; m+2], B = (-3; 5) với m ∈ ℝ. Có bao nhiêu giá trị nguyên của m để A ⊂ B?",
+                            "answer": "2"
+                        },
+                        {
+                            "id": "1.2.47",
+                            "type": "short_answer",
+                            "question": "Cho tập hợp B = {x∈ℤ | x²+1 ≤ 2}. Tập hợp B có bao nhiêu tập con gồm 2 phần tử?",
+                            "answer": "3"
+                        },
+                        {
+                            "id": "1.2.48",
+                            "type": "short_answer",
+                            "question": "Cho hai tập hợp A = [m+1; 2m-1], B = (0; 6). Có bao nhiêu giá trị m nguyên để A ⊂ B?",
+                            "answer": "1"
+                        },
+                        {
+                            "id": "1.2.49",
+                            "type": "short_answer",
+                            "question": "Cho hai tập hợp: A = [m-3; m+2], B = (-3; 5) với m ∈ ℝ. Có bao nhiêu giá trị nguyên của m để A ∩ B khác tập rỗng?",
+                            "answer": "13"
+                        },
+                        {
+                            "id": "1.2.50",
+                            "type": "short_answer",
+                            "question": "Một lớp học có 25 học sinh chơi bóng đá, 23 học sinh chơi bóng bàn, 14 học sinh chơi cả bóng đá và bóng bàn, 6 học sinh không chơi môn nào. Tìm số học sinh chỉ chơi một môn thể thao?",
+                            "answer": "20"
+                        },
+                        {
+                            "id": "1.2.51",
+                            "type": "short_answer",
+                            "question": "Cho A = [m-3; (m+2)/4], B = (-∞; -1) ∪ [2; +∞). Tính tổng các giá trị nguyên m để A ∩ B = ∅.",
+                            "answer": "9"
+                        },
+                        {
+                            "id": "1.2.52",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu giá trị nguyên m để trong tập hợp A = (m-1; m] ∩ (3; 5) có đúng một số tự nhiên?",
+                            "answer": "11"
+                        },
+                        {
+                            "id": "1.2.53",
+                            "type": "short_answer",
+                            "question": "Cho hai tập hợp A = (m-1; 5), B = (3; +∞), m ∈ ℝ. Tính tổng các giá trị nguyên m để A \\ B = ∅.",
+                            "answer": "9"
+                        },
+                        {
+                            "id": "1.2.54",
+                            "type": "short_answer",
+                            "question": "Cho các tập hợp A = {-2; 1; 2}; B = {x∈ℕ* | x²(x²-4)(x³-4x²+3x) = 0} và C = {x∈ℝ | x²-(2m+1)x+m²+m = 0}. Xác định số giá trị m để (A ∪ C) = B.",
+                            "answer": "1"
+                        },
+                        {
+                            "id": "1.2.55",
+                            "type": "short_answer",
+                            "question": "Một lớp 10C14 có 45 học sinh chuẩn bị cho hội diễn văn nghệ chào mừng ngày nhà giáo Việt Nam 20/11. Trong danh sách đăng kí tham gia tiết mục nhảy Flashmob và tiết mục hát, có 35 học sinh tham gia tiết mục nhảy Flashmob, 10 học sinh tham gia cả hai tiết mục. Hỏi có bao nhiêu học sinh trong lớp tham gia tiết mục hát? Biết rằng lớp có 4 bạn bị khuyết tật hòa nhập nên không tham gia tiết mục nào.",
+                            "answer": "16"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
