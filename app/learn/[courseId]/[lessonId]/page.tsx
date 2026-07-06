@@ -5,7 +5,6 @@ import { useParams, useRouter } from 'next/navigation';
 import { CourseService, Course, Lesson, QuizQuestion } from '@/services/courseService';
 import { useProgressStore } from '@/store/useProgressStore';
 import SidebarPlaylist from '@/features/learn/sidebar-playlist';
-import NotesTab from '@/features/learn/notes-tab';
 import DiscussionTab from '@/features/learn/discussion-tab';
 import { BookOpen, FileText, Settings, ShieldAlert, Sparkles, Bookmark, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
@@ -19,7 +18,7 @@ export default function LearnPage() {
 
   const { enrolledCourses, completedLessons, completeLesson, toggleBookmark, bookmarks } = useProgressStore();
 
-  const [activeTab, setActiveTab] = React.useState<'docs' | 'transcript' | 'notes' | 'discussion'>('docs');
+  const [activeTab, setActiveTab] = React.useState<'docs' | 'discussion'>('docs');
   const [userAnswers, setUserAnswers] = React.useState<{ [key: string]: number }>({});
   const [currentQuestionIdx, setCurrentQuestionIdx] = React.useState(0);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
@@ -385,8 +384,6 @@ export default function LearnPage() {
           <div className="flex border-b border-border/60 overflow-x-auto scrollbar-none gap-2">
             {[
               { id: 'docs', label: 'Tài liệu học' },
-              { id: 'transcript', label: 'Bản dịch thoại' },
-              { id: 'notes', label: 'Ghi chú Markdown' },
               { id: 'discussion', label: 'Hỏi đáp & Thảo luận' }
             ].map((tab) => (
               <button
@@ -406,26 +403,61 @@ export default function LearnPage() {
           {/* Tab contents */}
           <div className="animate-in fade-in duration-200">
             {activeTab === 'docs' && (
-              <div className="space-y-4">
-                <div className="prose prose-sm dark:prose-invert max-w-none text-xs sm:text-sm text-muted-foreground leading-relaxed whitespace-pre-line bg-card/40 rounded-2xl border border-border p-5">
-                  {lesson.content}
+              <div className="space-y-6">
+                {/* Main Content Card */}
+                <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 -mr-12 -mt-12 h-24 w-24 rounded-full bg-primary/5 blur-xl pointer-events-none" />
+                  
+                  <div className="flex items-center gap-2 border-b border-border/50 pb-4 mb-2">
+                    <div className="h-9 w-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                      <BookOpen className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-foreground">Nội dung Tóm tắt lý thuyết</h4>
+                      <p className="text-[10px] text-muted-foreground">Tài liệu học tập chính thức do thầy Bùi Văn Công biên soạn</p>
+                    </div>
+                  </div>
+
+                  <div className="prose prose-sm dark:prose-invert max-w-none text-xs sm:text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {lesson.content}
+                  </div>
                 </div>
-                {/* Resources */}
+
+                {/* Resources Card */}
                 {lesson.resources.length > 0 && (
-                  <div className="space-y-2">
-                    <h4 className="text-xs font-bold text-foreground">Tài liệu đính kèm:</h4>
-                    <div className="flex flex-col gap-2">
+                  <div className="rounded-3xl border border-border bg-card p-6 shadow-sm space-y-4">
+                    <div className="flex items-center gap-2 border-b border-border/50 pb-3">
+                      <div className="h-9 w-9 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-bold text-foreground">Tài liệu đính kèm (PDF)</h4>
+                        <p className="text-[10px] text-muted-foreground">Bao gồm lý thuyết đầy đủ, bài tập tự luyện và đáp án giải chi tiết</p>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {lesson.resources.map((res, i) => (
-                        <div key={i} className="flex items-center justify-between rounded-xl border border-border bg-card p-3 text-xs">
-                          <span className="font-semibold text-foreground flex items-center gap-1.5">
-                            <FileText className="h-4 w-4 text-primary" />
-                            {res.name}
-                          </span>
+                        <div 
+                          key={i} 
+                          className="flex items-center justify-between rounded-2xl border border-border bg-card/60 p-4 hover:border-primary/30 hover:shadow-md transition-all group"
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className="h-10 w-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-500 font-bold shrink-0 border border-red-500/20 group-hover:bg-red-500 group-hover:text-white transition-all text-xs">
+                              PDF
+                            </div>
+                            <div className="min-w-0">
+                              <span className="font-bold text-xs text-foreground truncate block group-hover:text-primary transition-colors">
+                                {res.name}
+                              </span>
+                              <span className="text-[10px] text-muted-foreground">Dung lượng: {res.size}</span>
+                            </div>
+                          </div>
                           <a
                             href={res.url}
-                            className="rounded-lg bg-primary/10 border border-primary/20 px-3 py-1 text-2xs font-bold text-primary hover:bg-primary hover:text-white transition-all"
+                            className="rounded-xl bg-primary text-white hover:bg-primary/95 px-4 py-2 text-3xs font-extrabold shadow shadow-primary/10 active:scale-95 transition-all flex items-center gap-1.5"
                           >
-                            Tải về ({res.size})
+                            Tải tài liệu
                           </a>
                         </div>
                       ))}
@@ -433,21 +465,6 @@ export default function LearnPage() {
                   </div>
                 )}
               </div>
-            )}
-
-            {activeTab === 'transcript' && (
-              <div className="rounded-2xl border border-border bg-card/40 p-5 text-xs sm:text-sm text-muted-foreground leading-relaxed whitespace-pre-line italic">
-                {lesson.transcript || 'Không có bản dịch thoại nào cho bài học này.'}
-              </div>
-            )}
-
-            {activeTab === 'notes' && (
-              <NotesTab
-                courseId={courseId}
-                lessonId={lessonId}
-                currentVideoTime={0}
-                onSeek={() => {}}
-              />
             )}
 
             {activeTab === 'discussion' && (
