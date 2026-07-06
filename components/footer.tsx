@@ -49,8 +49,9 @@ export default function Footer() {
                 alt="iSinhvien Logo" 
                 className="h-7 w-auto object-contain rounded-lg shadow shadow-primary/5"
               />
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-lg font-bold tracking-tight text-transparent">
-                iSinhvien
+              <span className="text-lg font-black tracking-tight select-none">
+                <span className="text-[#2F80ED]">i</span>
+                <span className="text-[#F2994A]">Sinhvien</span>
               </span>
             </Link>
             <p className="text-xs text-muted-foreground leading-relaxed">

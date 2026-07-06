@@ -90,8 +90,9 @@ export default function Navbar() {
                 alt="iSinhvien Logo" 
                 className="h-9 w-auto object-contain rounded-xl shadow shadow-primary/10 transition-transform group-hover:scale-105"
               />
-              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
-                iSinhvien
+              <span className="text-xl font-black tracking-tight select-none">
+                <span className="text-[#2F80ED]">i</span>
+                <span className="text-[#F2994A]">Sinhvien</span>
               </span>
             </Link>
           </div>
