@@ -118,6 +118,35 @@ export default function AdminPage() {
     }
   };
 
+  const handleClearRegistration = async (userId: string, name: string) => {
+    if (confirm(`Bạn có chắc chắn muốn xóa toàn bộ gói học đã đăng ký của học sinh "${name}"? Học sinh này sẽ trở lại trạng thái chưa mua.`)) {
+      try {
+        const res = await fetch(`/api/admin/registrations?userId=${userId}`, {
+          method: 'DELETE'
+        });
+        const data = await res.json();
+        if (data.success) {
+          setSuccessMsg(`Đã xóa tất cả gói học đã mua của "${name}" thành công!`);
+          setTimeout(() => setSuccessMsg(''), 3000);
+          
+          // Reload registrations list
+          setRegLoading(true);
+          const r = await fetch('/api/admin/registrations');
+          const d = await r.json();
+          if (d.registrations) {
+            setRegistrations(d.registrations);
+          }
+          setRegLoading(false);
+        } else {
+          alert(`Lỗi: ${data.error || 'Không thể xóa đăng ký'}`);
+        }
+      } catch (err) {
+        console.error("Error deleting registration:", err);
+        alert("Có lỗi xảy ra khi thực hiện yêu cầu.");
+      }
+    }
+  };
+
   if (!isClient) return null;
 
   // Authorization Check
@@ -1059,6 +1088,7 @@ export default function AdminPage() {
                             <th className="px-6 py-4">Số điện thoại</th>
                             <th className="px-6 py-4">Gói học sở hữu</th>
                             <th className="px-6 py-4">Ngày đăng ký</th>
+                            <th className="px-6 py-4 text-right">Thao tác</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-border/60 bg-card/60 text-foreground">
@@ -1087,6 +1117,15 @@ export default function AdminPage() {
                                 <span className="text-2xs font-semibold text-muted-foreground bg-muted px-2.5 py-1 rounded-lg border border-border">
                                   {new Date(reg.createdAt).toLocaleString('vi-VN')}
                                 </span>
+                              </td>
+                              <td className="px-6 py-4 text-right">
+                                <button
+                                  onClick={() => handleClearRegistration(reg.userId, reg.name)}
+                                  className="rounded p-1.5 hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors inline-flex items-center justify-center"
+                                  title="Xóa tất cả các gói học của học viên này"
+                                >
+                                  <Trash2 className="h-4 w-4" />
+                                </button>
                               </td>
                             </tr>
                           ))}

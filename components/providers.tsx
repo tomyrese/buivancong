@@ -48,7 +48,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
         
         // Sync Zustand store only if state is different to prevent loops
         const currentAuthState = useAuthStore.getState();
-        if (!currentAuthState.isAuthenticated || currentAuthState.user?.id !== userProfile.id) {
+        const prevUser = currentAuthState.user;
+        const hasChanged = 
+          !currentAuthState.isAuthenticated || 
+          !prevUser || 
+          prevUser.id !== userProfile.id || 
+          prevUser.phone !== userProfile.phone || 
+          prevUser.name !== userProfile.name || 
+          JSON.stringify(prevUser.purchasedPackages) !== JSON.stringify(userProfile.purchasedPackages);
+
+        if (hasChanged) {
           useAuthStore.setState({ user: userProfile, isAuthenticated: true });
           // Load user-specific progress from localStorage first
           useProgressStore.persist.rehydrate();

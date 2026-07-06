@@ -77,3 +77,61 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
   }
 }
+
+export async function DELETE(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('userId');
+    if (!userId) {
+      return NextResponse.json({ error: 'Missing userId parameter' }, { status: 400 });
+    }
+
+    const supabaseUrl = 
+      process.env.NEXT_PUBLIC_SUPABASE_URL || 
+      process.env.SUPABASE_URL || 
+      'https://placeholder-project.supabase.co';
+
+    const supabaseServiceKey = 
+      process.env.SUPABASE_SECRET_KEY || 
+      'placeholder-key';
+
+    const isSupabaseConfigured = 
+      supabaseUrl && 
+      supabaseServiceKey && 
+      !supabaseUrl.includes('placeholder') && 
+      !supabaseServiceKey.includes('placeholder');
+
+    if (!isSupabaseConfigured) {
+      return NextResponse.json({ success: true, message: 'Mock registration cleared' });
+    }
+
+    const adminSupabase = createClient(supabaseUrl, supabaseServiceKey, {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false
+      }
+    });
+
+    // Reset user's purchased packages and enrolled courses
+    // First, fetch the current metadata to avoid unsetting name, phone, etc.
+    const { data: { user }, error: getError } = await adminSupabase.auth.admin.getUserById(userId);
+    if (getError) throw getError;
+
+    const currentMetadata = user?.user_metadata || {};
+
+    const { error: updateError } = await adminSupabase.auth.admin.updateUserById(userId, {
+      user_metadata: {
+        ...currentMetadata,
+        purchased_packages: [],
+        enrolled_courses: []
+      }
+    });
+
+    if (updateError) throw updateError;
+
+    return NextResponse.json({ success: true, message: 'Registration cleared successfully' });
+  } catch (error: any) {
+    console.error('Error deleting registration:', error);
+    return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });
+  }
+}
