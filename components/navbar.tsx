@@ -83,57 +83,60 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2 group">
-              <Image 
-                src={logoImg} 
-                alt="iSinhvien Logo" 
-                className="h-9 w-auto object-contain rounded-xl shadow shadow-primary/10 transition-transform group-hover:scale-105"
-              />
-              <span className="text-xl font-black tracking-tight select-none">
-                <span className="text-[#2F80ED]">i</span>
-                <span className="text-[#F2994A]">Sinhvien</span>
-              </span>
-            </Link>
-          </div>
+          {/* Left group: Logo and Desktop Navigation */}
+          <div className="flex items-center gap-10">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center gap-2 group">
+                <Image 
+                  src={logoImg} 
+                  alt="iSinhvien Logo" 
+                  className="h-9 w-auto object-contain rounded-xl shadow shadow-primary/10 transition-transform group-hover:scale-105"
+                />
+                <span className="text-xl font-black tracking-tight select-none">
+                  <span className="text-[#2F80ED]">i</span>
+                  <span className="text-[#F2994A]">Sinhvien</span>
+                </span>
+              </Link>
+            </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => {
-              const Icon = link.icon;
-              const isActive = link.href === '/' 
-                ? pathname === '/' 
-                : pathname === link.href || pathname.startsWith(link.href + '/');
-              return (
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => {
+                const Icon = link.icon;
+                const isActive = link.href === '/' 
+                  ? pathname === '/' 
+                  : pathname === link.href || pathname.startsWith(link.href + '/');
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-primary",
+                      isActive ? "text-primary font-semibold" : "text-muted-foreground"
+                    )}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {link.name}
+                  </Link>
+                );
+              })}
+              
+              {user?.role === 'admin' && (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  href="/admin"
                   className={cn(
-                    "flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-primary",
-                    isActive ? "text-primary font-semibold" : "text-muted-foreground"
+                    "flex items-center gap-1.5 text-sm font-medium transition-colors",
+                    pathname === '/admin' 
+                      ? "text-amber-500 font-bold" 
+                      : "text-muted-foreground hover:text-amber-500"
                   )}
                 >
-                  <Icon className="h-4 w-4" />
-                  {link.name}
+                  <ShieldCheck className="h-4 w-4" />
+                  Quản lý
                 </Link>
-              );
-            })}
-            
-            {user?.role === 'admin' && (
-              <Link
-                href="/admin"
-                className={cn(
-                  "flex items-center gap-1.5 text-sm font-medium transition-colors",
-                  pathname === '/admin' 
-                    ? "text-amber-500 font-bold" 
-                    : "text-muted-foreground hover:text-amber-500"
-                )}
-              >
-                <ShieldCheck className="h-4 w-4" />
-                Quản lý
-              </Link>
-            )}
+              )}
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-4">

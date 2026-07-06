@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Play, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
+import gv07Img from '@/src/imgs/GV07.png';
 
 export default function Hero() {
   return (
@@ -77,63 +79,20 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end"
+            className="lg:col-span-5 flex justify-center lg:justify-end animate-float"
           >
-            <div className="relative w-full max-w-[420px] animate-float">
-              {/* Glassmorphism Card Stack */}
-              <div className="glass-card rounded-3xl p-6 shadow-2xl relative z-10 overflow-hidden">
-                <div className="flex items-center justify-between border-b border-border pb-4 mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white">
-                      <GraduationCap className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-foreground">Tiến độ học tập</h4>
-                      <p className="text-2xs text-muted-foreground">Cập nhật 2 phút trước</p>
-                    </div>
-                  </div>
-                  <span className="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-2xs font-semibold text-emerald-500">
-                    Đang học
-                  </span>
-                </div>
-                
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-semibold mb-1">
-                      <span className="text-foreground">Suy luận Khoa học</span>
-                      <span className="text-primary">75%</span>
-                    </div>
-                    <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
-                      <div className="h-full rounded-full bg-primary" style={{ width: '75%' }} />
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center justify-between text-xs font-semibold mb-1">
-                      <span className="text-foreground">Toán học lớp 12</span>
-                      <span className="text-secondary">25%</span>
-                    </div>
-                    <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
-                      <div className="h-full rounded-full bg-secondary" style={{ width: '25%' }} />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between rounded-2xl bg-muted/50 p-3 text-xs">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-2.5 w-2.5 rounded-full bg-primary animate-ping" />
-                    <span className="font-medium text-muted-foreground">Bài học: Vật lý nhiệt</span>
-                  </div>
-                  <Link href="/learn/physics-12/l-phys12-1-1" className="flex items-center gap-1 font-bold text-primary hover:underline">
-                    Học tiếp
-                    <Play className="h-3 w-3 fill-primary" />
-                  </Link>
-                </div>
-              </div>
+            <div className="relative w-full max-w-[380px] flex items-center justify-center">
+              {/* Teacher Image with 3D drop shadow */}
+              <Image 
+                src={gv07Img} 
+                alt="Teacher Model" 
+                priority
+                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_40px_rgba(0,0,0,0.35)] filter dark:drop-shadow-[0_30px_40px_rgba(255,255,255,0.06)] transform hover:scale-[1.03] transition-transform duration-500 z-10"
+              />
 
               {/* Decorative Blur Orbs inside image container */}
-              <div className="absolute -top-6 -left-6 h-12 w-12 rounded-full bg-accent/30 blur-md" />
-              <div className="absolute -bottom-6 -right-6 h-20 w-20 rounded-full bg-secondary/30 blur-lg" />
+              <div className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-accent/20 blur-md" />
+              <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-secondary/20 blur-lg" />
             </div>
           </motion.div>
         </div>
