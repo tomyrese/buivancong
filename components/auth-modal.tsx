@@ -80,9 +80,10 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
         setSuccess('Đăng ký tài khoản thành công! Bắt đầu học ngay.');
       }
 
-      // Close modal on success after delay
+      // Close modal on success after delay and refresh page to reset store state cleanly
       setTimeout(() => {
         onClose();
+        window.location.reload();
       }, 1000);
     } catch (err) {
       console.error(err);

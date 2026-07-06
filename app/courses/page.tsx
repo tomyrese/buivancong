@@ -116,7 +116,6 @@ function CoursesContent() {
         onSearchChange={setSearch}
         filters={filters}
         onFilterChange={handleFilterChange}
-        onOpenAI={() => setIsAIModalOpen(true)}
         recentSearches={recentSearches}
         onAddRecent={handleAddRecentSearch}
         onClearRecent={handleClearRecentSearches}

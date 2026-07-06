@@ -179,6 +179,7 @@ export default function Navbar() {
                           onClick={() => {
                             logout();
                             setShowProfileMenu(false);
+                            window.location.href = '/';
                           }}
                           className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-destructive hover:bg-destructive/10 transition-colors text-left"
                         >
@@ -293,6 +294,7 @@ export default function Navbar() {
                       onClick={() => {
                         logout();
                         setIsOpen(false);
+                        window.location.href = '/';
                       }}
                       className="flex items-center justify-center gap-1.5 rounded-xl bg-destructive/10 py-2 text-xs font-semibold text-destructive hover:bg-destructive/20 transition-colors"
                     >

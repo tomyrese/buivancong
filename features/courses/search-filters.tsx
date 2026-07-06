@@ -15,7 +15,6 @@ interface SearchFiltersProps {
     sortBy: 'newest' | 'popular' | 'rating';
   };
   onFilterChange: (updates: Partial<SearchFiltersProps['filters']>) => void;
-  onOpenAI: () => void;
   recentSearches: string[];
   onAddRecent: (term: string) => void;
   onClearRecent: () => void;
@@ -26,7 +25,6 @@ export default function SearchFilters({
   onSearchChange,
   filters,
   onFilterChange,
-  onOpenAI,
   recentSearches,
   onAddRecent,
   onClearRecent
@@ -53,7 +51,6 @@ export default function SearchFilters({
       {/* Top Search bar */}
       <form onSubmit={handleSearchSubmit} className="flex gap-3">
         <div className="relative flex-1">
-          <Search className="absolute left-4 top-3.5 h-5 w-5 text-muted-foreground" />
           <input
             type="text"
             value={search}
@@ -61,26 +58,17 @@ export default function SearchFilters({
             placeholder="Tìm tên khóa học, mô tả giảng dạy..."
             className="w-full rounded-2xl border border-border bg-card/50 backdrop-blur-sm pl-12 pr-10 py-3.5 text-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary shadow-sm"
           />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
           {search && (
             <button
               type="button"
               onClick={() => onSearchChange('')}
-              className="absolute right-3 top-3.5 rounded-full p-0.5 hover:bg-muted text-muted-foreground hover:text-foreground"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-0.5 hover:bg-muted text-muted-foreground hover:text-foreground"
             >
               <X className="h-4 w-4" />
             </button>
           )}
         </div>
-
-        {/* AI Consultant button */}
-        <button
-          type="button"
-          onClick={onOpenAI}
-          className="flex items-center gap-1.5 rounded-2xl bg-secondary/10 px-5 text-sm font-semibold text-secondary hover:bg-secondary/20 transition-all border border-secondary/20 shadow-sm shrink-0"
-        >
-          <Sparkles className="h-4 w-4 text-secondary animate-pulse" />
-          <span className="hidden sm:inline">Tư vấn AI</span>
-        </button>
 
         {/* Advanced filter toggle button */}
         <button
