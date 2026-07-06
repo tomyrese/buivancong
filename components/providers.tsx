@@ -30,7 +30,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (session?.user) {
         const email = session.user.email || '';
-        const isAdmin = email === 'admin@isinhvien.vn';
+        const isAdmin = email === 'admin@istudent.vn';
         const userProfile: User = {
           id: session.user.id,
           name: session.user.user_metadata?.name || 'Học Viên',

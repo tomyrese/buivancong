@@ -13,17 +13,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "iSinhvien - Nền tảng học tập trực tuyến miễn phí",
-  description: "Trực quan hóa lộ trình học của bạn. Khám phá các khóa học lập trình, trí tuệ nhân tạo, thiết kế UI/UX chất lượng cao miễn phí.",
-  keywords: "isinhvien, hoc truc tuyen, lap trinh mien phi, nextjs, react, ui ux design",
-  authors: [{ name: "iSinhvien Team" }],
+  title: "iStudent - Nền tảng luyện thi ĐGNL chất lượng cao",
+  description: "Trực quan hóa lộ trình học của bạn. Ôn thi Đánh giá Năng lực cùng Thầy Bùi Văn Công.",
+  keywords: "istudent, hoc truc tuyen, luyen thi dgnl, thuy bui van cong, toan logic",
+  authors: [{ name: "iStudent Team" }],
   openGraph: {
-    title: "iSinhvien - Nền tảng học tập trực tuyến miễn phí",
-    description: "Khám phá các khóa học lập trình, trí tuệ nhân tạo, thiết kế UI/UX chất lượng cao miễn phí.",
+    title: "iStudent - Nền tảng luyện thi ĐGNL chất lượng cao",
+    description: "Ôn thi Đánh giá Năng lực cùng Thầy Bùi Văn Công.",
     type: "website",
     locale: "vi_VN",
-    url: "https://isinhvien.vn",
-    siteName: "iSinhvien",
+    url: "https://istudent.vn",
+    siteName: "iStudent",
   },
 };
 

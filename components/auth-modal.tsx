@@ -159,7 +159,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
         if (error) throw error;
       } else {
         await new Promise((resolve) => setTimeout(resolve, 800));
-        await login('hocsinh.gmail@isinhvien.vn', '123456');
+        await login('hocsinh.gmail@istudent.vn', '123456');
         setSuccess('Đăng nhập bằng Google thành công! Chào mừng bạn.');
         setTimeout(() => {
           onClose();

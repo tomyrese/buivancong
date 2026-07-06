@@ -70,7 +70,7 @@ export default function Navbar() {
   ];
 
   const handleMockLogin = async () => {
-    await login('student@isinhvien.vn');
+    await login('student@istudent.vn');
   };
 
   return (

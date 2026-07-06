@@ -47,7 +47,7 @@ export const useAuthStore = create<AuthState>()(
           if (error) throw error;
           
           if (data.user) {
-            const isAdmin = data.user.email === 'admin@isinhvien.vn';
+            const isAdmin = data.user.email === 'admin@istudent.vn';
             const userProfile: User = {
               id: data.user.id,
               name: data.user.user_metadata?.name || 'Học Viên',
@@ -67,12 +67,12 @@ export const useAuthStore = create<AuthState>()(
           return false;
         } else {
           // Fallback to local mock authentication
-          const isAdmin = email === 'admin@isinhvien.vn';
+          const isAdmin = email === 'admin@istudent.vn';
           const mockUser: User = isAdmin
             ? {
                 id: 'u-admin',
                 name: 'iSinhvien Admin',
-                email: 'admin@isinhvien.vn',
+                email: 'admin@istudent.vn',
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
                 role: 'admin',
                 xp: 9999,
@@ -83,7 +83,7 @@ export const useAuthStore = create<AuthState>()(
             : {
                 id: 'u-student',
                 name: 'Học Viên Chăm Chỉ',
-                email: email || 'student@isinhvien.vn',
+                email: email || 'student@istudent.vn',
                 avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
                 role: 'student',
                 xp: 350,

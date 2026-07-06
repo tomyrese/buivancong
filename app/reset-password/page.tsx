@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
+import { useAuthStore } from '@/store/useAuthStore';
 import { Lock, ArrowRight, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function ResetPasswordPage() {
@@ -12,6 +13,19 @@ export default function ResetPasswordPage() {
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState('');
   const [success, setSuccess] = React.useState('');
+  const hasReset = React.useRef(false);
+
+  React.useEffect(() => {
+    // If they leave or navigate away from reset-password page without completing success, sign them out!
+    return () => {
+      if (!hasReset.current) {
+        supabase.auth.signOut().then(() => {
+          const { logout } = useAuthStore.getState();
+          logout();
+        });
+      }
+    };
+  }, []);
 
   const validateForm = () => {
     if (!password.trim() || !confirmPassword.trim()) {
@@ -55,6 +69,7 @@ export default function ResetPasswordPage() {
         setSuccess('[Giả lập] Cập nhật mật khẩu thành công! Đang chuyển hướng...');
       }
 
+      hasReset.current = true;
       setTimeout(() => {
         router.push('/');
       }, 2000);
