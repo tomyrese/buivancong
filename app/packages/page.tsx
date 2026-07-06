@@ -17,7 +17,8 @@ import {
   X,
   Copy,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  ArrowUpCircle
 } from 'lucide-react';
 import Link from 'next/link';
 import { useAuthStore } from '@/store/useAuthStore';
@@ -40,7 +41,8 @@ interface Package {
 const packageCodeMap: Record<string, string> = {
   'combo-toan-logic': 'CBTOAN',
   'combo-khoa-hoc': 'CBKH',
-  'combo-toan-dien': 'CBDN'
+  'combo-toan-dien': 'CBDN',
+  'combo-nang-cap': 'CBNGC'
 };
 
 export default function PackagesPage() {
@@ -65,7 +67,13 @@ export default function PackagesPage() {
     setTimeout(() => setCopiedText(''), 2000);
   };
 
-  const packages: Package[] = [
+  const hasLogic = user?.purchasedPackages?.includes('combo-toan-logic');
+  const hasKhoaHoc = user?.purchasedPackages?.includes('combo-khoa-hoc');
+  const hasToanDien = user?.purchasedPackages?.includes('combo-toan-dien');
+
+  const showUpgrade = (hasLogic || hasKhoaHoc) && !hasToanDien;
+
+  const basePackages: Package[] = [
     {
       id: 'combo-toan-logic',
       name: 'Combo Toán học & Tư duy Logic',
@@ -117,6 +125,33 @@ export default function PackagesPage() {
       ]
     }
   ];
+
+  const packages = [...basePackages];
+
+  if (showUpgrade) {
+    const originalPrice = hasLogic && hasKhoaHoc 
+      ? 100000 
+      : hasLogic 
+      ? 800000 
+      : 400000;
+
+    packages.push({
+      id: 'combo-nang-cap',
+      name: 'Nâng cấp Combo Toàn Diện',
+      price: 5000, // 5k test price
+      originalPrice: originalPrice,
+      badge: 'Khuyên dùng',
+      description: 'Đặc quyền nâng cấp thẳng lên gói Toàn Diện 9 môn học với mức học phí đã khấu trừ combo cũ.',
+      icon: ArrowUpCircle,
+      color: 'from-fuchsia-600 via-pink-600 to-rose-600',
+      features: [
+        'Mở khóa trọn bộ 9 môn học ôn thi ĐGNL',
+        'Đã trừ đi học phí của các gói bạn đang sở hữu',
+        'Tặng sách ôn thi ĐGNL Thầy Bùi Văn Công',
+        'Đặc quyền sửa lỗi bài tập, tư vấn lộ trình riêng 1-1'
+      ]
+    });
+  }
 
   const handleCheckoutOpen = (pkg: Package) => {
     if (!isAuthenticated) {
@@ -272,6 +307,10 @@ export default function PackagesPage() {
         {packages.map((pkg) => {
           const PkgIcon = pkg.icon;
           const isBest = pkg.badge !== undefined;
+          const isPurchased = 
+            user?.purchasedPackages?.includes(pkg.id) || 
+            (pkg.id !== 'combo-toan-dien' && user?.purchasedPackages?.includes('combo-toan-dien'));
+
           return (
             <div 
               key={pkg.id} 
@@ -322,17 +361,27 @@ export default function PackagesPage() {
               </div>
 
               {/* Buy Button */}
-              <button
-                onClick={() => handleCheckoutOpen(pkg)}
-                className={`w-full flex items-center justify-center gap-1.5 rounded-2xl py-3.5 text-xs font-extrabold transition-all active:scale-[0.98] mt-8 ${
-                  isBest
-                    ? 'bg-primary text-white hover:bg-primary/95 shadow-md shadow-primary/25'
-                    : 'bg-muted text-foreground hover:bg-muted/80 border border-border/80'
-                }`}
-              >
-                Đăng ký ngay
-                <ArrowRight className="h-4 w-4" />
-              </button>
+              {isPurchased ? (
+                <button
+                  disabled={true}
+                  className="w-full flex items-center justify-center gap-1.5 rounded-2xl py-3.5 text-xs font-extrabold bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 cursor-not-allowed mt-8 animate-in fade-in duration-300 animate-pulse"
+                >
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                  Đã đăng ký
+                </button>
+              ) : (
+                <button
+                  onClick={() => handleCheckoutOpen(pkg)}
+                  className={`w-full flex items-center justify-center gap-1.5 rounded-2xl py-3.5 text-xs font-extrabold transition-all active:scale-[0.98] mt-8 ${
+                    isBest
+                      ? 'bg-primary text-white hover:bg-primary/95 shadow-md shadow-primary/25'
+                      : 'bg-muted text-foreground hover:bg-muted/80 border border-border/80'
+                  }`}
+                >
+                  Đăng ký ngay
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              )}
             </div>
           );
         })}

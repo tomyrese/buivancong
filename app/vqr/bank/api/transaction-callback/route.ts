@@ -35,6 +35,13 @@ const PACKAGE_MAPPING: Record<string, { id: string; courses: string[] }> = {
       'math-10', 'math-11', 'math-12',
       'physics-12', 'biology-12', 'chemistry-12', 'geography-12', 'history-12', 'economy-law-12'
     ]
+  },
+  CBNGC: {
+    id: 'combo-toan-dien',
+    courses: [
+      'math-10', 'math-11', 'math-12',
+      'physics-12', 'biology-12', 'chemistry-12', 'geography-12', 'history-12', 'economy-law-12'
+    ]
   }
 };
 

@@ -14,6 +14,7 @@ export interface User {
   streak: number;
   joinedAt: string;
   avatarBorder?: string;
+  purchasedPackages?: string[];
 }
 
 interface AuthState {
@@ -60,6 +61,7 @@ export const useAuthStore = create<AuthState>()(
               streak: data.user.user_metadata?.streak || 1,
               joinedAt: data.user.created_at,
               avatarBorder: data.user.user_metadata?.avatarBorder || undefined,
+              purchasedPackages: data.user.user_metadata?.purchased_packages || [],
             };
             set({ user: userProfile, isAuthenticated: true });
             return true;
@@ -79,6 +81,7 @@ export const useAuthStore = create<AuthState>()(
                 level: 99,
                 streak: 15,
                 joinedAt: '2026-01-01T00:00:00Z',
+                purchasedPackages: ['combo-toan-dien'],
               }
             : {
                 id: 'u-student',
@@ -90,6 +93,7 @@ export const useAuthStore = create<AuthState>()(
                 level: 2,
                 streak: 4,
                 joinedAt: '2026-05-01T08:00:00Z',
+                purchasedPackages: [],
               };
           set({ user: mockUser, isAuthenticated: true });
           return true;
@@ -125,6 +129,7 @@ export const useAuthStore = create<AuthState>()(
               level: 1,
               streak: 1,
               joinedAt: data.user.created_at,
+              purchasedPackages: [],
             };
             set({ user: userProfile, isAuthenticated: true });
             return true;

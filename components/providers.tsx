@@ -43,6 +43,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           streak: session.user.user_metadata?.streak || 1,
           joinedAt: session.user.created_at,
           avatarBorder: session.user.user_metadata?.avatarBorder || undefined,
+          purchasedPackages: session.user.user_metadata?.purchased_packages || [],
         };
         
         // Sync Zustand store only if state is different to prevent loops
