@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import logoImg from '@/src/imgs/logo.png';
@@ -27,6 +27,7 @@ import AuthModal from './auth-modal';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, setTheme } = useTheme();
   const { user, logout, login } = useAuthStore();
   
@@ -192,7 +193,7 @@ export default function Navbar() {
                           onClick={() => {
                             logout();
                             setShowProfileMenu(false);
-                            window.location.href = '/';
+                            router.push('/');
                           }}
                           className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-destructive hover:bg-destructive/10 transition-colors text-left"
                         >
@@ -307,7 +308,7 @@ export default function Navbar() {
                       onClick={() => {
                         logout();
                         setIsOpen(false);
-                        window.location.href = '/';
+                        router.push('/');
                       }}
                       className="flex items-center justify-center gap-1.5 rounded-xl bg-destructive/10 py-2 text-xs font-semibold text-destructive hover:bg-destructive/20 transition-colors"
                     >

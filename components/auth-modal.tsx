@@ -116,10 +116,9 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
           setSuccess('Đăng ký tài khoản thành công! Bắt đầu học ngay.');
         }
 
-        // Close modal on success after delay and refresh page to reset store state cleanly
+        // Close modal on success after delay
         setTimeout(() => {
           onClose();
-          window.location.reload();
         }, 1000);
       }
     } catch (err: any) {
@@ -158,7 +157,6 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
         setSuccess('Đăng nhập bằng Google thành công! Chào mừng bạn.');
         setTimeout(() => {
           onClose();
-          window.location.reload();
         }, 1000);
       }
     } catch (err: any) {
