@@ -1,6 +1,6 @@
 # iStudent - Nền tảng học trực tuyến công nghệ miễn phí
 
-iStudent là một nền tảng học tập trực tuyến hiện đại, trực quan hóa lộ trình học của bạn với sự hỗ trợ của AI. Được phát triển bằng công nghệ Next.js 15 (App Router), React 19, TypeScript và Tailwind CSS, sẵn sàng deploy trực tiếp lên Vercel.
+iStudent là một nền tảng học tập trực tuyến hiện đại, trực quan hóa lộ trình học tập tối ưu bám sát đề thi ĐGNL. Được phát triển bằng công nghệ Next.js 15 (App Router), React 19, TypeScript và Tailwind CSS, sẵn sàng deploy trực tiếp lên Vercel.
 
 ## 🚀 Các tính năng chính
 - **Khám phá khóa học**: Tìm kiếm, lọc và phân cấp khóa học (Cơ bản, Trung bình, Nâng cao).
@@ -9,7 +9,6 @@ iStudent là một nền tảng học tập trực tuyến hiện đại, trực
 - **Trắc nghiệm Quiz**: Đánh giá năng lực ngẫu nhiên câu hỏi kèm lời giải thích chi tiết.
 - **Chứng nhận verify QR**: Cấp chứng chỉ số PDF sau khi hoàn thành bài thi với mã QR xác thực.
 - **Personal Dashboard**: Thống kê thời gian học bằng biểu đồ Recharts, theo dõi XP, Streak liên tục và huy hiệu.
-- **AI Recommendation**: Gợi ý lộ trình khóa học dựa trên mục tiêu nhập bằng ngôn ngữ tự nhiên.
 - **Admin Dashboard**: Giao diện quản lý CRUD mô phỏng cho các khóa học và danh mục.
 
 ## 🛠️ Công nghệ sử dụng

@@ -8,7 +8,7 @@ export default function Benefits() {
     {
       id: 1,
       title: 'Khám phá & Chọn lựa',
-      description: 'Lựa chọn các khóa học phù hợp với nhu cầu từ kho dữ liệu hoặc nhận tư vấn từ AI thông minh.',
+      description: 'Lựa chọn các khóa học phù hợp với mục tiêu và nhu cầu ôn luyện của riêng bạn từ kho dữ liệu phong phú.',
       icon: Search,
       color: 'bg-primary/10 text-primary border-primary/20',
     },

@@ -18,8 +18,8 @@ const faqs = [
     answer: 'Hệ thống tự động chấm điểm XP cho bạn khi hoàn thành mỗi bài học (+50 XP), hoàn thành bài Quiz (+100 XP) và duy trì chuỗi học tập liên tiếp hàng ngày (Streak). Khi tích lũy đủ XP, cấp độ tài khoản của bạn sẽ tự động được nâng lên.',
   },
   {
-    question: 'Công cụ gợi ý lộ trình bằng AI hoạt động ra sao?',
-    answer: 'Công cụ gợi ý AI sử dụng thuật toán phân tích nhu cầu nhập liệu của bạn để so khớp với kho khóa học. Nó sẽ đề xuất cho bạn những khóa học liên quan mật thiết và lộ trình sắp xếp theo trình tự tăng dần từ cơ bản đến nâng cao.',
+    question: 'Lộ trình học tập của các khóa học được sắp xếp như thế nào?',
+    answer: 'Các khóa học trên iStudent được phân loại theo chuyên đề ôn thi ĐGNL bám sát cấu trúc đề. Bạn có thể tự do lựa chọn học theo từng môn riêng lẻ hoặc mua các combo toàn diện để có lộ trình ôn luyện hệ thống từ cơ bản đến nâng cao.',
   },
 ];
 
