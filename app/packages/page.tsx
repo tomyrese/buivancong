@@ -305,7 +305,7 @@ export default function PackagesPage() {
                     : 'bg-muted text-foreground hover:bg-muted/80 border border-border/80'
                 }`}
               >
-                Mua ngay
+                Đăng ký ngay
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>
