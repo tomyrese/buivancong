@@ -112,7 +112,9 @@ export default function Navbar() {
                 Quản lý
               </Link>
             )}
+          </div>
 
+          <div className="hidden md:flex items-center gap-4">
             {/* AI Assistant shortcut */}
             <Link
               href="/courses?ai=true"
@@ -121,10 +123,6 @@ export default function Navbar() {
               <Sparkles className="h-3.5 w-3.5 text-secondary animate-pulse" />
               Gợi ý AI
             </Link>
-          </div>
-
-          {/* Right Section (User profile) */}
-          <div className="hidden md:flex items-center gap-4">
 
             {/* Profile Dropdown */}
             {user ? (
