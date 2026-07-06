@@ -71,18 +71,18 @@ export default function Footer() {
             <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-4">Tài nguyên</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Tài liệu Markdown
+                <a href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  Tài liệu học tập
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Mẫu ghi chú
+                <a href="/courses" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  Luyện đề trắc nghiệm
                 </a>
               </li>
               <li>
-                <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-                  Chương trình Đại sứ
+                <a href="/courses?ai=true" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  Hỏi đáp AI
                 </a>
               </li>
               <li>

@@ -1,9 +1,10 @@
 'use client';
 
 import * as React from 'react';
-import { Sparkles, X, Send, BrainCircuit, Bot, User, ArrowRight } from 'lucide-react';
+import { Sparkles, X, Send, BrainCircuit, Bot, User, ArrowRight, RotateCcw } from 'lucide-react';
 import { CourseService, Course } from '@/services/courseService';
-import Link from 'next/link';
+import Link from 'next/link'; // Wait, let's use 'next/link' instead of next/next-link!
+import { MarkdownRenderer } from '@/components/markdown-renderer';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -16,16 +17,46 @@ interface AIModalProps {
 }
 
 export default function AIRecommendationModal({ isOpen, onClose }: AIModalProps) {
-  const [messages, setMessages] = React.useState<Message[]>([
-    {
-      role: 'assistant',
-      content: 'Chào bạn! Tôi là Trợ lý AI chuyên trách luyện thi ĐGNL lớp Thầy Bùi Văn Công. Tôi có thể giúp bạn thiết kế lộ trình ôn tập và tư vấn các combo khóa học (Toán học, Suy luận Khoa học) phù hợp nhất. Bạn đang cần ôn luyện về môn học nào?'
-    }
-  ]);
+  const DEFAULT_WELCOME: Message = {
+    role: 'assistant',
+    content: 'Chào bạn! Tôi là Trợ lý AI chuyên trách luyện thi ĐGNL lớp Thầy Bùi Văn Công. Tôi có thể giúp bạn thiết kế lộ trình ôn tập và tư vấn các combo khóa học (Toán học, Suy luận Khoa học) phù hợp nhất. Bạn đang cần ôn luyện về môn học nào?'
+  };
+
+  const [messages, setMessages] = React.useState<Message[]>([]);
   const [input, setInput] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const messagesEndRef = React.useRef<HTMLDivElement>(null);
   const courses = React.useMemo(() => CourseService.getCourses(), []);
+
+  // Load chat history from localStorage on mount
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('istudent_ai_messages');
+      if (saved) {
+        try {
+          setMessages(JSON.parse(saved));
+        } catch (e) {
+          console.error('Error loading saved messages:', e);
+          setMessages([DEFAULT_WELCOME]);
+        }
+      } else {
+        setMessages([DEFAULT_WELCOME]);
+      }
+    } else {
+      setMessages([DEFAULT_WELCOME]);
+    }
+  }, []);
+
+  // Save chat history when messages change
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && messages.length > 0) {
+      if (messages.length === 1 && messages[0].content === DEFAULT_WELCOME.content) {
+        localStorage.removeItem('istudent_ai_messages');
+      } else {
+        localStorage.setItem('istudent_ai_messages', JSON.stringify(messages));
+      }
+    }
+  }, [messages]);
 
   // Auto-scroll to bottom of chat
   const scrollToBottom = () => {
@@ -37,13 +68,6 @@ export default function AIRecommendationModal({ isOpen, onClose }: AIModalProps)
       scrollToBottom();
       document.body.style.overflow = 'hidden';
     } else {
-      // Reset chat on close
-      setMessages([
-        {
-          role: 'assistant',
-          content: 'Chào bạn! Tôi là Trợ lý AI chuyên trách luyện thi ĐGNL lớp Thầy Bùi Văn Công. Tôi có thể giúp bạn thiết kế lộ trình ôn tập và tư vấn các combo khóa học (Toán học, Suy luận Khoa học) phù hợp nhất. Bạn đang cần ôn luyện về môn học nào?'
-        }
-      ]);
       setInput('');
       setLoading(false);
       document.body.style.overflow = '';
@@ -56,6 +80,13 @@ export default function AIRecommendationModal({ isOpen, onClose }: AIModalProps)
   React.useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
+
+  const handleResetChat = () => {
+    if (confirm('Bạn có chắc chắn muốn xóa toàn bộ lịch sử trò chuyện với AI?')) {
+      setMessages([DEFAULT_WELCOME]);
+      localStorage.removeItem('istudent_ai_messages');
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -145,12 +176,21 @@ export default function AIRecommendationModal({ isOpen, onClose }: AIModalProps)
               <p className="text-3xs text-muted-foreground">Tư vấn lộ trình học lớp Thầy Bùi Văn Công chính xác</p>
             </div>
           </div>
-          <button 
-            onClick={onClose}
-            className="rounded-xl border border-border p-2 hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <X className="h-4 w-4" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={handleResetChat}
+              title="Xóa lịch sử trò chuyện"
+              className="rounded-xl border border-border p-2 hover:bg-muted text-muted-foreground hover:text-destructive transition-colors"
+            >
+              <RotateCcw className="h-4 w-4" />
+            </button>
+            <button 
+              onClick={onClose}
+              className="rounded-xl border border-border p-2 hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
         </div>
 
         {/* Chat History Messages Container */}
@@ -176,12 +216,16 @@ export default function AIRecommendationModal({ isOpen, onClose }: AIModalProps)
 
                 {/* Message Bubble Container */}
                 <div className="space-y-3">
-                  <div className={`rounded-2xl px-4 py-2.5 text-xs leading-relaxed whitespace-pre-line shadow-sm border ${
+                  <div className={`rounded-2xl px-4 py-2.5 text-xs leading-relaxed shadow-sm border ${
                     isAI 
                       ? 'bg-card text-foreground border-border' 
-                      : 'bg-primary text-white border-primary/10'
+                      : 'bg-primary text-white border-primary/10 whitespace-pre-line'
                   }`}>
-                    {cleanText}
+                    {isAI ? (
+                      <MarkdownRenderer content={cleanText} />
+                    ) : (
+                      cleanText
+                    )}
                   </div>
 
                   {/* Render dynamic clickable course suggestion cards if found in AI message */}

@@ -5,9 +5,9 @@ import { BookOpen, Video, Users, Award } from 'lucide-react';
 
 export default function Stats() {
   const stats = [
-    { id: 1, name: 'Khóa học chất lượng', value: '100+', icon: BookOpen, color: 'text-primary' },
-    { id: 2, name: 'Video bài giảng', value: '10,000+', icon: Video, color: 'text-secondary' },
-    { id: 3, name: 'Học viên tin tưởng', value: '100,000+', icon: Users, color: 'text-accent' },
+    { id: 1, name: 'Môn thi ĐGNL', value: '9 Môn', icon: BookOpen, color: 'text-primary' },
+    { id: 2, name: 'Video bài giảng', value: '200+', icon: Video, color: 'text-secondary' },
+    { id: 3, name: 'Thành viên ôn tập', value: '85,000+', icon: Users, color: 'text-accent' },
   ];
 
   return (
