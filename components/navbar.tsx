@@ -4,6 +4,8 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import logoImg from '@/src/imgs/logo.png';
 import { 
   Menu, 
   X, 
@@ -83,9 +85,11 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-md shadow-primary/20 transition-transform group-hover:scale-105">
-                <span className="text-xl font-black">i</span>
-              </div>
+              <Image 
+                src={logoImg} 
+                alt="iStudent Logo" 
+                className="h-9 w-auto object-contain rounded-xl shadow shadow-primary/10 transition-transform group-hover:scale-105"
+              />
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-xl font-extrabold tracking-tight text-transparent">
                 iStudent
               </span>

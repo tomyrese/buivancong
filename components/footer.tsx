@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { BookOpen, Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import logoImg from '@/src/imgs/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,9 +19,11 @@ export default function Footer() {
           {/* Logo & Slogan */}
           <div className="space-y-4 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-white font-extrabold shadow-sm">
-                <span>i</span>
-              </div>
+              <Image 
+                src={logoImg} 
+                alt="iStudent Logo" 
+                className="h-7 w-auto object-contain rounded-lg shadow shadow-primary/5"
+              />
               <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-lg font-bold tracking-tight text-transparent">
                 iStudent
               </span>
