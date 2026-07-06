@@ -43,11 +43,20 @@ export function Providers({ children }: { children: React.ReactNode }) {
           avatarBorder: session.user.user_metadata?.avatarBorder || undefined,
         };
         
-        // Sync Zustand store
-        useAuthStore.setState({ user: userProfile, isAuthenticated: true });
+        // Sync Zustand store only if state is different to prevent loops
+        const currentAuthState = useAuthStore.getState();
+        if (!currentAuthState.isAuthenticated || currentAuthState.user?.id !== userProfile.id) {
+          useAuthStore.setState({ user: userProfile, isAuthenticated: true });
+        }
+
+        // Clean up URL hash to prevent infinite hydration refresh loops
+        if (typeof window !== 'undefined' && window.location.hash && (window.location.hash.includes('access_token') || window.location.hash.includes('type=recovery'))) {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
       } else {
         // Clear Zustand if Supabase has no active session
-        if (useAuthStore.getState().isAuthenticated) {
+        const currentAuthState = useAuthStore.getState();
+        if (currentAuthState.isAuthenticated) {
           useAuthStore.setState({ user: null, isAuthenticated: false });
         }
       }
