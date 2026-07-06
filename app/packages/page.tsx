@@ -18,7 +18,9 @@ import {
   Copy,
   CheckCircle2,
   AlertCircle,
-  ArrowUpCircle
+  ArrowUpCircle,
+  RefreshCw,
+  Loader2
 } from 'lucide-react';
 import Link from 'next/link';
 import { useAuthStore } from '@/store/useAuthStore';
@@ -60,7 +62,20 @@ export default function PackagesPage() {
   const [copiedText, setCopiedText] = React.useState('');
   const [qrTimestamp, setQrTimestamp] = React.useState<number | null>(null);
   const [timeLeft, setTimeLeft] = React.useState<number>(300);
+  const [checkingPayment, setCheckingPayment] = React.useState(false);
+  const [checkAlert, setCheckAlert] = React.useState('');
 
+  // Prevent background scrolling when checkout modal is open
+  React.useEffect(() => {
+    if (selectedPackage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedPackage]);
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
     setCopiedText(label);
@@ -213,6 +228,18 @@ export default function PackagesPage() {
             const targetId = selectedPackage.id === 'combo-nang-cap' ? 'combo-toan-dien' : selectedPackage.id;
             if (Array.isArray(purchased) && purchased.includes(targetId)) {
               clearInterval(checkInterval);
+              
+              // Force update local Zustand store profile to avoid JWT caching delay
+              const currentAuthState = useAuthStore.getState();
+              if (currentAuthState.user) {
+                useAuthStore.setState({
+                  user: {
+                    ...currentAuthState.user,
+                    purchasedPackages: purchased
+                  }
+                });
+              }
+              
               setCheckoutStep('success');
             }
           }
@@ -226,6 +253,41 @@ export default function PackagesPage() {
       if (checkInterval) clearInterval(checkInterval);
     };
   }, [selectedPackage, checkoutStep, paymentMode, isAuthenticated, timeLeft]);
+
+  const handleCheckPayment = async () => {
+    if (!selectedPackage) return;
+    setCheckingPayment(true);
+    setCheckAlert('');
+    
+    try {
+      const { data: { session: newSession } } = await supabase.auth.refreshSession();
+      if (newSession?.user) {
+        const purchased = newSession.user.user_metadata?.purchased_packages;
+        const targetId = selectedPackage.id === 'combo-nang-cap' ? 'combo-toan-dien' : selectedPackage.id;
+        if (Array.isArray(purchased) && purchased.includes(targetId)) {
+          // Force update local Zustand store profile to avoid JWT caching delay
+          const currentAuthState = useAuthStore.getState();
+          if (currentAuthState.user) {
+            useAuthStore.setState({
+              user: {
+                ...currentAuthState.user,
+                purchasedPackages: purchased
+              }
+            });
+          }
+          setCheckoutStep('success');
+          return;
+        }
+      }
+      
+      setCheckAlert('Hệ thống chưa nhận được thông tin chuyển khoản từ ngân hàng của bạn. Xin vui lòng chờ thêm ít phút hoặc quét lại mã và kiểm tra nội dung chuyển khoản.');
+    } catch (err: any) {
+      console.error('Error verifying payment manually:', err);
+      setCheckAlert(err.message || 'Có lỗi xảy ra khi kiểm tra giao dịch, vui lòng thử lại!');
+    } finally {
+      setCheckingPayment(false);
+    }
+  };
 
   const handleCheckoutSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -407,7 +469,7 @@ export default function PackagesPage() {
           {/* Backdrop */}
           <div 
             className="fixed inset-0 bg-background/80 backdrop-blur-sm transition-opacity" 
-            onClick={() => { if (!loading) setSelectedPackage(null); }}
+            onClick={() => { if (!loading && !checkingPayment) setSelectedPackage(null); }}
           />
 
           {/* Modal content */}
@@ -418,19 +480,25 @@ export default function PackagesPage() {
               <div className="space-y-1">
                 <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 1: Quét mã QR</span>
                 <h3 className="text-sm font-bold text-foreground">
-                  {paymentMode === 'vietqr' ? 'Thanh toán tự động' : 'Chuyển khoản thủ công'}
+                  Thanh toán tự động VietQR
                 </h3>
               </div>
 
               {/* VietQR design */}
-              <div className="rounded-2xl border border-border bg-card p-4 text-center space-y-4 shadow-sm relative overflow-hidden">
+              <div className="rounded-2xl border border-border bg-card p-5 text-center space-y-4 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 left-0 bg-primary/10 text-primary text-[10px] font-bold px-2.5 py-0.5 rounded-br-lg border-r border-b border-border/60">
-                  {paymentMode === 'vietqr' ? 'VietQR Tự Động' : 'Vietcombank'}
+                  VietQR Tự Động
                 </div>
                 
-                {/* QR Code image source */}
-                <div className="bg-white p-2.5 rounded-xl border border-border w-52 h-52 mx-auto flex items-center justify-center relative shadow-inner overflow-hidden">
-                  {timeLeft <= 0 && paymentMode === 'vietqr' ? (
+                {/* QR Code image source with scan corners */}
+                <div className="relative bg-white p-4 rounded-2xl border border-border w-52 h-52 mx-auto flex items-center justify-center shadow-inner overflow-hidden">
+                  {/* Scan corners styling */}
+                  <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-primary/60 rounded-tl" />
+                  <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-primary/60 rounded-tr" />
+                  <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-primary/60 rounded-bl" />
+                  <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary/60 rounded-br" />
+
+                  {timeLeft <= 0 ? (
                     <div className="absolute inset-0 bg-background/95 flex flex-col items-center justify-center p-4 text-center space-y-2 z-10 animate-in fade-in duration-200">
                       <span className="text-[10px] font-bold text-red-500 uppercase">Mã QR đã hết hạn</span>
                       <p className="text-[9px] text-muted-foreground leading-normal">Vui lòng bấm nút bên dưới để tạo mã QR mới.</p>
@@ -439,6 +507,7 @@ export default function PackagesPage() {
                         onClick={() => {
                           setQrTimestamp(Date.now());
                           setTimeLeft(300);
+                          setCheckAlert('');
                         }}
                         className="rounded-lg bg-primary px-3 py-1.5 text-[10px] font-bold text-white shadow hover:bg-primary/95 transition-all cursor-pointer"
                       >
@@ -447,22 +516,14 @@ export default function PackagesPage() {
                     </div>
                   ) : null}
 
-                  {paymentMode === 'vietqr' ? (
-                    <img 
-                      src={`https://img.vietqr.io/image/vietcombank-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=QRTBVC%20${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''}%20${packageCodeMap[selectedPackage.id] || 'CBTOAN'}&accountName=Nguyen%20Phu%20Quy`}
-                      alt="VietQR Automatic Payment"
-                      className={`w-48 h-48 object-contain transition-opacity duration-300 ${timeLeft <= 0 && paymentMode === 'vietqr' ? 'opacity-10' : 'opacity-100'}`}
-                    />
-                  ) : (
-                    <img 
-                      src={`https://img.vietqr.io/image/vietcombank-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=ISTUDENT%20${phone || 'SDT'}%20${selectedPackage.id.toUpperCase().replace(/-/g, '_')}&accountName=Nguyen%20Phu%20Quy`}
-                      alt="VietQR Manual Payment"
-                      className="w-48 h-48 object-contain"
-                    />
-                  )}
+                  <img 
+                    src={`https://img.vietqr.io/image/vietcombank-1019248902-compact2.png?amount=${selectedPackage.price}&addInfo=QRTBVC%20${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''}%20${packageCodeMap[selectedPackage.id] || 'CBTOAN'}&accountName=Nguyen%20Phu%20Quy`}
+                    alt="VietQR Automatic Payment"
+                    className={`w-44 h-44 object-contain transition-opacity duration-300 ${timeLeft <= 0 ? 'opacity-10' : 'opacity-100'}`}
+                  />
                 </div>
                 
-                {paymentMode === 'vietqr' && timeLeft > 0 ? (
+                {timeLeft > 0 ? (
                   <div className="text-[10px] font-bold text-amber-600 flex items-center justify-center gap-1">
                     <span>Mã QR hết hạn sau:</span>
                     <span className="font-mono text-xs bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
@@ -506,16 +567,11 @@ export default function PackagesPage() {
                   <span className="text-muted-foreground">Nội dung chuyển khoản:</span>
                   <div className="flex items-center justify-between gap-2 font-extrabold text-amber-600 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1.5 rounded-lg mt-1">
                     <span className="select-all tracking-wide text-xs">
-                      {paymentMode === 'vietqr' 
-                        ? `QRTBVC ${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} ${packageCodeMap[selectedPackage.id] || 'CBTOAN'}`
-                        : `ISTUDENT ${phone ? phone.trim() : '[SĐT_CỦA_BẠN]'} ${selectedPackage.id.toUpperCase().replace(/-/g, '_')}`
-                      }
+                      QRTBVC {user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} {packageCodeMap[selectedPackage.id] || 'CBTOAN'}
                     </span>
                     <button 
                       onClick={() => handleCopy(
-                        paymentMode === 'vietqr' 
-                          ? `QRTBVC ${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} ${packageCodeMap[selectedPackage.id] || 'CBTOAN'}`
-                          : `ISTUDENT ${phone ? phone.trim() : 'SDT'} ${selectedPackage.id.toUpperCase().replace(/-/g, '_')}`,
+                        `QRTBVC ${user ? user.id.replace(/-/g, '').substring(0, 8).toUpperCase() : ''} ${packageCodeMap[selectedPackage.id] || 'CBTOAN'}`,
                         'ndck'
                       )}
                       className="text-amber-700 hover:text-amber-900 transition-colors"
@@ -534,51 +590,21 @@ export default function PackagesPage() {
               
               {/* Close Button */}
               <button 
-                onClick={() => { if (!loading) setSelectedPackage(null); }}
+                onClick={() => { if (!loading && !checkingPayment) setSelectedPackage(null); }}
                 className="absolute right-4 top-4 rounded-xl border border-border p-2 hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
-                disabled={loading}
+                disabled={loading || checkingPayment}
               >
                 <X className="h-4 w-4" />
               </button>
 
               {checkoutStep === 'info' ? (
-                /* Form block for updating profile / submitting manual receipt */
+                /* Form block for updating profile */
                 <form onSubmit={handleCheckoutSubmit} className="space-y-4 h-full flex flex-col justify-between">
                   <div className="space-y-4">
-                    {/* Step Title & Selector */}
-                    <div className="space-y-2">
+                    {/* Step Title */}
+                    <div className="space-y-1">
                       <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Xác nhận thông tin</span>
-                      
-                      {/* Payment Mode Selector Tabs */}
-                      <div className="flex rounded-xl bg-muted p-1 border border-border">
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setPaymentMode('vietqr');
-                            if (user?.phone && user.phone.trim() !== '') {
-                              setCheckoutStep('qr');
-                            }
-                          }}
-                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
-                            paymentMode === 'vietqr'
-                              ? 'bg-card text-foreground shadow-xs'
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                        >
-                          ⚡ Tự động (VietQR)
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setPaymentMode('manual')}
-                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
-                            paymentMode === 'manual'
-                              ? 'bg-card text-foreground shadow-xs'
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                        >
-                          📝 Thủ công (Gửi ảnh)
-                        </button>
-                      </div>
+                      <h3 className="text-xs font-bold text-foreground">Cập nhật thông tin nhận lớp</h3>
                     </div>
 
                     {error && (
@@ -589,8 +615,8 @@ export default function PackagesPage() {
 
                     {/* Personal Details Form */}
                     <div className="space-y-3">
-                      <div className="rounded-xl bg-amber-500/5 border border-amber-500/10 p-3 text-[10px] text-amber-700 font-medium">
-                        💡 Yêu cầu bắt buộc: Phải cập nhật địa chỉ Email và Số điện thoại hợp lệ để hệ thống đối soát giao dịch tự động.
+                      <div className="rounded-xl bg-amber-500/5 border border-amber-500/10 p-3 text-[10px] text-amber-700 font-medium leading-normal">
+                        💡 Yêu cầu bắt buộc: Vui lòng kiểm tra và cập nhật đầy đủ Số điện thoại chính xác để hệ thống kích hoạt tự động.
                       </div>
 
                       <div className="space-y-1">
@@ -628,46 +654,20 @@ export default function PackagesPage() {
                           required
                         />
                       </div>
-
-                      {paymentMode === 'manual' && (
-                        /* Manual Mode Screenshot Upload */
-                        <div className="space-y-1 pt-1">
-                          <label className="text-[10px] font-bold text-muted-foreground uppercase pl-0.5">Ảnh chụp minh chứng</label>
-                          <button
-                            type="button"
-                            onClick={() => setHasFile(true)}
-                            className={`w-full rounded-xl border-2 border-dashed p-3 text-center transition-all flex flex-col items-center justify-center gap-1 ${
-                              hasFile 
-                                ? 'border-emerald-500 bg-emerald-500/5 text-emerald-600' 
-                                : 'border-border hover:border-primary/40 hover:bg-muted/40 text-muted-foreground'
-                            }`}
-                          >
-                            <Upload className="h-5 w-5" />
-                            <span className="text-[10px] font-semibold">
-                              {hasFile ? 'Đã đính kèm: bienlai.png (Thay đổi)' : 'Tải biên lai giao dịch lên'}
-                            </span>
-                          </button>
-                        </div>
-                      )}
                     </div>
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4"
+                    className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3.5 text-xs font-bold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 mt-4 cursor-pointer"
                   >
                     {loading ? (
                       <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                    ) : paymentMode === 'vietqr' ? (
-                      <>
-                        <Send className="h-4 w-4" />
-                        Xác nhận & Tạo mã QR
-                      </>
                     ) : (
                       <>
                         <Send className="h-4 w-4" />
-                        Gửi xác nhận chuyển khoản
+                        Xác nhận & Tạo mã QR
                       </>
                     )}
                   </button>
@@ -676,38 +676,10 @@ export default function PackagesPage() {
                 /* QR code waiting step */
                 <div className="space-y-4 h-full flex flex-col justify-between">
                   <div className="space-y-4">
-                    {/* Step Title & Selector */}
-                    <div className="space-y-2">
-                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Chờ thanh toán</span>
-                      
-                      {/* Payment Mode Selector Tabs */}
-                      <div className="flex rounded-xl bg-muted p-1 border border-border">
-                        <button
-                          type="button"
-                          onClick={() => setPaymentMode('vietqr')}
-                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
-                            paymentMode === 'vietqr'
-                              ? 'bg-card text-foreground shadow-xs'
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                        >
-                          ⚡ Tự động (VietQR)
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setPaymentMode('manual');
-                            setCheckoutStep('info');
-                          }}
-                          className={`flex-1 rounded-lg py-1.5 text-[10px] font-extrabold tracking-wider uppercase transition-all ${
-                            paymentMode === 'manual'
-                              ? 'bg-card text-foreground shadow-xs'
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                        >
-                          📝 Thủ công (Gửi ảnh)
-                        </button>
-                      </div>
+                    {/* Step Title */}
+                    <div className="space-y-1">
+                      <span className="text-3xs font-bold text-primary uppercase tracking-wider">Bước 2: Tiến hành thanh toán</span>
+                      <h3 className="text-xs font-bold text-foreground">Chờ giao dịch tự động</h3>
                     </div>
 
                     <div className="space-y-4 py-2">
@@ -719,17 +691,23 @@ export default function PackagesPage() {
                           </div>
                         </div>
                         <div className="space-y-1">
-                          <h4 className="text-xs font-bold text-foreground">Đang đợi thanh toán tự động...</h4>
+                          <h4 className="text-xs font-bold text-foreground">Đang đợi chuyển khoản tự động...</h4>
                           <p className="text-3xs text-muted-foreground leading-relaxed">
                             Mở ứng dụng Ngân hàng quét mã QR ở ô bên trái. Hệ thống sẽ kích hoạt khóa học ngay sau khi nhận được chuyển khoản.
                           </p>
                         </div>
                       </div>
 
+                      {checkAlert && (
+                        <div className="rounded-xl bg-amber-500/10 border border-amber-500/25 px-3.5 py-3 text-[10px] font-semibold text-amber-700 leading-normal animate-in fade-in duration-200">
+                          ⚠️ {checkAlert}
+                        </div>
+                      )}
+
                       {/* Developer sandbox info box */}
                       <div className="rounded-xl bg-muted border border-border p-3 text-[10px] text-muted-foreground space-y-1.5 leading-relaxed">
                         <div className="flex items-center gap-1 font-bold text-foreground">
-                          <Info className="h-3.5 w-3.5 text-blue-500" />
+                          <Info className="h-3.5 w-3.5 text-blue-500 animate-pulse" />
                           <span>Mẹo Thử nghiệm Sandbox (Dev Tip)</span>
                         </div>
                         <p>
@@ -739,17 +717,40 @@ export default function PackagesPage() {
                     </div>
                   </div>
 
-                  <button
-                    onClick={() => setCheckoutStep('info')}
-                    className="w-full py-2.5 rounded-2xl border border-border bg-card text-2xs font-bold text-muted-foreground hover:bg-muted transition-colors text-center"
-                  >
-                    ✏️ Thay đổi thông tin cá nhân
-                  </button>
+                  <div className="space-y-2 pt-2">
+                    <button
+                      onClick={handleCheckPayment}
+                      disabled={checkingPayment || timeLeft <= 0}
+                      className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-primary to-secondary py-3.5 text-xs font-extrabold text-white shadow-md shadow-primary/20 hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-50 cursor-pointer"
+                    >
+                      {checkingPayment ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Đang kiểm tra giao dịch...
+                        </>
+                      ) : (
+                        <>
+                          <RefreshCw className="h-3.5 w-3.5" />
+                          Kiểm tra thanh toán (Ấn nếu chưa cập nhật)
+                        </>
+                      )}
+                    </button>
+
+                    <button
+                      onClick={() => {
+                        setCheckAlert('');
+                        setCheckoutStep('info');
+                      }}
+                      className="w-full py-2.5 rounded-2xl border border-border bg-card text-2xs font-bold text-muted-foreground hover:bg-muted transition-colors text-center cursor-pointer"
+                    >
+                      ✏️ Thay đổi thông tin cá nhân
+                    </button>
+                  </div>
                 </div>
               ) : (
                 /* Success screen */
                 <div className="text-center py-8 space-y-6 flex flex-col justify-center h-full">
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 animate-bounce">
                     <CheckCircle className="h-8 w-8 animate-in zoom-in-50 duration-300" />
                   </div>
                   <div className="space-y-2">
@@ -771,7 +772,7 @@ export default function PackagesPage() {
                     </Link>
                     <button
                       onClick={() => setSelectedPackage(null)}
-                      className="w-full rounded-2xl border border-border bg-card py-3 text-xs font-bold text-foreground hover:bg-muted transition-all"
+                      className="w-full rounded-2xl border border-border bg-card py-3 text-xs font-bold text-foreground hover:bg-muted transition-all cursor-pointer"
                     >
                       Đóng cửa sổ
                     </button>
