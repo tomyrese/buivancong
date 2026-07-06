@@ -170,16 +170,14 @@ export default function PackagesPage() {
     if (selectedPackage && checkoutStep === 'qr' && paymentMode === 'vietqr' && isAuthenticated && timeLeft > 0) {
       checkInterval = setInterval(async () => {
         try {
-          // Fetch latest user details from Supabase to check if the package is activated
-          const { data: { user: latestUser } } = await supabase.auth.getUser();
-          if (latestUser?.user_metadata?.purchased_packages?.includes(selectedPackage.id)) {
-            clearInterval(checkInterval);
-            setCheckoutStep('success');
-            
-            // Sync courses list from Supabase db user_metadata
-            const dbEnrolledCourses = latestUser.user_metadata?.enrolled_courses;
-            if (Array.isArray(dbEnrolledCourses) && dbEnrolledCourses.length > 0) {
-              useProgressStore.setState({ enrolledCourses: dbEnrolledCourses });
+          // Force refresh session to get the latest JWT containing updated metadata
+          const { data: { session: newSession } } = await supabase.auth.refreshSession();
+          
+          if (newSession?.user) {
+            const purchased = newSession.user.user_metadata?.purchased_packages;
+            if (Array.isArray(purchased) && purchased.includes(selectedPackage.id)) {
+              clearInterval(checkInterval);
+              setCheckoutStep('success');
             }
           }
         } catch (err) {
