@@ -73,10 +73,10 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
     try {
       if (isLoginMode) {
-        await login(email);
+        await login(email, password);
         setSuccess('Đăng nhập thành công! Chào mừng bạn quay trở lại.');
       } else {
-        await register(name, email);
+        await register(name, email, password);
         setSuccess('Đăng ký tài khoản thành công! Bắt đầu học ngay.');
       }
 
