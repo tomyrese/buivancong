@@ -149,6 +149,10 @@ export default function ProfilePage() {
             </div>
           </div>
 
+        </div>
+
+        {/* Right Column: Update Info Form */}
+        <div className="md:col-span-2 space-y-6">
           {/* Avatar Border Customizer */}
           <div className="rounded-3xl border border-border bg-card p-6 space-y-4 shadow-sm">
             <div className="space-y-1">
@@ -190,10 +194,7 @@ export default function ProfilePage() {
               })}
             </div>
           </div>
-        </div>
 
-        {/* Right Column: Update Info Form */}
-        <div className="md:col-span-2 space-y-6">
           {/* Profile details card */}
           <div className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-sm space-y-6">
             <h3 className="text-xs font-bold text-foreground uppercase tracking-wider pb-3 border-b border-border/40">
