@@ -1,28 +1,1701 @@
 {
-  "chapters": [
-    {
-      "id": 1,
-      "name": "HÀM SỐ LƯỢNG GIÁC VÀ PHƯƠNG TRÌNH LƯỢNG GIÁC",
-      "topics": [
+    "chapters": [
         {
-          "id": 1,
-          "name": "Góc lượng giác và công thức lượng giác",
-          "questions": [
-            {
-              "id": "math11.1.1.1",
-              "type": "multiple_choice",
-              "question": "Công thức nào sau đây là đúng về biến đổi tổng thành tích?",
-              "options": [
-                "A. cos a + cos b = 2 cos((a+b)/2) cos((a-b)/2).",
-                "B. cos a + cos b = -2 sin((a+b)/2) sin((a-b)/2).",
-                "C. sin a + sin b = 2 sin((a+b)/2) sin((a-b)/2).",
-                "D. sin a - sin b = 2 sin((a-b)/2) sin((a+b)/2)."
-              ],
-              "answer": "A"
-            }
-          ]
+            "id": 1,
+            "name": "HÀM SỐ VÀ PHƯƠNG TRÌNH LƯỢNG GIÁC",
+            "topics": [
+                {
+                    "id": "1.1",
+                    "name": "GÓC LƯỢNG GIÁC",
+                    "questions": [
+                        {
+                            "id": "1.1.1",
+                            "type": "multiple_choice",
+                            "question": "Góc có số đo π/24 đổi sang độ bằng (Câu 1 trang 16):",
+                            "options": [
+                                "A. 7°",
+                                "B. 7°30'",
+                                "C. 8°",
+                                "D. 8°30'"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "1.1.2",
+                            "type": "multiple_choice",
+                            "question": "Một bánh xe có 72 răng. Số đo góc mà bánh xe đã quay được khi di chuyển 10 răng là (Câu 8 trang 16):",
+                            "options": [
+                                "A. 60°",
+                                "B. 30°",
+                                "C. 40°",
+                                "D. 50°"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.1.3",
+                            "type": "true_false",
+                            "question": "Đổi số đo của các góc sang radian. Khi đó (Câu 22 trang 19):",
+                            "statements": [
+                                "a. 30° = π/6 rad",
+                                "b. (15/π)° = 1/12 rad",
+                                "c. 132° = 11π/15 rad",
+                                "d. -495° = -13π/4 rad"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.1.4",
+                            "type": "short_answer",
+                            "question": "Từ hình vẽ đường tròn lượng giác, công thức số đo tổng quát của góc lượng giác (OA, OM); (OA, ON) có dạng lần lượt là n/m·π + k2π; -p/q·π + k2π. Tính giá trị T = (m+p) - (n+q). (Câu 31 trang 22)",
+                            "answer": "-1"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.2",
+                    "name": "GIÁ TRỊ LƯỢNG GIÁC CỦA MỘT GÓC LƯỢNG GIÁC",
+                    "questions": [
+                        {
+                            "id": "1.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho π/2 < a < π. Kết quả nào đúng (Câu 1 trang 35):",
+                            "options": [
+                                "A. sin a > 0, cos a > 0",
+                                "B. sin a < 0, cos a < 0",
+                                "C. sin a > 0, cos a < 0",
+                                "D. sin a < 0, cos a > 0"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho biết cot α = 5. Tính giá trị của E = 2cos² α + 5sin α.cos α + 1? (Câu 24 trang 143)",
+                            "options": [
+                                "A. 10/26",
+                                "B. 100/26",
+                                "C. 50/26",
+                                "D. 101/26"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.2.3",
+                            "type": "true_false",
+                            "question": "Cho 0° < α < 90°. Xét dấu của các biểu thức sau (Câu 23 trang 37):",
+                            "statements": [
+                                "a. A = sin(α + 90°) > 0",
+                                "b. B = cos(α - 45°) > 0",
+                                "c. C = tan(270° - α) < 0",
+                                "d. D = cos(2α + 90°) > 0"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "1.2.4",
+                            "type": "short_answer",
+                            "question": "Cho cos x = 1/2. Tính giá trị biểu thức P = 3sin² x + 4cos² x. (Câu 35 trang 40)",
+                            "answer": "13/4"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "name": "CÔNG THỨC LƯỢNG GIÁC",
+                    "questions": [
+                        {
+                            "id": "1.3.1",
+                            "type": "multiple_choice",
+                            "question": "Trong các công thức sau, công thức nào sai? (Câu 4 trang 53)",
+                            "options": [
+                                "A. cos 6a = cos² 3a - sin² 3a",
+                                "B. cos 6a = 1 - 2sin² 3a",
+                                "C. cos 6a = 1 - 6sin² a",
+                                "D. cos 6a = 2cos² 3a - 1"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.3.2",
+                            "type": "multiple_choice",
+                            "question": "Nếu sin x + cos x = 1/2 thì sin 2x bằng (Câu 6 trang 53):",
+                            "options": [
+                                "A. 3/4",
+                                "B. 3/8",
+                                "C. √2/2",
+                                "D. -3/4"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "1.3.3",
+                            "type": "true_false",
+                            "question": "Cho biết sin α = 3/5, cos α = -4/5 và các biểu thức A = sin(π/2 - α) + sin(π + α); B = cos(π - α) + cot(π/2 - α). Khi đó (Câu 13 trang 54):",
+                            "statements": [
+                                "a. A = cos α - sin α",
+                                "b. B = cos α + tan α",
+                                "c. A + B = 27/20",
+                                "d. A - B = -29/20"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.3.4",
+                            "type": "short_answer",
+                            "question": "Cho biểu thức P = cos 5x.cos 3x - cos(5x + 90°).cos(-3x - 90°). Sau khi đơn giản hóa, ta được biểu thức P = cos(ax). Giá trị của a bằng (Câu 20 trang 56):",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.4",
+                    "name": "HÀM SỐ LƯỢNG GIÁC",
+                    "questions": [
+                        {
+                            "id": "1.4.1",
+                            "type": "multiple_choice",
+                            "question": "Tập xác định của hàm số y = 1/sin x là (Câu 3 trang 70):",
+                            "options": [
+                                "A. D = ℝ \\ {0}",
+                                "B. D = ℝ \\ {k2π, k∈ℤ}",
+                                "C. D = ℝ \\ {kπ, k∈ℤ}",
+                                "D. D = ℝ \\ {0; π}"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "1.4.2",
+                            "type": "multiple_choice",
+                            "question": "Trong các hàm số sau, hàm số nào có đồ thị đối xứng qua gốc tọa độ? (Câu 14 trang 72)",
+                            "options": [
+                                "A. y = 1/sin³ x",
+                                "B. y = sin(x + π/4)",
+                                "C. y = √2 cos(x - π/4)",
+                                "D. y = √sin 2x"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.4.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số y = 3 - sin(2x + π/4), khi đó (Câu 25 trang 74):",
+                            "statements": [
+                                "a. Hàm số có tập xác định D = ℝ",
+                                "b. Giá trị nhỏ nhất của hàm số bằng 2",
+                                "c. Giá trị lớn nhất của hàm số bằng 4",
+                                "d. Tập giá trị của hàm số là T = [2; 4]"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.4.4",
+                            "type": "short_answer",
+                            "question": "Tập giá trị của hàm số: y = sin⁶ x + cos⁶ x có dạng [a/b; 1] với a; b là các số nguyên, a/b là phân số tối giản. Tính giá trị S = a + ab². (Câu 37 trang 77)",
+                            "answer": "5"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.5",
+                    "name": "PHƯƠNG TRÌNH LƯỢNG GIÁC",
+                    "questions": [
+                        {
+                            "id": "1.5.1",
+                            "type": "multiple_choice",
+                            "question": "Nghiệm của phương trình cos x = 1/2 là (Câu 8 trang 92):",
+                            "options": [
+                                "A. x = ±π/3 + k2π",
+                                "B. x = ±π/3 + kπ",
+                                "C. x = ±π/6 + k2π",
+                                "D. x = ±π/6 + kπ"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.5.2",
+                            "type": "multiple_choice",
+                            "question": "Phương trình 3cos² x + 7cos x - 10 = 0 có nghiệm là (Câu 29 trang 95):",
+                            "options": [
+                                "A. x = kπ, k∈ℤ",
+                                "B. x = π/2 + k2π, k∈ℤ",
+                                "C. x = kπ, k∈ℤ",
+                                "D. x = 2kπ, k∈ℤ"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "1.5.3",
+                            "type": "true_false",
+                            "question": "Cho phương trình lượng giác sin 2x = -1/2 (*). Khi đó (Câu 40 trang 97):",
+                            "statements": [
+                                "a. Phương trình (*) tương đương sin 2x = sin π/6",
+                                "b. Trong khoảng (0; π) phương trình có 3 nghiệm",
+                                "c. Tổng các nghiệm của phương trình trong khoảng (0; π) bằng 3π/2",
+                                "d. Trong khoảng (0; π) phương trình có nghiệm lớn nhất bằng 11π/12"
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "1.5.4",
+                            "type": "short_answer",
+                            "question": "Phương trình 2sin x - √6 + 2 = 0 có bao nhiêu nghiệm trên khoảng (0; 2π)? (Câu 51 trang 100)",
+                            "answer": "1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "DÃY SỐ, CẤP SỐ",
+            "topics": [
+                {
+                    "id": "2.1",
+                    "name": "DÃY SỐ",
+                    "questions": [
+                        {
+                            "id": "2.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho dãy số (u_n) với u_n = 2ⁿ. Số hạng u_{n+1} bằng (Câu 9 trang 118):",
+                            "options": [
+                                "A. u_{n+1} = 2ⁿ.2",
+                                "B. u_{n+1} = 2ⁿ + 1",
+                                "C. u_{n+1} = 2(n+1)",
+                                "D. u_{n+1} = 2ⁿ + 2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.1.2",
+                            "type": "multiple_choice",
+                            "question": "Trong các dãy số (u_n) cho bởi số hạng tổng quát (u_n) sau, dãy số nào bị chặn? (Câu 27 trang 120)",
+                            "options": [
+                                "A. u_n = n²",
+                                "B. u_n = 2ⁿ",
+                                "C. u_n = 1/n",
+                                "D. u_n = √(n+1)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "2.1.3",
+                            "type": "true_false",
+                            "question": "Cho dãy số (u_n) có số hạng tổng quát u_n = (n+1)/(n+2). Khi đó (Câu 42 trang 122):",
+                            "statements": [
+                                "a. u_{n+1} - u_n = 1/[(n+3)(n+2)]",
+                                "b. u_{n+1} < u_n, ∀ n ∈ ℕ*",
+                                "c. Dãy số (u_n) là dãy số giảm",
+                                "d. Dãy (u_n) là dãy số bị chặn"
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "2.1.4",
+                            "type": "short_answer",
+                            "question": "Cho dãy số (u_n) với u_n = (2n + 1)/(n²). Hãy tính số hạng thứ 6 của dãy số. (Câu 44 trang 122)",
+                            "answer": "13/36"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.2",
+                    "name": "CẤP SỐ CỘNG",
+                    "questions": [
+                        {
+                            "id": "2.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho cấp số cộng (u_n) với u_1 = 2 và u_2 = 7. Công sai của cấp số cộng đã cho bằng (Câu 5 trang 138):",
+                            "options": [
+                                "A. 5",
+                                "B. 2/7",
+                                "C. -5",
+                                "D. 7/2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho cấp số cộng (u_n) có u_1 = 1 và tổng 100 số hạng đầu bằng 10000. Tính tổng S = 1/(u_1 u_2) + 1/(u_2 u_3) + ... + 1/(u_99 u_100). (Câu 28 trang 140)",
+                            "options": [
+                                "A. 100/201",
+                                "B. 200/201",
+                                "C. 198/199",
+                                "D. 99/199"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "2.2.3",
+                            "type": "true_false",
+                            "question": "Cho dãy số hữu hạn gồm các số hạng: -1; 2; 5; 8; 11; 14; 17. Khi đó (Câu 36 trang 140):",
+                            "statements": [
+                                "a. Dãy số đã cho là không phải cấp số cộng",
+                                "b. Số hạng u_1 = -1",
+                                "c. Nếu dãy số đã cho là cấp số cộng thì công sai d = 2",
+                                "d. Tổng tất cả số hạng của dãy số bằng 56"
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "2.2.4",
+                            "type": "short_answer",
+                            "question": "Tìm số hạng đầu u_1 của cấp số cộng (u_n) biết rằng: u_1 + u_3 = 10, u_1 + u_6 = 26. (Câu 45 trang 142)",
+                            "answer": "3"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.3",
+                    "name": "CẤP SỐ NHÂN",
+                    "questions": [
+                        {
+                            "id": "2.3.1",
+                            "type": "multiple_choice",
+                            "question": "Cho cấp số nhân (u_n) có u_1 = 2 và u_4 = 54. Giá trị của công bội q bằng (Câu 11 trang 165):",
+                            "options": [
+                                "A. 3",
+                                "B. 9",
+                                "C. 27",
+                                "D. -3"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.3.2",
+                            "type": "multiple_choice",
+                            "question": "Cho một cấp số nhân có các số hạng đều không âm thỏa mãn u_2 = 6, u_4 = 24. Tính tổng của 12 số hạng đầu tiên (Câu 34 trang 167):",
+                            "options": [
+                                "A. 3.2¹² - 3",
+                                "B. 2¹² - 1",
+                                "C. 3.2¹² - 1",
+                                "D. 3.2¹²"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "2.3.3",
+                            "type": "true_false",
+                            "question": "Cho cấp số nhân (u_n) với công bội q < 0 và u_2 = 4, u_4 = 9. Khi đó (Câu 62 trang 171):",
+                            "statements": [
+                                "a. Số hạng đầu u_1 = -8/3",
+                                "b. Số hạng u_3 = 27/2",
+                                "c. -2187/32 là số hạng thứ 8",
+                                "d. Cấp số nhân có công bội q = -3/2"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "2.3.4",
+                            "type": "short_answer",
+                            "question": "Cho cấp số nhân (u_n) có tổng n số hạng đầu tiên là S_n = 5ⁿ - 1. Tính tổng số hạng đầu u_1 và công bội q của cấp số nhân đó. (Câu 70 trang 173)",
+                            "answer": "5"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "GIỚI HẠN, HÀM SỐ LIÊN TỤC",
+            "topics": [
+                {
+                    "id": "3.1",
+                    "name": "GIỚI HẠN DÃY SỐ",
+                    "questions": [
+                        {
+                            "id": "3.1.1",
+                            "type": "multiple_choice",
+                            "question": "lim 1/(2n + 5) bằng (Câu 5 trang 190):",
+                            "options": [
+                                "A. 1/2",
+                                "B. 0",
+                                "C. +∞",
+                                "D. 1/5"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.1.2",
+                            "type": "multiple_choice",
+                            "question": "Tính giới hạn L = lim (√(16ⁿ+1 + 4ⁿ) - √(16ⁿ+1 + 3ⁿ)). (Câu 23 trang 192)",
+                            "options": [
+                                "A. T = 0",
+                                "B. T = 1/4",
+                                "C. T = 1/8",
+                                "D. T = 1/16"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.1.3",
+                            "type": "true_false",
+                            "question": "Cho dãy số (u_n) với u_n = 4n² + n + 2 / (an² + 5). Để dãy số đã cho có giới hạn bằng 2, giá trị của a = ? (Câu 60 trang 196)",
+                            "statements": [
+                                "a. Để dãy số đã cho có giới hạn bằng 2, giá trị của a = 2.",
+                                "b. Để dãy số đã cho có giới hạn bằng 1, giá trị của a = 3.",
+                                "c. Để dãy số đã cho có giới hạn bằng 3, giá trị của a là một số nguyên.",
+                                "d. Để dãy số đã cho có giới hạn bằng -2, giá trị của a = -2."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "3.1.4",
+                            "type": "short_answer",
+                            "question": "Giới hạn lim (2n² - 3√n + 1)/(3n√n + 2n) = lim (a√n - 3/n + 1/n√n)/(b + 2/√n) với a; b là các số tự nhiên. Tính P = a + b². (Câu 68 trang 198)",
+                            "answer": "4"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.2",
+                    "name": "GIỚI HẠN HÀM SỐ",
+                    "questions": [
+                        {
+                            "id": "3.2.1",
+                            "type": "multiple_choice",
+                            "question": "Tính lim (x² + 2x - 3)/(x - 1) khi x → 1. (Câu 2 trang 215)",
+                            "options": [
+                                "A. 1",
+                                "B. 0",
+                                "C. 3",
+                                "D. 2"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "3.2.2",
+                            "type": "multiple_choice",
+                            "question": "Tính L = lim (√(x² + 3x) - √(x² + 2x)). (Ví dụ 4.3 trang 189)",
+                            "options": [
+                                "A. 1/2",
+                                "B. 0",
+                                "C. 1",
+                                "D. 3/2"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.2.3",
+                            "type": "true_false",
+                            "question": "Cho lim (2x²/(5 + x) + ax + b) = 2. Khi đó giá trị của biểu thức T = a + b bằng (Câu 25 trang 216):",
+                            "statements": [
+                                "a. T = -2",
+                                "b. T = 0",
+                                "c. T = 1",
+                                "d. T = 2"
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "3.2.4",
+                            "type": "short_answer",
+                            "question": "Giới hạn lim (3√(x³ - 2x²) - x) khi x → +∞ có dạng a/b. với a; b là các số tự nhiên và a/b là phân số tối giản. Tính P = a + b. (Câu 51 trang 220)",
+                            "answer": "5"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.3",
+                    "name": "HÀM SỐ LIÊN TỤC",
+                    "questions": [
+                        {
+                            "id": "3.3.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số f(x) = (x² - 4)/(x + 2) khi x ≠ 2 và f(2) = 4. Chọn mệnh đề đúng? (Câu 4 trang 233)",
+                            "options": [
+                                "A. Hàm số liên tục tại x = 2.",
+                                "B. Hàm số gián đoạn tại x = 2.",
+                                "C. f(2) = 4.",
+                                "D. lim f(x) = 2 khi x → 2."
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "3.3.2",
+                            "type": "multiple_choice",
+                            "question": "Tìm m để hàm số f(x) = (x² - 4)/(x + 2) khi x ≠ -2 và f(x) = m khi x = -2 liên tục tại x = -2. (Câu 11 trang 234)",
+                            "options": [
+                                "A. -4",
+                                "B. 2",
+                                "C. 4",
+                                "D. 0"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "3.3.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số f(x) = (x² - 1)/(x - 1) khi x ≠ 1 và f(x) = a khi x = 1. Để hàm số liên tục tại x=1 thì a = ? (Câu 13 trang 234)",
+                            "statements": [
+                                "a. a = 0",
+                                "b. a = -1/2",
+                                "c. a = 1/2",
+                                "d. a = 1"
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "3.3.4",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu giá trị nguyên của tham số m để hàm số f(x) = (x² - 1)/(x - 1) khi x ≠ 1 và f(x) = m.x khi x = 1 liên tục tại x = 1? (Câu 50 trang 240)",
+                            "answer": "1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "QUAN HỆ SONG SONG",
+            "topics": [
+                {
+                    "id": "4.1",
+                    "name": "ĐIỂM – ĐƯỜNG VÀ MẶT PHẲNG",
+                    "questions": [
+                        {
+                            "id": "4.1.1",
+                            "type": "multiple_choice",
+                            "question": "Một hình chóp có đáy là ngũ giác có số mặt và số cạnh là (Câu 4 trang 256):",
+                            "options": [
+                                "A. 5 mặt, 5 cạnh.",
+                                "B. 6 mặt, 5 cạnh.",
+                                "C. 6 mặt, 10 cạnh.",
+                                "D. 5 mặt, 10 cạnh."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành tâm O. Giao tuyến của hai mặt phẳng (SAC) và (SBD) là (Câu 6 trang 256):",
+                            "options": [
+                                "A. SO",
+                                "B. SC",
+                                "C. SD",
+                                "D. SA"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.1.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Gọi O là giao điểm của AC và BD; M, N lần lượt là trung điểm của SB, SD. P thuộc SC và không là trung điểm. Khi đó (Câu 18 trang 258):",
+                            "statements": [
+                                "a. Giao tuyến của (SAC) và (SBD) là SO.",
+                                "b. Giao điểm E của SO và (MNP) là giao điểm của MN và SO.",
+                                "c. Giao điểm Q của SA và (MNP) là giao điểm của PE và SO.",
+                                "d. Gọi I, J, K lần lượt là giao điểm của QM và AB, QP và AC, QN và AD. Vậy I, J, K thẳng hàng."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "4.1.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành tâm O. Gọi M là trung điểm SC và I là giao điểm của AM và mặt phẳng (SBD). Biết tam giác SAC vuông tại S và AC = 6. Tính độ dài đoạn OI. (Câu 22 trang 259)",
+                            "answer": "1"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.2",
+                    "name": "HAI ĐƯỜNG THẲNG SONG SONG",
+                    "questions": [
+                        {
+                            "id": "4.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Gọi d là giao tuyến của mặt phẳng (SAD) và (SBC). Tìm mệnh đề đúng (Câu 7 trang 270):",
+                            "options": [
+                                "A. d qua S và song song với BC",
+                                "B. d qua S và song song với AB",
+                                "C. d qua S và song song với DC",
+                                "D. d qua S và song song với BD"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành. Gọi I, J, E, F lần lượt là trung điểm SA, SB, SC, SD. Trong các đường thẳng sau, đường thẳng nào không song song với IJ? (Câu 13 trang 271)",
+                            "options": [
+                                "A. EF",
+                                "B. DC",
+                                "C. AD",
+                                "D. AB"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.2.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD có đáy là hình vuông tâm O, M, N lần lượt là trung điểm của SA, SB. Khi đó (Câu 16 trang 272):",
+                            "statements": [
+                                "a. MN song song với AB",
+                                "b. MN song song với CD",
+                                "c. MO và SD cắt nhau",
+                                "d. NO và SC cắt nhau"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "4.2.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABCD, đáy ABCD là hình thang, AB // CD. Gọi I, J lần lượt là trung điểm của AD, BC và G là trọng tâm tam giác SAB. Mặt phẳng (GIJ) cắt SA, SB lần lượt tại M, N. Biết AB = k.CD, tìm k để MNIJ là hình bình hành. (Câu 21 trang 273)",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.3",
+                    "name": "ĐƯỜNG THẲNG SONG SONG MẶT PHẲNG",
+                    "questions": [
+                        {
+                            "id": "4.3.1",
+                            "type": "multiple_choice",
+                            "question": "Cho đường thẳng a nằm trong mặt phẳng (α). Giả sử b ⊄ (α). Mệnh đề nào sau đây là đúng? (Câu 6 trang 286)",
+                            "options": [
+                                "A. Nếu b // (α) thì b // a",
+                                "B. Nếu b cắt (α) thì b cắt a.",
+                                "C. Nếu b cắt (α) và (β) chứa b thì giao tuyến của (α) và (β) là đường thẳng cắt cả a và b.",
+                                "D. Nếu b // a thì b // (α)."
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "4.3.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD, đáy ABCD là hình bình hành tâm O. Gọi M là trung điểm của SC. Đường thẳng OM song song với những mặt phẳng nào sau đây? (Câu 11 trang 287)",
+                            "options": [
+                                "A. (SAD) và (SBC)",
+                                "B. (SAD) và (SBA)",
+                                "C. (SBA) và (SCD)",
+                                "D. (SAC) và (ABCD)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.3.3",
+                            "type": "true_false",
+                            "question": "Cho hai hình bình hành ABCD và ABEF không đồng phẳng có tâm lần lượt là I và J. Khi đó (Câu 18 trang 289):",
+                            "statements": [
+                                "a. IJ // (ADF)",
+                                "b. IJ // (CEB)",
+                                "c. IJ // (CEA)",
+                                "d. IJ // (CDFE)"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "4.3.4",
+                            "type": "short_answer",
+                            "question": "Cho tứ diện ABCD. Gọi M, N lần lượt là trọng tâm các tam giác ABC và ABD. Đường thẳng MN song song với bao nhiêu mặt phẳng trong bốn mặt của tứ diện? (Câu 22 trang 290)",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.4",
+                    "name": "HAI MẶT PHẲNG SONG SONG",
+                    "questions": [
+                        {
+                            "id": "4.4.1",
+                            "type": "multiple_choice",
+                            "question": "Hình hộp là hình lăng trụ có đáy là hình bình hành. Mệnh đề nào sau đây là sai? (Câu 5 trang 302)",
+                            "options": [
+                                "A. (ABCD) // (A'B'C'D')",
+                                "B. (ABB'A') // (DCC'D')",
+                                "C. (ACC'A') // (ABD)",
+                                "D. (A'B'C') // (ABD)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.4.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình hộp ABCD.A'B'C'D', AC cắt BD tại O và A'C' cắt B'D' tại O'. Khi đó (AB'D') song song với mặt phẳng nào sau đây? (Câu 11 trang 303)",
+                            "options": [
+                                "A. (A'OC')",
+                                "B. (BDA')",
+                                "C. (BDC')",
+                                "D. (BDC)"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "4.4.3",
+                            "type": "true_false",
+                            "question": "Cho hình lăng trụ ABCD.A'B'C'D' có hai đáy là các hình bình hành. Các điểm M, N, P lần lượt là trung điểm của cạnh AD, BC, CC'. Khi đó (Câu 17 trang 304):",
+                            "statements": [
+                                "a. A'B' // (MNP).",
+                                "b. (MNP) // (BC'D').",
+                                "c. (MNP) // (B'C'D').",
+                                "d. DD' cắt (MNP)."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "4.4.4",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu khẳng định đúng trong các khẳng định dưới đây? (Câu 21 trang 306)",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.5",
+                    "name": "PHÉP CHIẾU SONG SONG",
+                    "questions": [
+                        {
+                            "id": "4.5.1",
+                            "type": "multiple_choice",
+                            "question": "Qua phép chiếu song song, tính chất nào không được bảo toàn? (Câu 3 trang 314)",
+                            "options": [
+                                "A. Chéo nhau.",
+                                "B. Đồng quy.",
+                                "C. Thẳng hàng.",
+                                "D. Song song."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "4.5.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD đáy là hình bình hành tâm O. Trên cạnh SB, SD lần lượt lấy điểm M, N sao cho SM = 2MB và SN = 1/3 SD. Hình chiếu của M, N qua phép chiếu song song lên mặt phẳng chiếu (ABCD) theo phương của đường thẳng SO lần lượt là P, Q. Tính tỉ số OP/OQ. (Câu 10 trang 315)",
+                            "options": [
+                                "A. 2",
+                                "B. 1/2",
+                                "C. 3/4",
+                                "D. 2/3"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "4.5.3",
+                            "type": "true_false",
+                            "question": "Cho hình hộp chữ nhật ABCD.A'B'C'D'. Xét các mệnh đề sau (Câu 18 trang 316):",
+                            "statements": [
+                                "a. Hình chiếu của C lên (A'B'C') theo phương chiếu DA' là điểm C'.",
+                                "b. Hình chiếu của điểm A lên (A'B'C') theo phương chiếu OO' là điểm A'.",
+                                "c. Hình chiếu của I lên (A'B'C') theo phương chiếu AI' là điểm A'.",
+                                "d. Hình chiếu của G lên (A'B'C') theo phương chiếu II' là trọng tâm tam giác A'B'C'."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "4.5.4",
+                            "type": "short_answer",
+                            "question": "Số mệnh đề nào trong các mệnh đề sau là sai? (Câu 21 trang 317)",
+                            "answer": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "CÁC SỐ ĐẶC TRƯNG ĐO XU THẾ TRUNG TÂM CHO MSL GHÉP NHÓM",
+            "topics": [
+                {
+                    "id": "5.1",
+                    "name": "SỐ TRUNG BÌNH & MỐT CỦA MSL GHÉP NHÓM",
+                    "questions": [
+                        {
+                            "id": "5.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho mẫu số liệu ghép nhóm về thời gian (phút) đi từ nhà đến nơi làm việc của các nhân viên. Mẫu số liệu được chia thành bao nhiêu nhóm? (Câu 6 trang 327)",
+                            "options": [
+                                "A. 6 nhóm",
+                                "B. 5 nhóm",
+                                "C. 7 nhóm",
+                                "D. 8 nhóm"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "5.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho bảng khảo sát về cân nặng học sinh trong lớp. Khoảng cân nặng mà số học sinh chiếm nhiều nhất là (Câu 14 trang 329):",
+                            "options": [
+                                "A. [60; 65)",
+                                "B. [55; 60)",
+                                "C. [50; 55)",
+                                "D. [60; 65)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.1.3",
+                            "type": "true_false",
+                            "question": "Cho mẫu số liệu ghép nhóm sau: Điểm số môn Toán ... Số học sinh đạt được ... Khi đó (Câu 35 trang 333):",
+                            "statements": [
+                                "a. Cỡ mẫu của mẫu số liệu bằng 40.",
+                                "b. Giá trị đại diện nhóm [2; 4) bằng 3.",
+                                "c. Độ dài nhóm [6; 8) bằng 3.",
+                                "d. Độ dài nhóm [8; 10) bằng 2."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "5.1.4",
+                            "type": "short_answer",
+                            "question": "Khảo sát số lần sử dụng Facebook của một người thực hiện mỗi ngày trong 30 ngày. Xác định mốt của mẫu số liệu ghép nhóm trên. (Câu 51 trang 338)",
+                            "answer": "10.4"
+                        }
+                    ]
+                },
+                {
+                    "id": "5.2",
+                    "name": "TRUNG VỊ & TỨ PHÂN VỊ",
+                    "questions": [
+                        {
+                            "id": "5.2.1",
+                            "type": "multiple_choice",
+                            "question": "Khảo sát thời gian chạy bộ trong một ngày của một số học sinh. Mốt của mẫu số liệu trên là (Câu 7 trang 348):",
+                            "options": [
+                                "A. 42",
+                                "B. 52",
+                                "C. 53",
+                                "D. 54"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.2.2",
+                            "type": "multiple_choice",
+                            "question": "Doanh thu bán hàng trong 20 ngày được lựa chọn ngẫu nhiên. Trung vị của mẫu số liệu trên thuộc khoảng nào? (Câu 12 trang 348)",
+                            "options": [
+                                "A. [7; 9)",
+                                "B. [9; 11)",
+                                "C. [11; 13)",
+                                "D. [13; 15)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "5.2.3",
+                            "type": "true_false",
+                            "question": "Dựa vào bảng tần số mẫu số liệu ghép nhóm sau, hãy tìm tứ phân vị của nó. (Câu 47 trang 355):",
+                            "statements": [
+                                "a. Cỡ mẫu của mẫu số liệu là 40.",
+                                "b. Tứ phân vị thứ hai Q2 = 45.",
+                                "c. Tứ phân vị thứ nhất Q1 = 48.",
+                                "d. Tứ phân vị thứ ba Q3 = 61.5."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "5.2.4",
+                            "type": "short_answer",
+                            "question": "Kết quả thu thập điểm số môn Toán của 25 học sinh. Tìm trung vị của mẫu số liệu ghép nhóm trên. (Câu 57 trang 358)",
+                            "answer": "10"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "PHÉP TÍNH LŨY THỪA",
+            "topics": [
+                {
+                    "id": "6.1",
+                    "name": "PHÉP TÍNH LŨY THỪA",
+                    "questions": [
+                        {
+                            "id": "6.1.1",
+                            "type": "multiple_choice",
+                            "question": "Với a là số thực dương tuỳ ý, ³√a bằng (Câu 2 trang 370):",
+                            "options": [
+                                "A. a^(1/6)",
+                                "B. a^(2/3)",
+                                "C. a^6",
+                                "D. a^(3/2)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho biểu thức P = ³√x . ⁴√x . √x, với x > 0. Mệnh đề nào dưới đây đúng? (Câu 7 trang 370)",
+                            "options": [
+                                "A. P = x^(15/24)",
+                                "B. P = x^(1/2)",
+                                "C. P = x^(7/24)",
+                                "D. P = x^(7/12)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "6.1.3",
+                            "type": "true_false",
+                            "question": "Cho a, b là các số thực dương. Khi đó: (Câu 36 trang 373)",
+                            "statements": [
+                                "a. (a^m.b^n)^p = a^mp.b^np",
+                                "b. a^m / a^n = a^(m-n)",
+                                "c. (a^m)^n = a^(m.n)",
+                                "d. a^m + a^n = a^(m+n)"
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "6.1.4",
+                            "type": "short_answer",
+                            "question": "Biết biểu thức P = (√(5) + 2√6)^2024.(√5 - 2√6)^2025 / 2 = a^c với a; c là số tự nhiên. Tính giá trị ca - 2. (Câu 43 trang 375)",
+                            "answer": "-1"
+                        }
+                    ]
+                },
+                {
+                    "id": "6.2",
+                    "name": "PHÉP TÍNH LOGARIT",
+                    "questions": [
+                        {
+                            "id": "6.2.1",
+                            "type": "multiple_choice",
+                            "question": "Với các số thực dương a, b tùy ý, đặt log₃ a = α, log₃ b = β. Mệnh đề nào dưới đây đúng? (Câu 9 trang 386)",
+                            "options": [
+                                "A. log₃(a²b³) = 2α + 3β",
+                                "B. log₃(a²b³) = 9α + 2β",
+                                "C. log₃(a²b³) = 2α - 3β",
+                                "D. log₃(a²b³) = 9α - 2β"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho log₂ a = 3 và log₂ b = 1/2. Tính I = log₂(a²b³). (Câu 11 trang 387)",
+                            "options": [
+                                "A. 5/4",
+                                "B. 0",
+                                "C. 4",
+                                "D. 3/2"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "6.2.3",
+                            "type": "true_false",
+                            "question": "Cho a, b, c > 1 và m, n ∈ ℝ. Xét tính đúng, sai trong các khẳng định sau. (Câu 33 trang 389)",
+                            "statements": [
+                                "a. log_a(a³.a⁴) = 7",
+                                "b. log_a b . log_b c . log_c a = 1",
+                                "c. Cho log₃ 7 = m, log₃ 10 = n. Khi đó log₃ 70 = n - m.",
+                                "d. Cho log₅ 2 = m, log₅ 3 = n. Khi đó log_250 30 = (m + 1)/(n + 3)."
+                            ],
+                            "answers": [
+                                false,
+                                true,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "6.2.4",
+                            "type": "short_answer",
+                            "question": "Cho log_a b = 2 và log_a c = 3. Tính Q = log_a(b²c³). (Câu 36 trang 390)",
+                            "answer": "13"
+                        }
+                    ]
+                },
+                {
+                    "id": "6.3",
+                    "name": "HÀM SỐ MŨ – HÀM SỐ LOGARIT",
+                    "questions": [
+                        {
+                            "id": "6.3.1",
+                            "type": "multiple_choice",
+                            "question": "Tìm tập xác định của hàm số y = log₂ x². (Câu 5 trang 402)",
+                            "options": [
+                                "A. [0; +∞)",
+                                "B. ℝ",
+                                "C. (0; +∞)",
+                                "D. [2; +∞)"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "6.3.2",
+                            "type": "multiple_choice",
+                            "question": "Cho ba số thực dương a, b, c khác 1. Đồ thị các hàm số y = aˣ, y = bˣ, y = cˣ được cho trong hình vẽ. Mệnh đề nào dưới đây đúng? (Câu 30 trang 405)",
+                            "options": [
+                                "A. a < b < c",
+                                "B. a < c < b",
+                                "C. b < c < a",
+                                "D. c < a < b"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "6.3.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số 2ˣ. Khi đó (Câu 41 trang 407):",
+                            "statements": [
+                                "a. Hàm số có tập xác định D = ℝ.",
+                                "b. Hàm số nghịch biến trên khoảng (-∞; +∞).",
+                                "c. Đồ thị hàm số đi qua điểm A(2; 4).",
+                                "d. Đồ thị hàm số 2ˣ đối xứng với đồ thị (1/2)ˣ qua trục tung."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "6.3.4",
+                            "type": "short_answer",
+                            "question": "Có bao nhiêu giá trị nguyên của tham số m để hàm số y = log₂(x² - 2mx + 4) xác định với mọi x thuộc ℝ? (Câu 47 trang 409)",
+                            "answer": "5"
+                        }
+                    ]
+                },
+                {
+                    "id": "6.4",
+                    "name": "PHƯƠNG TRÌNH & BẤT PHƯƠNG TRÌNH MŨ - LOGARIT",
+                    "questions": [
+                        {
+                            "id": "6.4.1",
+                            "type": "multiple_choice",
+                            "question": "Tập nghiệm của bất phương trình 2ˣ < 5 là (Câu 17 trang 433):",
+                            "options": [
+                                "A. (-∞; log₂ 5)",
+                                "B. (log₂ 5; +∞)",
+                                "C. (-∞; log₅ 2)",
+                                "D. (log₅ 2; +∞)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.4.2",
+                            "type": "multiple_choice",
+                            "question": "Tập nghiệm S của bất phương trình log₂(x² - 1) > 3 là (Câu 26 trang 435):",
+                            "options": [
+                                "A. (7; +∞)",
+                                "B. (4; +∞)",
+                                "C. (-∞; 4)",
+                                "D. [4; +∞)"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "6.4.3",
+                            "type": "true_false",
+                            "question": "Cho phương trình log₂(x² - 5x - 6) = 3 (1). Các mệnh đề sau đúng hay sai? (Câu 39 trang 436):",
+                            "statements": [
+                                "a. Điều kiện của phương trình (1) là x > 6.",
+                                "b. Phương trình (1) có hai nghiệm trái dấu.",
+                                "c. Phương trình (1) có hai nghiệm x₁ < x₂ thỏa mãn x₁ + x₂ = 5.",
+                                "d. Tổng bình phương các nghiệm của phương trình (1) lớn hơn 53."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "6.4.4",
+                            "type": "short_answer",
+                            "question": "Bất phương trình 3^(2x + 3) < 81 có bao nhiêu nghiệm nguyên? (Câu 58 trang 440)",
+                            "answer": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "ĐẠO HÀM",
+            "topics": [
+                {
+                    "id": "7.1",
+                    "name": "ĐẠO HÀM",
+                    "questions": [
+                        {
+                            "id": "7.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số y = f(x) có đạo hàm thỏa f'(8) = 5. Giá trị của biểu thức lim (f(x) - f(8))/(x - 8) khi x → 8 bằng (Câu 1 trang 459):",
+                            "options": [
+                                "A. 12",
+                                "B. 5",
+                                "C. 1/3",
+                                "D. 1/2"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "7.1.2",
+                            "type": "multiple_choice",
+                            "question": "Tiếp tuyến của đồ thị hàm số y = (x+1)/(x-1) tại điểm có hoành độ x = 2 có phương trình (Câu 10 trang 460):",
+                            "options": [
+                                "A. y = -2x + 7",
+                                "B. y = 2x + 1",
+                                "C. y = 2x - 1",
+                                "D. y = -2x - 1"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "7.1.3",
+                            "type": "true_false",
+                            "question": "Hàm số f(x) xác định trên khoảng (a; b) và x₀ ∈ (a; b). Khi đó các mệnh đề sau đúng hay sai? (Câu 21 trang 462):",
+                            "statements": [
+                                "a. f'(x₀) = lim (f(x) - f(x₀))/(x - x₀) khi x → x₀.",
+                                "b. f'(x₀) = lim (f(x₀ + h) - f(x₀))/h khi h → 0.",
+                                "c. f'(x₀) là hệ số góc của tiếp tuyến tại x = x₀.",
+                                "d. f'(x₀) > 0."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "7.1.4",
+                            "type": "short_answer",
+                            "question": "Tính đạo hàm của hàm số y = 1/(x² + x + 1) tại x₀ = -2. (Câu 30 trang 464)",
+                            "answer": "0.11"
+                        }
+                    ]
+                },
+                {
+                    "id": "7.2",
+                    "name": "CÁC QUY TẮC TÍNH ĐẠO HÀM",
+                    "questions": [
+                        {
+                            "id": "7.2.1",
+                            "type": "multiple_choice",
+                            "question": "Đạo hàm của hàm số y = ln x tại điểm x = 1/3 là (Câu 2 trang 480):",
+                            "options": [
+                                "A. 1/3",
+                                "B. 1/9",
+                                "C. 9",
+                                "D. 3"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "7.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hàm số f(x) = x².log₂(x² + 1), tính f'(1). (Câu 9 trang 480)",
+                            "options": [
+                                "A. 1",
+                                "B. 1/(2ln2)",
+                                "C. 1/2",
+                                "D. 1/(2ln2)"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "7.2.3",
+                            "type": "true_false",
+                            "question": "Cho hàm số f(x) = 3x² - 6x + 2. Khi đó (Câu 24 trang 482):",
+                            "statements": [
+                                "a. Hàm số có đạo hàm là f'(x) = 6x - 6.",
+                                "b. f'(3) = 6.",
+                                "c. f'(4) < f'(5).",
+                                "d. f'(2) + f'(-2) = 0."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                false,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "7.2.4",
+                            "type": "short_answer",
+                            "question": "Nhiệt độ cơ thể của một người trong thời gian bị bệnh được cho bởi công thức T(t) = -0.1t² + 1.2t + 98.6, trong đó t là nhiệt độ tại thời điểm t (tính theo ngày). Tìm tốc độ thay đổi của nhiệt độ ở thời điểm t = 2. (Câu 32 trang 484)",
+                            "answer": "0.8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "QUAN HỆ VUÔNG GÓC",
+            "topics": [
+                {
+                    "id": "8.1",
+                    "name": "HAI ĐƯỜNG THẲNG VUÔNG GÓC",
+                    "questions": [
+                        {
+                            "id": "8.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình lập phương ABCD.A'B'C'D'. Đường thẳng nào sau đây vuông góc với đường thẳng BC'? (Câu 6 trang 492)",
+                            "options": [
+                                "A. A'D",
+                                "B. AC",
+                                "C. BB'",
+                                "D. AD'"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "8.1.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình lăng trụ ABCD.EFGH có 6 mặt đều là hình vuông. Tính góc giữa hai đường thẳng EG và GD. (Câu 9 trang 493)",
+                            "options": [
+                                "A. 83°",
+                                "B. 90°",
+                                "C. 50°",
+                                "D. 60°"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "8.1.3",
+                            "type": "true_false",
+                            "question": "Trong không gian, cho hai đường thẳng bất kỳ. Khi đó (Câu 24 trang 495):",
+                            "statements": [
+                                "a. Góc giữa hai đường thẳng trong không gian là góc giữa 2 đường thẳng cùng đi qua một điểm và lần lượt song song với hai đường thẳng đã cho.",
+                                "b. Hai đường thẳng vuông góc thì cắt nhau.",
+                                "c. Cho hai đường thẳng song song, đường thẳng nào vuông góc với đường thẳng này thì cũng vuông góc với đường thẳng kia.",
+                                "d. Nếu hai đường thẳng cùng vuông góc với đường thẳng thứ ba thì hai đường thẳng đó song song với nhau."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "8.1.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình bình hành, tam giác SAB là tam giác đều. Tính sin của góc giữa đường thẳng SA và DC. (Câu 34 trang 498)",
+                            "answer": "0.5"
+                        }
+                    ]
+                },
+                {
+                    "id": "8.2",
+                    "name": "ĐƯỜNG THẲNG VUÔNG GÓC MẶT PHẲNG",
+                    "questions": [
+                        {
+                            "id": "8.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho mặt phẳng (P) và hai đường thẳng a, b phân biệt biết a ⊥ (P) và b ⊥ (P). Khẳng định nào đúng? (Câu 9 trang 511)",
+                            "options": [
+                                "A. (a, b) = 90°",
+                                "B. (a, b) = 0°",
+                                "C. (a, b) = 60°",
+                                "D. (a, b) = 45°"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "8.2.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông, SA vuông góc với mặt phẳng đáy. Gọi AE, AF lần lượt là các đường cao của tam giác SAB và SAD. Chọn khẳng định đúng? (Câu 10 trang 512)",
+                            "options": [
+                                "A. SC ⊥ (AEF).",
+                                "B. SC ⊥ (AEC).",
+                                "C. SC ⊥ (AFB).",
+                                "D. SC ⊥ (AED)."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "8.2.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông và SA ⊥ (ABCD). Khi đó (Câu 21 trang 513):",
+                            "statements": [
+                                "a. BC ⊥ (SAB).",
+                                "b. CD ⊥ (SAD).",
+                                "c. AC ⊥ (SBD).",
+                                "d. BD ⊥ (SAC)."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "8.2.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABCD có cạnh bên SA ⊥ (ABCD) và đáy ABC là tam giác cân ở B. Gọi H và K lần lượt là trung điểm của AC và SC. Góc của hai đường thẳng BH, SC bằng bao nhiêu độ? (Câu 31 trang 515)",
+                            "answer": "90"
+                        }
+                    ]
+                },
+                {
+                    "id": "8.3",
+                    "name": "HAI MẶT PHẲNG VUÔNG GÓC",
+                    "questions": [
+                        {
+                            "id": "8.3.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABC có đáy ABC là tam giác vuông tại B và SA vuông góc với mặt phẳng (ABC). Mệnh đề nào sau đây sai? (Câu 8 trang 537)",
+                            "options": [
+                                "A. SA ⊥ BC",
+                                "B. AB ⊥ BC",
+                                "C. AB ⊥ SC",
+                                "D. SB ⊥ BC"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "8.3.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình thoi tâm O, SO vuông góc với (ABCD). Biết AB = a, SB = a, SO = a√6/3. Tìm số đo của góc giữa hai mặt phẳng (SAB) và (SAD). (Câu 19 trang 538)",
+                            "options": [
+                                "A. 30°",
+                                "B. 45°",
+                                "C. 60°",
+                                "D. 90°"
+                            ],
+                            "answer": "D"
+                        },
+                        {
+                            "id": "8.3.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông, SA ⊥ (ABCD). Khi đó (Câu 27 trang 539):",
+                            "statements": [
+                                "a. (SAC) ⊥ (SBD) = 90°.",
+                                "b. (SAC) ⊥ (SBD) = 45°.",
+                                "c. (SAB) ⊥ (SBC).",
+                                "d. (SCD) ⊥ (SAD)."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "8.3.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABC có đáy ABC là tam giác đều cạnh a, cạnh bên SA vuông góc với đáy. Khi đó góc giữa hai mặt phẳng (SAB) và (SAC) bằng bao nhiêu độ? (Câu 36 trang 541)",
+                            "answer": "60"
+                        }
+                    ]
+                },
+                {
+                    "id": "8.4",
+                    "name": "KHOẢNG CÁCH & THỂ TÍCH",
+                    "questions": [
+                        {
+                            "id": "8.4.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy là hình vuông tâm O, SA vuông góc với đáy. Xác định khoảng cách từ điểm S đến AB? (Câu 3 trang 576)",
+                            "options": [
+                                "A. SO",
+                                "B. SA",
+                                "C. SB",
+                                "D. SD"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "8.4.2",
+                            "type": "multiple_choice",
+                            "question": "Tính thể tích V của khối lập phương ABCD.A'B'C'D', biết AC' = a√3. (Câu 6 trang 576)",
+                            "options": [
+                                "A. V = a³",
+                                "B. V = 3√6 a³ / 4",
+                                "C. V = 3√3 a³",
+                                "D. V = a³ / 3"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "8.4.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD đáy ABCD là hình thang vuông tại A và B. Biết AB = BC = 2a, AD = 2a, SB = 2a√3. Cạnh bên SB vuông góc với mặt đáy, E là trung điểm BC. Khi đó (Câu 22 trang 579):",
+                            "statements": [
+                                "a. d(D, (SAB)) = a.",
+                                "b. d(E, (SBD)) = EA.",
+                                "c. d(B, (SCD)) = 30a/5, với J là hình chiếu vuông góc của điểm B lên SD.",
+                                "d. d(I, (SCD)) = 30a, với I là giao điểm AC và BD."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "8.4.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông cạnh a, cạnh bên SA vuông góc với đáy và SA = a√3. Khoảng cách từ D đến mặt phẳng (SBC) bằng bao nhiêu? (Câu 32 trang 581)",
+                            "answer": "0.87"
+                        }
+                    ]
+                },
+                {
+                    "id": "8.5",
+                    "name": "GÓC GIỮA ĐƯỜNG & MẶT – GÓC NHỊ DIỆN",
+                    "questions": [
+                        {
+                            "id": "8.5.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp S.ABCD có đáy là hình vuông, SA vuông góc với mặt phẳng đáy. Góc giữa đường thẳng SC và (ABCD) là góc nào sau đây? (Câu 8 trang 597)",
+                            "options": [
+                                "A. SAC",
+                                "B. CSA",
+                                "C. SCA",
+                                "D. ABC"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "8.5.2",
+                            "type": "multiple_choice",
+                            "question": "Cho hình chóp tứ giác đều S.ABCD. Góc phẳng nhị diện [S, AC, B] là (Câu 10 trang 598):",
+                            "options": [
+                                "A. SBC",
+                                "B. DAC",
+                                "C. SOB",
+                                "D. BSD"
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "8.5.3",
+                            "type": "true_false",
+                            "question": "Cho hình chóp S.ABCD có đáy ABCD là hình vuông, SA ⊥ (ABCD), SA = a. Gọi E, F lần lượt là hình chiếu của A lên SB, SD. Khi đó (Câu 28 trang 601):",
+                            "statements": [
+                                "a. Góc giữa AE và (SBC) bằng 90°.",
+                                "b. Góc giữa AF và (SCD) bằng 60°.",
+                                "c. Góc giữa SA và (SBC) bằng 45°.",
+                                "d. Góc giữa SC và (AEF) bằng 30°."
+                            ],
+                            "answers": [
+                                true,
+                                false,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "id": "8.5.4",
+                            "type": "short_answer",
+                            "question": "Cho hình chóp S.ABC có đáy ABC là tam giác vuông tại C, SA vuông góc với mặt phẳng đáy. Trên hình có bao nhiêu đường thẳng vuông góc với BC? (Câu 39 trang 603)",
+                            "answer": "3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "XÁC SUẤT",
+            "topics": [
+                {
+                    "id": "9.1",
+                    "name": "BIẾN CỐ GIAO & QUY TẮC NHÂN XÁC SUẤT",
+                    "questions": [
+                        {
+                            "id": "9.1.1",
+                            "type": "multiple_choice",
+                            "question": "Cho hai biến cố A và B. Nếu việc xảy ra hay không xảy ra của biến cố A không làm ảnh hưởng tới xác suất xảy ra của biến cố B thì hai biến cố A và B được gọi là (Câu 1 trang 613):",
+                            "options": [
+                                "A. Xung khắc.",
+                                "B. Đối nhau.",
+                                "C. Độc lập.",
+                                "D. Hợp nhau."
+                            ],
+                            "answer": "C"
+                        },
+                        {
+                            "id": "9.1.2",
+                            "type": "multiple_choice",
+                            "question": "Trên kệ sách có 8 sách Toán và 6 sách Văn. Lấy lần lượt 3 cuốn sách mà không để lại trên kệ. Có bao nhiêu cách để chọn được ít nhất hai cuốn sách Toán? (Câu 10 trang 613)",
+                            "options": [
+                                "A. 1344",
+                                "B. 1626",
+                                "C. 7123",
+                                "D. 1567"
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "9.1.3",
+                            "type": "true_false",
+                            "question": "Cho A và B là hai biến cố liên quan cùng một phép thử T. Khi đó (Câu 26 trang 615):",
+                            "statements": [
+                                "a. Nếu A và B là hai biến cố xung khắc thì P(A∪B) = P(A) + P(B).",
+                                "b. Nếu A và B là hai biến cố độc lập thì P(AB) = P(A).P(B).",
+                                "c. Hai biến cố xung khắc là hai biến cố đối.",
+                                "d. Hai biến cố đối là hai biến cố xung khắc."
+                            ],
+                            "answers": [
+                                true,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "9.1.4",
+                            "type": "short_answer",
+                            "question": "Trong phép thử T, cho các biến cố A và B độc lập nhau. Số khẳng định đúng trong các khẳng định sau? (Câu 36 trang 618)",
+                            "answer": "2"
+                        }
+                    ]
+                },
+                {
+                    "id": "9.2",
+                    "name": "BIẾN CỐ HỢP & QUY TẮC CỘNG XÁC SUẤT",
+                    "questions": [
+                        {
+                            "id": "9.2.1",
+                            "type": "multiple_choice",
+                            "question": "Cho A và B là hai biến cố xung khắc. Chọn phát biểu đúng (Câu 1 trang 628):",
+                            "options": [
+                                "A. P(A∪B) = P(A) + P(B).",
+                                "B. P(A∪B) = P(A) - P(B).",
+                                "C. P(A∩B) = P(A) + P(B).",
+                                "D. P(A∩B) = P(A) - P(B)."
+                            ],
+                            "answer": "A"
+                        },
+                        {
+                            "id": "9.2.2",
+                            "type": "multiple_choice",
+                            "question": "Một chiếc hộp chứa 9 viên bi cùng kích thước và khối lượng, trong đó có 4 viên bi màu đỏ, 5 viên bi màu xanh. Lấy ngẫu nhiên từ hộp 2 viên bi. Xác suất của biến cố \"lấy được 2 viên bi cùng màu\" bằng (Câu 6 trang 628):",
+                            "options": [
+                                "A. 1/6",
+                                "B. 4/9",
+                                "C. 5/18",
+                                "D. 1/9"
+                            ],
+                            "answer": "B"
+                        },
+                        {
+                            "id": "9.2.3",
+                            "type": "true_false",
+                            "question": "Cho hai biến cố A và B. Xét tính đúng, sai của các mệnh đề sau. (Câu 26 trang 630):",
+                            "statements": [
+                                "a. Nếu A, B là hai biến cố độc lập thì P(AB) = P(A) + P(B).",
+                                "b. Nếu A, B là hai biến cố xung khắc thì P(A∪B) = P(A).P(B).",
+                                "c. P(A∪B) = P(A) + P(B) - P(AB).",
+                                "d. Nếu P(AB) = P(A).P(B) thì A, B là hai biến cố độc lập."
+                            ],
+                            "answers": [
+                                false,
+                                false,
+                                true,
+                                true
+                            ]
+                        },
+                        {
+                            "id": "9.2.4",
+                            "type": "short_answer",
+                            "question": "Lớp 11A1 có 50 học sinh, trong đó có 32 bạn thích học môn Toán, 17 bạn thích học môn Lịch Sử và 8 bạn thích cả hai môn trên. Chọn ngẫu nhiên một bạn trong lớp. Xác suất để bạn đó không thích cả môn Toán và môn Lịch Sử là bao nhiêu? (Câu 35 trang 632)",
+                            "answer": "0.18"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
