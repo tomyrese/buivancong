@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { useAuthStore } from '@/store/useAuthStore';
 import { cn } from '@/lib/utils';
+import AuthModal from './auth-modal';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -31,6 +32,7 @@ export default function Navbar() {
   const [showProfileMenu, setShowProfileMenu] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const [showAuthModal, setShowAuthModal] = React.useState(false);
 
   React.useEffect(() => {
     setMounted(true);
@@ -190,7 +192,7 @@ export default function Navbar() {
               </div>
             ) : (
               <button
-                onClick={handleMockLogin}
+                onClick={() => setShowAuthModal(true)}
                 className="rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 Đăng nhập
@@ -303,7 +305,7 @@ export default function Navbar() {
                 <div className="px-3">
                   <button
                     onClick={() => {
-                      handleMockLogin();
+                      setShowAuthModal(true);
                       setIsOpen(false);
                     }}
                     className="w-full rounded-xl bg-primary py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-primary/20 hover:bg-primary/90 transition-all"
@@ -316,6 +318,10 @@ export default function Navbar() {
           </div>
         </div>
       )}
+      <AuthModal 
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+      />
     </nav>
   );
 }
