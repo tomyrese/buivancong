@@ -210,7 +210,8 @@ export default function PackagesPage() {
           
           if (newSession?.user) {
             const purchased = newSession.user.user_metadata?.purchased_packages;
-            if (Array.isArray(purchased) && purchased.includes(selectedPackage.id)) {
+            const targetId = selectedPackage.id === 'combo-nang-cap' ? 'combo-toan-dien' : selectedPackage.id;
+            if (Array.isArray(purchased) && purchased.includes(targetId)) {
               clearInterval(checkInterval);
               setCheckoutStep('success');
             }

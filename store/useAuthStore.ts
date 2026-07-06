@@ -171,6 +171,8 @@ export const useAuthStore = create<AuthState>()(
               data: {
                 name: newUser.name,
                 avatar: newUser.avatar,
+                phone: newUser.phone,
+                purchased_packages: newUser.purchasedPackages,
                 xp: newUser.xp,
                 level: newUser.level,
                 streak: newUser.streak,
