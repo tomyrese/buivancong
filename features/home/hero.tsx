@@ -8,7 +8,7 @@ import gv07Img from '@/src/imgs/GV07.png';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-32">
+    <section className="relative overflow-hidden pt-20 pb-0 lg:pt-32 lg:pb-0">
       {/* Background Gradient Blurs */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
         <div className="h-[400px] w-[600px] rounded-full bg-primary/20 blur-[120px] dark:bg-primary/10" />
@@ -17,9 +17,9 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-end">
           {/* Hero Content */}
-          <div className="lg:col-span-7 text-left space-y-6">
+          <div className="lg:col-span-7 text-left space-y-6 lg:pb-16 pb-8">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,20 +79,20 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end animate-float"
+            className="lg:col-span-5 flex justify-center lg:justify-end self-end z-10"
           >
-            <div className="relative w-full max-w-[380px] flex items-center justify-center">
+            <div className="relative w-full max-w-[460px] lg:max-w-[500px] flex items-end justify-center">
               {/* Teacher Image with 3D drop shadow */}
               <Image 
                 src={gv07Img} 
                 alt="Teacher Model" 
                 priority
-                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_40px_rgba(0,0,0,0.35)] filter dark:drop-shadow-[0_30px_40px_rgba(255,255,255,0.06)] transform hover:scale-[1.03] transition-transform duration-500 z-10"
+                className="w-full h-auto object-contain select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.3)] filter dark:drop-shadow-[0_20px_35px_rgba(255,255,255,0.05)] transform hover:scale-[1.03] transition-transform duration-500 z-10 translate-y-1"
               />
 
               {/* Decorative Blur Orbs inside image container */}
-              <div className="absolute -top-6 -left-6 h-16 w-16 rounded-full bg-accent/20 blur-md" />
-              <div className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-secondary/20 blur-lg" />
+              <div className="absolute top-10 left-10 h-16 w-16 rounded-full bg-accent/20 blur-md" />
+              <div className="absolute bottom-10 right-10 h-24 w-24 rounded-full bg-secondary/20 blur-lg" />
             </div>
           </motion.div>
         </div>
