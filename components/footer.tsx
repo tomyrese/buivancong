@@ -3,7 +3,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Send, X, ShieldCheck, FileText, Cookie } from 'lucide-react';
+import { BookOpen, Send, X, ShieldCheck, FileText, Cookie, UserCheck, Lock, CreditCard, ShieldAlert } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import logoImg from '@/src/imgs/logo.png';
@@ -250,32 +250,46 @@ export default function Footer() {
             <div className="p-6 max-h-[60vh] overflow-y-auto space-y-4 text-xs text-muted-foreground leading-relaxed">
               {activeModal === 'privacy' && (
                 <div className="space-y-4 pr-1">
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">1. Thu thập thông tin cá nhân</h4>
-                    <p>
+                  {/* Card 1 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <UserCheck className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>1. Thu thập thông tin cá nhân</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       iSinhvien chỉ thu thập các thông tin cá nhân cơ bản và cần thiết cho trải nghiệm học tập bao gồm: Họ tên, Địa chỉ Email, và Số điện thoại di động. Các thông tin này được thu thập khi bạn đăng ký tài khoản hoặc cập nhật hồ sơ cá nhân.
                     </p>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">2. Sử dụng thông tin của bạn</h4>
-                    <p>
-                      Chúng tôi sử dụng dữ liệu của bạn nhằm:
+
+                  {/* Card 2 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <BookOpen className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>2. Sử dụng thông tin của bạn</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
+                      Chúng tôi sử dụng dữ liệu của bạn nhằm đối soát tự động các giao dịch chuyển khoản VietQR để kích hoạt gói học ngay lập tức; theo dõi tiến trình bài học, chuỗi ngày học liên tục (streak) và điểm kinh nghiệm (XP) của riêng bạn; gửi tài liệu học tập hoặc các thông báo quan trọng thông qua hệ thống Bản tin.
                     </p>
-                    <ul className="list-disc pl-5 space-y-0.5">
-                      <li>Đối soát tự động các giao dịch chuyển khoản VietQR để kích hoạt gói học ngay lập tức.</li>
-                      <li>Theo dõi tiến trình bài học, lưu điểm số trắc nghiệm, chuỗi ngày học liên tục (streak) và điểm kinh nghiệm (XP) của riêng bạn.</li>
-                      <li>Gửi tài liệu học tập hoặc các thông báo quan trọng thông qua hệ thống Bản tin nhận tin (nếu đăng ký).</li>
-                    </ul>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">3. Bảo mật và Lưu trữ dữ liệu</h4>
-                    <p>
+
+                  {/* Card 3 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <Lock className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>3. Bảo mật và Lưu trữ dữ liệu</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       Toàn bộ mật khẩu của bạn được mã hóa một chiều an toàn bằng thuật toán mã hóa hiện đại của hệ thống Supabase. Mọi kết nối truyền tải thông tin giữa máy khách và máy chủ đều sử dụng giao thức bảo mật SSL. Chúng tôi cam kết tuyệt đối không chia sẻ, mua bán dữ liệu cá nhân của bạn cho bất kỳ bên thứ ba nào.
                     </p>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">4. Quyền kiểm soát của học sinh</h4>
-                    <p>
+
+                  {/* Card 4 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <ShieldCheck className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>4. Quyền kiểm soát của học sinh</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       Bạn có toàn quyền truy cập, chỉnh sửa thông tin cá nhân bất kỳ lúc nào tại mục Hồ sơ cá nhân. Trong trường hợp muốn xóa tài khoản học viên vĩnh viễn hoặc yêu cầu đặt lại các gói học đã đăng ký, vui lòng liên hệ quản trị viên qua email hỗ trợ để được giải quyết lập tức.
                     </p>
                   </div>
@@ -284,27 +298,46 @@ export default function Footer() {
 
               {activeModal === 'terms' && (
                 <div className="space-y-4 pr-1">
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">1. Quy định về tài khoản học viên</h4>
-                    <p>
+                  {/* Card 1 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <UserCheck className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>1. Quy định về tài khoản học viên</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       Mỗi học viên chỉ được phép sử dụng một tài khoản email (Gmail) duy nhất ứng với một thông tin đăng ký lớp học chính thức. Bạn chịu trách nhiệm hoàn toàn về tính bảo mật của mật khẩu đăng nhập cá nhân.
                     </p>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">2. Bản quyền sở hữu tài liệu học tập</h4>
-                    <p>
-                      Toàn bộ video bài giảng, câu hỏi trắc nghiệm, đề thi thử và tài liệu PDF đính kèm trên website iSinhvien đều thuộc bản quyền trí tuệ của Thầy Bùi Văn Công. Nghiêm cấm mọi hành vi sao chép, tải lậu, hoặc chia sẻ tài khoản cho nhiều người sử dụng chung dưới mục đích thương mại.
+
+                  {/* Card 2 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <FileText className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>2. Bản quyền sở hữu tài liệu học tập</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
+                      Toàn bộ video bài giảng, câu hỏi trắc nghiệm, đề thi thử và tài liệu PDF đính kèm trên website iSinhvien đều thuộc bản quyền trí tuệ của Thầy Bùi Văn Công. Nghiêm cấm mọi hành vi sao chép, tải lậu, hoặc chia sẻ tài khoản cho nhiều người sử dụng chung.
                     </p>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">3. Chính sách thanh toán tự động</h4>
-                    <p>
+
+                  {/* Card 3 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <CreditCard className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>3. Chính sách thanh toán tự động</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       Giao dịch chuyển khoản được xác thực tự động thông qua việc quét mã VietQR đi kèm đúng Nội dung chuyển khoản đã chỉ định. Hệ thống kích hoạt gói học ngay lập tức trên tài khoản khi ngân hàng báo có.
                     </p>
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-bold text-foreground">4. Miễn trừ trách nhiệm kết quả học tập</h4>
-                    <p>
+
+                  {/* Card 4 */}
+                  <div className="p-4 rounded-2xl bg-muted/40 border border-border/80 space-y-2">
+                    <div className="flex items-center gap-2 font-bold text-foreground">
+                      <ShieldAlert className="h-4.5 w-4.5 text-primary shrink-0" />
+                      <span>4. Miễn trừ trách nhiệm kết quả học tập</span>
+                    </div>
+                    <p className="text-2xs leading-relaxed text-muted-foreground pl-7">
                       Các chuyên đề tự luyện thi ĐGNL được thiết kế tối ưu nhất. Tuy nhiên, kết quả thi chính thức phụ thuộc hoàn toàn vào quá trình kiên trì tự ôn luyện và làm bài của mỗi học viên. iSinhvien không cam kết đảm bảo điểm số đầu ra cụ thể bằng văn bản pháp lý.
                     </p>
                   </div>
@@ -366,7 +399,7 @@ export default function Footer() {
             </div>
 
             {/* Footer buttons */}
-            <div className="p-6 border-t border-border flex justify-end gap-2 bg-muted/20">
+            <div className="p-6 border-t border-border flex justify-end gap-2 bg-card">
               <button 
                 onClick={() => setActiveModal(null)}
                 className="px-4 py-2 rounded-xl border border-border text-2xs font-bold text-muted-foreground hover:bg-muted transition-colors cursor-pointer"
