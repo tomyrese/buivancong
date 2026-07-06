@@ -150,7 +150,8 @@ export default function PackagesPage() {
       ? 800000 
       : 400000;
 
-    packages.push({
+    // Dynamically replace the center Combo Toàn Diện card with the Upgrade card
+    packages[1] = {
       id: 'combo-nang-cap',
       name: 'Nâng cấp Combo Toàn Diện',
       price: 5000, // 5k test price
@@ -158,14 +159,14 @@ export default function PackagesPage() {
       badge: 'Khuyên dùng',
       description: 'Đặc quyền nâng cấp thẳng lên gói Toàn Diện 9 môn học với mức học phí đã khấu trừ combo cũ.',
       icon: ArrowUpCircle,
-      color: 'from-fuchsia-600 via-pink-600 to-rose-600',
+      color: 'from-amber-500 via-orange-500 to-red-500', // Keep the center card's beautiful color
       features: [
         'Mở khóa trọn bộ 9 môn học ôn thi ĐGNL',
         'Đã trừ đi học phí của các gói bạn đang sở hữu',
         'Tặng sách ôn thi ĐGNL Thầy Bùi Văn Công',
         'Đặc quyền sửa lỗi bài tập, tư vấn lộ trình riêng 1-1'
       ]
-    });
+    };
   }
 
   const handleCheckoutOpen = (pkg: Package) => {
@@ -731,7 +732,7 @@ export default function PackagesPage() {
                       ) : (
                         <>
                           <RefreshCw className="h-3.5 w-3.5" />
-                          Kiểm tra thanh toán (Ấn nếu chưa cập nhật)
+                          Kiểm tra thanh toán (Tải lại)
                         </>
                       )}
                     </button>
