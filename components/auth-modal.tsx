@@ -140,6 +140,10 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_PUBLISHABLE_KEY;
       const isSupabaseConfigured = url && key && !url.includes('placeholder') && !key.includes('placeholder');
 
+      console.log("[Auth Debug] Google Login Triggered");
+      console.log("[Auth Debug] Supabase URL:", url);
+      console.log("[Auth Debug] Is Supabase Configured:", !!isSupabaseConfigured);
+
       if (isSupabaseConfigured) {
         const { error } = await supabase.auth.signInWithOAuth({
           provider: 'google',
